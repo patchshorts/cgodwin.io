@@ -1,0 +1,8 @@
+<template><div><h1 id="transitioning-from-coder-to-manager" tabindex="-1"><a class="header-anchor" href="#transitioning-from-coder-to-manager" aria-hidden="true">#</a> Transitioning from Coder to Manager</h1>
+<p>I recently got hired at Charles Schwab as a Full Time Employee(FTE). The position is a Management position which is more like a team lead. I have a Co-Manager who is accountable for the productivity of half our engineers, while the other half falls to me.</p>
+<p>So I figured I begin one of those github-pages resume blogs and catalog my journey into Management, share the books I'm reading along with my opinions on the topic. If anyone finds this helpful, great, however the main purpose of this publication is to internalize the things I study and practice.</p>
+<h2 id="new-realities" tabindex="-1"><a class="header-anchor" href="#new-realities" aria-hidden="true">#</a> New Realities</h2>
+<p>One of the new changes I now face is that I am sometimes leading people more experienced than me at coding, as well as potentially older than me. They may not have the reporting, communication, and people skills that I have. I must be prepared to be scrutinized as a leader, through a new lense.</p>
+<h2 id="purchased-a-book" tabindex="-1"><a class="header-anchor" href="#purchased-a-book" aria-hidden="true">#</a> Purchased a Book</h2>
+<p>I bought <a href="https://www.amazon.com/Become-Effective-Software-Engineering-Manager/dp/1680507249" target="_blank" rel="noopener noreferrer">Become an Effective Software Engineering Manager<ExternalLinkIcon/></a> by Stanier. We'll see how it is.</p>
+</div></template>
