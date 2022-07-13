@@ -20,7 +20,7 @@ projects:
     desc: link detailed description
     link: https://link.address
 
-  - icon: book
+  - icon: books
     name: book name
     desc: Detailed description of the book
     link: https://link.to.your.book
