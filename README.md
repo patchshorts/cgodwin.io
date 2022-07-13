@@ -11,35 +11,32 @@ heroFullScreen: false
 tagline: Mananger, Cloud & DevSecOps
 projects:
   - icon: project
-    name: project name
-    desc: project detailed description
-    link: https://your.project.link
+    name: Charles Schwab
+    desc: Manager, Software Development & Engineering
+    link: https://www.schwab.com/
 
-  - icon: link
-    name: link name
-    desc: link detailed description
-    link: https://link.address
+  - icon: project
+    name: International Gameing Technology
+    desc: Senior Site Reliability Engineer
+    link: https://www.igt.com/
 
-  - icon: books
-    name: book name
-    desc: Detailed description of the book
-    link: https://link.to.your.book
+  - icon: project
+    name: Fire, Well & Tree
+    desc: Self Employed Freelancer
 
-  - icon: article
-    name: article name
-    desc: Detailed description of the article
-    link: https://link.to.your.article
+  - icon: project
+    name: Sundaram
+    desc: Senior Developer
+    link: https://sundaramdesign.com/
 
-  - icon: friend
-    name: friend name
-    desc: Detailed description of friend
-    link: https://link.to.your.friend
+  - icon: project
+    name: Host U Online
+    desc: CTO, DevOps Engineer
+  # - icon: /logo.svg
+  #   name: custom item
+  #   desc: Detailed description of this custom item
+  #   link: https://link.to.your.friend
 
-  - icon: /logo.svg
-    name: custom item
-    desc: Detailed description of this custom item
-    link: https://link.to.your.friend
-
-footer: customize your footer text
+# footer: customize your footer text
 ---
 

@@ -1,8 +1,11 @@
-# Logs
+# Mine
+yarn.lock
 *.swp
 *.save
 *lock.json
 *lock.yaml
+
+# Logs
 logs
 *.log
 npm-debug.log*
