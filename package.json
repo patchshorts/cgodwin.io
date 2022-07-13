@@ -1,0 +1,31 @@
+{
+  "name": "cgodwin-io-blog",
+  "version": "1.0.0",
+  "description": "Christopher Godwin's Blog",
+  "license": "MIT",
+  "scripts": {
+    "docs:build": "vuepress build . && rm -rf .vuepress/serve/* && cp -a .vuepress/dist/* .vuepress/serve/",
+    "docs:clean-dev": "vuepress dev . --clean-cache",
+    "docs:dev": "vuepress dev .",
+    "build": "npm run docs:build",
+    "sync": "gulp browser-sync",
+    "watch-dev": "npm run build-dev && npm run sync",
+    "watch:all": "onchange '**' -- npm run docs:build",
+    "watch": "run-p sync watch:all build"
+  },
+  "devDependencies": {
+    "@vuepress/client": "^2.0.0-beta.48",
+    "browser-sync": "^2.27.10",
+    "gulp-clean": "^0.4.0",
+    "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2",
+    "react-is": "^18.0.0",
+    "vue": "^3.2.36",
+    "vuepress": "^2.0.0-beta.48",
+    "vuepress-theme-hope": "^2.0.0-beta.84"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}
