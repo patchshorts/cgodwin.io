@@ -8,7 +8,7 @@ OUT_FSJSON="$IMAGES"/bionic-base-fs.json
 CONTAINER_NAME=bionic-full
 IMAGE_NAME=i386/bionic-full
 
-mkdir -p "$IMAGES"
+mkdir -p "$IMAGES"cd 
 docker build . --platform linux/386 --rm --tag "$IMAGE_NAME"
 docker rm "$CONTAINER_NAME" || true
 docker create --platform linux/386 -t -i --name "$CONTAINER_NAME" "$IMAGE_NAME" bash
