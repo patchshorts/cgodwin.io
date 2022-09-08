@@ -13,7 +13,7 @@ export default navbar([
     link: "/resume",
   },
   {
-    text: "Toybox",
+    text: "Toy box",
     icon: "style",
     link: "/toys",
   }

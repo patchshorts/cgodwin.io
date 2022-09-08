@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-beta.48" />
+    <meta name="theme" content="VuePress Theme Hope" />
+    <meta property="og:url" content="https://vuepress-theme-hope-v2-demo.mrhope.site/toys/v86/docs/archlinux.html"><meta property="og:site_name" content="CGodwin"><meta property="og:type" content="article"><meta property="og:updated_time" content="2022-09-08T16:06:56.000Z"><meta property="og:locale" content="en-US"><meta property="article:modified_time" content="2022-09-08T16:06:56.000Z"><title>CGodwin</title><meta name="description" content="A demo for vuepress-theme-hope">
+    <style>
+      :root {
+        --bg-color: #fff;
+      }
+
+      html[data-theme="dark"] {
+        --bg-color: #1d2025;
+      }
+
+      html,
+      body {
+        background-color: var(--bg-color);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.querySelector("html").setAttribute("data-theme", "dark");
+      }
+    </script>
+    <link rel="stylesheet" href="/assets/style.e94c191a.css">
+    <link rel="modulepreload" href="/assets/app.e6600fbb.js"><link rel="modulepreload" href="/assets/archlinux.html.0b921b47.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper.21dcd24c.js"><link rel="modulepreload" href="/assets/archlinux.html.27423e98.js"><link rel="prefetch" href="/assets/index.html.132b2575.js"><link rel="prefetch" href="/assets/home.html.68241f2a.js"><link rel="prefetch" href="/assets/resume.html.5a173b42.js"><link rel="prefetch" href="/assets/toybox.html.015998ed.js"><link rel="prefetch" href="/assets/best-simple-outline-google-cloud-professional-cloud-architect-certification-skills.html.a56ab20a.js"><link rel="prefetch" href="/assets/building-this-resume-blog.html.8d6ae53e.js"><link rel="prefetch" href="/assets/transitioning-from-coder-to-manager.html.ea61c3b0.js"><link rel="prefetch" href="/assets/index.html.c3525a25.js"><link rel="prefetch" href="/assets/filesystem.html.72ae8e88.js"><link rel="prefetch" href="/assets/linux-9p-image.html.2b1dba35.js"><link rel="prefetch" href="/assets/networking.html.d7a4bc68.js"><link rel="prefetch" href="/assets/windows-xp.html.96c9ec8c.js"><link rel="prefetch" href="/assets/index.html.25408cac.js"><link rel="prefetch" href="/assets/index.html.f9a31ec1.js"><link rel="prefetch" href="/assets/404.html.7f510e78.js"><link rel="prefetch" href="/assets/index.html.43d49a89.js"><link rel="prefetch" href="/assets/index.html.74c48d36.js"><link rel="prefetch" href="/assets/index.html.f04128ea.js"><link rel="prefetch" href="/assets/index.html.9c63361f.js"><link rel="prefetch" href="/assets/index.html.09a9e757.js"><link rel="prefetch" href="/assets/index.html.3256155b.js"><link rel="prefetch" href="/assets/index.html.419a4da8.js"><link rel="prefetch" href="/assets/index.html.12fb1916.js"><link rel="prefetch" href="/assets/index.html.26fa6095.js"><link rel="prefetch" href="/assets/index.html.fcfb232a.js"><link rel="prefetch" href="/assets/index.html.b98104dd.js"><link rel="prefetch" href="/assets/index.html.f708f1ec.js"><link rel="prefetch" href="/assets/index.html.e924eea5.js"><link rel="prefetch" href="/assets/index.html.9b794a06.js"><link rel="prefetch" href="/assets/index.html.50af0088.js"><link rel="prefetch" href="/assets/index.html.04deac71.js"><link rel="prefetch" href="/assets/index.html.e0f0b82c.js"><link rel="prefetch" href="/assets/index.html.e48248b0.js"><link rel="prefetch" href="/assets/home.html.febaeaad.js"><link rel="prefetch" href="/assets/resume.html.54b0ecd3.js"><link rel="prefetch" href="/assets/toybox.html.d39e17c0.js"><link rel="prefetch" href="/assets/best-simple-outline-google-cloud-professional-cloud-architect-certification-skills.html.4cb345e1.js"><link rel="prefetch" href="/assets/building-this-resume-blog.html.f707abad.js"><link rel="prefetch" href="/assets/transitioning-from-coder-to-manager.html.e454e3b8.js"><link rel="prefetch" href="/assets/index.html.9b714158.js"><link rel="prefetch" href="/assets/filesystem.html.d68c00e9.js"><link rel="prefetch" href="/assets/linux-9p-image.html.c6a35783.js"><link rel="prefetch" href="/assets/networking.html.e0fa0c08.js"><link rel="prefetch" href="/assets/windows-xp.html.1e6e42c6.js"><link rel="prefetch" href="/assets/index.html.4f073f3b.js"><link rel="prefetch" href="/assets/index.html.6c8122fc.js"><link rel="prefetch" href="/assets/404.html.c13e9b62.js"><link rel="prefetch" href="/assets/index.html.2f09ac4c.js"><link rel="prefetch" href="/assets/index.html.e234515a.js"><link rel="prefetch" href="/assets/index.html.f2821032.js"><link rel="prefetch" href="/assets/index.html.0dd2866e.js"><link rel="prefetch" href="/assets/index.html.e141226c.js"><link rel="prefetch" href="/assets/index.html.b12f6d06.js"><link rel="prefetch" href="/assets/index.html.59ffcabc.js"><link rel="prefetch" href="/assets/index.html.8a2c6e39.js"><link rel="prefetch" href="/assets/index.html.5c9f900b.js"><link rel="prefetch" href="/assets/index.html.d7f69d18.js"><link rel="prefetch" href="/assets/index.html.f40d0c67.js"><link rel="prefetch" href="/assets/index.html.2035e9fb.js"><link rel="prefetch" href="/assets/index.html.e99a9db2.js"><link rel="prefetch" href="/assets/index.html.100348ba.js"><link rel="prefetch" href="/assets/index.html.8e3a173d.js"><link rel="prefetch" href="/assets/index.html.f8243dca.js"><link rel="prefetch" href="/assets/index.html.b99145a5.js"><link rel="prefetch" href="/assets/404.3348f878.js"><link rel="prefetch" href="/assets/Layout.e42a21ed.js"><link rel="prefetch" href="/assets/Slide.7e12395f.js"><link rel="prefetch" href="/assets/Blog.6ce87e2d.js"><link rel="prefetch" href="/assets/auto.esm.36809f22.js"><link rel="prefetch" href="/assets/index.daae04bf.js"><link rel="prefetch" href="/assets/index.1842ee54.js"><link rel="prefetch" href="/assets/mermaid.esm.min.ee1e0284.js"><link rel="prefetch" href="/assets/highlight.esm.d982e650.js"><link rel="prefetch" href="/assets/markdown.esm.832a189d.js"><link rel="prefetch" href="/assets/math.esm.a3f84b6f.js"><link rel="prefetch" href="/assets/notes.esm.3c361cb7.js"><link rel="prefetch" href="/assets/reveal.esm.b96f05d8.js"><link rel="prefetch" href="/assets/search.esm.80da4a02.js"><link rel="prefetch" href="/assets/zoom.esm.8514a202.js"><link rel="prefetch" href="/assets/photoswipe.esm.092fbc15.js">
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><!--[--><span tabindex="-1"></span><a href="#main-content" class="skip-link sr-only">Skip to content</a><!--]--><div class="theme-container has-toc"><!--[--><!--[--><header class="navbar"><div class="navbar-left"><button class="toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><!----><a href="/" class="brand"><img class="logo" src="/logo.svg" alt="CGodwin"><!----><span class="site-name hide-in-pad">CGodwin</span></a><!----></div><div class="navbar-center"><!----><nav class="nav-links"><div class="nav-item hide-in-mobile"><a href="/" class="nav-link" aria-label="Blog Home"><span class="icon iconfont icon-home" style=""></span>Blog Home<!----></a></div><div class="nav-item hide-in-mobile"><a href="/timeline/" class="nav-link" aria-label="Timeline"><span class="icon iconfont icon-time" style=""></span>Timeline<!----></a></div><div class="nav-item hide-in-mobile"><a href="/resume.html" class="nav-link" aria-label="Resume"><span class="icon iconfont icon-read" style=""></span>Resume<!----></a></div><div class="nav-item hide-in-mobile"><a href="/toys" class="nav-link active" aria-label="Toybox"><span class="icon iconfont icon-style" style=""></span>Toybox<!----></a></div></nav><!----></div><div class="navbar-right"><!----><!----><div class="nav-item"><a class="repo-link" href="https://github.com/vuepress-theme-hope/vuepress-theme-hope" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" class="icon github-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="github icon" style="width:1.25rem;height:1.25rem;vertical-align:middle;"><path d="M511.957 21.333C241.024 21.333 21.333 240.981 21.333 512c0 216.832 140.544 400.725 335.574 465.664 24.49 4.395 32.256-10.07 32.256-23.083 0-11.69.256-44.245 0-85.205-136.448 29.61-164.736-64.64-164.736-64.64-22.315-56.704-54.4-71.765-54.4-71.765-44.587-30.464 3.285-29.824 3.285-29.824 49.195 3.413 75.179 50.517 75.179 50.517 43.776 75.008 114.816 53.333 142.762 40.79 4.523-31.66 17.152-53.377 31.19-65.537-108.971-12.458-223.488-54.485-223.488-242.602 0-53.547 19.114-97.323 50.517-131.67-5.035-12.33-21.93-62.293 4.779-129.834 0 0 41.258-13.184 134.912 50.346a469.803 469.803 0 0 1 122.88-16.554c41.642.213 83.626 5.632 122.88 16.554 93.653-63.488 134.784-50.346 134.784-50.346 26.752 67.541 9.898 117.504 4.864 129.834 31.402 34.347 50.474 78.123 50.474 131.67 0 188.586-114.73 230.016-224.042 242.09 17.578 15.232 33.578 44.672 33.578 90.454v135.85c0 13.142 7.936 27.606 32.854 22.87C862.25 912.597 1002.667 728.747 1002.667 512c0-271.019-219.648-490.667-490.71-490.667z"></path></svg></a></div><div class="nav-item hide-in-mobile"><button id="appearance-switch"><svg xmlns="http://www.w3.org/2000/svg" class="icon auto-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="auto icon" style="display:block;"><path d="M512 992C246.92 992 32 777.08 32 512S246.92 32 512 32s480 214.92 480 480-214.92 480-480 480zm0-840c-198.78 0-360 161.22-360 360 0 198.84 161.22 360 360 360s360-161.16 360-360c0-198.78-161.22-360-360-360zm0 660V212c165.72 0 300 134.34 300 300 0 165.72-134.28 300-300 300z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon dark-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="dark icon" style="display:none;"><path d="M524.8 938.667h-4.267a439.893 439.893 0 0 1-313.173-134.4 446.293 446.293 0 0 1-11.093-597.334A432.213 432.213 0 0 1 366.933 90.027a42.667 42.667 0 0 1 45.227 9.386 42.667 42.667 0 0 1 10.24 42.667 358.4 358.4 0 0 0 82.773 375.893 361.387 361.387 0 0 0 376.747 82.774 42.667 42.667 0 0 1 54.187 55.04 433.493 433.493 0 0 1-99.84 154.88 438.613 438.613 0 0 1-311.467 128z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon light-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="light icon" style="display:none;"><path d="M952 552h-80a40 40 0 0 1 0-80h80a40 40 0 0 1 0 80zM801.88 280.08a41 41 0 0 1-57.96-57.96l57.96-58a41.04 41.04 0 0 1 58 58l-58 57.96zM512 752a240 240 0 1 1 0-480 240 240 0 0 1 0 480zm0-560a40 40 0 0 1-40-40V72a40 40 0 0 1 80 0v80a40 40 0 0 1-40 40zm-289.88 88.08-58-57.96a41.04 41.04 0 0 1 58-58l57.96 58a41 41 0 0 1-57.96 57.96zM192 512a40 40 0 0 1-40 40H72a40 40 0 0 1 0-80h80a40 40 0 0 1 40 40zm30.12 231.92a41 41 0 0 1 57.96 57.96l-57.96 58a41.04 41.04 0 0 1-58-58l58-57.96zM512 832a40 40 0 0 1 40 40v80a40 40 0 0 1-80 0v-80a40 40 0 0 1 40-40zm289.88-88.08 58 57.96a41.04 41.04 0 0 1-58 58l-57.96-58a41 41 0 0 1 57.96-57.96z"></path></svg></button></div><!----><!----><button class="toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span class="button-container"><span class="button-top"></span><span class="button-middle"></span><span class="button-bottom"></span></span></button></div></header><!----><!--]--><!----><div class="toggle-sidebar-wrapper"><span class="arrow left"></span></div><aside class="sidebar"><!--[--><!----><!--]--><ul class="sidebar-links"><li><!--[--><a href="/" class="nav-link sidebar-link sidebar-page" aria-label="Blog Home"><span class="icon iconfont icon-home" style=""></span>Blog Home<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li><li><!--[--><a href="/timeline/" class="nav-link sidebar-link sidebar-page" aria-label="Timeline"><span class="icon iconfont icon-time" style=""></span>Timeline<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li><li><!--[--><a href="/resume.html" class="nav-link sidebar-link sidebar-page" aria-label="Resume"><span class="icon iconfont icon-read" style=""></span>Resume<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li><li><!--[--><a href="/toybox.html" class="nav-link sidebar-link sidebar-page" aria-label="Toybox"><span class="icon iconfont icon-style" style=""></span>Toybox<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li></ul><!--[--><!----><!--]--></aside><!--[--><main class="page" id="main-content"><!--[--><!----><nav class="breadcrumb disable"></nav><div class="page-title"><h1><!----></h1><div class="page-info"><span class="author-info" aria-label="Author🖊" data-balloon-pos="down" localizeddate="September 8, 2022" isoriginal="false" pageview="false"><svg xmlns="http://www.w3.org/2000/svg" class="icon author-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="author icon"><path d="M649.6 633.6c86.4-48 147.2-144 147.2-249.6 0-160-128-288-288-288s-288 128-288 288c0 108.8 57.6 201.6 147.2 249.6-121.6 48-214.4 153.6-240 288-3.2 9.6 0 19.2 6.4 25.6 3.2 9.6 12.8 12.8 22.4 12.8h704c9.6 0 19.2-3.2 25.6-12.8 6.4-6.4 9.6-16 6.4-25.6-25.6-134.4-121.6-240-243.2-288z"></path></svg><span><a class="author-item" href="https://cgodwin.io" target="_blank" rel="noopener noreferrer">Christopher Godwin</a></span><span property="author" content="Christopher Godwin"></span></span><!----><span class="date-info" aria-label="Writing Date📅" data-balloon-pos="down" isoriginal="false" pageview="false"><svg xmlns="http://www.w3.org/2000/svg" class="icon calendar-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="calendar icon"><path d="M716.4 110.137c0-18.753-14.72-33.473-33.472-33.473-18.753 0-33.473 14.72-33.473 33.473v33.473h66.993v-33.473zm-334.87 0c0-18.753-14.72-33.473-33.473-33.473s-33.52 14.72-33.52 33.473v33.473h66.993v-33.473zm468.81 33.52H716.4v100.465c0 18.753-14.72 33.473-33.472 33.473a33.145 33.145 0 01-33.473-33.473V143.657H381.53v100.465c0 18.753-14.72 33.473-33.473 33.473a33.145 33.145 0 01-33.473-33.473V143.657H180.6A134.314 134.314 0 0046.66 277.595v535.756A134.314 134.314 0 00180.6 947.289h669.74a134.36 134.36 0 00133.94-133.938V277.595a134.314 134.314 0 00-133.94-133.938zm33.473 267.877H147.126a33.145 33.145 0 01-33.473-33.473c0-18.752 14.72-33.473 33.473-33.473h736.687c18.752 0 33.472 14.72 33.472 33.473a33.145 33.145 0 01-33.472 33.473z"></path></svg><span>September 8, 2022</span><meta property="datePublished" content="2022-09-08T16:06:56.000Z"></span><!----><!----><span class="reading-time-info" aria-label="Reading Time⌛" data-balloon-pos="down" localizeddate="September 8, 2022" isoriginal="false" pageview="false"><svg xmlns="http://www.w3.org/2000/svg" class="icon timer-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="timer icon"><path d="M799.387 122.15c4.402-2.978 7.38-7.897 7.38-13.463v-1.165c0-8.933-7.38-16.312-16.312-16.312H256.33c-8.933 0-16.311 7.38-16.311 16.312v1.165c0 5.825 2.977 10.874 7.637 13.592 4.143 194.44 97.22 354.963 220.201 392.763-122.204 37.542-214.893 196.511-220.2 389.397-4.661 5.049-7.638 11.651-7.638 19.03v5.825h566.49v-5.825c0-7.379-2.849-13.981-7.509-18.9-5.049-193.016-97.867-351.985-220.2-389.527 123.24-37.67 216.446-198.453 220.588-392.892zM531.16 450.445v352.632c117.674 1.553 211.787 40.778 211.787 88.676H304.097c0-48.286 95.149-87.382 213.728-88.676V450.445c-93.077-3.107-167.901-81.297-167.901-177.093 0-8.803 6.99-15.793 15.793-15.793 8.803 0 15.794 6.99 15.794 15.793 0 80.261 63.69 145.635 142.01 145.635s142.011-65.374 142.011-145.635c0-8.803 6.99-15.793 15.794-15.793s15.793 6.99 15.793 15.793c0 95.019-73.789 172.82-165.96 177.093z"></path></svg><span>About 10 min</span><meta property="timeRequired" content="PT10M"></span></div><hr></div><div class="toc-place-holder"><aside id="toc"><div class="toc-header">On This Page</div><div class="toc-wrapper"><ul class="toc-list"><!--[--><li class="toc-item"><a aria-current="page" href="/toys/v86/docs/archlinux.html#choosing-an-installer-iso" class="router-link-active router-link-exact-active toc-link level2">Choosing an installer ISO</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/toys/v86/docs/archlinux.html#basic-installation-using-qemu" class="router-link-active router-link-exact-active toc-link level2">Basic installation using QEMU</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/toys/v86/docs/archlinux.html#scripting-image-creation-for-v86" class="router-link-active router-link-exact-active toc-link level2">Scripting image creation for v86</a></li><ul class="toc-list"><!--[--><li class="toc-item"><a aria-current="page" href="/toys/v86/docs/archlinux.html#creating-a-packer-template" class="router-link-active router-link-exact-active toc-link level3">Creating a packer template</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/toys/v86/docs/archlinux.html#creating-the-archlinux-installation-script" class="router-link-active router-link-exact-active toc-link level3">Creating the Archlinux installation script</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/toys/v86/docs/archlinux.html#creating-the-9p-filesystem" class="router-link-active router-link-exact-active toc-link level3">Creating the 9p filesystem</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/toys/v86/docs/archlinux.html#using-the-created-artifacts-in-v86" class="router-link-active router-link-exact-active toc-link level3">Using the created artifacts in v86</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/toys/v86/docs/archlinux.html#networking" class="router-link-active router-link-exact-active toc-link level3">Networking</a></li><!----><!--]--></ul><!--]--></ul></div></aside></div><!----><div class="theme-hope-content"><p>(This document partly also applies to other Linuxes)</p><h2 id="choosing-an-installer-iso" tabindex="-1"><a class="header-anchor" href="#choosing-an-installer-iso" aria-hidden="true">#</a> Choosing an installer ISO</h2><p>The last ISO installer version of Archlinux that supports 32-bit is <a href="https://www.archlinux.org/releng/releases/2017.02.01/" target="_blank" rel="noopener noreferrer">2017.02.01<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a>. Later versions of the archisos don&#39;t work on the v86 emulator because the installer only supports x86_64, not x86 anymore. For existing Archlinux installations, updates and patches will be done until somewhere around 2018.</p><p>In the future the community might come up with an alternative distribution based on Archlinux to maintain support for x86. At this point in time <a href="https://mirror.archlinux32.org" target="_blank" rel="noopener noreferrer">archlinux32<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a> seems to work.</p><h2 id="basic-installation-using-qemu" tabindex="-1"><a class="header-anchor" href="#basic-installation-using-qemu" aria-hidden="true">#</a> Basic installation using QEMU</h2><p>Installing Archlinux like this will result in a raw disk image that can be booted by v86.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># fetch archlinux32 installer</span>
+<span class="token function">wget</span> https://mirror.archlinux32.org/archisos/archlinux32-2021.12.01-i686.iso
+
+<span class="token comment"># Create a 10 gigabyte disk image. If you intend to pacstrap only &#39;base&#39; then 1.5G should be fine also.</span>
+qemu-img create arch.img 10G
+
+<span class="token comment"># Follow the normal installation process (you can add accel=kvm if your system supports it to speed up the installation)</span>
+qemu-system-x86_64 -m <span class="token number">256</span> -drive <span class="token assign-left variable">file</span><span class="token operator">=</span>arch.img,format<span class="token operator">=</span>raw -cdrom archlinux32-2021.12.01-i686.iso
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>For keyboard support it is necessary to open /etc/mkinitcpio.conf and edit the following line:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token assign-left variable">MODULES</span><span class="token operator">=</span><span class="token string">&quot;atkbd i8042&quot;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>For the changes to take effect you need to regenerate the RAMdisk with <code>mkinitcpio -p linux</code></p><p>The resulting <code>arch.img</code> is a bootable disk image for v86.</p><h2 id="scripting-image-creation-for-v86" tabindex="-1"><a class="header-anchor" href="#scripting-image-creation-for-v86" aria-hidden="true">#</a> Scripting image creation for v86</h2><p>Installing the ISO by hand takes a long time if you intend to recreate the image many times. There are various reasons why you might want to do this more than once. For example: because the emulator is slow you might want to compile any new software release in QEMU which is much faster and then use the resulting image in v86 instead of making the emulator compile the software. Another reason is that the build progress potentially takes long and if you want to do automated builds in parallel to find out what configurations do and don&#39;t work you can just throw more computing power at the problem in order to solve it. This example requires that you have <code>packer</code>, <code>qemu</code> and <code>kpartx</code> installed.</p><h3 id="creating-a-packer-template" tabindex="-1"><a class="header-anchor" href="#creating-a-packer-template" aria-hidden="true">#</a> Creating a packer template</h3><p><a href="https://www.packer.io/docs/builders/qemu.html" target="_blank" rel="noopener noreferrer">Packer<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a> is a tool that lets you boot an ISO in any of multiple emulators (so QEMU in our case) and send pre-scripted keystrokes to bootstrap and SSH server. Once the SSH connection is established a script can be started for further provisioning.</p><p>Create a template for automating the base installation</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">mkdir</span> -p packer
+<span class="token function">cat</span> <span class="token operator">&gt;</span> packer/template.json <span class="token operator">&lt;&lt;</span> <span class="token string">&#39;EOF&#39;
+{
+  &quot;provisioners&quot;: [
+    {
+      &quot;type&quot;: &quot;shell&quot;,
+      &quot;override&quot;: {
+        &quot;qemu&quot;: {
+          &quot;scripts&quot;: [&quot;scripts/provision.sh&quot;]
+        }
+      }
+    }
+  ],
+  &quot;builders&quot;: [
+    {
+      &quot;accelerator&quot;: &quot;kvm&quot;,
+      &quot;type&quot;: &quot;qemu&quot;,
+      &quot;boot_command&quot;: [
+        &quot;&lt;enter&gt;&lt;wait30&gt;&lt;enteropenssl passwd help&lt;wait10&gt;&quot;,
+        &quot;dhcpcd&lt;enter&gt;&lt;wait5&gt;&quot;,
+        &quot;echo root:root | chpasswd&lt;enter&gt;&lt;wait5&gt;&quot;,
+        &quot;systemctl start sshd&lt;enter&gt;&quot;
+      ],
+      &quot;headless&quot;: true,
+      &quot;boot_wait&quot;: &quot;10s&quot;,
+      &quot;disk_size&quot;: 1500,
+      &quot;disk_interface&quot;: &quot;ide&quot;,
+      &quot;iso_url&quot;: &quot;https://mirror.archlinux32.org/archisos/archlinux32-2021.12.01-i686.iso&quot;,
+      &quot;iso_checksum&quot;: &quot;90c6f5aecb095d5578f6c9970539da7c5e9324ec&quot;,
+      &quot;iso_checksum_type&quot;: &quot;sha1&quot;,
+      &quot;ssh_wait_timeout&quot;: &quot;120s&quot;,
+      &quot;ssh_pty&quot;: true,
+      &quot;ssh_username&quot;: &quot;root&quot;,
+      &quot;ssh_password&quot;: &quot;root&quot;,
+      &quot;ssh_port&quot;: 22,
+      &quot;format&quot;: &quot;raw&quot;,
+      &quot;vm_name&quot;: &quot;archlinux&quot;,
+      &quot;disk_detect_zeroes&quot;: &quot;unmap&quot;,
+      &quot;memory&quot;: 2048,
+      &quot;vnc_bind_address&quot;: &quot;0.0.0.0&quot;
+    }
+  ]
+}
+EOF</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>You can tweak the options a bit to match your situation. For debugging you can set <code>headless</code> to <code>false</code>. That will show you the vnc instead of running the <code>boot_command</code> in the background. For a <code>base</code> pacstrap using a 1.5G disk should be sufficient. The <code>raw</code> disk format is important. v86 does not read qcow2 images, only raw disk images. If your system does not support kvm (the default accelerator), you can change <code>&quot;accelerator&quot;: &quot;none&quot;</code> to the settings, in macos you may use <code>&quot;accelerator&quot;: &quot;hvf&quot;</code>. Other accelerator options can be found <a href="https://www.packer.io/docs/builders/qemu.html#accelerator" target="_blank" rel="noopener noreferrer">here<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a>.</p><p>After gaining SSH connectivity to the VM, packer will run the <code>scripts/provisioning.sh</code> script in the guest.</p><h3 id="creating-the-archlinux-installation-script" tabindex="-1"><a class="header-anchor" href="#creating-the-archlinux-installation-script" aria-hidden="true">#</a> Creating the Archlinux installation script</h3><p>Create a script for your Archlinux installation. This runs in the ISO booted Archlinux environment, so you need to partition, pacstrap and install a bootloader.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">mkdir</span> -p packer/scripts
+<span class="token comment">### Write your own or copy paste the example below</span>
+<span class="token function">vim</span> packer/scripts/provision.sh
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>An example script to install Archlinux with the root mounted using the 9p network filesystem:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Creating a GPT partition on /dev/sda1&quot;</span>
+<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;g<span class="token entity" title="\n">\n</span>n<span class="token entity" title="\n">\n</span><span class="token entity" title="\n">\n</span><span class="token entity" title="\n">\n</span><span class="token entity" title="\n">\n</span>w&quot;</span> <span class="token operator">|</span> <span class="token function">fdisk</span> /dev/sda
+
+<span class="token comment"># In case you might want to create a DOS partition instead. It doesn&#39;t really matter.</span>
+<span class="token comment">#echo &quot;Creating a DOS partition on /dev/sda1&quot;</span>
+<span class="token comment">#echo -e &quot;o\nn\np\n1\n\n\nw&quot; | fdisk /dev/sda</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Formatting /dev/sda1 to ext4&quot;</span>
+<span class="token function">mkfs</span> -t ext4 /dev/sda1
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Mounting new filesystem&quot;</span>
+<span class="token function">mount</span> -t ext4 /dev/sda1 /mnt
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Create pacman package cache dir&quot;</span>
+<span class="token function">mkdir</span> -p /mnt/var/cache/pacman/pkg
+
+<span class="token comment"># We don&#39;t want the pacman cache to fill up the image. After reboot whatever tarballs pacman has cached are gone.</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Mount the package cache dir in memory so it doesn&#39;t fill up the image&quot;</span>
+<span class="token function">mount</span> -t tmpfs none /mnt/var/cache/pacman/pkg
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Updating archlinux-keyring&quot;</span>
+pacman -Sy archlinux-keyring --noconfirm
+
+<span class="token comment"># uncomment to remove signing if unable to resolve signing errors</span>
+<span class="token function">sed</span> -i <span class="token string">&#39;s/SigLevel.*/SigLevel = Never/g&#39;</span> /etc/pacman.conf
+
+<span class="token comment"># Install the Archlinux base system, feel free to add packages you need here</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Performing pacstrap&quot;</span>
+pacstrap -i /mnt base linux dhcpcd <span class="token function">curl</span> openssh --noconfirm
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Writing fstab&quot;</span>
+genfstab -p /mnt <span class="token operator">&gt;&gt;</span> /mnt/etc/fstab
+
+<span class="token comment"># When the Linux boots we want it to automatically log in on tty1 as root</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Ensuring root autologin on tty1&quot;</span>
+<span class="token function">mkdir</span> -p /mnt/etc/systemd/system/getty@tty1.service.d
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&#39;EOF&#39;<span class="token bash punctuation"> <span class="token operator">&gt;</span> /mnt/etc/systemd/system/getty@tty1.service.d/override.conf</span>
+[Service]
+ExecStart=
+ExecStart=-/usr/bin/agetty --autologin root --noclear %I $TERM
+EOF</span>
+
+<span class="token comment"># This is the tricky part. The current root will be mounted on /dev/sda1 but after we reboot</span>
+<span class="token comment"># it will try to mount root during boot using the 9p network filesystem. This means the emulator</span>
+<span class="token comment"># will request all files over the network using XMLHttpRequests from the server. This is great</span>
+<span class="token comment"># because then you only need to provide the client with a saved state (the memory) and the</span>
+<span class="token comment"># session will start instantly and load needed files on the fly. This is fast and it saves bandwidth.</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Ensuring root is remounted using 9p after reboot&quot;</span>
+<span class="token function">mkdir</span> -p /mnt/etc/initcpio/hooks
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&#39;EOF&#39;<span class="token bash punctuation"> <span class="token operator">&gt;</span> /mnt/etc/initcpio/hooks/9p_root</span>
+run_hook() {
+    mount_handler=&quot;mount_9p_root&quot;
+}
+
+mount_9p_root() {
+    msg &quot;:: mounting &#39;$root&#39; on real root (9p)&quot;
+    # Note the host9p. We won&#39;t mount /dev/sda1 on root anymore,
+    # instead we mount the network filesystem and the emulator will
+    # retrieve the files on the fly.
+    if ! mount -t 9p host9p &quot;$1&quot;; then
+        echo &quot;You are now being dropped into an emergency shell.&quot;
+        launch_interactive_shell
+        msg &quot;Trying to continue (this will most likely fail) ...&quot;
+    fi
+}
+EOF</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Adding initcpio build hook for 9p root remount&quot;</span>
+<span class="token function">mkdir</span> -p /mnt/etc/initcpio/install
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&#39;EOF&#39;<span class="token bash punctuation"> <span class="token operator">&gt;</span> /mnt/etc/initcpio/install/9p_root</span>
+#!/bin/bash
+build() {
+	add_runscript
+}
+EOF</span>
+
+<span class="token comment"># We need to load some modules into the kernel for it to play nice with the emulator</span>
+<span class="token comment"># The atkbd and i8042 modules are for keyboard input in the browser. If you do not</span>
+<span class="token comment"># want to use the network filesystem you only need these. The 9p, 9pnet and 9pnet_virtio</span>
+<span class="token comment"># modules are needed for being able to mount 9p network filesystems using the emulator.</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Configure mkinitcpio for 9p&quot;</span>
+<span class="token function">sed</span> -i <span class="token string">&#39;s/MODULES=()/MODULES=(atkbd i8042 libps2 serio serio_raw psmouse virtio_pci virtio_pci_modern_dev 9p 9pnet 9pnet_virtio fscache netfs)/g&#39;</span> /mnt/etc/mkinitcpio.conf
+
+<span class="token comment"># Because we want to mount the root filesystem over the network during boot, we need to</span>
+<span class="token comment"># hook into initcpio. If you do not want to mount the root filesystem during boot but</span>
+<span class="token comment"># only want to mount a 9p filesystem later, you can leave this out. Once the system</span>
+<span class="token comment"># has been booted you should be able to mount 9p filesystems with mount -t 9p host9p /blabla</span>
+<span class="token comment"># without this hook.</span>
+<span class="token function">sed</span> -i <span class="token string">&#39;s/fsck&quot;/fsck 9p_root&quot;/g&#39;</span> /mnt/etc/mkinitcpio.conf
+
+<span class="token comment"># enable ssh password auth and root login</span>
+<span class="token function">sed</span> -i <span class="token string">&#39;s/#PermitRootLogin.*/PermitRootLogin yes/g&#39;</span> /etc/ssh/sshd_config
+<span class="token function">sed</span> -i <span class="token string">&#39;s/#PasswordAuthentication.*/PasswordAuthentication yes/g&#39;</span> /etc/ssh/sshd_config
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Writing the installation script&quot;</span>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&#39;EOF&#39;<span class="token bash punctuation"> <span class="token operator">&gt;</span> /mnt/bootstrap.sh</span>
+#!/usr/bin/bash
+echo &quot;Re-generate initial ramdisk environment&quot;
+mkinitcpio -p linux
+
+# uncomment to remove signing if you are unable to resolve signing errors otherwise
+sed -i &#39;s/SigLevel.*/SigLevel = Never/g&#39; /etc/pacman.conf
+
+pacman -S --noconfirm syslinux gptfdisk
+syslinux-install_update -i -a -m
+
+# disabling ldconfig to speed up boot (to remove Rebuild dynamic linker cache...)
+# you may want to comment this out
+echo &quot;Disabling ldconfig service&quot;
+systemctl mask ldconfig.service
+
+sync
+EOF</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Chrooting and bootstrapping the installation&quot;</span>
+arch-chroot /mnt <span class="token function">bash</span> bootstrap.sh
+
+
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&#39;EOF&#39;<span class="token bash punctuation"> <span class="token operator">&gt;</span> /mnt/boot/syslinux/syslinux.cfg</span>
+# Config file for Syslinux -
+# /boot/syslinux/syslinux.cfg
+#
+# Comboot modules:
+#   * menu.c32 - provides a text menu
+#   * vesamenu.c32 - provides a graphical menu
+#   * chain.c32 - chainload MBRs, partition boot sectors, Windows bootloaders
+#   * hdt.c32 - hardware detection tool
+#   * reboot.c32 - reboots the system
+#
+# To Use: Copy the respective files from /usr/lib/syslinux to /boot/syslinux.
+# If /usr and /boot are on the same file system, symlink the files instead
+# of copying them.
+#
+# If you do not use a menu, a &#39;boot:&#39; prompt will be shown and the system
+# will boot automatically after 5 seconds.
+#
+# Please review the wiki: https://wiki.archlinux.org/index.php/Syslinux
+# The wiki provides further configuration examples
+
+DEFAULT arch
+PROMPT 0        # Set to 1 if you always want to display the boot: prompt
+TIMEOUT 100
+
+# Menu Configuration
+# Either menu.c32 or vesamenu32.c32 must be copied to /boot/syslinux
+UI menu.c32
+#UI vesamenu.c32
+
+# Refer to http://syslinux.zytor.com/wiki/index.php/Doc/menu
+MENU TITLE Arch Linux
+#MENU BACKGROUND splash.png
+MENU COLOR border       30;44   #40ffffff #a0000000 std
+MENU COLOR title        1;36;44 #9033ccff #a0000000 std
+MENU COLOR sel          7;37;40 #e0ffffff #20ffffff all
+MENU COLOR unsel        37;44   #50ffffff #a0000000 std
+MENU COLOR help         37;40   #c0ffffff #a0000000 std
+MENU COLOR timeout_msg  37;40   #80ffffff #00000000 std
+MENU COLOR timeout      1;37;40 #c0ffffff #00000000 std
+MENU COLOR msg07        37;40   #90ffffff #a0000000 std
+MENU COLOR tabmsg       31;40   #30ffffff #00000000 std
+
+# boot sections follow
+#
+# TIP: If you want a 1024x768 framebuffer, add &quot;vga=773&quot; to your kernel line.
+#
+#-*
+
+LABEL arch
+    MENU LABEL Arch Linux 9p
+    LINUX ../vmlinuz-linux
+    APPEND root=/dev/sda1 rw quiet
+    INITRD ../initramfs-linux.img
+
+LABEL arch2
+    MENU LABEL Arch Linux Disk
+    LINUX ../vmlinuz-linux
+    APPEND root=/dev/sda1 rw quiet disablehooks=9p_root
+    INITRD ../initramfs-linux.img
+
+LABEL hdt
+        MENU LABEL HDT (Hardware Detection Tool)
+        COM32 hdt.c32
+
+LABEL reboot
+        MENU LABEL Reboot
+        COM32 reboot.c32
+
+LABEL poweroff
+        MENU LABEL Poweroff
+        COM32 poweroff.c32
+EOF</span>
+<span class="token function">umount</span> -R /mnt
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>With the packer template and the script you have enough to create an image that can be booted by v86. But because this example script installs an Archlinux that wants to mount root over the network with 9p, we need to host that filesystem first. If you do not want to use 9p, you can just run <code>(cd packer &amp;&amp; packer build -force template.json)</code> to build the image.</p><h3 id="creating-the-9p-filesystem" tabindex="-1"><a class="header-anchor" href="#creating-the-9p-filesystem" aria-hidden="true">#</a> Creating the 9p filesystem</h3><p>Now that we have an image that contains a filesystem, we can convert that filesystem into something we can host on the webserver together with the v86 library.</p><p>To do so, we need to mount the image once and create a json mapping of the filesystem. The following script shows how to map the filesystem in an automated fashion.</p><p>Create a script to builds the image and then creates v86 compatible artifacts:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">vim</span> build.sh
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>Example script:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token shebang important">#!/bin/sh</span>
+
+<span class="token assign-left variable">SRC</span><span class="token operator">=</span>packer
+<span class="token assign-left variable">TARGET</span><span class="token operator">=</span>output
+
+<span class="token comment"># build the boxfile from the iso</span>
+<span class="token punctuation">(</span>cd <span class="token variable">$SRC</span> <span class="token operator">&amp;&amp;</span> <span class="token function">sudo</span> <span class="token assign-left variable">PACKER_LOG</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">PACKER_LOG_PATH</span><span class="token operator">=</span><span class="token string">&quot;./packer.log&quot;</span> packer build -force template.json<span class="token punctuation">)</span>
+
+<span class="token comment"># test if there is a boxfile where we expected it</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">!</span> -f <span class="token variable">$SRC</span>/output-qemu/archlinux <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;Looks like something went wrong building the image, maybe try again?&quot;</span>
+    <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+<span class="token keyword">fi</span><span class="token punctuation">;</span>
+
+<span class="token comment"># clean up any previous loops and mounts</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Making sure mountpoint is empty&quot;</span>
+<span class="token assign-left variable">LOOP_DEV</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">sudo</span> losetup -f<span class="token variable">)</span></span>
+
+<span class="token function">sudo</span> <span class="token function">umount</span> diskmount -f <span class="token operator">||</span> /bin/true
+<span class="token function">sudo</span> kpartx -d <span class="token variable">$LOOP_DEV</span> <span class="token operator">||</span> /bin/true
+<span class="token function">sudo</span> losetup -d <span class="token variable">$LOOP_DEV</span> <span class="token operator">||</span> /bin/true
+
+<span class="token comment"># mount the generated raw image, we do that so we can create</span>
+<span class="token comment"># a json mapping of it and copy it to host on the webserver</span>
+<span class="token function">mkdir</span> -p diskmount
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Mounting the created image so we can convert it to a p9 image&quot;</span>
+<span class="token function">sudo</span> losetup <span class="token variable">$LOOP_DEV</span> <span class="token variable">$SRC</span>/output-qemu/archlinux
+<span class="token function">sudo</span> kpartx -a <span class="token variable">$LOOP_DEV</span>
+<span class="token function">sudo</span> <span class="token function">mount</span> /dev/mapper/<span class="token variable"><span class="token variable">$(</span><span class="token function">basename</span> $LOOP_DEV<span class="token variable">)</span></span>p1 diskmount
+
+<span class="token comment"># make images dir</span>
+<span class="token function">mkdir</span> -p <span class="token variable">$TARGET</span>
+<span class="token function">mkdir</span> -p <span class="token variable">$TARGET</span>/images
+<span class="token function">mkdir</span> -p <span class="token variable">$TARGET</span>/images/arch
+
+<span class="token comment"># map the filesystem to json with fs2json</span>
+<span class="token function">sudo</span> ./tools/fs2json.py --out <span class="token variable">$TARGET</span>/images/fs.json diskmount
+<span class="token function">sudo</span> ./tools/copy-to-sha256.py diskmount <span class="token variable">$TARGET</span>/images/arch
+
+<span class="token comment"># copy the filesystem and chown to nonroot user</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Copying the filesystem to <span class="token variable">$TARGET</span>/arch&quot;</span>
+<span class="token function">mkdir</span> <span class="token variable">$TARGET</span>/arch -p
+<span class="token function">sudo</span> <span class="token function">rsync</span> -q -av diskmount/ <span class="token variable">$TARGET</span>/arch
+<span class="token function">sudo</span> <span class="token function">chown</span> -R <span class="token variable"><span class="token variable">$(</span><span class="token function">whoami</span><span class="token variable">)</span></span><span class="token builtin class-name">:</span><span class="token variable"><span class="token variable">$(</span><span class="token function">whoami</span><span class="token variable">)</span></span> <span class="token variable">$TARGET</span>/arch
+
+<span class="token comment"># clean up mount</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Cleaning up mounts&quot;</span>
+<span class="token function">sudo</span> <span class="token function">umount</span> diskmount -f
+<span class="token function">sudo</span> kpartx -d <span class="token variable">$LOOP_DEV</span>
+<span class="token function">sudo</span> losetup -d <span class="token variable">$LOOP_DEV</span>
+
+<span class="token comment"># Move the image to the images dir</span>
+<span class="token function">sudo</span> <span class="token function">mv</span> <span class="token variable">$SRC</span>/output-qemu/archlinux <span class="token variable">$TARGET</span>/images/arch.img
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Given that the packer template and <a href="http://provision.sh" target="_blank" rel="noopener noreferrer">provision.sh<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a> is rooted at <code>packer</code> (adjust the value of <code>$SRC</code> otherwise), run the <code>build.sh</code> at root of your <code>v86</code> repo:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>chmod +x build.sh
+./build.sh
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>Generated artifacts are now available for serving from <code>output</code>.</p><h3 id="using-the-created-artifacts-in-v86" tabindex="-1"><a class="header-anchor" href="#using-the-created-artifacts-in-v86" aria-hidden="true">#</a> Using the created artifacts in v86</h3><p>Now that we have everything we need to host a server that serves an Archlinux environment over the network.</p><p>Create a checkout of v86 and run <code>make build/libv86.js</code>. We can then edit <code>examples/arch.html</code>, we have two options:</p><ol><li>Boot Arch Linux from the 9p filesystem (generated .bin artifacts at <code>/output/images/arch</code>):</li></ol><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>filesystem: <span class="token punctuation">{</span>
+  baseurl: <span class="token string">&quot;../output/images/arch/&quot;</span>,
+  basefs: <span class="token string">&quot;../output/images/fs.json&quot;</span>,
+<span class="token punctuation">}</span>,
+
+bzimage_initrd_from_filesystem: true,
+
+cmdline: <span class="token punctuation">[</span>
+  <span class="token string">&quot;rw&quot;</span>,
+  <span class="token string">&quot;root=host9p rootfstype=9p rootflags=trans=virtio,cache=loose&quot;</span>,
+<span class="token punctuation">]</span>.join<span class="token punctuation">(</span><span class="token string">&quot; &quot;</span><span class="token punctuation">)</span>,
+
+acpi: false,
+autostart: true,
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2"><li>Boot the archlinux from the qemu raw disk image:</li></ol><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>hda: <span class="token punctuation">{</span>
+    url: <span class="token string">&quot;../output/images/arch.img&quot;</span>,
+    <span class="token comment"># set to true if you want to load it asynchrously during runtime (for this option we need to run a webserver that supports the Range header)</span>
+    <span class="token comment"># NOTE: async: false is slow but proved to be more realiable</span>
+    async: false,
+
+    <span class="token comment"># This needs to be the size of the raw disk.</span>
+    size: <span class="token number">1.5</span> * <span class="token number">1024</span> * <span class="token number">1024</span> * <span class="token number">1024</span>,
+    <span class="token comment"># See the `disk_size` item in the packer template.</span>
+<span class="token punctuation">}</span>,
+
+acpi: false,
+autostart: true,
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Next, we need a webserver that supports the Range header. For example <a href="https://github.com/smgoller/rangehttpserver" target="_blank" rel="noopener noreferrer">this extension of the SimpleHTTPServer<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a>. At your <code>v86</code> root, run:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">wget</span> https://raw.githubusercontent.com/smgoller/rangehttpserver/master/RangeHTTPServer.py
+python2 RangeHTTPServer.py
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>Now that the webserver is running, point your browser to <code>http://localhost:8000/examples/arch.html</code>. Wait for the Linux to boot. When the system is up, click &#39;Save state to file&#39;. Your browser will download a <code>v86state.bin</code> file. Copy that file to <code>/your/v86/dir/images</code>. You can then edit <code>examples/arch.html</code> again and add a &#39;state&#39; key to the <code>V86Starter</code> array.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>initial_state: <span class="token punctuation">{</span>
+    <span class="token string">&quot;url&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;http://localhost:8000/images/v86state.bin&quot;</span>,
+<span class="token punctuation">}</span>,
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>If you refresh <code>http://localhost:8000/examples/arch.html</code> you will see that the state is restored instantly and all required files are loaded over the network on the fly.</p><h3 id="networking" tabindex="-1"><a class="header-anchor" href="#networking" aria-hidden="true">#</a> Networking</h3><p>The emulator can emulate a network card. For more information <a href="https://github.com/copy/v86/blob/master/docs/networking.md" target="_blank" rel="noopener noreferrer">look at the networking documentation<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a>. To set up networking in the VM, add the following item to the <code>V86Starter</code> array in the <code>examples/arch.html</code> file:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>network_relay_url: <span class="token string">&quot;ws://localhost:8080/&quot;</span>,
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>This will make the emulator try to connect to a <a href="https://github.com/benjamincburns/websockproxy" target="_blank" rel="noopener noreferrer">WebSockets proxy<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a>. Running the proxy is very easy if you use the Docker container.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">docker</span> run --privileged -p <span class="token number">8080</span>:80 --name relay bennottelling/websockproxy
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>NOTE:</strong> original <code>benjamincburns/jor1k-relay:latest</code> has throttling built-in by default which will degrade the networking. <code>bennottelling/websockproxy</code> has this throttling removed via <a href="https://github.com/benjamincburns/websockproxy/issues/4#issuecomment-317255890" target="_blank" rel="noopener noreferrer">websockproxy/issues/4#issuecomment-317255890<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a>.</p><p>You can check if the relay is running correctly by going to <code>http://localhost:8080/</code> in your browser. There you should see a message that reads <code>Can &quot;Upgrade&quot; only to &quot;Websocket&quot;.</code>.</p><p>Now you should be able to get network connectivity in the virtual machine. If you are restoring from a saved state, you might need to first run:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">ip</span> <span class="token function">link</span> <span class="token builtin class-name">set</span> enp0s5 down
+rmmod ne2k-pci
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>To bring the network up, run:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>modprobe ne2k-pci
+dhcpcd -w4 enp0s5
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>It might take a while for a carrier to become available on the interface. If the <code>dhcpcd</code> command fails shortly after booting, wait a bit and try again a bit later. If you are using the 9p network filesystem you can use the developer tools networking tab (in chrome) to get a sense of what is going on by looking at the files that are being downloaded.</p><p>When the network is up you should be able to curl a website. To check, run <code>curl icanhazip.com</code>. There you should see the public IP of the machine running the proxy.</p><p>You can&#39;t do inbound traffic into the VM with the websockproxy Docker container because it uses a basic NAT. To SSH into the VM running in the browser, you can create a reverse SSH tunnel to expose the SSH port of the sshd in the VM to the outside world. You may need to start <code>sshd</code> first, it may also be reasonable to change root password:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">passwd</span> root
+systemctl start sshd
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>then create a reverse SSH tunnel:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># This will create a port 1122 on the example.com server</span>
+<span class="token comment"># which forwards to the SSH in the VM</span>
+<span class="token function">ssh</span> root@example.com -R <span class="token number">1122</span>:localhost:22
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Now on the <code>example.com</code> server you should be able to SSH into your browser tab by running <code>ssh root@localhost -p 1122</code>.</p></div><!----><footer class="page-meta"><div class="meta-item edit-link"><a href="https://github.com/vuepress-theme-hope/vuepress-theme-hope/edit/main/demo/src/toys/v86/docs/archlinux.md" rel="noopener noreferrer" target="_blank" aria-label="Edit this page" class="nav-link label"><!--[--><svg xmlns="http://www.w3.org/2000/svg" class="icon edit-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="edit icon"><path d="M430.818 653.65a60.46 60.46 0 0 1-50.96-93.281l71.69-114.012 7.773-10.365L816.038 80.138A60.46 60.46 0 0 1 859.225 62a60.46 60.46 0 0 1 43.186 18.138l43.186 43.186a60.46 60.46 0 0 1 0 86.373L588.879 565.55l-8.637 8.637-117.466 68.234a60.46 60.46 0 0 1-31.958 11.229z"></path><path d="M728.802 962H252.891A190.883 190.883 0 0 1 62.008 771.98V296.934a190.883 190.883 0 0 1 190.883-192.61h267.754a60.46 60.46 0 0 1 0 120.92H252.891a69.962 69.962 0 0 0-69.098 69.099V771.98a69.962 69.962 0 0 0 69.098 69.098h475.911A69.962 69.962 0 0 0 797.9 771.98V503.363a60.46 60.46 0 1 1 120.922 0V771.98A190.883 190.883 0 0 1 728.802 962z"></path></svg><!--]-->Edit this page<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!----></a></div><div class="meta-item update-time"><span class="label">Last update: </span><span class="info">9/8/2022, 11:06:56 AM</span></div><div class="meta-item contributors"><span class="label">Contributors: </span><!--[--><!--[--><span class="contributor" title="email: patchshorts@gmail.com">Chris Godwin</span><!--]--><!--]--></div></footer><!----><!----><!----><!--]--></main><!--]--><footer class="footer-wrapper"><div class="footer">Default footer</div><div class="copyright">Copyright © 2022 Christopher Godwin</div></footer><!--]--></div><!--]--><!----><!--]--></div>
+    <script type="module" src="/assets/app.e6600fbb.js" defer></script>
+  </body>
+</html>
