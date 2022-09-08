@@ -1,6 +1,6 @@
 FROM node:16-alpine
 WORKDIR /app
-ADD src/* .
+ADD src/* ./
 COPY toys .
 RUN yarn global add http-server
 RUN yarn install --production
