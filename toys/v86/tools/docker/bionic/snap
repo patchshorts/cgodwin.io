@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+while ! kill -0 $(pidof snapd) 2>/dev/null; do
+  echo "Waiting for snapd to start."
+  sleep 1
+  if kill -0 $(pidof snapd) 2>/dev/null; then
+    break
+  fi
+done
