@@ -1,0 +1,10 @@
+sprintf(buffer,"**System used for compilation:\n");
+output_string(buffer);
+sprintf(buffer,"**Linux buildkitsandbox 5.10.102.1-microsoft-standard-WSL2 #1 SMP Wed Mar 2 00:3\n");
+output_string(buffer);
+sprintf(buffer,"**C compiler: gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) \n");
+output_string(buffer);
+sprintf(buffer,"**libc: libc-2.27.so\n");
+output_string(buffer);
+sprintf(buffer,"**Date of compilation: Thu Sep  8 02:31:04 UTC 2022\n");
+output_string(buffer);

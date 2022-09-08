@@ -1,0 +1,16 @@
+705281cfe9d19ed58f39f642397a6235  lib/dhcpcd/dhcpcd-hooks/01-test
+1b55442301138ed2c3a51385f4f03091  lib/dhcpcd/dhcpcd-hooks/02-dump
+c3f91d632a6561a0578b7610350d6fff  lib/dhcpcd/dhcpcd-hooks/20-resolv.conf
+772727014044e8703e04d79df635adc3  lib/dhcpcd/dhcpcd-hooks/30-hostname
+f37d8162bb1dd31afcda98ce8e5b5970  lib/dhcpcd/dhcpcd-hooks/50-ntp.conf
+234a8032f7e369415aebefbdef6aea3d  lib/dhcpcd/dhcpcd-run-hooks
+1f80fe457693e9feee9a5ae2bb1d0bff  sbin/dhcpcd5
+3f86c5aa687d7c4a53b56d1791fb9bcc  usr/share/dhcpcd/hooks/10-wpa_supplicant
+dd00d1fc995dd448a07cc4277574f93d  usr/share/dhcpcd/hooks/15-timezone
+847baffd5ac240d04b763eb554fda1f0  usr/share/dhcpcd/hooks/29-lookup-hostname
+495abdd0c2d1767fc32ddcf3371fb4bb  usr/share/doc/dhcpcd5/changelog.Debian.gz
+78fcf5bfcf409d05747e35ed8b17b16c  usr/share/doc/dhcpcd5/copyright
+04ba1ea49e84b08006e0f0eaf985f2ff  usr/share/lintian/overrides/dhcpcd5
+2b9046ae8ba2567db78e554ec70284c7  usr/share/man/man5/dhcpcd.conf.5.gz
+97063f472b02c0057db5eaeeeff02747  usr/share/man/man8/dhcpcd-run-hooks.8.gz
+26081b55a817f74fd7cd3dc58fa3d460  usr/share/man/man8/dhcpcd5.8.gz

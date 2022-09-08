@@ -1,0 +1,12 @@
+/.
+/boot
+/boot/vmlinuz-4.15.0-192-lowlatency
+/usr
+/usr/lib
+/usr/lib/linux
+/usr/lib/linux/triggers
+/usr/share
+/usr/share/doc
+/usr/share/doc/linux-image-4.15.0-192-lowlatency
+/usr/share/doc/linux-image-4.15.0-192-lowlatency/changelog.Debian.gz
+/usr/share/doc/linux-image-4.15.0-192-lowlatency/copyright

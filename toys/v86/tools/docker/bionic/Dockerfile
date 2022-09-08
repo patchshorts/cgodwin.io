@@ -68,5 +68,5 @@ RUN update-ca-certificates
 # RUN k0s install controller --single
 
 # K3S
-RUN curl -sfL https://get.k3s.io | sh -
+RUN curl -sfL https://get.k3s.io | sh - || true
 
