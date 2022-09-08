@@ -1,14 +1,3 @@
-# see #522827
-# The following override is no longer useful, since the tag has been
-# marked as non-overridable. It's also no longer needed, since
-# #553262 was implemented in lintian. Keeping this here to provide
-# a reminder of this special-case
-#no-copyright-file
-debian-changelog-file-missing-or-wrong-name
-# lintian is looking at the upstream changelog here
-syntax-error-in-debian-changelog
-# corner case; this perldoc is just a stub, not a full implementation,
-# so no point in trying to provide a manpage here.
-binary-without-manpage usr/bin/perldoc
-# not intended as a user interface
-binary-without-manpage usr/bin/cpanp-run-perl
+version https://git-lfs.github.com/spec/v1
+oid sha256:18f7ec50fa9da7a5706d5448f07b67476b9c654885a92b8939165e34e92b9ca4
+size 637

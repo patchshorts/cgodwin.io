@@ -1,28 +1,3 @@
-#!/bin/sh
-
-PROGNAME=${0##*/}
-
-die () {
-    echo "$PROGNAME: fatal error: $*" >&2
-    exit 1
-}
-
-if ! which locale >/dev/null 2>&1; then
-    die "required program \"locale\" not available"
-fi
-
-case "$(locale charmap 2>/dev/null)" in
-    KOI8-R)
-        XTERM=koi8rxterm
-        ;;
-    UTF-8)
-        XTERM=uxterm
-        ;;
-    *)
-        XTERM=xterm
-        ;;
-esac
-
-exec "$XTERM" "$@"
-
-# vim:set ai et sw=4 ts=4 tw=80:
+version https://git-lfs.github.com/spec/v1
+oid sha256:11c3ca65a185f28c07ef1fe563cd3d192718ed9e0b743e06248f5159651bfda3
+size 419

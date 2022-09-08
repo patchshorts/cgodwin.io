@@ -1,11 +1,3 @@
-/etc/init.d/procps
-/etc/sysctl.conf
-/etc/sysctl.d/10-console-messages.conf
-/etc/sysctl.d/10-ipv6-privacy.conf
-/etc/sysctl.d/10-kernel-hardening.conf
-/etc/sysctl.d/10-link-restrictions.conf
-/etc/sysctl.d/10-magic-sysrq.conf
-/etc/sysctl.d/10-network-security.conf
-/etc/sysctl.d/10-ptrace.conf
-/etc/sysctl.d/10-zeropage.conf
-/etc/sysctl.d/README
+version https://git-lfs.github.com/spec/v1
+oid sha256:05c01364b0b4d7e0af2a96436e81d63a426863d044810beb042f5d1dfb03719e
+size 343

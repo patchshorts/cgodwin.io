@@ -1,4 +1,3 @@
-86e22d191ffe9f230987f415531d6794  usr/bin/curl
-2e61937ad06d3e817d84468ca5d41261  usr/share/doc/curl/copyright
-563a09d285aedf39d48b832708134715  usr/share/man/man1/curl.1.gz
-a65206402c105310b0b8332eb8043512  usr/share/zsh/vendor-completions/_curl
+version https://git-lfs.github.com/spec/v1
+oid sha256:8989d89f4445fd2203ee18315b3ebfd69667eeb8b0dbba36f3ec93a9f482923c
+size 246

@@ -1,11 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libgdbm_compat.so.4.0.0
-/usr/share
-/usr/share/doc
-/usr/share/doc/libgdbm-compat4
-/usr/share/doc/libgdbm-compat4/copyright
-/usr/lib/i386-linux-gnu/libgdbm_compat.so.4
-/usr/share/doc/libgdbm-compat4/changelog.Debian.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:b06731dbc46bfcb557003bc0fa160399adc88320fc7a2c198fdacc20cac81c0e
+size 282

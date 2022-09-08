@@ -1,8 +1,3 @@
-b103bd62a310f5445622f8af0935b205  usr/bin/strace
-6efdfe769ed701ad6270d43eebf62acd  usr/bin/strace-log-merge
-930369b326db7a56c1ab8005c02f48fd  usr/share/doc/strace/NEWS.gz
-a333e4b8f3dcbd18005ec725c16ecb51  usr/share/doc/strace/changelog.Debian.gz
-a6ffd0ef3aa679aa14c9fed292c77bd6  usr/share/doc/strace/copyright
-d365e14dc5d46a17057bf6cf28daa65e  usr/share/doc/strace/examples/strace-graph.gz
-8338194aa18f363c299c0d2b1676d3df  usr/share/man/man1/strace-log-merge.1.gz
-0edae783cbe510a7d5094f00a8ae6bf5  usr/share/man/man1/strace.1.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:966e9a49e13aada44b7090f1f63b2c88b71bb9804081484a01d8da71a89e0ed9
+size 531

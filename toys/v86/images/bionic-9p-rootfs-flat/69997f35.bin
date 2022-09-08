@@ -1,4 +1,3 @@
-default xkb_keycodes "empty" {
-    minimum= 8;
-    maximum= 255;
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:69997f35044955d76a14361f4751a5aca361d3edca6ba2007368ee7c7e8c024f
+size 68

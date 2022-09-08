@@ -1,16 +1,3 @@
-Reporting missing or buggy detection
-
-* Wanted: Reproducers and file format description
-
-It's crucial to understand any mis-detection and being able to test
-any fix, so please provide something suitable: Attach a short
-sample, or send an information where to find it. Double-check this
-file neither contains sensitive data nor infringes a copyright.
-
-Also welcome: Pointers to documents that describe the file format.
-
-* Suggested bug severities
-
-  - Missing detection (just 'data'), or enhancements: wishlist
-  - Mis-detection: normal
-  - Overall correct detection, but with some errors: minor
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b22d304bc13e3d023a66fe4ecf91065e09d0804096ade6f907e588ac047aae0
+size 595

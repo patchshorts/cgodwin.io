@@ -1,5 +1,3 @@
-# intentional
-libpython3.6-minimal binary: python-script-but-no-python-dep
-
-# lintian omission, multiarch string is encoded in the filename
-libpython3.6-minimal binary: arch-dependent-file-not-in-arch-specific-directory
+version https://git-lfs.github.com/spec/v1
+oid sha256:09a02521eb89b5ffb45f13747fbd3809e026fbcb3f0dc94872045e190853de9d
+size 220

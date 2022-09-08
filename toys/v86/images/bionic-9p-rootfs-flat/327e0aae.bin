@@ -1,19 +1,3 @@
-#!/bin/sh
-set -e
-
-case "$1" in
-    remove|purge)
-    	# This test should be kept only for compatibility with old 
-	# locales-all packages, new ones don't use locale-archive.
-    	if ! [ -f /usr/lib/locales-all/supported.tar.lzma ] ; then
-		# If locales-all is not installed, clean the locales
-		rm -f /usr/lib/locale/locale-archive
-	fi
-	;;
-    *)
-    	;;
-esac
-
-
-
-exit 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:327e0aae9f2bd286b311e9f2ef129b516923dc9b0b40c20b52ce4e30f2577a00
+size 370

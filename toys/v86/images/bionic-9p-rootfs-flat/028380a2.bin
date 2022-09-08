@@ -1,21 +1,3 @@
-#!/usr/bin/perl
-# This file was preprocessed, do not edit!
-
-
-package Debconf::Path;
-use strict;
-use File::Spec;
-
-
-sub find {
-	my $program=shift;
-	my @path=File::Spec->path();
-	for my $dir (@path) {
-		my $file=File::Spec->catfile($dir, $program);
-		return 1 if -x $file;
-	}
-	return '';
-}
-
-
-1
+version https://git-lfs.github.com/spec/v1
+oid sha256:028380a22abab29ad18b0f4411bb3f1a1f3bf192f139ae61121393cebf5acc6e
+size 291

@@ -1,2 +1,3 @@
-b135eeda5b02c042855fb734aadf968e  usr/lib/i386-linux-gnu/libgdbm_compat.so.4.0.0
-b64e50d247fd560601aeb435003e20c4  usr/share/doc/libgdbm-compat4/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:5789bc28da06e46ea6b009438bd0e9736f1dafac08cd6c7ed75902be024f550b
+size 155

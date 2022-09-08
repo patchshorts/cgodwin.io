@@ -1,12 +1,3 @@
-/.
-/lib
-/lib/i386-linux-gnu
-/lib/i386-linux-gnu/libprocps.so.6.0.0
-/usr
-/usr/share
-/usr/share/doc
-/usr/share/doc/libprocps6
-/usr/share/doc/libprocps6/NEWS.Debian.gz
-/usr/share/doc/libprocps6/changelog.Debian.gz
-/usr/share/doc/libprocps6/copyright
-/lib/i386-linux-gnu/libprocps.so.6
+version https://git-lfs.github.com/spec/v1
+oid sha256:f0996d429a328bf11c7279714b299f9b40c8d6faac3a5b6960d2aa6524adf335
+size 282

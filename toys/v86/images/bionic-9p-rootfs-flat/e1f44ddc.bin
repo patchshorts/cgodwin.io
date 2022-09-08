@@ -1,19 +1,3 @@
-cmake_minimum_required(VERSION 2.8)
-
-project(carl9170)
-
-#if you don't want the full compiler output, remove the following line
-#set(CMAKE_VERBOSE_MAKEFILE ON)
-
-include("config.cmake")
-
-add_subdirectory(carlfw)
-
-if (CONFIG_CARL9170FW_BUILD_MINIBOOT)
-	add_subdirectory(minifw)
-endif (CONFIG_CARL9170FW_BUILD_MINIBOOT)
-
-if (CONFIG_CARL9170FW_BUILD_TOOLS)
-	add_subdirectory(tools)
-endif (CONFIG_CARL9170FW_BUILD_TOOLS)
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:e1f44ddcad490a4da6a9f8349facf6d07c5449dc7a606b411b6c8c18032d243a
+size 416

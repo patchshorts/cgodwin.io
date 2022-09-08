@@ -1,17 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libidn2.so.0.3.3
-/usr/share
-/usr/share/doc
-/usr/share/doc/libidn2-0
-/usr/share/doc/libidn2-0/AUTHORS
-/usr/share/doc/libidn2-0/NEWS.gz
-/usr/share/doc/libidn2-0/README.md.gz
-/usr/share/doc/libidn2-0/changelog.Debian.gz
-/usr/share/doc/libidn2-0/copyright
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/libidn2-0
-/usr/lib/i386-linux-gnu/libidn2.so.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:98e6d3ff0ab54ced7fef79db4a2fc190fc52b65d91743ad6a833d0a634e475f6
+size 441

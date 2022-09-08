@@ -1,26 +1,3 @@
-#!/usr/bin/perl -w
-# This file was preprocessed, do not edit!
-
-
-package Debconf::Element::Web::Password;
-use strict;
-use base qw(Debconf::Element);
-
-
-sub show {
-	my $this=shift;
-
-	$_=$this->question->extended_description;
-	s/\n/\n<br>\n/g;
-	$_.="\n<p>\n";
-
-	my $default='';
-	$default=$this->question->value if defined $this->question->value;
-	my $id=$this->id;
-	$_.="<b>".$this->question->description."</b><input type=password name=\"$id\" value=\"$default\">\n";
-
-	return $_;
-}
-
-
-1
+version https://git-lfs.github.com/spec/v1
+oid sha256:aff9175f3d6d46cd1a98d602e670d565c66005bc1e482174ca8ca75b53a40300
+size 483

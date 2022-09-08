@@ -1,16 +1,3 @@
-#! /bin/sh
-set -e
-
-mkdir -p /boot/grub
-for x in /usr/share/grub-gfxpayload-lists/blacklist/*; do
-	case $x in
-	    *~|*/\#*\#|*.dpkg-*)
-		continue
-		;;
-	esac
-	[ -e "$x" ] || continue
-	cat "$x"
-done >/boot/grub/gfxblacklist.txt.new
-mv /boot/grub/gfxblacklist.txt.new /boot/grub/gfxblacklist.txt
-
-exit 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ed3cca7f2be42aa0367bfa0122936c775e560c02c96976d7067eb0bf0ae3ab9
+size 301

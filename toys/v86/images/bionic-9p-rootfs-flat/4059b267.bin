@@ -1,14 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libroken.so.18.1.0
-/usr/share
-/usr/share/doc
-/usr/share/doc/libroken18-heimdal
-/usr/share/doc/libroken18-heimdal/changelog.Debian.gz
-/usr/share/doc/libroken18-heimdal/copyright
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/libroken18-heimdal
-/usr/lib/i386-linux-gnu/libroken.so.18
+version https://git-lfs.github.com/spec/v1
+oid sha256:4059b267ccb7f5664bebbc9a217b9e4eb78ef9c4a6160804cc53d27f579d3a7b
+size 377

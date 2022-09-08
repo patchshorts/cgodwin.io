@@ -1,1 +1,3 @@
-libheimbase 1 libheimbase1-heimdal (>= 1.4.0~git20110226.dfsg.2-1)
+version https://git-lfs.github.com/spec/v1
+oid sha256:b4b0bae104ed9e9649406b6b7bb74c33deab8d6202c8c7685d4a92fd6fbb749f
+size 67

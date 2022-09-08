@@ -1,12 +1,3 @@
-_have debconf-show &&
-_debconf_show()
-{
-        local cur
-
-        COMPREPLY=()
-        cur=${COMP_WORDS[COMP_CWORD]}
-        COMPREPLY=($( compgen -W '--listowners --listdbs --db=' -- $cur ) \
-                        $( apt-cache pkgnames -- $cur ) )
-}
-complete -F _debconf_show debconf-show
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:45a6978806b39111a579c0e7d4e85937bd6c8e20c3f6732d3ecf5fbd2344cfb0
+size 294

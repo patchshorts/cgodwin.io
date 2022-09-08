@@ -1,16 +1,3 @@
-#!/bin/sh
-
-if  test $# = 0							\
-    && test x"$LDCONFIG_NOTRIGGER" = x				\
- && test x"$DPKG_MAINTSCRIPT_PACKAGE" != x			\
- && dpkg-trigger --check-supported 2>/dev/null
-then
-	if dpkg-trigger --no-await ldconfig; then
-		if test x"$LDCONFIG_TRIGGER_DEBUG" != x; then
-			echo "ldconfig: wrapper deferring update (trigger activated)"
-		fi
-		exit 0
-	fi	
-fi
-
-exec /sbin/ldconfig.real "$@"
+version https://git-lfs.github.com/spec/v1
+oid sha256:bfd5df90c7f070feab584435f106f254ffffaa268a04de5b5c3bd61d59c092f3
+size 387

@@ -1,8 +1,3 @@
-// Allow systemd-networkd to set timezone and transient hostname
-polkit.addRule(function(action, subject) {
-    if ((action.id == "org.freedesktop.hostname1.set-hostname" ||
-         action.id == "org.freedesktop.timedate1.set-timezone") &&
-        subject.user == "systemd-network") {
-        return polkit.Result.YES;
-    }
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c00e1dde60c8738d25ade38d5e8d0ef16edc07852ca0fbbd2964094a750537c
+size 330

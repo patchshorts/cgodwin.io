@@ -1,25 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=Remount Root and Kernel File Systems
-Documentation=man:systemd-remount-fs.service(8)
-Documentation=https://www.freedesktop.org/wiki/Software/systemd/APIFileSystems
-DefaultDependencies=no
-Conflicts=shutdown.target
-After=systemd-fsck-root.service
-Before=local-fs-pre.target local-fs.target shutdown.target
-Wants=local-fs-pre.target
-ConditionPathExists=/etc/fstab
-ConditionVirtualization=!container
-
-[Service]
-Type=oneshot
-RemainAfterExit=yes
-ExecStart=/lib/systemd/systemd-remount-fs
+version https://git-lfs.github.com/spec/v1
+oid sha256:b229cbe11fdc763f095e62a66ec5db6a04e822079a58180196e110aacb4adcb1
+size 833

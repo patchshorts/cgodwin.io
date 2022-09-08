@@ -1,16 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libX11.so.6.3.0
-/usr/share
-/usr/share/doc
-/usr/share/doc/libx11-6
-/usr/share/doc/libx11-6/NEWS.Debian.gz
-/usr/share/doc/libx11-6/NEWS.gz
-/usr/share/doc/libx11-6/changelog.Debian.gz
-/usr/share/doc/libx11-6/copyright
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/libx11-6
-/usr/lib/i386-linux-gnu/libX11.so.6
+version https://git-lfs.github.com/spec/v1
+oid sha256:28238113bb8824c762355a04a33a6a0cb83032968786a8941e6680a6143ac891
+size 402

@@ -1,25 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=Create User's Volatile Files and Directories
-Documentation=man:tmpfiles.d(5) man:systemd-tmpfiles(8)
-DefaultDependencies=no
-Conflicts=shutdown.target
-Before=basic.target shutdown.target
-RefuseManualStop=yes
-
-[Service]
-Type=oneshot
-RemainAfterExit=yes
-ExecStart=/bin/systemd-tmpfiles --user --create --remove --boot
-SuccessExitStatus=65
-
-[Install]
-WantedBy=basic.target
+version https://git-lfs.github.com/spec/v1
+oid sha256:1a9fd3e2546ebef89045f34b1fd490c843d4efabecf115e2b3cfd143e74e674e
+size 720

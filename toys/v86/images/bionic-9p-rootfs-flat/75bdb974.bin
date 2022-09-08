@@ -1,14 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libheimntlm.so.0.1.0
-/usr/share
-/usr/share/doc
-/usr/share/doc/libheimntlm0-heimdal
-/usr/share/doc/libheimntlm0-heimdal/copyright
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/libheimntlm0-heimdal
-/usr/lib/i386-linux-gnu/libheimntlm.so.0
-/usr/share/doc/libheimntlm0-heimdal/changelog.Debian.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:75bdb974f7730a582e63c16e828818f82c925c097031c6b99a972468be82b597
+size 389

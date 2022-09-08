@@ -1,7 +1,3 @@
-# CATEGORY(XLC|XIM|OM)	SHARED_LIBRARY_NAME	FUNCTION_NAME
-#
-#	XI18N objects table for nokhchi-1 locale
-#
-XLC	common/xlcDef	_XlcDefaultLoader	# XLC_open
-XIM	common/ximcp	_XimOpenIM _XimRegisterIMInstantiateCallback  _XimUnRegisterIMInstantiateCallback # XIM_open	XIM_register XIM_unregister
-XOM	common/xomGeneric 	_XomGenericOpenOM	# XOM_open
+version https://git-lfs.github.com/spec/v1
+oid sha256:b849f1c3fd5c6c98700c3e11202c5bf37c63e5956532678e45336779bab75137
+size 341

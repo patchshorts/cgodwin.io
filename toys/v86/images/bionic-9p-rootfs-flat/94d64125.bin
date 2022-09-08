@@ -1,14 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libhx509.so.5.0.0
-/usr/share
-/usr/share/doc
-/usr/share/doc/libhx509-5-heimdal
-/usr/share/doc/libhx509-5-heimdal/copyright
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/libhx509-5-heimdal
-/usr/lib/i386-linux-gnu/libhx509.so.5
-/usr/share/doc/libhx509-5-heimdal/changelog.Debian.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:94d64125cb6b2e08a5e66882c9c046fccc26c5001fa8100988dbdccba8f90a8a
+size 375

@@ -1,6 +1,3 @@
-#!/bin/sh
-set -e
-# Automatically added by dh_installdeb/11.1.6ubuntu2
-dpkg-maintscript-helper rm_conffile /etc/apt/apt.conf.d/20changelog 1.2.4\~ -- "$@"
-dpkg-maintscript-helper rm_conffile /etc/cron.daily/apt 1.2.10\~ -- "$@"
-# End automatically added section
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c2ae0110f4367485c5549bfcdb819b2d4891b6db3f52d0c5c7d19772d8e91f1
+size 261

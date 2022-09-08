@@ -1,4 +1,3 @@
-9795fffe9ee5b3d031dace9d1a627944  usr/lib/i386-linux-gnu/libp11-kit.so.0.3.0
-aba661a96543a80cbbc0f39d2fff850a  usr/share/doc/libp11-kit0/changelog.Debian.gz
-7407af2ac7d0e094f9b44788efd41374  usr/share/doc/libp11-kit0/copyright
-161f8ec95326f47d853cb7c1ee76c7b8  usr/share/doc/libp11-kit0/examples/pkcs11.conf.example
+version https://git-lfs.github.com/spec/v1
+oid sha256:9528a9a7e6c7384fc61682350646120dbe5282d25205650f7a308aa6bf6ed589
+size 316

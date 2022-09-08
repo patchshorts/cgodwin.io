@@ -1,5 +1,3 @@
-57301a211aad1a6d8cecb110a024cf5a  lib/i386-linux-gnu/libjson-c.so.3.0.1
-e03b5881cdab9ea7fcd43e30fa710245  usr/share/doc/libjson-c3/README
-c2cd2445b7d70640fb856de7f15f0787  usr/share/doc/libjson-c3/README.html
-966654dbd704a4b5f45a034b80731878  usr/share/doc/libjson-c3/changelog.Debian.gz
-ccc88a203dcbaff2f99c4d46fbf36f4d  usr/share/doc/libjson-c3/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c5e4875d6a3b2df3ffbf14e9ef2395269c3253cbad87829f00ffbc09bf9af32
+size 357

@@ -1,11 +1,3 @@
-/.
-/lib
-/lib/i386-linux-gnu
-/lib/i386-linux-gnu/libattr.so.1.1.0
-/usr
-/usr/share
-/usr/share/doc
-/usr/share/doc/libattr1
-/usr/share/doc/libattr1/changelog.Debian.gz
-/usr/share/doc/libattr1/copyright
-/lib/i386-linux-gnu/libattr.so.1
+version https://git-lfs.github.com/spec/v1
+oid sha256:bc06f276905b98582039f8855efcd3d1b0efcd9828be5c6fa90f51bb975860eb
+size 231

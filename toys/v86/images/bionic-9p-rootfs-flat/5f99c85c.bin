@@ -1,4 +1,3 @@
-?package(procps):needs="text" section="Applications/System/Monitoring" \
-        title="Top" \
-		description="Display Linux tasks" \
-		command="/usr/bin/top"
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f99c85c077e5e1d2231dbd1a1764447acac574583dcc9b0dbb97505da167e0b
+size 158

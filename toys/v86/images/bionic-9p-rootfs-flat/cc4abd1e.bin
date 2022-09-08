@@ -1,9 +1,3 @@
-/etc/security/access.conf
-/etc/security/faillock.conf
-/etc/security/group.conf
-/etc/security/limits.conf
-/etc/security/namespace.conf
-/etc/security/namespace.init
-/etc/security/pam_env.conf
-/etc/security/sepermit.conf
-/etc/security/time.conf
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc4abd1ee251c114dedf1bc3980d51764920167f4cd5cfacc153cd81a3e05c7a
+size 242

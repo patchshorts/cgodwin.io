@@ -1,4 +1,3 @@
-# The description refers to the terminfo entry which is lowercase.
-ncurses-base: capitalization-error-in-description linux Linux
-# Work around FTBFS bugs #804083, #804084
-ncurses-base: package-contains-empty-directory usr/share/terminfo/
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b1c20607efe26c7da9ce8a009e3ee150a7b91c04eba38b541a21e17477fc599
+size 238

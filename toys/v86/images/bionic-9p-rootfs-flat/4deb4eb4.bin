@@ -1,24 +1,3 @@
-// Use the Scroll Lock LED to show either
-// Scroll Lock, Group, or Shift Lock state.
-
-default partial xkb_compatibility "scroll_lock" {
-    indicator "Scroll Lock" {
-	allowExplicit;
-	whichModState= Locked;
-	modifiers= ScrollLock;
-    };
-};
-
-partial xkb_compatibility "group_lock" {
-    indicator "Scroll Lock" {
-	modifiers= None;
-	groups=All-group1;
-    };
-};
-
-partial xkb_compatibility "shift_lock" {
-    indicator "Scroll Lock" {
-	whichModState= Locked;
-	modifiers= Shift;
-    };
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:4deb4eb4390d48791e27840e564b4c0737598252101063dc0a5b5471b7968da5
+size 486

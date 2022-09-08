@@ -1,4 +1,3 @@
-#define hlines2_width 1
-#define hlines2_height 2
-static char hlines2_bits[] = {
-   0x01, 0x00};
+version https://git-lfs.github.com/spec/v1
+oid sha256:2103f8511e437a309c1bdd30dfbf78cdf68acd23c2f9cf38daf91502a9644a4a
+size 96

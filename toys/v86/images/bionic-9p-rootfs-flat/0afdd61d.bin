@@ -1,27 +1,3 @@
-_isosize_module()
-{
-	local cur prev OPTS
-	COMPREPLY=()
-	cur="${COMP_WORDS[COMP_CWORD]}"
-	prev="${COMP_WORDS[COMP_CWORD-1]}"
-	case $prev in
-		'-d'|'--divisor')
-			COMPREPLY=( $(compgen -W "number" -- $cur) )
-			return 0
-			;;
-		'-h'|'--help'|'-V'|'--version')
-			return 0
-			;;
-	esac
-	case $cur in
-		-*)
-			COMPREPLY=( $(compgen -W "--divisor --sectors --help --version" -- $cur) )
-			return 0
-			;;
-	esac
-	local IFS=$'\n'
-	compopt -o filenames
-	COMPREPLY=( $(compgen -f -- $cur) )
-	return 0
-}
-complete -F _isosize_module isosize
+version https://git-lfs.github.com/spec/v1
+oid sha256:0afdd61db90044908eef15ef623eb9e6f4598cdfe581f20b1b812650d961f567
+size 529

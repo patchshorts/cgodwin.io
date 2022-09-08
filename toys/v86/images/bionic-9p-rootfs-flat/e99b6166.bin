@@ -1,20 +1,3 @@
-# This file blacklists most old-style PCI framebuffer drivers.
-
-blacklist arkfb
-blacklist aty128fb
-blacklist atyfb
-blacklist radeonfb
-blacklist cirrusfb
-blacklist cyber2000fb
-blacklist kyrofb
-blacklist matroxfb_base
-blacklist mb862xxfb
-blacklist neofb
-blacklist pm2fb
-blacklist pm3fb
-blacklist s3fb
-blacklist savagefb
-blacklist sisfb
-blacklist tdfxfb
-blacklist tridentfb
-blacklist vt8623fb
+version https://git-lfs.github.com/spec/v1
+oid sha256:e99b6166cf309aa1cbbd296d9fbf93af567148c7316c8d5d7a057cf3e85113ea
+size 390

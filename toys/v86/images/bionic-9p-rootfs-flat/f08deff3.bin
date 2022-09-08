@@ -1,16 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libutempter.so.1.1.6
-/usr/lib/i386-linux-gnu/utempter
-/usr/lib/i386-linux-gnu/utempter/utempter
-/usr/share
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/libutempter0
-/usr/share/doc
-/usr/share/doc/libutempter0
-/usr/share/doc/libutempter0/copyright
-/usr/share/doc/libutempter0/changelog.Debian.gz
-/usr/lib/i386-linux-gnu/libutempter.so.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:f08deff3ace9d5f1c5bf3f4c8a65e7d3365dba2815144c7ae4afc6db484e91b4
+size 432

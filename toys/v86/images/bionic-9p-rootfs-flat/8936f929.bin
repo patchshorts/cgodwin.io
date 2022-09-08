@@ -1,13 +1,3 @@
-package Net::FTP::E;
-
-use 5.008001;
-
-use strict;
-use warnings;
-
-use Net::FTP::I;
-
-our @ISA = qw(Net::FTP::I);
-our $VERSION = "3.10";
-
-1;
+version https://git-lfs.github.com/spec/v1
+oid sha256:8936f929f6a45814b30ecbbf47426a4ef2eb3d68b27fa5202dac3ce7a76a404c
+size 137

@@ -1,6 +1,3 @@
-e2c551c467aa1a8a46d92dbf5aaaa933  usr/share/doc/cpp/README.Debian
-6d61a7081f0f04ab074f92f3ac8592c0  usr/share/doc/cpp/changelog.Debian.gz
-cdda17f31f221cd51b47a9022d5af678  usr/share/doc/cpp/copyright
-7f6931a23815b54379ff94aae3d33080  usr/share/man/man7/fsf-funding.7gcc.gz
-04ab7aaa8286a2a537810a2b032eac56  usr/share/man/man7/gfdl.7gcc.gz
-d4c25b03566c0e43740f8acb2f72f4a0  usr/share/man/man7/gpl.7gcc.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:d48280aa06ce0aa843b8ea68ac588f0e32357e791a93b9a07ecea1ce60b2a153
+size 404

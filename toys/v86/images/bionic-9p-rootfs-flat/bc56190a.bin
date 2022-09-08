@@ -1,9 +1,3 @@
-use strict;
-# Adjust the number here!
-use Test::More tests => 2;
-
-BEGIN {
-    use_ok('Encode');
-    use_ok('Encode::$_Name_');
-}
-# Add more test here!
+version https://git-lfs.github.com/spec/v1
+oid sha256:bc56190ad7c7adf64e3ec9dee516c4fc7f632ef6aa6e2cbec3a3454231d6863e
+size 151

@@ -1,10 +1,3 @@
-libgio-2.0 0 libglib2.0-0 (>= 2.56.4)
-libglib-2.0 0 libglib2.0-0 (>= 2.56.4)
-libgmodule-2.0 0 libglib2.0-0 (>= 2.56.4)
-libgobject-2.0 0 libglib2.0-0 (>= 2.56.4)
-libgthread-2.0 0 libglib2.0-0 (>= 2.56.4)
-udeb: libgio-2.0 0 libglib2.0-udeb (>= 2.56.4)
-udeb: libglib-2.0 0 libglib2.0-udeb (>= 2.56.4)
-udeb: libgmodule-2.0 0 libglib2.0-udeb (>= 2.56.4)
-udeb: libgobject-2.0 0 libglib2.0-udeb (>= 2.56.4)
-udeb: libgthread-2.0 0 libglib2.0-udeb (>= 2.56.4)
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b0ad7ba6e98df0a766d96eeb2bfa68fabeb4082d47a746ba34aed5df5e2e7a7
+size 451

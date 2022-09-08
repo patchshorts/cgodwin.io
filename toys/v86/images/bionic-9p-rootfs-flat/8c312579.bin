@@ -1,12 +1,3 @@
-menu "Firmware Tools"
-
-config CARL9170FW_BUILD_TOOLS
-	def_bool y
-	prompt "Build Firmware Tools"
-
-config CARL9170FW_BUILD_TOOLS_CARLU
-	def_bool n
-	prompt "Build CARLU testbench"
-	depends on CARL9170FW_BUILD_TOOLS
-
-endmenu
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c312579576a4af10f4aaf3cb7c76b139e589b27f70ec1f17306e9afd7879ead
+size 221

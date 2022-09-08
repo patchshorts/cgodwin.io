@@ -1,4 +1,3 @@
-# empty
-
-# silence lintian stupidity
-binutils-i686-linux-gnu binary: spelling-error-in-binary usr/bin/as mmnemonic mnemonic
+version https://git-lfs.github.com/spec/v1
+oid sha256:64744efa37f6b059478d796ae9c70f03b4f17f7d976d19327347474f99ea2f61
+size 124

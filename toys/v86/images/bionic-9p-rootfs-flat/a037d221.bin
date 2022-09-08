@@ -1,18 +1,3 @@
-/* SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note */
-/*
- * wanrouter.h	Legacy declarations kept around until X25 is removed
- */
-
-#ifndef _ROUTER_H
-#define _ROUTER_H
-
-/* 'state' defines */
-enum wan_states
-{
-	WAN_UNCONFIGURED,	/* link/channel is not configured */
-	WAN_DISCONNECTED,	/* link/channel is disconnected */
-	WAN_CONNECTING,		/* connection is in progress */
-	WAN_CONNECTED		/* link/channel is operational */
-};
-
-#endif /* _ROUTER_H */
+version https://git-lfs.github.com/spec/v1
+oid sha256:a037d2210b8a741bf1d2e1ca075c5eddd7990563e41d3a8c880438c4cc2076c9
+size 453

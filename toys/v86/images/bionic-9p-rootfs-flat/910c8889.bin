@@ -1,8 +1,3 @@
-/usr/lib/systemd/catalog systemd/noawait
-/etc/init.d systemd/noawait
-/lib/udev/hwdb.d udev/noawait
-/usr/lib/i386-linux-gnu/gio/modules libglib2.0-0:i386/noawait
-/usr/lib/gio/modules libglib2.0-0:i386/noawait
-/usr/share/glib-2.0/schemas libglib2.0-0:i386
-/usr/lib/mime/packages mime-support/noawait
-/usr/share/applications mime-support/noawait
+version https://git-lfs.github.com/spec/v1
+oid sha256:910c88897b58714f630ee93a370b8c676baafcf497efd06624b4f5cc6230dde9
+size 343

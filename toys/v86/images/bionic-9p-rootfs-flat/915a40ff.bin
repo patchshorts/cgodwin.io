@@ -1,5 +1,3 @@
-bdc722426223d6720d61609cee2e841e  usr/lib/i386-linux-gnu/libnettle.so.6.5
-3d3ad4da508314192508d7c5249925e9  usr/share/doc/libnettle6/NEWS.gz
-003a759c72474f9a7fde5a1ac807bb70  usr/share/doc/libnettle6/README
-04d27d053cd82746bb82b61b539740ad  usr/share/doc/libnettle6/changelog.Debian.gz
-15b9f03f23d717817435070fd13171de  usr/share/doc/libnettle6/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:915a40ff9aeb8391f6b8e3239000181d1b73c46cd46633301390e70a174d22b2
+size 355

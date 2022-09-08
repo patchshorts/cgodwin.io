@@ -1,16 +1,3 @@
-/.
-/lib
-/lib/klibc-v4Tf-crw3v_1cq_YA-_Qjg5nYh0.so
-/usr
-/usr/share
-/usr/share/doc
-/usr/share/doc/libklibc
-/usr/share/doc/libklibc/README
-/usr/share/doc/libklibc/README.ipconfig.gz
-/usr/share/doc/libklibc/README.klibc
-/usr/share/doc/libklibc/README.klibc.arch
-/usr/share/doc/libklibc/changelog.Debian.gz
-/usr/share/doc/libklibc/copyright
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/libklibc
+version https://git-lfs.github.com/spec/v1
+oid sha256:95b6e44dc4c0372960a8dba5ea297d2eb1cf2de56efddf4cb82aca5e9e03af9b
+size 422

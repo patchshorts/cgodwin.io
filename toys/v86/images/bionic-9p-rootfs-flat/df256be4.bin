@@ -1,13 +1,3 @@
-csb_PL csb:pl
-en_AU en_AU:en_GB
-en_IE en_IE:en_GB
-en_NZ en_NZ:en_GB
-en_ZA en_ZA:en_GB
-fr_BE fr_BE:fr_FR
-fr_CA fr_CA:fr_FR
-fr_CH fr_CH:fr_FR
-fr_LU fr_LU:fr_FR
-it_CH it_CH:it_IT
-mai_IN mai:hi
-nds_DE nds:de
-szl_PL szl:pl
+version https://git-lfs.github.com/spec/v1
+oid sha256:df256be45479f419f5671ad5fd99a647017f31a6319b670c72fc2660d5f78c9d
+size 218

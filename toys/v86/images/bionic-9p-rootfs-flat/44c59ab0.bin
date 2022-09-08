@@ -1,6 +1,3 @@
-#autoload
-# SPDX-License-Identifier: LGPL-2.1+
-
-local -a _output_opts
-_output_opts=(short short-full short-iso short-iso-precise short-precise short-monotonic short-unix verbose export json json-pretty json-sse cat)
-_describe -t output 'output mode' _output_opts || compadd "$@"
+version https://git-lfs.github.com/spec/v1
+oid sha256:44c59ab08768633e5b276a19d6e71897cec7b396d12922346b46df38b649cf28
+size 279

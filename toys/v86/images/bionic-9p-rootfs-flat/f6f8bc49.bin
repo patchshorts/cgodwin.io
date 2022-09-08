@@ -1,1 +1,3 @@
-libgnutls 30 libgnutls30 (>= 3.5.9-0)
+version https://git-lfs.github.com/spec/v1
+oid sha256:f6f8bc494c45792ecf4bd47cddd9d017fd019f96f5f121f3381385e299af7e2c
+size 38

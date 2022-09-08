@@ -1,3 +1,3 @@
-7dee0cf8ef9199660a218efb07198963  usr/lib/i386-linux-gnu/libzstd.so.1.3.3
-52596526b9a85ce8c6ec8c9e8983b65a  usr/share/doc/libzstd1/changelog.Debian.gz
-b6dcc775bc80ce30161af05dfa60bed9  usr/share/doc/libzstd1/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:d4a425fe69af77f1cfc6afa3a51c243618c957617ccba38964026c222347791b
+size 218

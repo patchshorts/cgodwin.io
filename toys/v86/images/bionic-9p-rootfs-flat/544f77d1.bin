@@ -1,8 +1,3 @@
-prefix=/usr
-datarootdir=${prefix}/share
-datadir=${datarootdir}
-xkb_base=/usr/share/X11/xkb
-
-Name: XKeyboardConfig
-Description: X Keyboard configuration data
-Version: 2.23.1
+version https://git-lfs.github.com/spec/v1
+oid sha256:544f77d16f7f1655f9e93558728af49a81568e4dfc49c0807e4836ffe867fb2c
+size 173

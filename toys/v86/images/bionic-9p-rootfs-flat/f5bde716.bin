@@ -1,9 +1,3 @@
-require '_h2ph_pre.ph';
-
-no warnings qw(redefine misc);
-
-unless(defined(&__timer_t_defined)) {
-    eval 'sub __timer_t_defined () {1;}' unless defined(&__timer_t_defined);
-    require 'bits/types.ph';
-}
-1;
+version https://git-lfs.github.com/spec/v1
+oid sha256:f5bde716827fdf502681a66ae55bd789a2e1a6885545159a2d535f94b1beb8b8
+size 206

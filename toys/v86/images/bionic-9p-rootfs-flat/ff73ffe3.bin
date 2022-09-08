@@ -1,34 +1,3 @@
-_findfs_module()
-{
-	local cur prev OPTS findable
-	COMPREPLY=()
-	cur="${COMP_WORDS[COMP_CWORD]}"
-	prev="${COMP_WORDS[COMP_CWORD-1]}"
-	case $prev in
-		'-h'|'--help'|'-V'|'--version')
-			return 0
-			;;
-	esac
-	case $cur in
-		-*)
-			OPTS="--version --help"
-			COMPREPLY=( $(compgen -W "${OPTS[*]}" -- $cur) )
-			return 0
-			;;
-	esac
-	for i in $(lsblk -rpno label); do
-		findable+=" LABEL=$i"
-	done
-	for i in $(lsblk -rpno uuid); do
-		findable+=" UUID=$i"
-	done
-	for i in $(lsblk -rpno partlabel); do
-		findable+=" PARTLABEL=$i"
-	done
-	for i in $(lsblk -rpno partuuid); do
-		findable+=" PARTUUID=$i"
-	done
-	COMPREPLY=( $(compgen -W "$findable" -- $cur) )
-	return 0
-}
-complete -F _findfs_module findfs
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff73ffe3f15cc6ec0bfeed0a2c87b67eb1c9890ec5e7a23d18eab733d16c0df8
+size 695

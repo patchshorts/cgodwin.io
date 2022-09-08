@@ -1,31 +1,3 @@
-[Unit]
-Description=Lightweight Kubernetes
-Documentation=https://k3s.io
-Wants=network-online.target
-After=network-online.target
-
-[Install]
-WantedBy=multi-user.target
-
-[Service]
-Type=notify
-EnvironmentFile=-/etc/default/%N
-EnvironmentFile=-/etc/sysconfig/%N
-EnvironmentFile=-/etc/systemd/system/k3s.service.env
-KillMode=process
-Delegate=yes
-# Having non-zero Limit*s causes performance problems due to accounting overhead
-# in the kernel. We recommend using cgroups to do container-local accounting.
-LimitNOFILE=1048576
-LimitNPROC=infinity
-LimitCORE=infinity
-TasksMax=infinity
-TimeoutStartSec=0
-Restart=always
-RestartSec=5s
-ExecStartPre=/bin/sh -xc '! /usr/bin/systemctl is-enabled --quiet nm-cloud-setup.service'
-ExecStartPre=-/sbin/modprobe br_netfilter
-ExecStartPre=-/sbin/modprobe overlay
-ExecStart=/usr/local/bin/k3s \
-    server \
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:e846711e65b50662db45fa82f533a4033b191e5975957c2f0a22a2496b66f96d
+size 836

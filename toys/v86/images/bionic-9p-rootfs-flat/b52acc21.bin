@@ -1,29 +1,3 @@
-#!/bin/sh -e
-
-if [ "$1" = configure ]
-then
-    # The 5.6.0 packages had /usr/share/doc/perl as a symlink to
-    # perl-base, now the reverse.
-    docs=/usr/share/doc
-    if [ -L $docs/perl ] && [ ! -L $docs/perl-base ] && [ -d $docs/perl-base ]
-    then
-    rm -f $docs/perl
-    mv $docs/perl-base $docs/perl
-    ln -s perl $docs/perl-base
-    fi
-
-    # rename (and prename) is now only provided by the rename package
-    update-alternatives --remove rename /usr/bin/prename
-
-    if which dpkg-trigger >/dev/null 2>&1 && \
-       [ -n "$2" ] && \
-       dpkg --compare-versions "$2" lt 5.26.0~
-    then
-        dpkg-trigger --no-await perl-major-upgrade
-    fi
-fi
-
-dpkg-maintscript-helper rm_conffile \
-    /etc/perl/sitecustomize.pl 5.26.0~rc1-2~ perl -- "$@"
-
-exit 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:b52acc2189b2357cc18f63e9188616545d48bd2606d6fd843eeae9ffe938ff63
+size 769

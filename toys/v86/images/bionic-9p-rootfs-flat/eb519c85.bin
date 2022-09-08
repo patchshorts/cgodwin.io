@@ -1,18 +1,3 @@
-/.
-/etc
-/etc/gss
-/etc/gss/mech.d
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libgssapi_krb5.so.2.2
-/usr/share
-/usr/share/doc
-/usr/share/doc/libgssapi-krb5-2
-/usr/share/doc/libgssapi-krb5-2/copyright
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/libgssapi-krb5-2
-/usr/lib/i386-linux-gnu/libgssapi_krb5.so.2
-/usr/share/doc/libgssapi-krb5-2/NEWS.Debian.gz
-/usr/share/doc/libgssapi-krb5-2/changelog.Debian.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb519c8541b6dfa5c0b68b1ac9ae6389b0094fddb81bcdf1370e037e32c71cee
+size 454

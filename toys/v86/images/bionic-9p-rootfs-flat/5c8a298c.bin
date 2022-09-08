@@ -1,10 +1,3 @@
-#autoload
-# SPDX-License-Identifier: LGPL-2.1+
-
-_sd_unit_files() {
-    local files expl
-    files=( '*:files:->files' )
-
-    _description files expl 'unit file'
-    _files "$expl[@]" -g '*.(automount|device|mount|path|service|socket|swap|target|timer)'
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c8a298c899d264746794244edd83334a5c3fb7f18e34ac6202ea39f14dee9ea
+size 255

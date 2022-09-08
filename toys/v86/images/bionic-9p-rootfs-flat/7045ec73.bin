@@ -1,13 +1,3 @@
-require '_h2ph_pre.ph';
-
-no warnings qw(redefine misc);
-
-if(defined(&__i386__)) {
-    require 'asm/posix_types_32.ph';
-}
- elsif(defined(&__ILP32__)) {
-    require 'asm/posix_types_x32.ph';
-} else {
-    require 'asm/posix_types_64.ph';
-}
-1;
+version https://git-lfs.github.com/spec/v1
+oid sha256:7045ec732c90a900defb195c46e27caf395a01ef11db2cdf87622e40e88adfa5
+size 240

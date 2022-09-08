@@ -1,31 +1,3 @@
-package bytes;
-
-our $VERSION = '1.05';
-
-$bytes::hint_bits = 0x00000008;
-
-sub import {
-    $^H |= $bytes::hint_bits;
-}
-
-sub unimport {
-    $^H &= ~$bytes::hint_bits;
-}
-
-sub AUTOLOAD {
-    require "bytes_heavy.pl";
-    goto &$AUTOLOAD if defined &$AUTOLOAD;
-    require Carp;
-    Carp::croak("Undefined subroutine $AUTOLOAD called");
-}
-
-sub length (_);
-sub chr (_);
-sub ord (_);
-sub substr ($$;$$);
-sub index ($$;$);
-sub rindex ($$;$);
-
-1;
-__END__
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb05c506666da8af731d6470f1d5824c794461e1d5a6a4fd0ec9a78d1589e574
+size 447

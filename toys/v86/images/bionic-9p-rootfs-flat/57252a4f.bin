@@ -1,12 +1,3 @@
-/.
-/lib
-/lib/i386-linux-gnu
-/lib/i386-linux-gnu/libgpg-error.so.0.22.0
-/usr
-/usr/share
-/usr/share/doc
-/usr/share/doc/libgpg-error0
-/usr/share/doc/libgpg-error0/README.gz
-/usr/share/doc/libgpg-error0/changelog.Debian.gz
-/usr/share/doc/libgpg-error0/copyright
-/lib/i386-linux-gnu/libgpg-error.so.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:57252a4f0441ce6975a58316fba422b523d755d5f7afa7c41ac6506fe6fa18fa
+size 296

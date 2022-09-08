@@ -1,3 +1,3 @@
-c046d6841d33081cb628b38915b849dd  lib/i386-linux-gnu/libaudit.so.1.0.0
-1e7e890253072c14f42f3acb3b5d28e4  usr/share/doc/libaudit1/changelog.Debian.gz
-5952b5f296d37405c3d5cd1ef9ff18d8  usr/share/doc/libaudit1/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:406cca49e120874864049fe6d4b62151482e5c8fce4d71d009f688ddfcaca846
+size 217

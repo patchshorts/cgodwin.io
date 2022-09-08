@@ -1,26 +1,3 @@
-/.
-/etc
-/etc/kernel
-/etc/kernel/postinst.d
-/etc/kernel/postinst.d/zz-update-grub
-/etc/kernel/postrm.d
-/etc/kernel/postrm.d/zz-update-grub
-/usr
-/usr/bin
-/usr/lib
-/usr/lib/grub-legacy
-/usr/lib/grub-legacy/update-grub
-/usr/sbin
-/usr/sbin/upgrade-from-grub-legacy
-/usr/share
-/usr/share/bug
-/usr/share/bug/grub-pc
-/usr/share/bug/grub-pc/presubj
-/usr/share/bug/grub-pc/script
-/usr/share/doc
-/usr/share/man
-/usr/share/man/man8
-/usr/share/man/man8/grub-bios-setup.8.gz
-/usr/bin/grub-ntldr-img
-/usr/sbin/grub-bios-setup
-/usr/share/doc/grub-pc
+version https://git-lfs.github.com/spec/v1
+oid sha256:e81ea04100c32880ab509eeb559029f4578624fe83e867f35fdd7a13d65432d9
+size 534

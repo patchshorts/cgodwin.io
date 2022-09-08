@@ -1,14 +1,3 @@
-#! /bin/sh
-# postremoval script for apt-file
-set -e;
-
-if [ "purge" = "$1" ]; then
-	rm -fr /var/cache/apt/apt-file/
-	rm -f /var/lib/update-notifier/user.d/apt-file-update
-fi;
-
-# Automatically added by dh_installdeb/10.10.5ubuntu1
-dpkg-maintscript-helper rm_conffile /etc/bash_completion.d/apt-file 3.0\~exp -- "$@"
-dpkg-maintscript-helper rm_conffile /etc/apt/apt-file.conf 3.0\~exp -- "$@"
-# End automatically added section
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8c9d37732c865ac9607f3b148d90e0ad8b26edb78c92af545cbc7663723ddc1
+size 425

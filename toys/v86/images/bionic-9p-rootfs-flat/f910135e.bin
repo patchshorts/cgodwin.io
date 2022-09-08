@@ -1,24 +1,3 @@
-" Vim compiler file
-" Compiler:	onsgmls
-" Maintainer:	Robert Rowsome <rowsome@wam.umd.edu>
-" Last Change:	2004 Mar 27
-
-if exists("current_compiler")
-  finish
-endif
-let current_compiler = "onsgmls"
-
-if exists(":CompilerSet") != 2		" older Vim always used :setlocal
-  command -nargs=* CompilerSet setlocal <args>
-endif
-
-let s:cpo_save = &cpo
-set cpo-=C
-
-CompilerSet makeprg=onsgmls\ -s\ %
-
-CompilerSet errorformat=onsgmls:%f:%l:%c:%t:%m,
-		    \onsgmls:%f:%l:%c:%m
-
-let &cpo = s:cpo_save
-unlet s:cpo_save
+version https://git-lfs.github.com/spec/v1
+oid sha256:f910135e94c9825a0ca3babdead08fb3581060a372eb4bfed08c205c7e2428e6
+size 503

@@ -1,11 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libxcb.so.1.1.0
-/usr/share
-/usr/share/doc
-/usr/share/doc/libxcb1
-/usr/share/doc/libxcb1/changelog.Debian.gz
-/usr/share/doc/libxcb1/copyright
-/usr/lib/i386-linux-gnu/libxcb.so.1
+version https://git-lfs.github.com/spec/v1
+oid sha256:6978cac14c6460eb4683cc0f0db3ec98dc728cb008d88bfe1274840d4c313ce7
+size 242

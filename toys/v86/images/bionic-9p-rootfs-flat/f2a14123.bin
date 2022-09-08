@@ -1,30 +1,3 @@
-_more_module()
-{
-	local cur prev OPTS
-	COMPREPLY=()
-	cur="${COMP_WORDS[COMP_CWORD]}"
-	prev="${COMP_WORDS[COMP_CWORD-1]}"
-	case $prev in
-		'-V')
-			return 0
-			;;
-	esac
-	case $cur in
-		-*)
-			OPTS="-d -f -l -p -c -u -s -number -V"
-			COMPREPLY=( $(compgen -W "${OPTS[*]}" -- $cur) )
-			return 0
-			;;
-		+*)
-			OPTS="+number +/string"
-			COMPREPLY=( $(compgen -W "${OPTS[*]}" -- $cur) )
-			return 0
-			;;
-	esac
-
-	local IFS=$'\n'
-	compopt -o filenames
-	COMPREPLY=( $(compgen -f -- $cur) )
-	return 0
-}
-complete -F _more_module more
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2a14123adff1db7144fa503b2e939d9383055e7b893a7730e146dd93c328032
+size 528

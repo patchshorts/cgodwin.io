@@ -1,14 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[D-BUS Service]
-Name=org.freedesktop.network1
-Exec=/bin/false
-User=root
-SystemdService=dbus-org.freedesktop.network1.service
+version https://git-lfs.github.com/spec/v1
+oid sha256:83dfaf1996f005ac5cb059328f447dfcb7e2bdcc688ddb14310c48219422253d
+size 457

@@ -1,12 +1,3 @@
-/.
-/boot
-/boot/vmlinuz-4.15.0-192-lowlatency
-/usr
-/usr/lib
-/usr/lib/linux
-/usr/lib/linux/triggers
-/usr/share
-/usr/share/doc
-/usr/share/doc/linux-image-4.15.0-192-lowlatency
-/usr/share/doc/linux-image-4.15.0-192-lowlatency/changelog.Debian.gz
-/usr/share/doc/linux-image-4.15.0-192-lowlatency/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:da81d3330847c0b6aa5bbf62ebd8b34701b8d13ca235df168e87835b72d9371a
+size 301

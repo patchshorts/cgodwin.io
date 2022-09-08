@@ -1,16 +1,3 @@
-package CPAN::DeferredCode;
-
-use strict;
-use vars qw/$VERSION/;
-
-use overload fallback => 1, map { ($_ => 'run') } qw/
-    bool "" 0+
-/;
-
-$VERSION = "5.50";
-
-sub run {
-    $_[0]->();
-}
-
-1;
+version https://git-lfs.github.com/spec/v1
+oid sha256:543ea23c897acb50709feb425135fc294a93dff277b3b4939b7cd6e717b62ac3
+size 189

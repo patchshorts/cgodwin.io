@@ -1,18 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=/dev/initctl Compatibility Daemon
-Documentation=man:systemd-initctl.service(8)
-DefaultDependencies=no
-
-[Service]
-NotifyAccess=all
-ExecStart=/lib/systemd/systemd-initctl
-SystemCallArchitectures=native
+version https://git-lfs.github.com/spec/v1
+oid sha256:64e53c3255a975abde35385d48e2a78e536b101476807199efe6d5e688c9f12c
+size 551

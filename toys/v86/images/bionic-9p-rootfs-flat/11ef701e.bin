@@ -1,8 +1,3 @@
-#! /bin/sh
-set -e
-
-update-grub-gfxpayload
-
-
-
-exit 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:11ef701e2ccf1ea97c827b7e5209c7846e307c5521b7e74e2637e7b00281a3bd
+size 52

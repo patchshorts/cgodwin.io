@@ -1,10 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libxdo.so.3
-/usr/share
-/usr/share/doc
-/usr/share/doc/libxdo3
-/usr/share/doc/libxdo3/changelog.Debian.gz
-/usr/share/doc/libxdo3/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:91d6ea1f859bf1944d882ce578d5ca0c94d43c57931a968dd6c443df88bbb97c
+size 202

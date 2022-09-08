@@ -1,9 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libubsan.so.0.0.0
-/usr/share
-/usr/share/doc
-/usr/lib/i386-linux-gnu/libubsan.so.0
-/usr/share/doc/libubsan0
+version https://git-lfs.github.com/spec/v1
+oid sha256:dbe34676646b9e318ad01f78c325366c19fe94bf5dc970c8884aeb2e33f17bf2
+size 172

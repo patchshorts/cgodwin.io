@@ -1,17 +1,3 @@
-#!/bin/sh
-
-# Prevent recursive loops, where these values are set to this script
-p="$(which sensible-pager)"
-[ "$(which $PAGER || true)" = "$p" ] && PAGER=
-
-${PAGER:-pager} "$@"
-ret="$?"
-if [ "$ret" -eq 126 ] || [ "$ret" -eq 127 ]; then
-more "$@"
-ret="$?"
-	if [ "$ret" -eq 126 ] || [ "$ret" -eq 127 ]; then
-		echo "Couldn't find a pager!" 1>&2
-		echo "Set the \$PAGER environment variable to your desired pager." 1>&2
-		exit 1
-	fi
-fi
+version https://git-lfs.github.com/spec/v1
+oid sha256:d680dcd580a6de75907014ccffc6da77bcac70212162f85f2ea9f52f7a1538ee
+size 433

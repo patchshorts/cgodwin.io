@@ -1,7 +1,3 @@
-/.
-/usr
-/usr/share
-/usr/share/doc
-/usr/share/doc/linux-image-lowlatency
-/usr/share/doc/linux-image-lowlatency/changelog.gz
-/usr/share/doc/linux-image-lowlatency/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:0c092d5605287300b4b17b47a8de007befcbebd503044c9b3aab9eb123b88da6
+size 171

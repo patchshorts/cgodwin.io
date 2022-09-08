@@ -1,2 +1,3 @@
-ACTION!="remove", SUBSYSTEM=="input", KERNEL=="event*", SUBSYSTEMS=="platform", KERNELS=="gpio_keys.6|soc:gpio_keys", PROGRAM="/bin/cat /proc/device-tree/model", RESULT=="HP ProLiant m400 Server Cartridge", TAG+="power-switch"
-ACTION!="remove", SUBSYSTEM=="input", KERNEL=="event*", SUBSYSTEMS=="platform", KERNELS=="gpio_keys.12", ATTRS{keys}=="116", PROGRAM="/bin/cat /proc/device-tree/model", RESULT=="HP ProLiant m800 Server Cartridge", TAG+="power-switch"
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb21a846365b3a8450e801164b6818dd8b99929afad661c4311ef349edfa90aa
+size 461

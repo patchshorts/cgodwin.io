@@ -1,7 +1,3 @@
-	.globl _start
-	.type  _start, @function
-	.section ".boot", "ax"
-	_start:
-		mov.l startcode, r0
-		jmp @r0
-startcode:	.long 0x00000008
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b29a262984e4e596e0e8f3f5038b36a151541398ab1ff90b1461bd04293e8ae
+size 134

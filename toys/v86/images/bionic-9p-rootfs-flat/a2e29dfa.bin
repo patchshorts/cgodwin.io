@@ -1,10 +1,3 @@
-prefix=/usr
-exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
-includedir=${prefix}/include
-
-Name: X bitmaps
-Description: Bitmaps that are shared between X applications
-Version: 1.1.1
-Cflags: -I${includedir}
-Libs:
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2e29dfa1fbecca898111f5323b5ddf36023c579ff20702aa51635eb09d3e522
+size 211

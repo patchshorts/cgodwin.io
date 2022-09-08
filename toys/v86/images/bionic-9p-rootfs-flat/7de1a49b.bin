@@ -1,9 +1,3 @@
-/.
-/usr
-/usr/share
-/usr/share/bug
-/usr/share/bug/grub2
-/usr/share/bug/grub2/presubj
-/usr/share/bug/grub2/script
-/usr/share/doc
-/usr/share/doc/grub2
+version https://git-lfs.github.com/spec/v1
+oid sha256:7de1a49b8d884b4ac4e467c2d219b97e7a4ae986ae15344bdbbf5eeecc776bc4
+size 148

@@ -1,13 +1,3 @@
-# Configuration script for amd64-microcode version 3
-
-#
-# initramfs helper
-#
-
-#
-# Set this to "no" to disable automatic microcode updates on boot;
-# Set this to "early" to always install microcode updates to the early initramfs
-# Set this to "auto" to autodetect mode for current system (default);
-#
-#AMD64UCODE_INITRAMFS=auto
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:10fb3bfc2f6ae15152e096b89a7550bc4dd395bedff8d9e070d308e77d4adb9b
+size 328

@@ -1,10 +1,3 @@
-# CATEGORY(XLC|XIM|OM)	SHARED_LIBRARY_NAME	FUNCTION_NAME
-#
-#	XI18N objects table for ja locale
-#
-XLC	ja_JP.PCK/xlibi18n_PCK	_XlcGenericLoader	# XLC_open
-XLC	common/xlibi18n	_XlcGenericLoader	# XLC_open
-XIM	common/ximp40	_Ximp_OpenIM		# XIM_open
-XIM	common/ximlocal	_XimpLocalOpenIM	# XIM_open
-XIM	common/ximcp	_XimOpenIM _XimRegisterIMInstantiateCallback  _XimUnRegisterIMInstantiateCallback # XIM_open	XIM_regiser XIM_unregister
-XOM	common/xomGeneric	_XomGenericOpenOM # XOM_open
+version https://git-lfs.github.com/spec/v1
+oid sha256:bbfdd2a67876afd2ebf9fb7f1d89a7f5840380bdb3b78fda27356ce6617c3f51
+size 481

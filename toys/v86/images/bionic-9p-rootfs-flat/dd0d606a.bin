@@ -1,3 +1,3 @@
-/etc/default/intel-microcode
-/etc/kernel/preinst.d/intel-microcode
-/etc/modprobe.d/intel-microcode-blacklist.conf
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd0d606a26516927019acd65c594f4baa9609ece3838b7431e3716914ac80fd4
+size 114

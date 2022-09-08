@@ -1,17 +1,3 @@
-_ctrlaltdel_module()
-{
-	local cur prev
-	COMPREPLY=()
-	cur="${COMP_WORDS[COMP_CWORD]}"
-	prev="${COMP_WORDS[COMP_CWORD-1]}"
-	case $prev in
-		'-h'|'--help'|'-V'|'--version')
-			return 0
-			;;
-	esac
-	if [ $COMP_CWORD -eq 1 ]; then
-		COMPREPLY=( $(compgen -W "hard soft" -- $cur) )
-	fi
-	return 0
-}
-complete -F _ctrlaltdel_module ctrlaltdel
+version https://git-lfs.github.com/spec/v1
+oid sha256:52021091a5554e9b6275cdabbf1820ccd18eff38d8b0094284ef7fb68c38f66f
+size 335

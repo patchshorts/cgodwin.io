@@ -1,24 +1,3 @@
-_fsfreeze_module()
-{
-	local cur prev OPTS
-	COMPREPLY=()
-	cur="${COMP_WORDS[COMP_CWORD]}"
-	prev="${COMP_WORDS[COMP_CWORD-1]}"
-	case $prev in
-		'-h'|'--help'|'-V'|'--version')
-			return 0
-			;;
-	esac
-	case $cur in
-		-*)
-			OPTS="--freeze --unfreeze --help --version"
-			COMPREPLY=( $(compgen -W "${OPTS[*]}" -- $cur) )
-			return 0
-			;;
-	esac
-	local MPOINT
-	MPOINT="$(findmnt -t ext2,ext3,ext4,reiserfs,jfs,xfs -o TARGET -n -r)"
-	COMPREPLY=( $(compgen -W "$MPOINT" -- $cur) )
-	return 0
-}
-complete -F _fsfreeze_module fsfreeze
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f99f914f660697f78e57850e4e70c027e73a0aa5074a28bd3a5d25c2564b371
+size 524

@@ -1,2 +1,3 @@
-1493c37a3f23c1299039aacef3a71e0a  lib/i386-linux-gnu/libgcc_s.so.1
-f79acf8d33ea1c17cee2548b40d82ddf  usr/share/lintian/overrides/libgcc1
+version https://git-lfs.github.com/spec/v1
+oid sha256:d0102efff227a7525b2f1c5ddf48f2ff8a342efeeb5b1cf457442de1dcda9093
+size 137

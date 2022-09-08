@@ -1,11 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/liblz4.so.1.7.1
-/usr/share
-/usr/share/doc
-/usr/share/doc/liblz4-1
-/usr/share/doc/liblz4-1/changelog.Debian.gz
-/usr/share/doc/liblz4-1/copyright
-/usr/lib/i386-linux-gnu/liblz4.so.1
+version https://git-lfs.github.com/spec/v1
+oid sha256:61c866989e8adb267a2012d94cfe38373323354ef75a1bcbe7995004b56cc1af
+size 245

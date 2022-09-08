@@ -1,8 +1,3 @@
-ba501449ce845a4e2387fbc5ccc7f4d4  lib/klibc-v4Tf-crw3v_1cq_YA-_Qjg5nYh0.so
-e0b6b75d3304a519d7b3a49544df6cd1  usr/share/doc/libklibc/README
-0552369c029f6f8d42e13edb2de017e4  usr/share/doc/libklibc/README.ipconfig.gz
-2ae781d5d9b5786255f2638c230cbf56  usr/share/doc/libklibc/README.klibc
-d8c2771d33cad4ee8dd643adfd3c9228  usr/share/doc/libklibc/README.klibc.arch
-16b25ee48f2d7f73df67453ec83049b4  usr/share/doc/libklibc/changelog.Debian.gz
-5da92f0f15652351044c637f8b7d6b90  usr/share/doc/libklibc/copyright
-13fb99a59bbece1abeb255b7c4c6bf49  usr/share/lintian/overrides/libklibc
+version https://git-lfs.github.com/spec/v1
+oid sha256:711880bac9669904f14d4844e0037649d6075ab1a45a064672cdd05704cf94af
+size 575

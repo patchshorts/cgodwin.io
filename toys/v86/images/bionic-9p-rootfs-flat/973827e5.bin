@@ -1,18 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=Remote File Systems
-Documentation=man:systemd.special(7)
-After=remote-fs-pre.target
-DefaultDependencies=no
-Conflicts=shutdown.target
-
-[Install]
-WantedBy=multi-user.target
+version https://git-lfs.github.com/spec/v1
+oid sha256:973827e5659568134a123af241085373b974f211a466939b4af081ee1317cfa2
+size 522

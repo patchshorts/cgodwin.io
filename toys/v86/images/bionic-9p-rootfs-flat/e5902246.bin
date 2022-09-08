@@ -1,13 +1,3 @@
-/* SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note */
-#ifndef _CAN_VXCAN_H
-#define _CAN_VXCAN_H
-
-enum {
-	VXCAN_INFO_UNSPEC,
-	VXCAN_INFO_PEER,
-
-	__VXCAN_INFO_MAX
-#define VXCAN_INFO_MAX	(__VXCAN_INFO_MAX - 1)
-};
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:e59022462fa61c823ef2b347cf0dc49955f68a4ad2497f425e65ec8399808c1a
+size 227

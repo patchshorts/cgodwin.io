@@ -1,20 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=Cleaning Up and Shutting Down Daemons
-DefaultDependencies=no
-ConditionPathExists=/etc/initrd-release
-OnFailure=emergency.target
-OnFailureJobMode=replace-irreversibly
-After=initrd-root-fs.target initrd-fs.target initrd.target
-
-[Service]
-Type=oneshot
-ExecStart=/bin/systemctl --no-block isolate initrd-switch-root.target
+version https://git-lfs.github.com/spec/v1
+oid sha256:25fae4465d241da976bb36273016a481db2336e88d3866baa25cc41acc61ec33
+size 670

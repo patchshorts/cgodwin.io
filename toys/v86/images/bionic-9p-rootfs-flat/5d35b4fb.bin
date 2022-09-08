@@ -1,4 +1,3 @@
-+{
-   locale_version => 1.19,
-   backwards => 2,
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d35b4fbd7da8f20b2e0a5baa57ba3fe65a6a0575ab65ce77e9d384d32eba170
+size 52

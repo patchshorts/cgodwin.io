@@ -1,7 +1,3 @@
-cmake_minimum_required(VERSION 2.8)
-
-project(libcarlfw)
-
-set(carlfw_src carlfw.c)
-
-add_library( carlfw STATIC ${carlfw_src})
+version https://git-lfs.github.com/spec/v1
+oid sha256:503fef93ffa15c3e1802fc15101c53991e5a5982d0f7880550e8586d274a8c4d
+size 125

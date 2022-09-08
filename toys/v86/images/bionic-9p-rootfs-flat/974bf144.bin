@@ -1,9 +1,3 @@
-#!/bin/sh
-
-set -e
-
-if [ "$1" != "upgrade" ]; then
-	update-alternatives --remove dhcpcd /sbin/dhcpcd5
-fi
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:974bf144e9f35ace6426da57df78d601c4c2c7783afa3269c2b3a420f41af454
+size 106

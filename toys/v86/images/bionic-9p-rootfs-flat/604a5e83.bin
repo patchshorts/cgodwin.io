@@ -1,11 +1,3 @@
-#!/bin/sh
-
-# Tell grub that resume was successful
-
-case "$1" in
-	thaw)
-		[ -s /boot/grub/grubenv ] || rm -f /boot/grub/grubenv
-		mkdir -p /boot/grub
-		grub-editenv /boot/grub/grubenv unset recordfail
-		;;
-esac
+version https://git-lfs.github.com/spec/v1
+oid sha256:604a5e8373bfa19f1b28e467d4048e07315140f46d9e4e27aa15be160140e9ea
+size 210

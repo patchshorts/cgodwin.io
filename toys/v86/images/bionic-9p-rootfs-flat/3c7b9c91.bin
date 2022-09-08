@@ -1,11 +1,3 @@
-partial default alphanumeric_keys 
-xkb_symbols "basic" {
-    include "macintosh_vndr/se(basic)" // for consistent naming
-    name[Group1]= "Finland - Mac";
-};
-
-partial alphanumeric_keys 
-xkb_symbols "nodeadkeys" {
-    include "macintosh_vndr/se(basic)"	// for consistent naming
-    name[Group1]= "Finland - Mac, no dead keys";
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c7b9c91d813bb273a68921283ea6f0cedcb4cccbcd0556c63988f780bb631b5
+size 330

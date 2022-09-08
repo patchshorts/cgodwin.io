@@ -1,1 +1,3 @@
-c8fa2219e55c7ade3ae847ed8d7871b7234e928e  /boot/initrd.img-4.15.0-192-lowlatency
+version https://git-lfs.github.com/spec/v1
+oid sha256:feb72fe381a241251052cef027681ac642d9a1db96b51204ad757f06c3c5bdf2
+size 81

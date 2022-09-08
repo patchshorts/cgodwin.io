@@ -1,17 +1,3 @@
-/.
-/lib
-/lib/i386-linux-gnu
-/lib/i386-linux-gnu/libtinfo.so.5.9
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libtic.so.5.9
-/usr/share
-/usr/share/doc
-/usr/share/doc/libtinfo5
-/usr/share/doc/libtinfo5/FAQ
-/usr/share/doc/libtinfo5/TODO.Debian
-/usr/share/doc/libtinfo5/changelog.Debian.gz
-/usr/share/doc/libtinfo5/copyright
-/lib/i386-linux-gnu/libtinfo.so.5
-/usr/lib/i386-linux-gnu/libtic.so.5
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc9e85702032c8fab0100d6e8b1280c1b689c060dfc25ae51cb34ed9ccb8d984
+size 407

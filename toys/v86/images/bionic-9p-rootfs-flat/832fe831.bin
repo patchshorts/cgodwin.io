@@ -1,15 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=Rescue Mode
-Documentation=man:systemd.special(7)
-Requires=sysinit.target rescue.service
-After=sysinit.target rescue.service
-AllowIsolate=yes
+version https://git-lfs.github.com/spec/v1
+oid sha256:832fe8316cb92018636d70f6afc3ae63107064936dc71109b8bbd1ca0a5d2838
+size 492

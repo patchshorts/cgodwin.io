@@ -1,11 +1,3 @@
-/.
-/usr
-/usr/share
-/usr/share/doc
-/usr/share/doc/libxmu6
-/usr/share/doc/libxmu6/copyright
-/usr/share/doc/libxmu6/changelog.Debian.gz
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libXmu.so.6.2.0
-/usr/lib/i386-linux-gnu/libXmu.so.6
+version https://git-lfs.github.com/spec/v1
+oid sha256:af43277f467643302177efcbb3c8f5bdd648717f8923eaf19bdcdb64242f3f95
+size 242

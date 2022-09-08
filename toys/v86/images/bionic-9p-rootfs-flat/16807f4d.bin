@@ -1,35 +1,3 @@
-// JIS symbol mapping for Apple Aluminium
-// (Damien Ciabrini <damien.ciabrini@gmail.com>)
-//
-// The JIS version of the Aluminium Keyboard is made of
-//   QWERTY-like map for the latin part
-//   PC98-like map for the kana part
-//   EISU and KANA keys found on other Apple keyboards
-
-partial default alphanumeric_keys
-xkb_symbols "usmac" {
-    name[Group1]	= "Japan - Macintosh, US map";
-    include "jp(common)"
-
-    key <JPCM> { [ KP_Separator ] };
-    key <AE13> { [ yen, bar 	] };
-    replace key <AE10> { [ 0		] };
-    replace key <AB11> { [ underscore	] };
-    replace key <CAPS> { [ Caps_Lock ] };
-};
-
-partial alphanumeric_keys
-xkb_symbols "mac" {
-    name[Group1]	= "Japan - Macintosh";
-    include "jp(kana)"
-
-    replace key <CAPS> { [ Caps_Lock ] };
-};
-
-partial alphanumeric_keys
-xkb_symbols "alujiskeys" {
-    // On JIS USB keyboard, EISU and KANA replace Hangul and Hanja
-    // see keycodes macintosh(jisevdev)
-    replace key <HJCV> { [ Hiragana_Katakana ] };
-    replace key <HNGL> { [ Eisu_toggle ] };
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:16807f4d8c9cf8f78433feb043f5e6c2c74a6824b5960d47795394ed1779a6a0
+size 1021

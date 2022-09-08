@@ -1,2 +1,3 @@
-libdevmapper 1.02.1 libdevmapper1.02.1 (>= 2:1.02.145)
-udeb: libdevmapper 1.02.1 libdevmapper1.02.1-udeb (>= 2:1.02.145)
+version https://git-lfs.github.com/spec/v1
+oid sha256:3adedd052fbf0308033c00c7705a1a9b7018009913f2f67fb4342140313a4a28
+size 121

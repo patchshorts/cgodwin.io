@@ -1,12 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libbfd-2.30-system.so
-/usr/lib/i386-linux-gnu/libopcodes-2.30-system.so
-/usr/share
-/usr/share/doc
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/libbinutils
-/usr/share/doc/libbinutils
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd9415bc3994b21ce2bed2c315efe3da9e70f2b183865f955a025014d1d88ffd
+size 279

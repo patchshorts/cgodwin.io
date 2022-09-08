@@ -1,7 +1,3 @@
-+{
-   locale_version => 1.19,
-   entry => <<'ENTRY', # for DUCET v8.0.0
-05F3      ; [*02FE.001F.0002] # HEBREW PUNCTUATION GERESH
-05F4      ; [*0305.001F.0002] # HEBREW PUNCTUATION GERSHAYIM
-ENTRY
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:304640dda3f9c53a4a456a3dfc4c6a4d6bf7bf214ab1242368829510924227f4
+size 200

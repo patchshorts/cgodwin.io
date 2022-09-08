@@ -1,16 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=Suspend
-Documentation=man:systemd.special(7)
-DefaultDependencies=no
-Requires=systemd-suspend.service
-After=systemd-suspend.service
-StopWhenUnneeded=yes
+version https://git-lfs.github.com/spec/v1
+oid sha256:acec592c25438d9199a7b1180b960d98b08b711e0b95f040444cd1e892106c3e
+size 503

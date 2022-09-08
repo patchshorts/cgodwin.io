@@ -1,16 +1,3 @@
-/.
-/usr
-/usr/bin
-/usr/bin/curl
-/usr/share
-/usr/share/doc
-/usr/share/doc/curl
-/usr/share/doc/curl/copyright
-/usr/share/man
-/usr/share/man/man1
-/usr/share/man/man1/curl.1.gz
-/usr/share/zsh
-/usr/share/zsh/vendor-completions
-/usr/share/zsh/vendor-completions/_curl
-/usr/share/doc/curl/NEWS.Debian.gz
-/usr/share/doc/curl/changelog.Debian.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe5b3dafb556f6415dd7167c07c1c935377f6f7de9e202c73e731027f4dfdfd2
+size 336

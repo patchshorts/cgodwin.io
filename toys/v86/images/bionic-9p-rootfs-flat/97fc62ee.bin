@@ -1,11 +1,3 @@
-#! /bin/sh -e
-
-if [ $1 != "upgrade" ]; then
-    update-alternatives --quiet --remove cc /usr/bin/gcc
-    update-alternatives --quiet --remove c89 /usr/bin/c89-gcc
-    update-alternatives --quiet --remove c99 /usr/bin/c99-gcc
-fi
-
-
-
-exit 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:97fc62ee856340af0e5ff46e5471aaaa1165966e8b6c699f659886ee4f38c49d
+size 238

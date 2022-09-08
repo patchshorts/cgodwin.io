@@ -1,1 +1,3 @@
-libasn1 8 libasn1-8-heimdal (>= 1.4.0~git20110226.dfsg.2-1)
+version https://git-lfs.github.com/spec/v1
+oid sha256:033320fd90085728b7eacd9ca7bb3e42f0a8dfb834030fcddec45c34428b589a
+size 60

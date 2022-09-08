@@ -1,16 +1,3 @@
-/.
-/lib
-/lib/i386-linux-gnu
-/lib/i386-linux-gnu/libexpat.so.1.6.7
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libexpatw.so.1.6.7
-/usr/share
-/usr/share/doc
-/usr/share/doc/libexpat1
-/usr/share/doc/libexpat1/AUTHORS
-/usr/share/doc/libexpat1/changelog.Debian.gz
-/usr/share/doc/libexpat1/copyright
-/lib/i386-linux-gnu/libexpat.so.1
-/usr/lib/i386-linux-gnu/libexpatw.so.1
+version https://git-lfs.github.com/spec/v1
+oid sha256:50116f6ad692b6d6431635aa9f69729e96ec769847d94d77b2c548e2d3eb06c1
+size 384

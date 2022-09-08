@@ -1,22 +1,3 @@
-default  partial alphanumeric_keys
-xkb_symbols "basic" {
-
-    // Adds the macrons needed for the Maori language to
-    // a simple US keyboard layout.
-
-    include "latin"
-
-    name[Group1]="Maori";
-
-    key <AC01>  { [ a,   A,  amacron, Amacron ] };
-    key <AD03>  { [ e,   E,  emacron, Emacron ] };
-    key <AD08>  { [ i,   I,  imacron, Imacron ] };
-
-    key <AD09>  { [ o,   O,  omacron, Omacron ] };
-    key <AD07>  { [ u,   U,  umacron, Umacron ] };
-
-    key <RALT>  { type[Group1]="TWO_LEVEL",
-                  [ ISO_Level3_Shift, Multi_key ] };
-
-    modifier_map Mod5   { <RALT> };
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:a1c8ad6b8d5bd754e20ff4bd07b2d437ee4871d3bca7bebb0c3eb691c9cf37a0
+size 594

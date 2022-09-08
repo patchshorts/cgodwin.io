@@ -1,20 +1,3 @@
-#!/bin/sh
-set -e
-# Automatically added by dh_installinit/11.1.6ubuntu1
-if [ "$1" = "purge" ] ; then
-	update-rc.d grub-common remove >/dev/null
-fi
-
-
-# In case this system is running systemd, we make systemd reload the unit files
-# to pick up changes.
-if [ -d /run/systemd/system ] ; then
-	systemctl --system daemon-reload >/dev/null || true
-fi
-# End automatically added section
-# Automatically added by dh_installdeb/11.1.6ubuntu1
-dpkg-maintscript-helper rm_conffile /etc/grub.d/10_hurd 2.00-14~ -- "$@"
-# End automatically added section
-# Automatically added by dh_installdeb/11.1.6ubuntu1
-dpkg-maintscript-helper rm_conffile /etc/grub.d/10_freebsd 2.00-14~ -- "$@"
-# End automatically added section
+version https://git-lfs.github.com/spec/v1
+oid sha256:c2f53f7f9d4b6cda5307ba78e40de3809964b3ff82a9fa15e9797104f5f0d2e9
+size 700

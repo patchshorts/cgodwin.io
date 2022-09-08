@@ -1,15 +1,3 @@
-/.
-/lib
-/lib/lsb
-/lib/lsb/init-functions
-/lib/lsb/init-functions.d
-/lib/lsb/init-functions.d/20-left-info-blocks
-/lib/lsb/init-functions.d/50-ubuntu-logging
-/usr
-/usr/share
-/usr/share/doc
-/usr/share/doc/lsb-base
-/usr/share/doc/lsb-base/NEWS.Debian.gz
-/usr/share/doc/lsb-base/README.Debian.gz
-/usr/share/doc/lsb-base/changelog.gz
-/usr/share/doc/lsb-base/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:28a84cec3048396d4e5097a47ef42bf8542583664a3e4bc24c0347217d413946
+size 363

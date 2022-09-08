@@ -1,14 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libgssapi.so.3.0.0
-/usr/share
-/usr/share/doc
-/usr/share/doc/libgssapi3-heimdal
-/usr/share/doc/libgssapi3-heimdal/copyright
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/libgssapi3-heimdal
-/usr/lib/i386-linux-gnu/libgssapi.so.3
-/usr/share/doc/libgssapi3-heimdal/changelog.Debian.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb73ddc2d9fe27e9fb9754ef47a119436d80c50e095cdb8bde9ffa8cac089566
+size 377

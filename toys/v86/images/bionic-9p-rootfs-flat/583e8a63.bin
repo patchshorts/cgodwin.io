@@ -1,29 +1,3 @@
-default  partial alphanumeric_keys
-xkb_symbols "basic" {
-
-    include "rs(latin)"
-
-    name[Group1]="Slovenian";
-
-    key <TLDE> { type[Group1]="TWO_LEVEL", [ cedilla, diaeresis ] };
-};
-
-partial alphanumeric_keys
-xkb_symbols "us" {
-
-    include "rs(latinyz)"
-
-    name[Group1]= "Slovenian (US, with Slovenian letters)";
-
-    key <TLDE> { type[Group1]="TWO_LEVEL", [ cedilla, diaeresis ] };
-};
-
-partial alphanumeric_keys
-xkb_symbols "alternatequotes" {
-
-    include "rs(latinalternatequotes)"
-
-    name[Group1]= "Slovenian (with guillemets)";
-
-    key <TLDE> { type[Group1]="TWO_LEVEL", [ cedilla, diaeresis ] };
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:583e8a638a7af88108ac9311f79edd4072a477cff84acaf7a05841935c00da72
+size 615

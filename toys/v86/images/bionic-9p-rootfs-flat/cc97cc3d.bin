@@ -1,2 +1,3 @@
-libzstd 1 libzstd1
-udeb: libzstd 1 libzstd1-udeb
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc97cc3d0bcc1ded8a201de98afd47399cd16f023ba9bd8822fa4359eac33a8b
+size 49

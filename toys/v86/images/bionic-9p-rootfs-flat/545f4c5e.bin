@@ -1,10 +1,3 @@
-sprintf(buffer,"**System used for compilation:\n");
-output_string(buffer);
-sprintf(buffer,"**Linux mimi 2.0.31 #5 Thu Oct 23 10:02:08 CDT 1997 i486\n");
-output_string(buffer);
-sprintf(buffer,"**C compiler: gcc version 2.7.2.3\n");
-output_string(buffer);
-sprintf(buffer,"**libc: libc.so.5.4.38\n");
-output_string(buffer);
-sprintf(buffer,"**Date of compilation: Thu Nov 20 10:04:43 CST 1997\n");
-output_string(buffer);
+version https://git-lfs.github.com/spec/v1
+oid sha256:545f4c5e10312db1782f5a97168ba7f133c0596569b6a0774977a6b2d1254e15
+size 417

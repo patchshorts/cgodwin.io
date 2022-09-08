@@ -1,24 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=File System Check on Root Device
-Documentation=man:systemd-fsck-root.service(8)
-DefaultDependencies=no
-Wants=systemd-fsckd.socket
-Before=local-fs.target shutdown.target
-After=systemd-fsckd.socket
-ConditionPathIsReadWrite=!/
-ConditionPathExists=!/run/initramfs/fsck-root
-
-[Service]
-Type=oneshot
-RemainAfterExit=yes
-ExecStart=/lib/systemd/systemd-fsck
-TimeoutSec=0
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3c9fe7032db64313827ee1a520611b4f0e7a1ea3f3708bd3e54869d1c47953d
+size 714

@@ -1,17 +1,3 @@
-/.
-/lib
-/lib/i386-linux-gnu
-/lib/i386-linux-gnu/libncursesw.so.5.9
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libformw.so.5.9
-/usr/lib/i386-linux-gnu/libmenuw.so.5.9
-/usr/lib/i386-linux-gnu/libpanelw.so.5.9
-/usr/share
-/usr/share/doc
-/lib/i386-linux-gnu/libncursesw.so.5
-/usr/lib/i386-linux-gnu/libformw.so.5
-/usr/lib/i386-linux-gnu/libmenuw.so.5
-/usr/lib/i386-linux-gnu/libpanelw.so.5
-/usr/share/doc/libncursesw5
+version https://git-lfs.github.com/spec/v1
+oid sha256:abe35b61e261ea85eedac792c6d60573d2765fa745accdfb85f1e913b121c468
+size 432

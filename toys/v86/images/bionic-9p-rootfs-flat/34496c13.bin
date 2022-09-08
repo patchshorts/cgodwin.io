@@ -1,5 +1,3 @@
-d12ac839eab242d1e90eaaae251c31c3  usr/lib/initramfs-tools/bin/rzscontrol
-f43142123d65621fe66a903456999da4  usr/lib/initramfs-tools/bin/wait-for-root
-b7d6c3f7c2d3f6df54eda86e29937528  usr/share/doc/initramfs-tools-bin/NEWS.Debian.gz
-64834c8a9dd2cd2dc6036576a4f4c18d  usr/share/doc/initramfs-tools-bin/changelog.gz
-4fc01ee21c39633ec3547d25c2fd3a75  usr/share/doc/initramfs-tools-bin/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:34496c1304902f903f171b9e621341f8c351c3baa7f927c97391a0ccf765206e
+size 391

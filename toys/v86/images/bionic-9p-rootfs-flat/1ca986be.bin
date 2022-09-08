@@ -1,5 +1,3 @@
-695c1af3199d31e1df6be66e61532091  usr/lib/i386-linux-gnu/libnghttp2.so.14.15.2
-fa9cabdfc40bb79f8cac63ec6e564ac6  usr/share/doc/libnghttp2-14/AUTHORS
-f9260a36d5a992b79f90da7d99e04d30  usr/share/doc/libnghttp2-14/README.rst.gz
-8cc551562ebacefc79bf8b8ce6d8846c  usr/share/doc/libnghttp2-14/changelog.Debian.gz
-a1c3d5342cf319ca5bd1acac317e8148  usr/share/doc/libnghttp2-14/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ca986be5f102a4086c6755f86b18f1acfba55df9a833d68b3c5f9bc07b32042
+size 379

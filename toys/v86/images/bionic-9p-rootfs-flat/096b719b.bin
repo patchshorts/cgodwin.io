@@ -1,11 +1,3 @@
-/.
-/lib
-/lib/i386-linux-gnu
-/lib/i386-linux-gnu/libsystemd.so.0.21.0
-/usr
-/usr/share
-/usr/share/doc
-/usr/share/doc/libsystemd0
-/usr/share/doc/libsystemd0/changelog.Debian.gz
-/usr/share/doc/libsystemd0/copyright
-/lib/i386-linux-gnu/libsystemd.so.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:096b719bc075b08c4ffe4793eee3665fe138d5c3b0c51bdbde82b1ed2f815bbe
+size 247

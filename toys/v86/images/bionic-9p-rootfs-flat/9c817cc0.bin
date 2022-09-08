@@ -1,13 +1,3 @@
-require '_h2ph_pre.ph';
-
-no warnings qw(redefine misc);
-
-unless(defined(&_BITS_SS_FLAGS_H)) {
-    eval 'sub _BITS_SS_FLAGS_H () {1;}' unless defined(&_BITS_SS_FLAGS_H);
-    if(!defined (&_SIGNAL_H)  && !defined (&_SYS_UCONTEXT_H)) {
-	die("Never include this file directly.  Use <signal.h> instead");
-    }
-    eval("sub SS_ONSTACK () { 1; }") unless defined(&SS_ONSTACK);
-    eval("sub SS_DISABLE () { 2; }") unless defined(&SS_DISABLE);
-}
-1;
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c817cc083eea34485522313b613b15bc3e4359fb18829024ac9f27f37700b48
+size 443

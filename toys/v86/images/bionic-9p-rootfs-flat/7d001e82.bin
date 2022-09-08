@@ -1,28 +1,3 @@
-<?xml version="1.0"?>
-<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-<fontconfig>
-	<alias>
-		<family>serif</family>
-		<prefer>
-			<family>FreeSerif</family>
-			<family>Code2000</family>
-			<family>Code2001</family> <!-- plane1 and beyond -->
-		</prefer>
-	</alias>
-	<alias>
-		<family>sans-serif</family>
-		<prefer>
-			<family>FreeSans</family>
-			<family>Arial Unicode MS</family>
-			<family>Arial Unicode</family>
-			<family>Code2000</family> <!-- almost everything; serif actually -->
-			<family>Code2001</family> <!-- plane1 and beyond -->
-		</prefer>
-	</alias>
-	<alias>
-		<family>monospace</family>
-		<prefer>
-			<family>FreeMono</family>
-		</prefer>
-	</alias>
-</fontconfig>
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d001e8289d1af7a0f095b3c5646347a68c6586b989312ffa3059f92213678e5
+size 672

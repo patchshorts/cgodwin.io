@@ -1,24 +1,3 @@
-package utf8;
-
-$utf8::hint_bits = 0x00800000;
-
-our $VERSION = '1.19';
-
-sub import {
-    $^H |= $utf8::hint_bits;
-}
-
-sub unimport {
-    $^H &= ~$utf8::hint_bits;
-}
-
-sub AUTOLOAD {
-    require "utf8_heavy.pl";
-    goto &$AUTOLOAD if defined &$AUTOLOAD;
-    require Carp;
-    Carp::croak("Undefined subroutine $AUTOLOAD called");
-}
-
-1;
-__END__
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:f206b889aca0a761b973cb3dc58763c2863f3b9429f47164d1dd57f3d041d088
+size 342

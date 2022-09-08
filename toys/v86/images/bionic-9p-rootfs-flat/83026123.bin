@@ -1,10 +1,3 @@
-Document: findutils
-Title: findutils
-Abstract: utilities for finding files--find, xargs, and locate
- These utilities find files meeting specified criteria and perform
- various actions on the files which are found.
-Section: File Management
-
-Format: info
-Index: /usr/share/info/find.info.gz
-Files: /usr/share/info/find.info*
+version https://git-lfs.github.com/spec/v1
+oid sha256:83026123456c2f7c1cc44196701180752a65423ade28344ef277cf577b12faa6
+size 323

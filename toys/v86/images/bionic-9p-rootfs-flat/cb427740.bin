@@ -1,12 +1,3 @@
-require '_h2ph_pre.ph';
-
-no warnings qw(redefine misc);
-
-unless(defined(&_LINUX_POSIX_TYPES_H)) {
-    eval 'sub _LINUX_POSIX_TYPES_H () {1;}' unless defined(&_LINUX_POSIX_TYPES_H);
-    require 'linux/stddef.ph';
-    undef(&__FD_SETSIZE) if defined(&__FD_SETSIZE);
-    eval 'sub __FD_SETSIZE () {1024;}' unless defined(&__FD_SETSIZE);
-    require 'asm/posix_types.ph';
-}
-1;
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb427740bd1f65399fcd162e281dcca8f995020811ed8442850a006396233fa7
+size 373

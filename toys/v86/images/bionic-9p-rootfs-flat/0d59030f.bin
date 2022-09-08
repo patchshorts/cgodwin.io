@@ -1,9 +1,3 @@
-# $Id: Xsession.options 189 2005-06-11 00:04:27Z branden $
-#
-# configuration options for /etc/X11/Xsession
-# See Xsession.options(5) for an explanation of the available options.
-allow-failsafe
-allow-user-resources
-allow-user-xsession
-use-ssh-agent
-use-session-dbus
+version https://git-lfs.github.com/spec/v1
+oid sha256:0d59030f6d7a466ba62f301ff970ebda039cc9eac8ed9045dcf570460d41fb64
+size 265

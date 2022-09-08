@@ -1,4 +1,3 @@
-982021ad868139158a1a53267b2b57f6  lib/i386-linux-gnu/libcryptsetup.so.12.2.0
-56550cb787157aa4e1cdd13bd7d6228b  usr/share/doc/libcryptsetup12/NEWS.Debian.gz
-cf92a44fed690e468ab1d65d04c692a2  usr/share/doc/libcryptsetup12/changelog.Debian.gz
-cf8a17d11a6e9763858630bacfda07f5  usr/share/doc/libcryptsetup12/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:0d31898739222dc8f1bb3c898457855e266a843f399fdc5dac3070060b7f222f
+size 314

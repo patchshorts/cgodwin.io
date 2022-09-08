@@ -1,11 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libffi.so.6.0.4
-/usr/share
-/usr/share/doc
-/usr/share/doc/libffi6
-/usr/share/doc/libffi6/changelog.Debian.gz
-/usr/share/doc/libffi6/copyright
-/usr/lib/i386-linux-gnu/libffi.so.6
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e3bfcac0d824e02917f6b6995aabbf6fef288cf05535c571507181212f9d0f4
+size 242

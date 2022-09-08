@@ -1,18 +1,3 @@
-/.
-/usr
-/usr/share
-/usr/share/man
-/usr/share/man/man8
-/usr/share/man/man8/update-grub-gfxpayload.8.gz
-/usr/share/grub-gfxpayload-lists
-/usr/share/grub-gfxpayload-lists/blacklist
-/usr/share/grub-gfxpayload-lists/blacklist/20_radeon_hd6800
-/usr/share/grub-gfxpayload-lists/blacklist/00_header
-/usr/share/grub-gfxpayload-lists/blacklist/10_vmware
-/usr/share/grub-gfxpayload-lists/blacklist/11_virtualbox
-/usr/share/doc
-/usr/share/doc/grub-gfxpayload-lists
-/usr/share/doc/grub-gfxpayload-lists/changelog.gz
-/usr/share/doc/grub-gfxpayload-lists/copyright
-/usr/sbin
-/usr/sbin/update-grub-gfxpayload
+version https://git-lfs.github.com/spec/v1
+oid sha256:1357e9ac13400cc26408d12073409f8ae29ae5d6f3c6680c20fb24b38051d583
+size 593

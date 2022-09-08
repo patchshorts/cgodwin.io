@@ -1,4 +1,3 @@
-[Allow systemd-networkd to set timezone and transient hostname]
-Identity=unix-user:systemd-network
-Action=org.freedesktop.hostname1.set-hostname;org.freedesktop.timedate1.set-timezone;
-ResultAny=yes
+version https://git-lfs.github.com/spec/v1
+oid sha256:ffcf594fceb2b0412b0e8449050910b126be5d09396a1deda575d65c9aa514c7
+size 199

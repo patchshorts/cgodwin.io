@@ -1,1 +1,3 @@
-libwind 0 libwind0-heimdal (>= 1.4.0~git20110226.dfsg.1-1)
+version https://git-lfs.github.com/spec/v1
+oid sha256:b401153e0c52a166371e10a55457dd36e1afd24441eec234290910a960652642
+size 59

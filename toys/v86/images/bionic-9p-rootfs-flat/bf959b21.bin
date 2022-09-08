@@ -1,29 +1,3 @@
-# -*- Mode: cperl; coding: utf-8; cperl-indent-level: 4 -*-
-# vim: ts=4 sts=4 sw=4:
-package CPAN::Prompt;
-use overload '""' => "as_string";
-use vars qw($prompt);
-use vars qw(
-            $VERSION
-);
-$VERSION = "5.5";
-
-
-$prompt = "cpan> ";
-$CPAN::CurrentCommandId ||= 0;
-sub new {
-    bless {}, shift;
-}
-sub as_string {
-    my $word = "cpan";
-    unless ($CPAN::META->{LOCK}) {
-        $word = "nolock_cpan";
-    }
-    if ($CPAN::Config->{commandnumber_in_prompt}) {
-        sprintf "$word\[%d]> ", $CPAN::CurrentCommandId;
-    } else {
-        "$word> ";
-    }
-}
-
-1;
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf959b215b569d64db3b1d30da2961f1af8fa13b7401bd6ad1a259b7a3598f93
+size 567

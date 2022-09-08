@@ -1,16 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-# This exists mostly for compatibility with SysV/LSB units, and
-# implementations lacking socket/bus activation.
-
-[Unit]
-Description=RPC Port Mapper
-Documentation=man:systemd.special(7)
-RefuseManualStart=yes
+version https://git-lfs.github.com/spec/v1
+oid sha256:388f84fc7df2658eb221c1d076a62beb6c2061b80b061e1e36eb98c717ee3ff7
+size 540

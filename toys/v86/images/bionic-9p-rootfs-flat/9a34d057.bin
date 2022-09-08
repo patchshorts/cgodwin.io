@@ -1,12 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libcurl.so.4.5.0
-/usr/share
-/usr/share/doc
-/usr/share/doc/libcurl4
-/usr/share/doc/libcurl4/NEWS.Debian.gz
-/usr/share/doc/libcurl4/changelog.Debian.gz
-/usr/share/doc/libcurl4/copyright
-/usr/lib/i386-linux-gnu/libcurl.so.4
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a34d057c0337dce6d5c8a361e3d0912dfc02c64e64d6d59d991581f7269e20c
+size 286

@@ -1,30 +1,3 @@
-#
-
-package IO;
-
-use XSLoader ();
-use Carp;
-use strict;
-use warnings;
-
-our $VERSION = "1.38";
-XSLoader::load 'IO', $VERSION;
-
-sub import {
-    shift;
-
-    warnings::warnif('deprecated', qq{Parameterless "use IO" deprecated})
-        if @_ == 0 ;
-    
-    my @l = @_ ? @_ : qw(Handle Seekable File Pipe Socket Dir);
-
-    local @INC = @INC;
-    pop @INC if $INC[-1] eq '.';
-    eval join("", map { "require IO::" . (/(\w+)/)[0] . ";\n" } @l)
-	or croak $@;
-}
-
-1;
-
-__END__
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf096efb95d070b07609a1258b431a55fda71c6e6f21329a7be1a6117c6aeb4c
+size 469

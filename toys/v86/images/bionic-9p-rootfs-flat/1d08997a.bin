@@ -1,9 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libgomp.so.1.0.0
-/usr/share
-/usr/share/doc
-/usr/lib/i386-linux-gnu/libgomp.so.1
-/usr/share/doc/libgomp1
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d08997a7d7139e2ed4f55e65b5b2636b96c9bc5fa2022f65253ad85441676d7
+size 169

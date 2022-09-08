@@ -4,6 +4,7 @@ yarn.lock
 *.save
 *lock.json
 *lock.yaml
+toys/v86/images/*.tar
 
 # Logs
 logs

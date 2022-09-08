@@ -1,2 +1,3 @@
-bf4ecd5f6536cd8fdefaf0502e73badd  usr/lib/i386-linux-gnu/libpython3.6m.so.1.0
-c154e42fe43b71dd4f583eb325894750  usr/share/lintian/overrides/libpython3.6
+version https://git-lfs.github.com/spec/v1
+oid sha256:892768f2da475d5bbbe2064ec3475896ac8fd55e4729b65594c48e188d7543ec
+size 153

@@ -1,11 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libXt.so.6.0.0
-/usr/share
-/usr/share/doc
-/usr/share/doc/libxt6
-/usr/share/doc/libxt6/changelog.Debian.gz
-/usr/share/doc/libxt6/copyright
-/usr/lib/i386-linux-gnu/libXt.so.6
+version https://git-lfs.github.com/spec/v1
+oid sha256:215a35caa894795b4ef7bd7928eec8144f0de8703e499117a04958286859a2bb
+size 237

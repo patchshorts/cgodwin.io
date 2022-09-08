@@ -1,15 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=System Initialization
-Documentation=man:systemd.special(7)
-Conflicts=emergency.service emergency.target
-Wants=local-fs.target swap.target
-After=local-fs.target swap.target emergency.service emergency.target
+version https://git-lfs.github.com/spec/v1
+oid sha256:f7526dec8fc845658e8d743c9659f8e37f439913acefa0b6671bb97ad4f41691
+size 558

@@ -1,10 +1,3 @@
-/.
-/lib
-/lib/i386-linux-gnu
-/lib/i386-linux-gnu/libdevmapper.so.1.02.1
-/usr
-/usr/share
-/usr/share/doc
-/usr/share/doc/libdevmapper1.02.1
-/usr/share/doc/libdevmapper1.02.1/changelog.Debian.gz
-/usr/share/doc/libdevmapper1.02.1/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:86eefcc5bce7963dfed40bc279b9ea0be3a9d76c3d0457695cde6cadb426db72
+size 234

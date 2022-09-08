@@ -1,18 +1,3 @@
-/.
-/usr
-/usr/bin
-/usr/bin/file
-/usr/share
-/usr/share/bug
-/usr/share/bug/file
-/usr/share/bug/file/control
-/usr/share/bug/file/presubj
-/usr/share/doc
-/usr/share/doc/file
-/usr/share/doc/file/README.Debian
-/usr/share/doc/file/README.gz
-/usr/share/doc/file/copyright
-/usr/share/man
-/usr/share/man/man1
-/usr/share/man/man1/file.1.gz
-/usr/share/doc/file/changelog.Debian.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:26a61cd107048d9928e49d03a80d1011c2eeea8cc03f7be1b4a6294b196009ad
+size 367

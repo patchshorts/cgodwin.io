@@ -1,15 +1,3 @@
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=fsck to fsckd communication Socket
-Documentation=man:systemd-fsckd.service(8) man:systemd-fsck@.service(8) man:systemd-fsck-root.service(8)
-DefaultDependencies=no
-
-[Socket]
-ListenStream=/run/systemd/fsck.progress
-SocketMode=0600
+version https://git-lfs.github.com/spec/v1
+oid sha256:5cbce5a8b5f9391f0d774e259e90408459a2a66e82b99dd33ad9bdb52087bf49
+size 540

@@ -1,20 +1,3 @@
-#!/usr/bin/perl -w
-# This file was preprocessed, do not edit!
-
-
-package Debconf::Element;
-use strict;
-use base qw(Debconf::Base);
-
-
-sub visible {
-	my $this=shift;
-	
-	return 1;
-}
-
-
-sub show {}
-
-
-1
+version https://git-lfs.github.com/spec/v1
+oid sha256:00c10272de11fd0ddfbacf752982b22623e629b9d796533c95d586d858ce2c39
+size 196

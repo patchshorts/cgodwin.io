@@ -1,9 +1,3 @@
-Document: xterm-ctlseqs
-Title: Xterm Control Sequences
-Author: Edward Moy, Stephen Gildea, Thomas Dickey
-Abstract: This document describes the terminal control sequences that XTerm
- recognizes.
-Section: Terminal Emulators
-
-Format: text
-Files: /usr/share/doc/xterm/ctlseqs.txt.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d5f53931df5b7dcf8d036c4096fb05a1b19054b18ded7748059d4444ca2a7f7
+size 279

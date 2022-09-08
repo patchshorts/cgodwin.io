@@ -1,2 +1,3 @@
-libcom_err 2 libcom-err2
-udeb: libcom_err 2 e2fsprogs-udeb
+version https://git-lfs.github.com/spec/v1
+oid sha256:a34541a73f4e57f39fd5ec055002d6bd461da6dbe69156d43c9d61318d2677cd
+size 59

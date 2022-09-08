@@ -1,13 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libfontconfig.so.1.10.1
-/usr/share
-/usr/share/doc
-/usr/share/doc/libfontconfig1
-/usr/share/doc/libfontconfig1/AUTHORS
-/usr/share/doc/libfontconfig1/README.gz
-/usr/share/doc/libfontconfig1/changelog.Debian.gz
-/usr/share/doc/libfontconfig1/copyright
-/usr/lib/i386-linux-gnu/libfontconfig.so.1
+version https://git-lfs.github.com/spec/v1
+oid sha256:63101aef229a04340432a5291d139461ee472a252e196c8bbbd13fc6083f48ca
+size 356

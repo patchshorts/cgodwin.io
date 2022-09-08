@@ -1,13 +1,3 @@
-#! /bin/sh -e
-
-install_from_default() {
-  if [ ! -f $2 ]; then
-    cp -p $1 $2
-  fi
-}
-
-if [ "$1" = "configure" ] && [ "$2" = "" ]; then
-  install_from_default /usr/share/readline/inputrc /etc/inputrc
-fi
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:94506bc8b626670c34c3f328df3615033b8520e4b686e3a9e74814bf0219aee1
+size 205

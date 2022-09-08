@@ -1,2 +1,3 @@
-/etc/default/amd64-microcode
-/etc/modprobe.d/amd64-microcode-blacklist.conf
+version https://git-lfs.github.com/spec/v1
+oid sha256:4f66d0a836675d3cef595dac6206d252125b4edc744c35320cfef97f092eedcc
+size 76

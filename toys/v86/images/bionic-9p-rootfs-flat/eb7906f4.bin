@@ -1,16 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/engines-1.1
-/usr/lib/i386-linux-gnu/engines-1.1/afalg.so
-/usr/lib/i386-linux-gnu/engines-1.1/capi.so
-/usr/lib/i386-linux-gnu/engines-1.1/padlock.so
-/usr/lib/i386-linux-gnu/libcrypto.so.1.1
-/usr/lib/i386-linux-gnu/libssl.so.1.1
-/usr/share
-/usr/share/doc
-/usr/share/doc/libssl1.1
-/usr/share/doc/libssl1.1/NEWS.Debian.gz
-/usr/share/doc/libssl1.1/changelog.Debian.gz
-/usr/share/doc/libssl1.1/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb7906f4b9990212e6a11aeeddba52f2759cd6ba92dff9aa417b3a4cf3926662
+size 463

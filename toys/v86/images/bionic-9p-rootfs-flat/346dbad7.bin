@@ -1,8 +1,3 @@
-require '_h2ph_pre.ph';
-
-no warnings qw(redefine misc);
-
-unless(defined(&__always_inline)) {
-    eval 'sub __always_inline () { &__inline__;}' unless defined(&__always_inline);
-}
-1;
+version https://git-lfs.github.com/spec/v1
+oid sha256:346dbad7c0754e459f3dcd29591f6e1fe24a515948041ca11f9b87793ff65df3
+size 182

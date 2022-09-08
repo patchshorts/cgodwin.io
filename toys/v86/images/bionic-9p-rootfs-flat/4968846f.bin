@@ -1,14 +1,3 @@
-require '_h2ph_pre.ph';
-
-no warnings qw(redefine misc);
-
-eval 'sub _GCC_NEXT_LIMITS_H () {1;}' unless defined(&_GCC_NEXT_LIMITS_H);
-eval {
-    my(@REM);
-    my(%INCD) = map { $INC{$_} => 1 } (grep { $_ eq "limits.ph" } keys(%INC));
-    @REM = map { "$_/limits.ph" } (grep { not exists($INCD{"$_/limits.ph"}) and -f "$_/limits.ph" } @INC);
-    require "$REM[0]" if @REM;
-};
-warn($@) if $@;
-undef(&_GCC_NEXT_LIMITS_H) if defined(&_GCC_NEXT_LIMITS_H);
-1;
+version https://git-lfs.github.com/spec/v1
+oid sha256:4968846f2774f3d93f54ca5f67ebb4c6aa37027c2daf38a1b88b7052b3ea0a13
+size 452

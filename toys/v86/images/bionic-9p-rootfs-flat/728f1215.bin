@@ -1,8 +1,3 @@
-5cf923efc4a83a2119d4bc4e113e0a26  lib/i386-linux-gnu/libhistory.so.7.0
-a4be13337b598893ef029ee69ccc3d4d  lib/i386-linux-gnu/libreadline.so.7.0
-db22ab5a3d7a94ab8b0a93657b11aa08  usr/share/doc/libreadline7/README.Debian
-0bb4ff5a1ee6f767d0d1b7ded925a8a3  usr/share/doc/libreadline7/USAGE
-245cf92f1bae311d7dd7ab3d34a16f27  usr/share/doc/libreadline7/changelog.Debian.gz
-b0cf3572690d3722c99c47e2cc573aeb  usr/share/doc/libreadline7/copyright
-05e58ca0def73f34efef5ff4cac6a939  usr/share/doc/libreadline7/examples/Inputrc
-244319c9dd88c980910aacd76477b8d9  usr/share/doc/libreadline7/inputrc.arrows
+version https://git-lfs.github.com/spec/v1
+oid sha256:728f1215fd745107af1a3bb6ac931806d8d8943db298bb8a2d0f2bf24db8fd66
+size 591

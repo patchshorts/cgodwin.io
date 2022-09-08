@@ -1,14 +1,3 @@
-#compdef systemd-tmpfiles
-# SPDX-License-Identifier: LGPL-2.1+
-
-_arguments \
-    {-h,--help}'[Show help]' \
-    '--version[Show package version]' \
-    '--create[Create, set ownership/permissions based on the config files.]' \
-    '--clean[Clean up all files and directories with an age parameter configured.]' \
-    '--remove[All files and directories marked with r, R in the configuration files are removed.]' \
-    '--boot[Execute actions only safe at boot]' \
-    '--prefix=[Only apply rules that apply to paths with the specified prefix.]' \
-    '--exclude-prefix=[Ignore rules that apply to paths with the specified prefix.]' \
-    '--root=[Operate on an alternate filesystem root]:directory:_directories' \
-    '*::files:_files'
+version https://git-lfs.github.com/spec/v1
+oid sha256:775980852687224585d9dc054eef4069c031c68d3a9886b966c4b07091a34fcb
+size 736

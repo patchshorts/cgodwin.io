@@ -1,23 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=Journal Audit Socket
-Documentation=man:systemd-journald.service(8) man:journald.conf(5)
-DefaultDependencies=no
-Before=sockets.target
-ConditionSecurity=audit
-ConditionCapability=CAP_AUDIT_READ
-ConditionVirtualization=!private-users
-
-[Socket]
-Service=systemd-journald.service
-ReceiveBuffer=128M
-ListenNetlink=audit 1
-PassCredentials=yes
+version https://git-lfs.github.com/spec/v1
+oid sha256:525f836ff0594154a3f58d6508b26fbaa383cc00c9c5ad3d74378f580281746f
+size 686

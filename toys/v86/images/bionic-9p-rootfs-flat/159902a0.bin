@@ -1,13 +1,3 @@
-Document: users-and-groups
-Title: Users and Groups in the Debian System
-Author: Joey Hess, Colin Watson, David Mandelberg
-Abstract: Descriptions of important system users and groups in Debian.
-Section: System/Administration
-
-Format: text
-Files: /usr/share/doc/base-passwd/users-and-groups.txt.gz
-
-Format: HTML
-Index: /usr/share/doc/base-passwd/users-and-groups.html
-Files: /usr/share/doc/base-passwd/users-and-groups.html
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:159902a0284dbbcc039824ebab914948f8a803280fa2b67742b8f7fd40c50250
+size 423

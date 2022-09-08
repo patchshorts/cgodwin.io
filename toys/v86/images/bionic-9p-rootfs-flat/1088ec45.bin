@@ -1,6 +1,3 @@
-c7489fe85eed7ba0d68baf92fee7c533  usr/lib/i386-linux-gnu/perl5/5.26/Term/ReadKey.pm
-365526c4a2b686c5b1028707bc2f4a8a  usr/lib/i386-linux-gnu/perl5/5.26/auto/Term/ReadKey/ReadKey.so
-1c28b30aabaebc57efc582000eeecf3e  usr/share/doc/libterm-readkey-perl/changelog.Debian.gz
-ec14ea0419203a7f36c00c2fbf70cc54  usr/share/doc/libterm-readkey-perl/copyright
-82c9038f795a18f194987c85920db96c  usr/share/doc/libterm-readkey-perl/examples/test.pl.gz
-9eae32b86d0990565e7d8ae5c854ba78  usr/share/man/man3/Term::ReadKey.3pm.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:1088ec456caaa70c0eaa3626e759266d374cee4ae69655b3b517fdf12902b9ae
+size 512

@@ -1,25 +1,3 @@
-#! /bin/sh -e
-
-
-# dpkg triggers support for update-mime
-if [ "$1" = "triggered" ]; then
-    test -x /usr/sbin/update-mime && /usr/sbin/update-mime --triggered
-    exit 0
-fi
-
-
-# Remove the old status directory (and any orphaned install-mime program)
-rm -fr /var/lib/mime
-rm -f  /usr/sbin/install-mime
-
-
-# Remove the "see" as alternative for "view"
-# Closes: #623384
-# This command can be removed after the Jessie release
-update-alternatives --remove view /usr/bin/see
-
-
-# Run the update program
-if [ -x /usr/sbin/update-mime ]; then
-    /usr/sbin/update-mime --triggered
-fi
+version https://git-lfs.github.com/spec/v1
+oid sha256:49c877fb16329375740c81f770104f2ca4f19cf4307426e33042eb459cb6c07e
+size 573

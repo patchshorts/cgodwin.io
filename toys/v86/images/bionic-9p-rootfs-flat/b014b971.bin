@@ -1,7 +1,3 @@
-[Unit]
-Description=Discard unused blocks
-ConditionVirtualization=!container
-
-[Service]
-Type=oneshot
-ExecStart=/sbin/fstrim -av
+version https://git-lfs.github.com/spec/v1
+oid sha256:b014b9715cb5cab6d640362c0b9d126614b6963ef889d7abb0fb641991ef0c98
+size 127

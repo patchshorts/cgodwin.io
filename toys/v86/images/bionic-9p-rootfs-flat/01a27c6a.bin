@@ -1,32 +1,3 @@
-#!/usr/bin/perl
-# This file was preprocessed, do not edit!
-
-
-package Debconf::TmpFile;
-use strict;
-use IO::File;
-use Fcntl;
-use File::Temp;
-
-
-my $filename;
-
-sub open {
-	my $fh; # will be autovivified
-	my $ext=shift || '';
-	($fh, $filename) = File::Temp::tempfile(SUFFIX => $ext);
-	return $fh;
-}
-
-
-sub filename {
-	return $filename;
-}
-
-
-sub cleanup {
-	unlink $filename;
-}
-
-
-1
+version https://git-lfs.github.com/spec/v1
+oid sha256:01a27c6a5acbf11d145efb8341e0328892a0c00db0526ad522a8c2165e4e01f6
+size 374

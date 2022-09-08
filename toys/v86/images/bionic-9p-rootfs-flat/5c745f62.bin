@@ -1,9 +1,3 @@
-# Protect the zero page of memory from userspace mmap to prevent kernel
-# NULL-dereference attacks against potential future kernel security
-# vulnerabilities.  (Added in kernel 2.6.23.)
-#
-# While this default is built into the Ubuntu kernel, there is no way to
-# restore the kernel default if the value is changed during runtime; for
-# example via package removal (e.g. wine, dosemu).  Therefore, this value
-# is reset to the secure default each time the sysctl values are loaded.
-vm.mmap_min_addr = 65536
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c745f62d086d9b9cf2ec23e4164f510cdba206c7aa6f11d2256f3f9be64c950
+size 506

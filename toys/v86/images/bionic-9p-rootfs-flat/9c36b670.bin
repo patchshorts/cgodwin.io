@@ -1,34 +1,3 @@
-_fstrim_module()
-{
-	local cur prev OPTS
-	COMPREPLY=()
-	cur="${COMP_WORDS[COMP_CWORD]}"
-	prev="${COMP_WORDS[COMP_CWORD-1]}"
-	case $prev in
-		'-o'|'--offset'|'-l'|'--length'|'-m'|'--minimum')
-			COMPREPLY=( $(compgen -W "num" -- $cur) )
-			return 0
-			;;
-		'-h'|'--help'|'-V'|'--version')
-			return 0
-			;;
-	esac
-	case $cur in
-		-*)
-			OPTS="--all
-				--offset
-				--length
-				--minimum
-				--verbose
-				--help
-				--version"
-			COMPREPLY=( $(compgen -W "${OPTS[*]}" -- $cur) )
-			return 0
-			;;
-	esac
-	local MPOINTS
-	MPOINTS=$(findmnt -rno SOURCE,TARGET | awk '/^\/dev/{print $2}')
-	COMPREPLY=( $(compgen -W "$MPOINTS" -- $cur) )
-	return 0
-}
-complete -F _fstrim_module fstrim
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c36b670fa1b23811490e2b47b6576a4b58f38ded511ed4f3757e7b858e3700e
+size 677

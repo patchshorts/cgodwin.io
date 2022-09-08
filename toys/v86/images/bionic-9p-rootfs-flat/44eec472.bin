@@ -1,8 +1,3 @@
-#!/bin/sh
-#
-# This file is not managed by a package.  If you no longer want to
-# see this message you can safely remove the file.
-echo "This system has been minimized by removing packages and content that are"
-echo "not required on a system that users do not log into."
-echo ""
-echo "To restore this content, you can run the 'unminimize' command."
+version https://git-lfs.github.com/spec/v1
+oid sha256:44eec47257b2617813caec5607dee548f18ffb676bdaa44e972ed1e76aed777c
+size 348

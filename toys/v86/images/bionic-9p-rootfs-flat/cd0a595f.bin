@@ -1,33 +1,3 @@
-# 9p filesystem mounting            -*- shell-script -*-
-
-mountroot()
-{
-    wait_for_udev 10
-
-    if [ ${readonly} = y ]; then
-        roflag="-o ro"
-    else
-        roflag="-o rw"
-    fi
-
-    #echo "Running: mount -t 9p -o cache=mmap ${ROOT} ${rootmnt}"
-    #mount -t 9p -o cache=mmap ${ROOT} ${rootmnt}
-    echo "Running: mount -t 9p -o cache=fscache ${ROOT} ${rootmnt}"
-    mount -t 9p -o cache=fscache ${ROOT} ${rootmnt}
-    echo "mount finished with code $?"
-}
-
-mount_top()
-{
-    echo top
-}
-
-mount_premount()
-{
-    echo premount
-}
-
-mount_bottom()
-{
-    echo bottom
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cd0a595f30fb8158bff756dad4106f316a5d70ebd4ed52a1d18a7e0724c09774
+size 573

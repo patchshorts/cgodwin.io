@@ -1,28 +1,3 @@
-#!/bin/sh -e
-
-PREREQS=""
-
-prereqs() { echo "$PREREQS"; }
-
-case "$1" in
-    prereqs)
-    prereqs
-    exit 0
-    ;;
-esac
-
-# Stop udevd, we'll miss a few events while we run init, but we catch up
-udevadm control --exit
-
-# move the /dev tmpfs to the rootfs; fall back to util-linux mount that does
-# not understand -o move
-mount -n -o move /dev ${rootmnt}/dev || mount -n --move /dev ${rootmnt}/dev
-
-# create a temporary symlink to the final /dev for other initramfs scripts
-if command -v nuke >/dev/null; then
-    nuke /dev
-else
-    rm -rf /dev
-fi
-ln -s ${rootmnt}/dev /dev
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:8cd0183ba7b4d19722e930e3bacf02d21241ead7d4e9fa20ed092e3d14c49c25
+size 572

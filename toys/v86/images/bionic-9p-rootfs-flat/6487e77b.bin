@@ -1,16 +1,3 @@
-#!/bin/sh -e
-# Copy the compatibility symlinks until initramfs-tools will be converted
-# to use the kmod program.
-
-if [ "$1" = "prereqs" ]; then exit 0; fi
-
-. /usr/share/initramfs-tools/hook-functions
-
-copy_exec /bin/kmod
-cp -a /sbin/modprobe /sbin/rmmod $DESTDIR/sbin/
-
-mkdir -p $DESTDIR/lib/modprobe.d/
-if [ "$(echo /lib/modprobe.d/*)" != "/lib/modprobe.d/*" ]; then
-  cp -a /lib/modprobe.d/* $DESTDIR/lib/modprobe.d/
-fi
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:6487e77be73024004544929c8e643930d7f83ebe8a93bbac323d4a5a66aeb2aa
+size 424

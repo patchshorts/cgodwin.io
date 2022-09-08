@@ -1,4 +1,3 @@
-# The debconf templates are used by linux-check-removal
-linux-base: no-debconf-config
-# linux-check-removal is called from other packages' maintainer scripts
-linux-base: debconf-is-not-a-registry usr/bin/linux-check-removal
+version https://git-lfs.github.com/spec/v1
+oid sha256:be72cd6331d9af0d384e5356817f29199e7553c9bad6e74869c2b7ded1f9111d
+size 224

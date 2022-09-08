@@ -1,16 +1,3 @@
-#
-# /etc/pam.d/other - specify the PAM fallback behaviour
-#
-# Note that this file is used for any unspecified service; for example
-#if /etc/pam.d/cron  specifies no session modules but cron calls
-#pam_open_session, the session module out of /etc/pam.d/other is
-#used.  If you really want nothing to happen then use pam_permit.so or
-#pam_deny.so as appropriate.
-
-# We fall back to the system default in /etc/pam.d/common-*
-# 
-
-@include common-auth
-@include common-account
-@include common-password
-@include common-session
+version https://git-lfs.github.com/spec/v1
+oid sha256:d13078e71d3351ef7f63a7265ddb50b710a2598b9febc78810fbb0130a02695a
+size 520

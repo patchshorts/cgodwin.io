@@ -1,13 +1,3 @@
-/* SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note */
-#ifndef _XT_TCPMSS_H
-#define _XT_TCPMSS_H
-
-#include <linux/types.h>
-
-struct xt_tcpmss_info {
-	__u16 mss;
-};
-
-#define XT_TCPMSS_CLAMP_PMTU 0xffff
-
-#endif /* _XT_TCPMSS_H */
+version https://git-lfs.github.com/spec/v1
+oid sha256:db3bcf49d2a9f71386faee27be40b021cc0d3703c5d435c3e46dce5ec60595c4
+size 235

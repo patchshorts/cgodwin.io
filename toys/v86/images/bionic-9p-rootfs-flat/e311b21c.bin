@@ -1,4 +1,3 @@
-sprintf(buffer,"C compiler          : gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) \n");
-output_string(buffer);
-sprintf(buffer,"libc                : libc-2.27.so\n");
-output_string(buffer);
+version https://git-lfs.github.com/spec/v1
+oid sha256:e311b21c075f91d8d185768627c26080f26c852bb64b93773ae5faa11a14706a
+size 194

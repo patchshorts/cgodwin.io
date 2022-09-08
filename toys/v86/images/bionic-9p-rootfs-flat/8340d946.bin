@@ -1,6 +1,3 @@
-ec22a8c8c039435dda7f182c5d521c43  lib/i386-linux-gnu/liblzma.so.5.2.2
-bcb4f889a36b8fbf7ef825fb8e9fb986  usr/share/doc/liblzma5/AUTHORS
-ecd37f35dd2d26be65b28e770b8d7a7f  usr/share/doc/liblzma5/NEWS.gz
-a61a22c1380b3dae78f575bb51976709  usr/share/doc/liblzma5/THANKS
-99d95165df6284a8148e195778fd02b6  usr/share/doc/liblzma5/changelog.Debian.gz
-7a692fa91cb8fb6af4ef1094636a658f  usr/share/doc/liblzma5/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:8340d946e0c6434cfcff781a360b09ff3d20cd912bc252e99262ab298e2c0a38
+size 408

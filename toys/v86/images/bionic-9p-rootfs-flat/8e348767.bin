@@ -1,3 +1,3 @@
-89f2675f7d85822c470416b460e5964d  boot/vmlinuz-4.15.0-192-lowlatency
-ab518b1fa647ed5db54a08c37f635e18  usr/share/doc/linux-image-4.15.0-192-lowlatency/changelog.Debian.gz
-a8941f8b5b3adb2ab3bb8d0fd69bc2ac  usr/share/doc/linux-image-4.15.0-192-lowlatency/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:8e3487678f179af91f0a89918f9165c13ad9105f1e976121f6990f1193aa1fbb
+size 263

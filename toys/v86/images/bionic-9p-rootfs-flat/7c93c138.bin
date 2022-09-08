@@ -1,18 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=Switch Root
-ConditionPathExists=/etc/initrd-release
-DefaultDependencies=no
-Requires=initrd-switch-root.service
-Before=initrd-switch-root.service
-AllowIsolate=yes
-Wants=initrd-udevadm-cleanup-db.service initrd-root-fs.target initrd-fs.target systemd-journald.service initrd-cleanup.service
-After=initrd-udevadm-cleanup-db.service initrd-root-fs.target initrd-fs.target emergency.service emergency.target
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c93c1380ff261ca759d5dd9a14539bcc6b52f7943aac3a8dfc24df4dce17945
+size 754

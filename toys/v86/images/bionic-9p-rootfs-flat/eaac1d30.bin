@@ -1,16 +1,3 @@
-/* SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note */
-#ifndef _XT_MARK_H
-#define _XT_MARK_H
-
-#include <linux/types.h>
-
-struct xt_mark_tginfo2 {
-	__u32 mark, mask;
-};
-
-struct xt_mark_mtinfo1 {
-	__u32 mark, mask;
-	__u8 invert;
-};
-
-#endif /*_XT_MARK_H*/
+version https://git-lfs.github.com/spec/v1
+oid sha256:eaac1d30d0f595a9cc160a8555d7b8ec7c9d3dc376eb8e6d29ecc3271ac029a2
+size 260

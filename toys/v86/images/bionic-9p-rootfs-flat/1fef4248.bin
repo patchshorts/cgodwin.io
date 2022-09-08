@@ -1,15 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=Current graphical user session
-Documentation=man:systemd.special(7)
-Requires=basic.target
-RefuseManualStart=yes
-StopWhenUnneeded=yes
+version https://git-lfs.github.com/spec/v1
+oid sha256:1fef42486250c523257387fafbdc0f30126c75a7f9d9dbd7a89a79e328239a18
+size 484

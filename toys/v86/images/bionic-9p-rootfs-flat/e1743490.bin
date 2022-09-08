@@ -1,11 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libxkbcommon.so.0.0.0
-/usr/share
-/usr/share/doc
-/usr/share/doc/libxkbcommon0
-/usr/share/doc/libxkbcommon0/changelog.Debian.gz
-/usr/share/doc/libxkbcommon0/copyright
-/usr/lib/i386-linux-gnu/libxkbcommon.so.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:e1743490a269e473fe7c34b4a4f6cf0a3d7b816b280f9411b7a76545b15358ee
+size 272

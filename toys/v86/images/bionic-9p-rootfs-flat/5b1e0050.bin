@@ -1,4 +1,3 @@
-#define grid4_width 4
-#define grid4_height 4
-static char grid4_bits[] = {
-   0x05, 0x00, 0x01, 0x00};
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b1e0050dc6b80436b2e65bf40d1c8aa235c1f4201ba76d7949ded939f57413d
+size 102

@@ -1,14 +1,3 @@
-/.
-/lib
-/lib/i386-linux-gnu
-/lib/i386-linux-gnu/libe2p.so.2.3
-/lib/i386-linux-gnu/libext2fs.so.2.4
-/usr
-/usr/share
-/usr/share/doc
-/usr/share/doc/libext2fs
-/usr/share/doc/libext2fs2
-/usr/share/doc/libext2fs2/changelog.Debian.gz
-/usr/share/doc/libext2fs2/copyright
-/lib/i386-linux-gnu/libe2p.so.2
-/lib/i386-linux-gnu/libext2fs.so.2
+version https://git-lfs.github.com/spec/v1
+oid sha256:4ad5b44a493763401371861960d36f8e0e710612982637bf6107e6aca036631d
+size 330

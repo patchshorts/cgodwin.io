@@ -1,4 +1,3 @@
-ac697074502e521453acc7e879d2e7eb  usr/share/doc/gcc-7-base/README.Debian.i386.gz
-03f9fa7a11862b357a8f5cbf7f81fcc8  usr/share/doc/gcc-7-base/TODO.Debian
-5fa0eaf83727b2bd3eff41e4ad95d290  usr/share/doc/gcc-7-base/changelog.Debian.gz
-3f0d2ce56e94ec8b684189b07c5c475c  usr/share/doc/gcc-7-base/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e589313002c6fd7d78920a6031a1ec44980d513a3e97a9d6a4224fb2891f660
+size 300

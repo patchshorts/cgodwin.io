@@ -1,20 +1,3 @@
-# /etc/deluser.conf: `deluser' configuration.
-
-# Remove home directory and mail spool when user is removed
-REMOVE_HOME = 0
-
-# Remove all files on the system owned by the user to be removed
-REMOVE_ALL_FILES = 0
-
-# Backup files before removing them. This options has only an effect if
-# REMOVE_HOME or REMOVE_ALL_FILES is set.
-BACKUP = 0
-
-# target directory for the backup file
-BACKUP_TO = "."
-
-# delete a group even there are still users in this group
-ONLY_IF_EMPTY = 0
-
-# exclude these filesystem types when searching for files of a user to backup
-EXCLUDE_FSTYPES = "(proc|sysfs|usbfs|devpts|tmpfs|afs)"
+version https://git-lfs.github.com/spec/v1
+oid sha256:946e0f11a8997bf41dbafca1f6f5a4bedf46746c91801ca4f2e90dd0172f06b6
+size 604

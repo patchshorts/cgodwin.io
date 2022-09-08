@@ -1,11 +1,3 @@
-iat_keyboard: at_keyboard
-iserial: serial
-iserial_*: serial
-oaudio: morse
-ocbmemc: cbmemc
-ogfxterm: gfxterm
-omda_text: mda_text
-oserial: serial
-oserial_*: serial
-ospkmodem: spkmodem
-ovga_text: vga_text
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c52240a53b4c310abd3532a41f46ffa229585bc85b1607b8b604e4ce242ade8
+size 202

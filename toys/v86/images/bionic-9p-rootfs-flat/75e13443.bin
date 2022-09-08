@@ -1,4 +1,3 @@
-#define root_weave_width 4
-#define root_weave_height 4
-static char root_weave_bits[] = {
-   0x07, 0x0d, 0x0b, 0x0e};
+version https://git-lfs.github.com/spec/v1
+oid sha256:75e134432b727e585fa7700bb1a80aa1fab7ada7ac0011754083db384da57e0b
+size 117

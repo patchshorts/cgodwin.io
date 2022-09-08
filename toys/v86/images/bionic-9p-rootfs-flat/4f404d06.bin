@@ -1,31 +1,3 @@
-package ExtUtils::CBuilder::Platform::aix;
-$ExtUtils::CBuilder::Platform::aix::VERSION = '0.280225';
-use warnings;
-use strict;
-use ExtUtils::CBuilder::Platform::Unix;
-use File::Spec;
-
-use vars qw(@ISA);
-@ISA = qw(ExtUtils::CBuilder::Platform::Unix);
-
-sub need_prelink { 1 }
-
-sub link {
-  my ($self, %args) = @_;
-  my $cf = $self->{config};
-
-  (my $baseext = $args{module_name}) =~ s/.*:://;
-  my $perl_inc = $self->perl_inc();
-
-  # Massage some very naughty bits in %Config
-  local $cf->{lddlflags} = $cf->{lddlflags};
-  for ($cf->{lddlflags}) {
-    s/\Q$(BASEEXT)\E/$baseext/;
-    s/\Q$(PERL_INC)\E/$perl_inc/;
-  }
-
-  return $self->SUPER::link(%args);
-}
-
-
-1;
+version https://git-lfs.github.com/spec/v1
+oid sha256:4f404d065879e1969fd2fe4824058a98d55f8d2789956c3590501a41ee18d04a
+size 660

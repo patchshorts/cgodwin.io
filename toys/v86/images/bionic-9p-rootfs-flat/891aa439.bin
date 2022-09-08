@@ -1,15 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/i386-linux-gnu
-/usr/lib/i386-linux-gnu/libsasl2.so.2.0.25
-/usr/lib/sasl2
-/usr/share
-/usr/share/doc
-/usr/share/doc/libsasl2-2
-/usr/share/doc/libsasl2-2/README.Debian
-/usr/share/doc/libsasl2-2/README.configure-options
-/usr/share/doc/libsasl2-2/copyright
-/usr/lib/i386-linux-gnu/libsasl2.so.2
-/usr/share/doc/libsasl2-2/NEWS.Debian.gz
-/usr/share/doc/libsasl2-2/changelog.Debian.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:891aa439227eb78f519f294f916e019732362a124972d29827afd26598126d00
+size 403

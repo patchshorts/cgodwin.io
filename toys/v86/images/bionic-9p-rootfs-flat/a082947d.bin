@@ -1,5 +1,3 @@
-#define weird_size_width 7
-#define weird_size_height 13
-static char weird_size_bits[] = {
-   0x07, 0x05, 0x07, 0x01, 0x75, 0x45, 0x74, 0x44, 0x74, 0x00, 0x10, 0x38,
-   0x10};
+version https://git-lfs.github.com/spec/v1
+oid sha256:a082947ddfdeb96206c05ee5ccb21b7b422d8aae3e0bf4f70da82730924917bc
+size 175

@@ -1,13 +1,3 @@
-/.
-/usr
-/usr/lib
-/usr/lib/initramfs-tools
-/usr/lib/initramfs-tools/bin
-/usr/lib/initramfs-tools/bin/rzscontrol
-/usr/lib/initramfs-tools/bin/wait-for-root
-/usr/share
-/usr/share/doc
-/usr/share/doc/initramfs-tools-bin
-/usr/share/doc/initramfs-tools-bin/NEWS.Debian.gz
-/usr/share/doc/initramfs-tools-bin/changelog.gz
-/usr/share/doc/initramfs-tools-bin/copyright
+version https://git-lfs.github.com/spec/v1
+oid sha256:d5c6c2586f060c9daa0b429655babf79974ac2dcce7d4fa1831064d2f3e4edac
+size 358

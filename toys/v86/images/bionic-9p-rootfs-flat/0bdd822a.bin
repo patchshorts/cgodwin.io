@@ -1,8 +1,3 @@
-#!/bin/sh
-#
-# This is not a mistake.  This shell script (/etc/rmt) has been provided
-# for compatibility with other Unix-like systems, some of which have
-# utilities that expect to find (and execute) rmt in the /etc directory
-# on remote systems.
-#
-exec /usr/sbin/rmt
+version https://git-lfs.github.com/spec/v1
+oid sha256:0bdd822a1df82458bdf623d6869f9d0817f6e66f517366a67a4770dbbe714dd2
+size 268

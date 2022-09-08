@@ -1,12 +1,3 @@
-"""Constants."""
-
-# After the connection is lost, log warnings after this many write()s.
-LOG_THRESHOLD_FOR_CONNLOST_WRITES = 5
-
-# Seconds to wait before retrying accept().
-ACCEPT_RETRY_DELAY = 1
-
-# Number of stack entries to capture in debug mode.
-# The large the number, the slower the operation in debug mode
-# (see extract_stack() in events.py)
-DEBUG_STACK_DEPTH = 10
+version https://git-lfs.github.com/spec/v1
+oid sha256:03ae52059bcdac6c2133a9a561a7f9107ee6edeeb055731445c616b54284a09f
+size 371

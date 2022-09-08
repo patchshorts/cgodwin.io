@@ -1,29 +1,3 @@
-'''apport package hook for systemd
-
-(c) 2014 Canonical Ltd.
-Author: Martin Pitt <martin.pitt@ubuntu.com>
-'''
-
-import os.path
-import apport.hookutils
-
-def add_info(report):
-    apport.hookutils.attach_hardware(report)
-
-    report['SystemdDelta'] = apport.hookutils.command_output(['systemd-delta'])
-
-    if not os.path.exists('/run/systemd/system'):
-        return
-
-    # Add details about all failed units, if any
-    out = apport.hookutils.command_output(['systemctl', '--state=failed', '--full',
-                                           '--no-legend']).strip()
-    if out:
-        failed = ''
-        for line in out.splitlines():
-            unit = line.split()[0]
-            if failed:
-                failed += '------\n'
-            failed += apport.hookutils.command_output(['systemctl', 'status', '--full', unit])
-        report['SystemdFailedUnits'] = failed
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e262a9b3a3bb14728a86c90316e83aa242a122e737973573009d48cebd528fa
+size 872

@@ -1,11 +1,3 @@
-/.
-/lib
-/lib/i386-linux-gnu
-/lib/i386-linux-gnu/libss.so.2.0
-/usr
-/usr/share
-/usr/share/doc
-/usr/share/doc/libss2
-/usr/share/doc/libss2/copyright
-/lib/i386-linux-gnu/libss.so.2
-/usr/share/doc/libss2/changelog.Debian.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:03af810f7b618d06da2ebfa1a087559af467e8b77f2025d508f7d05227f27c8b
+size 219

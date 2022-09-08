@@ -1,3 +1,3 @@
-ba931a0c3b5936afabe0869c2ec71af4  usr/lib/i386-linux-gnu/libgssapi_krb5.so.2.2
-699c000bd0ea741649b75d44af8883be  usr/share/doc/libgssapi-krb5-2/copyright
-ff06c79275a2e9c2cece1bdf3d8d1b3b  usr/share/lintian/overrides/libgssapi-krb5-2
+version https://git-lfs.github.com/spec/v1
+oid sha256:417ae5c7a037346bde6d3ddb44ed678df61d22f75a6e3077e82eb9a38c5f96c0
+size 233

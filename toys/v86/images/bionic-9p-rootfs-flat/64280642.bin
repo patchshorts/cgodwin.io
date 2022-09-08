@@ -1,9 +1,3 @@
-/etc/dhcp/dhclient-enter-hooks.d/resolved
-/etc/dhcp/dhclient-exit-hooks.d/timesyncd
-/etc/pam.d/systemd-user
-/etc/systemd/journald.conf
-/etc/systemd/logind.conf
-/etc/systemd/resolved.conf
-/etc/systemd/system.conf
-/etc/systemd/timesyncd.conf
-/etc/systemd/user.conf
+version https://git-lfs.github.com/spec/v1
+oid sha256:642806421173dbf623d1544eb55939937b256231b3873f0dd09119b5791acd32
+size 263

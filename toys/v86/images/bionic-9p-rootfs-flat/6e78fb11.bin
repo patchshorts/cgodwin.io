@@ -1,9 +1,3 @@
-#!/bin/sh
-set -e
-
-dpkg-maintscript-helper rm_conffile /etc/modprobe.d/mlx4.conf 24-1ubuntu2 kmod -- "$@"
-
-# Automatically added by dh_installdeb/11.1.6ubuntu2
-dpkg-maintscript-helper rm_conffile /etc/init/kmod.conf 24-1ubuntu2~ kmod -- "$@"
-# End automatically added section
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e78fb11d33e4e0a18c6e3577afb90d8cf2f5759a39a41bf7ac802c2a3a287aa
+size 276

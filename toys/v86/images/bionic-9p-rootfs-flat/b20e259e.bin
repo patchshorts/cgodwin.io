@@ -1,5 +1,3 @@
-/* GNU ld script
-   Use the shared library, but some functions are only in
-   the static library, so try that secondarily.  */
-OUTPUT_FORMAT(elf32-i386)
-GROUP ( /lib/i386-linux-gnu/libpthread.so.0 /usr/lib/i386-linux-gnu/libpthread_nonshared.a )
+version https://git-lfs.github.com/spec/v1
+oid sha256:b20e259e849bc1ab41dd5747a329a9398b4a91b752990534f57b3d2ee4dfaef5
+size 246

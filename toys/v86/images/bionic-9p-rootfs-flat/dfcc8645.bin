@@ -1,11 +1,3 @@
-CC = arm-linux-gnueabi-gcc
-LD = arm-linux-gnueabi-ld
-OBJCOPY = arm-linux-gnueabi-objcopy
-
-bootcode.bin: Boot.S
-	$(CC) -mbig-endian -c Boot.S
-	$(LD) -Ttext 0x2c000000 -EB -o Boot Boot.o
-	$(OBJCOPY) -Obinary Boot bootcode.bin
-
-clean:
-	rm -f Boot.o Boot bootcode.bin
+version https://git-lfs.github.com/spec/v1
+oid sha256:dfcc8645697b54f5edc58646d6dd32422434deb5d9def655e4f41174307a2a47
+size 264

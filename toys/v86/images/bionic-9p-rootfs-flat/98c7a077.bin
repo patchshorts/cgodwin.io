@@ -1,7 +1,3 @@
-/.
-/usr
-/usr/share
-/usr/share/doc
-/usr/share/doc/multiarch-support
-/usr/share/doc/multiarch-support/copyright
-/usr/share/doc/multiarch-support/changelog.Debian.gz
+version https://git-lfs.github.com/spec/v1
+oid sha256:98c7a07756fb7487705a1ce34d0e9be4198100e46a7a73c326c003783c3efef3
+size 163

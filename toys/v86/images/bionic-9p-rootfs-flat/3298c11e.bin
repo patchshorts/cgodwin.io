@@ -1,4 +1,3 @@
-libncursesw 5 libncursesw5 (>= 6.1)
-libformw 5 libncursesw5 (>= 6.1)
-libmenuw 5 libncursesw5 (>= 6.1)
-libpanelw 5 libncursesw5 (>= 6.1)
+version https://git-lfs.github.com/spec/v1
+oid sha256:3298c11e62f485bf6cf9ae7240a4201e72eaa19c29d29a17b3c4ee2656987391
+size 136

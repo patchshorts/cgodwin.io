@@ -1,20 +1,3 @@
-#!/usr/bin/perl -w
-# This file was preprocessed, do not edit!
-
-
-package Debconf::Element::Dialog::Error;
-use strict;
-use base qw(Debconf::Element);
-
-
-sub show {
-	my $this=shift;
-
-	$this->frontend->showtext($this->question, 
-		$this->question->description."\n\n".
-		$this->question->extended_description
-	);
-	$this->value('');
-}
-
-1
+version https://git-lfs.github.com/spec/v1
+oid sha256:94044eacc5f6137204dc1c805e9323d8ee370163e21e16485961c073bd244c16
+size 331

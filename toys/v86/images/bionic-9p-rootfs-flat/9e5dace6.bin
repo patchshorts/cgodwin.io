@@ -1,9 +1,3 @@
-require '_h2ph_pre.ph';
-
-no warnings qw(redefine misc);
-
-unless(defined(&__clockid_t_defined)) {
-    eval 'sub __clockid_t_defined () {1;}' unless defined(&__clockid_t_defined);
-    require 'bits/types.ph';
-}
-1;
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e5dace6b426f8effe8e0b699862841ca46774f29162799810165265f0fc066d
+size 212

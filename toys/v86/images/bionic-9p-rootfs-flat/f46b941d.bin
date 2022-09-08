@@ -1,13 +1,3 @@
-#! /bin/sh
-
-set -e
-
-if [ ! -f /etc/python3.6/sitecustomize.py ]; then
-    cat <<-EOF
-	# Empty sitecustomize.py to avoid a dangling symlink
-EOF
-fi
-
-
-
-exit 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:f46b941d8f3f424ef5f4b01b7604e911f3ea83bf3be8a9ce5038f953b8e16a42
+size 156

@@ -1,22 +1,3 @@
-#!/bin/sh
-set -e
-
-# Automatically added by dh_installdeb/10.10.5ubuntu1
-dpkg-maintscript-helper rm_conffile /etc/bash_completion.d/apt-file 3.0\~exp -- "$@"
-dpkg-maintscript-helper rm_conffile /etc/apt/apt-file.conf 3.0\~exp -- "$@"
-# End automatically added section
-
-
-if [ "$1" != configure ]; then
-	exit 0
-fi
-
-if [ -d /var/cache/apt/apt-file ]; then
-	echo "Discarding old apt-file cache, please run \"apt update\""
-	rm -fr /var/cache/apt/apt-file/
-fi
-
-if /usr/share/apt-file/is-cache-empty; then
-	echo "The system-wide cache is empty. You may want to run 'apt-file update'"
-	echo "as root to update the cache."
-fi
+version https://git-lfs.github.com/spec/v1
+oid sha256:652fdd78d9ff575ccae62bc4e431c75bb5f718b0adab8e25af6eab2605b390de
+size 616

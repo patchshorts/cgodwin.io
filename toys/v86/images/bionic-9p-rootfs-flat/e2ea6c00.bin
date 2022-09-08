@@ -1,16 +1,3 @@
-#compdef systemd-delta
-# SPDX-License-Identifier: LGPL-2.1+
-
-_delta_type() {
-    local -a _delta_types
-    _delta_types=(masked equivalent redirected overridden unchanged)
-    _values -s , "${_delta_types[@]}"
-}
-
-_arguments \
-    {-h,--help}'[Show this help]' \
-    '--version[Show package version]' \
-    '--no-pager[Do not pipe output into a pager]' \
-    '--diff=[Show a diff when overridden files differ]:boolean:(1 0)' \
-    {-t+,--type=}'[Only display a selected set of override types]:types:_delta_type' \
-    ':SUFFIX:(tmpfiles.d sysctl.d systemd/system)'
+version https://git-lfs.github.com/spec/v1
+oid sha256:e2ea6c00e54519c36cfd44acab78125323e2b0355633f218db85bffb46cbcf36
+size 564

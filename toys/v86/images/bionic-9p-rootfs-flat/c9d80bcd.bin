@@ -1,18 +1,3 @@
-#!/bin/sh
-set -e
-
-version=4.15.0-192-lowlatency
-image_path=/boot/vmlinuz-$version
-
-if [ "$1" != remove ]; then
-    exit 0
-fi
-
-linux-check-removal $version
-
-if [ -d /etc/kernel/prerm.d ]; then
-    DEB_MAINT_PARAMS="$*" run-parts --report --exit-on-error --arg=$version \
-	      --arg=$image_path /etc/kernel/prerm.d
-fi
-
-exit 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:c9d80bcdd5fe317c7f6b814873441ef6d1f68bbe5cec6aa1914702b48dd056c4
+size 326

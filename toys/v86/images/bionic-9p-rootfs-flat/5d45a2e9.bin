@@ -1,30 +1,3 @@
-#  SPDX-License-Identifier: LGPL-2.1+
-#
-#  This file is part of systemd.
-#
-#  systemd is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU Lesser General Public License as published by
-#  the Free Software Foundation; either version 2.1 of the License, or
-#  (at your option) any later version.
-
-[Unit]
-Description=Emergency Shell
-Documentation=man:sulogin(8)
-DefaultDependencies=no
-Conflicts=shutdown.target
-Conflicts=rescue.service
-Before=shutdown.target
-Before=rescue.service
-
-[Service]
-Environment=HOME=/root
-WorkingDirectory=-/root
-ExecStartPre=-/bin/plymouth --wait quit
-ExecStart=-/lib/systemd/systemd-sulogin-shell emergency
-Type=idle
-StandardInput=tty-force
-StandardOutput=inherit
-StandardError=inherit
-KillMode=process
-IgnoreSIGPIPE=no
-SendSIGHUP=yes
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d45a2e982b2410f696c1c426cb840a514ae1130321d6f67673b37f61fdde969
+size 797
