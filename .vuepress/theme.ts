@@ -29,7 +29,7 @@ export default hopeTheme({
   displayFooter: true,
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
-
+  
   blog: {
     description: "Manager, Cloud & DevSecOps",
     intro: "/resume.html",

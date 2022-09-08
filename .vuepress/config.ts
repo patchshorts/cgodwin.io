@@ -6,7 +6,8 @@ export default defineUserConfig({
   title: "CGodwin",
   description: "A demo for vuepress-theme-hope",
 
+  pagePatterns: ['**/*.md', '**/*.vue', '!toys/**/*'],
+
   base: "/",
-  patterns: ['**/*.md', '**/*.vue', '!toys/**/*'],
   theme,
 });
