@@ -1,7 +1,6 @@
 FROM node:16-alpine
+ADD src /app
 WORKDIR /app
-ADD src/* ./
-ADD src/.vuepress ./
 RUN yarn global add http-server
 RUN yarn install --production
 RUN ./node_modules/.bin/vuepress build .
