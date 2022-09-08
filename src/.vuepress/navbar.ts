@@ -15,6 +15,6 @@ export default navbar([
   {
     text: "Toy box",
     icon: "style",
-    link: "/toys",
+    link: "/toybox",
   }
 ]);
