@@ -7,6 +7,6 @@ export default defineUserConfig({
   description: "A demo for vuepress-theme-hope",
 
   base: "/",
-
+  patterns: ['**/*.md', '**/*.vue', '!toys/**/*'],
   theme,
 });
