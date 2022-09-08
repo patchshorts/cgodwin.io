@@ -1,7 +1,7 @@
 FROM node:16-alpine
 WORKDIR /app
-COPY src .
-COPY toys .
+COPY . .
+COPY ../toys .
 RUN yarn global add http-server
 RUN yarn install --production
 RUN ./node_modules/.bin/vuepress build .
