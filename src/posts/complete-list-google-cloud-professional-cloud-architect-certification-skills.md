@@ -17,21 +17,21 @@ tag:
 
 ## Ability to Design for Business
 
-### Business Use-Cases*
+### Business Use-Cases
 When it comes to designing a cloud for business use-cases, there are a few key considerations that need to be taken into account.
-### Product Strategies*
+### Product Strategies
 Product strategies have a big impact on cloud architecture design.
-### Go-live Strategies*
+### Go-live Strategies
 Cloud-based launches require careful planning to ensure a successful outcome.
-### Application Design*
+### Application Design
 Applications that are designed to run in the cloud must be able to take advantage of the functionality, scalability and flexibility that the cloud offers. 
-### Cost Considerations*
+### Cost Considerations
 For every cost-effective option for running an application, there are at least two other cost-*ineffective* ways to accomplish the same thing in a cloud.
 ### Systems Integration
 Key considerations for communicating between cloud and on-premises networks and applications.
-### Data Handling and Management*
+### Data Handling and Management
 Keeping your data safe and secret is the goal of proper data handling, especially production and sensitive data.
-### Compliance, Regulations, Access Restrictions*
+### Compliance, Regulations, Access Restrictions
 Designing cloud architecture requires staying within industry compliance, legal regulation, and policy access restrictions. That involves careful consideration and arduous planning.
 ### Security
 Trust no file, no connection, no application. Treat everything as untrusted as a potential layer of breach, act according to that and you'll be fine.
@@ -41,8 +41,8 @@ Does our proof of concept have any measures of success other than a successful h
 ### Technical Debt Reconciliation
 Technical debt is the amount of time and effort required to fix or improve software that is not up to date or is poorly designed. It can accumulate over time as a result of shortcuts taken during development, such as using quick and dirty solutions instead of taking the time to do things properly. 
 ### Availability
-What to keep in mind when it comes to ensuring cloud availability.
-### Scailing Resources
+What is required to ensuring high-availability in the cloud. Is availability one of your business needs?
+### Scaling Resources
 Ensuring that the scaling process is efficient and cost effective and elastic.
 ### Reliability Engineering
 Working to identify and mitigate potential sources of failure.
@@ -80,7 +80,7 @@ Managed relational databases meet certain needs that compute database engines do
 Google Cloud Spanner is a relational database service that offers global horizontal scaling, strong consistency, and high availability. Basically Managed Vitesse.
 ### Big Query
 Google BigQuery is a cloud-based big data analytics web service for processing very large read-only data sets.
-### Cloud Firestore*
+### Cloud Firestore
 Cloud Firestore is an auto-scaling document database for storing, syncing, and querying data for mobile and web apps.
 ### Bigtable
 Google Big Table is a distributed storage system for low-latency access to large amounts(petabytes) of structured data.
@@ -90,28 +90,41 @@ As data doesn't need to be access as frequently, it can be time partitioned for 
 Latency is a key consideration for accessing data in any kind of storage. Regional, zone, and CDN considerations must be made.
 ## Ability to Design Network Architecture
 ### Virtual Private Cloud(VPC) Basics
-#### Subnets and Addressing
-#### Hybrid Cloud Networking
-#### Peering*
-#### Virtual Private Networks(VPNs)
-#### VPC Sharing*
-### Load Balancing*
-#### Regional
-#### Global 
-## Legal and Security Centric Design Scrutiny*
+IP Addressing, CIDR ranges, Firewall Rules and Routers. Cloud Router, Cloud Armor, VPC subnet and VPC sharing.
+### Hybrid Cloud Networking
+Knowledge of how hybrid cloud networking a mix of on-premises, private cloud, and public cloud services are setup and maintained.
+### CDN, DNS Zones, Zone Peering, Service Registry
+Additional services provided in GCP Networking.
+### Load Balancing(LB)
+Regional and Global Load Balancing have different use-cases. How GKE and provisions LBs.
+## Legal and Security Centric Design Scrutiny
 ### Identity and Access Management(IAM)
+All access is managed through IAM, it is relevant to every gcp service.
 ### Encryption
-#### Storage Encryption*
+#### Storage Encryption
+Understanding GCP's encryption at-rest schema.
 #### Connection Encryption
-### Key & Token Management
-### Security Evaluation*
-### Penetration Testing
-### Auditing*
+Understanding encryption in transit in GCP.
+### Key Management
+Ability to ascertain the needs of projects which need to control their own key management for data encryption.
+### Security Evaluation
+Penetration Testing & Iam Policy Auditing
 ### Security Design Principles
-### Major Regulations*
-### Information Technology Infrastructure Library*
+Full understanding of concepts like separation of duties, least privilege and Defense in Depth.
+### Major Regulations
+### Information Technology Infrastructure Library Framework
+The Information Technology Infrastructure Library (ITIL) is a framework that provides a set of best practices for managing IT services.
+### HIPPA/HITECH
+The Health Insurance Portability and Accountability Act, or HIPAA, is a federal law that was enacted in 199 HIPAA protects the privacy of patients' health information and establishes national standards for the security of electronic health information. The HITECH Act is a federal law that promotes the adoption and meaningful use of health information technology. 
+### GDPR
+GDPR applies to any company that processes the personal data of EU citizens, regardless of where the company is located. It strengthens EU data protection rules by giving individuals more control over their personal data, and establishing new rights for individuals. 
+### SOX Compliance
+The Sarbanes-Oxley Act was enacted in 2002 in response to the Enron scandal. The Act includes provisions to protect investors from fraudulent accounting practices and to improve the accuracy and transparency of corporate disclosures. The Act also created the Public Company Accounting Oversight Board to oversee the auditing of public companies.
+### COPPA
+The Children's Online Privacy Protection Act (COPPA) is a law that requires companies to get parental consent before collecting, using, or disclosing personal information from children under 1 COPPA also gives parents the right to review and delete their child's personal information, and to refuse to allow companies to collect or use it.
 ## Ability to Design for Reliability
-### Cloud Operations(Stackdriver)*
+### Stackdriver
+Stackdriver is a cloud monitoring tool that provides comprehensive monitoring and logging for cloud-powered applications. It offers powerful features like monitoring dashboards, alerting, log management, and tracing. Stackdriver is a great tool for keeping track of the health and performance of your cloud-based applications.
 ### Continuous Deployment
 ### Continuous Integration
 ### Reliability Engineering
@@ -126,7 +139,7 @@ Latency is a key consideration for accessing data in any kind of storage. Region
 #### Binary Authorization
 #### Readiness
 #### Liveness
-#### Port Verfication(L4)
+#### Port Verification(L4)
 #### Protocol Verification (L7)
 #### Content Verification
 #### Certificate Chain Verification
