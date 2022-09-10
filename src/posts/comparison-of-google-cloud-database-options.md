@@ -31,18 +31,17 @@ Running a database cluster out of Compute VM, you take all the management upon y
 |Product      |Relational|Unstructured|Heavy R/W|Low Latency|Global|
 |:------------|:--------:|:----------:|:-------:|:---------:|:----:|
 | Bigtable    |     🔴  |    🟢      |     🟢  |     🟢    |🔴  |
-| BigQuery    |     🟢  |    🔵✝     |     🔴✝✝|     🔴    |🔴  |
+| BigQuery    |     🟢  |    🟢✝     |     🔴✝✝|     🔴    |🔴  |
 |Cloud SQL    |     🟢  |    🟢      |     🔴  |     🔴    |🔴  |
 |Cloud Spanner|     🟢  |    🔴      |     🔴  |     🔴    |🟢  |
 |Compute VM   |     🟢  |    🟢      |     🔴  |     🔴    |🔴  |
-✝  Semi Unstructured Data with the Json type
-✝✝ Read / Append Only
+
 | Symbol  |    Meaning   |
 |:-------:|-------------:|
 |   🟢    | Yes          |
 |   🔴    | No           |
-|   🔵    | With Caveats |
-
+|✝|  Semi Unstructured Data with the Json type|
+|✝✝| Read / Append Only|
 ## Official Resources
 * [The Official Google Certified Professional Cloud Architect Exam
   Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
