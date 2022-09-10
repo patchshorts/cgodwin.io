@@ -11,7 +11,7 @@ tag:
   - GCCPCA
 ---
 
-# Complete List of Google Cloud Certified Professional Cloud Architecture Skills
+# Comparison of Google Cloud Data Storage Options
 
 [[toc]]
 
