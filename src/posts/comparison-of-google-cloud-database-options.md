@@ -26,7 +26,7 @@ Google Cloud SQL is fully managed, flexible, automatically replicated across mul
 ## Cloud Spanner
 Cloud Spanner uses TrueTime to execute the same query on multiple regions to ensure consistency. If your data needs to be consistent and cannot wait for replication, cloud spanner is the clear choice.
 ## Compute VM
-Running a database cluster out of Compute VM, you take all the management upon yourself. If you select the wrong compute sizes, either too big or too small, you run risks of rising costs or falling performance.
+Running a database cluster out on Compute VM, you take all the management upon yourself. If you select the wrong compute sizes, either too big or too small, you run risks of rising costs or falling performance.
 
 |Product      |Relational|Unstructured|Heavy R/W|Low Latency|Global|
 |:------------|:--------:|:----------:|:-------:|:---------:|:----:|
