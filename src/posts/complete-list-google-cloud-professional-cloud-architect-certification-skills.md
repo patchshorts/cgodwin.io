@@ -126,40 +126,72 @@ The Children's Online Privacy Protection Act (COPPA) is a law that requires comp
 ### Stackdriver
 Stackdriver is a cloud monitoring tool that provides comprehensive monitoring and logging for cloud-powered applications. It offers powerful features like monitoring dashboards, alerting, log management, and tracing. Stackdriver is a great tool for keeping track of the health and performance of your cloud-based applications.
 ### Continuous Deployment
+Just use [Harness](harness.io). Cloud Deploy in GCP is $15 per pipeline per month.
 ### Continuous Integration
+Cloud build basics.
 ### Reliability Engineering
+Reliability engineering via Cloud Ops: Logging, Monitoring, Alerting, Etc.
 ### Overloads, Cascading Failure and Testing
+Designs need to deal with capacity overloads, they need to fail in a cascading manor, and reliability testing.
 ### Incident Management, Analysis, and Reporting
+Identify Incident cause, Plan for fix remediation, and log the actions taken.
 ## Technical Process Introspection
 ### Lifecycle Planning
+Create and Understand Software Development Lifecycle plans.
 ### Troubleshooting
-### Unit Testing in CI
-### Regression testing in CD
-### Validation
-#### Binary Authorization
-#### Readiness
-#### Liveness
-#### Port Verification(L4)
-#### Protocol Verification (L7)
-#### Content Verification
-#### Certificate Chain Verification
+Fixing your technical processes by revisiting your Incident Response and Post-Mortem Culture
+### Enterprise IT Processes
+Fit your Technical Processes into the IT processes of your wider group. For example, creating AD groups and syncing them to GCP for IAM federation.
+### Business Continuity Planning and Disaster Recovery
+Architects wil be asked to help teams to be better prepared to run their app in a new environment from scratch.
 ## Business Process Introspection
-### Stakeholder Management*
-### Change Management*
-### Team Skill Management*
-### Customer Success Management*
-### Cost Management*
-## Development and Operations Design*
+### Stakeholder Management
+The ability to deliver and set expectations with people who have an interest in the project you're designing.
+### Change Management
+Understanding of Plan, Do, Study, Act.
+### Team Skill Management
+Help develop internal skill-sets among the team.
+### Customer Success Management
+Helping customers to get the most value from your services.
+### Cost Management
+Resource planning, Cost estimation, budgeting, and cost control.
+### Cost Optimization
+Familiar with HR Costs, Infrastructure costs, Operational Costs, and Capital Costs. Can contribute to optimizing these costs.
+## Development and Operations Design
 ### Create Development-and-Redevelopment-for-Cloud Strategies
+Ability to guide app developers to plan for redeveloping applications for cloud specific services.
 ### API Best Practices
+Understanding APIs, RESTful and RPC. API Security familiarization and comprehension of resource limiting.
 ### Testing Frameworks
-### Cloud SDK
+Vulnerability Testing, Unit Testing, Regression Testing, WebDriver Testing, HTTP and Healthcheck verifications.
 ### Secrets Integration for Third Party Apps
+Strategy for storing sensitivity data in the cloud.
+### Google Cloud SDK
+gcloud, gsutil, bq, cbt, kubectl, pubsub emulator...
+### Cloud Emulators
+Awareness in local emulators for development reduction. Bigtable, Datastore, Firestore, Pub/Sub, Spanner.
+### Migration Strategies
+Lift and Shift, Move and improve, or Rip and restore?
+### Tools
+Storage Transfer Service, gsutil, Google Cloud Database Migration, Google Transfer Appliances, and 3rd party options.
+### Migration Cost/Time Optimization
+Data Size, Redevelopment Time, Migration Time, Planning Time.
 ## Migration Planning
-### Integrating Networks
-### Integrating Databases and Migrating to Cloud in Phases
-### Segmenting Traffic to New Phases
-### Developing and Testing POC Projects
+### Integrating Cloud Systems with Existing Services
+### Migrating Applications and Data to Support a Solution
+Planning Changing code and configuration to support shifts in platform differences.
+#### Planning for Data Migration
+Consider the size and type of data being migrated, the workload requirements, and the available budget. Other restrictions.
+#### Governance of Data and Migrations
+Ensuring that data is managed to stay in-compliance effectively and consistently across a migration.
+#### Migrating Object Storage
+Bucket structure, Roles and Access Controls. Time and Cost comprehension, transfer sequence, transfer methods.
+#### Migration Relational Data
+Volume considerations, downtime considerations, replicate in the cloud for no-downtime migrations.
+### Software License Mapping
+Understanding of BYOL models and pay-as-you-go models.
+### Network Planning
+Planning Shared Networks in Tiered Projects, Planning VPCs, Planning Network Access Standards, Scaling & Performance Testing, Connectivity
 ## Official Resources
 * [The Official Google Certified Professional Cloud Architect Exam
   Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
