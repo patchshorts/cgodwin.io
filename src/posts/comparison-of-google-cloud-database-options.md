@@ -9,6 +9,18 @@ tag:
   - 'google cloud'
   - gcp
   - GCCPCA
+  - Cloud computing
+  - Cloud Databases
+  - Bigtable
+  - Database
+  - Information management
+  - Data management software
+  - Software engineering
+  - Information Age
+  - Computer science
+  - Databases
+  - Information retrieval
+  - Data
 ---
 
 # Comparison of Google Cloud Database Options
@@ -37,7 +49,7 @@ Running a database cluster on Compute VM, you take all the management upon yours
 |Compute VM   |     🟢  |🟢|    🟢      |     🔴  |     🔴    |🔴  |
 
 | Symbol  |    Meaning   |
-|:-------:|-------------:|
+|:-------:|:-------------:|
 |   🟢    | Yes          |
 |   🔴    | No           |
 |✝|  Semi Unstructured Data with the Json type|
