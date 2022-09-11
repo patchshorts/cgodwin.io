@@ -5,7 +5,12 @@ yarn.lock
 *lock.json
 *lock.yaml
 toys/v86/images/*.tar
-
+src/.vuepress/dist
+src/.vuepress/serve
+src/.vuepress/.temp
+old/.vuepress/dist
+old/.vuepress/serve
+old/.vuepress/.temp
 # Logs
 logs
 *.log
