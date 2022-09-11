@@ -1,9 +1,9 @@
-import { useStyleTag } from "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-components/lib/client/composables";
+import { useStyleTag } from "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-components@2.0.0-beta.97/node_modules/vuepress-plugin-components/lib/client/composables/index.js";
 import { h } from "vue";
 import { defineClientConfig } from "@vuepress/client";
-import Badge from "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-components/lib/client/components/Badge";
-import FontIcon from "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-components/lib/client/components/FontIcon";
-import BackToTop from "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-components/lib/client/components/BackToTop";
+import Badge from "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-components@2.0.0-beta.97/node_modules/vuepress-plugin-components/lib/client/components/Badge";
+import FontIcon from "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-components@2.0.0-beta.97/node_modules/vuepress-plugin-components/lib/client/components/FontIcon";
+import BackToTop from "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-components@2.0.0-beta.97/node_modules/vuepress-plugin-components/lib/client/components/BackToTop";
 
 
 export default defineClientConfig({

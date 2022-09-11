@@ -7,19 +7,10 @@ category:
 tag:
   - 'study guide'
   - 'google cloud'
-  - gcp
   - GCCPCA
-  - Cloud computing
-  - Cloud Databases
   - Bigtable
   - Database
-  - Information management
-  - Data management software
-  - Software engineering
-  - Information Age
-  - Computer science
-  - Databases
-  - Information retrieval
+  - 'Information retrieval'
   - Data
 ---
 

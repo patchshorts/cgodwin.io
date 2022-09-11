@@ -1,17 +1,18 @@
 import { defineClientConfig } from "@vuepress/client";
-import ChartJS from "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-md-enhance/lib/client/components/ChartJS";
-import ECharts from "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-md-enhance/lib/client/components/ECharts";
-import CodeDemo from "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-md-enhance/lib/client/components/CodeDemo";
-import CodeTabs from "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-md-enhance/lib/client/components/CodeTabs";
-import FlowChart from "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-md-enhance/lib/client/components/FlowChart";
-import Mermaid from "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-md-enhance/lib/client/components/Mermaid";
-import Presentation from "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-md-enhance/lib/client/components/Presentation";
-import "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-md-enhance/lib/client/styles/container/index.scss";
-import "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-md-enhance/lib/client/styles/footnote.scss";
-import "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-md-enhance/lib/client/styles/image-mark.scss";
-import Tabs from "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-md-enhance/lib/client/components/Tabs";
-import "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-md-enhance/lib/client/styles/tasklist.scss";
-import "/home/cgodwin/code/cgodwin-io-github/src/node_modules/vuepress-plugin-md-enhance/lib/client/styles/tex.scss";
+    import { defineAsyncComponent } from "vue";
+import ChartJS from "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-md-enhance@2.0.0-beta.97/node_modules/vuepress-plugin-md-enhance/lib/client/components/ChartJS";
+import ECharts from "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-md-enhance@2.0.0-beta.97/node_modules/vuepress-plugin-md-enhance/lib/client/components/ECharts";
+import CodeDemo from "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-md-enhance@2.0.0-beta.97/node_modules/vuepress-plugin-md-enhance/lib/client/components/CodeDemo";
+import CodeTabs from "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-md-enhance@2.0.0-beta.97/node_modules/vuepress-plugin-md-enhance/lib/client/components/CodeTabs";
+import FlowChart from "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-md-enhance@2.0.0-beta.97/node_modules/vuepress-plugin-md-enhance/lib/client/components/FlowChart";
+import Mermaid from "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-md-enhance@2.0.0-beta.97/node_modules/vuepress-plugin-md-enhance/lib/client/components/Mermaid";
+import Presentation from "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-md-enhance@2.0.0-beta.97/node_modules/vuepress-plugin-md-enhance/lib/client/components/Presentation";
+import "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-md-enhance@2.0.0-beta.97/node_modules/vuepress-plugin-md-enhance/lib/client/styles/container/index.scss";
+import "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-md-enhance@2.0.0-beta.97/node_modules/vuepress-plugin-md-enhance/lib/client/styles/footnote.scss";
+import "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-md-enhance@2.0.0-beta.97/node_modules/vuepress-plugin-md-enhance/lib/client/styles/image-mark.scss";
+import Tabs from "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-md-enhance@2.0.0-beta.97/node_modules/vuepress-plugin-md-enhance/lib/client/components/Tabs";
+import "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-md-enhance@2.0.0-beta.97/node_modules/vuepress-plugin-md-enhance/lib/client/styles/tasklist.scss";
+import "/home/cgodwin/code/cgodwin-io-github/new/node_modules/.pnpm/vuepress-plugin-md-enhance@2.0.0-beta.97/node_modules/vuepress-plugin-md-enhance/lib/client/styles/tex.scss";
 
 
 export default defineClientConfig({

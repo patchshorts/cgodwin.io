@@ -1,9 +1,9 @@
 import { hopeTheme } from "vuepress-theme-hope";
-import navbar from "./navbar";
-import sidebar from "./sidebar";
+import navbar from "./navbar.js";
+import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-v2-demo.mrhope.site",
+  hostname: "https://cgodwin-io-xu5obpctlq-uc.a.run.app/",
 
   author: {
     name: "Christopher Godwin",
@@ -14,7 +14,7 @@ export default hopeTheme({
 
   logo: "/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "patchshorts/cgodwin-io",
 
   docsDir: "demo/src",
 
@@ -29,10 +29,10 @@ export default hopeTheme({
   displayFooter: true,
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
-  
+
   blog: {
-    description: "Manager, Cloud & DevSecOps",
-    intro: "/resume.html",
+    description: "A FrontEnd programmer",
+    intro: "/intro.html",
     medias: {
       Baidu: "https://example.com",
       Bitbucket: "https://example.com",
@@ -68,7 +68,7 @@ export default hopeTheme({
 
   encrypt: {
     config: {
-      // "/guide/encrypt.html": ["1234"],
+      "/guide/encrypt.html": ["1234"],
     },
   },
 
@@ -84,11 +84,11 @@ export default hopeTheme({
       /**
        * Using Giscus
        */
-      // provider: "Giscus",
-      // repo: "vuepress-theme-hope/giscus-discussions",
-      // repoId: "R_kgDOG_Pt2A",
-      // category: "Announcements",
-      // categoryId: "DIC_kwDOG_Pt2M4COD69",
+      provider: "Giscus",
+      repo: "vuepress-theme-hope/giscus-discussions",
+      repoId: "R_kgDOG_Pt2A",
+      category: "Announcements",
+      categoryId: "DIC_kwDOG_Pt2M4COD69",
 
       /**
        * Using Twikoo

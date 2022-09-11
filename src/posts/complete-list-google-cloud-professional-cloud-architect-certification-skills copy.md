@@ -9,22 +9,10 @@ tag:
   - 'google cloud'
   - gcp
   - GCCPCA
-  - economy
-  - business and finance
-  - economic sector
-  - computing and information technology
-  - software science and technology
-  - information science
-  - human resources management
-  - health data
-  - IT/computer sciences
-  - computer networking
-  - technology and engineering
-  - business information
-  - computer security
-  - ethics
-  - government policy>migration of data
-  - personal data collection policy
+  - 'Cloud computing'
+  - 'business and finance'
+  - 'computing and information technology'
+  - 'software science and technology'
 ---
 
 # Complete List of Google Cloud Certified Professional Cloud Architecture Skills
