@@ -74,7 +74,7 @@ and industrious top performer who contributes to the efficiency and stability of
 ## Fire, Well & Tree, Austin, Texas
 ### Senior Developer, DevOps, System Engineer, 2013-2015
 * Utilized Vagrant and Docker to mirror app stacks on laptops.
-* Guided end-toend operations from sales to contracts to organizing team to developing.
+* Guided end-to-end operations from sales to contracts to organizing team to developing.
 * Contracted implemented and designating cluster architecture, highly-available fault-tolerant geolocated builds, and cloud provisioning.
 * Managed responsibility for over 200 servers previously in IT wild.
 * Delegated software engineering tasks to overseas development teams.

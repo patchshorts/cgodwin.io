@@ -9,7 +9,7 @@ bgImageStyle: cover
 heroImage: /logo.svg
 heroText: Christopher Shaun Godwin
 heroFullScreen: false
-tagline: Mananger, Cloud & DevSecOps
+tagline: Manager, Cloud & DevSecOps
 projects:
   - icon: project
     name: Charles Schwab
@@ -17,7 +17,7 @@ projects:
     link: https://www.schwab.com/
 
   - icon: project
-    name: International Gameing Technology
+    name: International Gaming Technology
     desc: Senior Site Reliability Engineer
     link: https://www.igt.com/
 
