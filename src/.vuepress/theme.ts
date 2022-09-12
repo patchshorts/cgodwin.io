@@ -14,9 +14,9 @@ export default hopeTheme({
 
   logo: "/logo.svg",
 
-  repo: "patchshorts/cgodwin-io",
+  repo: "patchshorts/cgodwin.io",
 
-  docsDir: "demo/src",
+  docsDir: "src",
 
   // navbar
   navbar: navbar,
