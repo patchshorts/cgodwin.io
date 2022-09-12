@@ -27,13 +27,13 @@ Shielded VMs use verification on hardware IDs and chips to defend against Linux 
 It uses [Secure Boot](https://cloud.google.com/compute/shielded-vm/docs/shielded-vm#secure-boot), [Virtual trusted platform module(vTPM)](https://cloud.google.com/compute/shielded-vm/docs/shielded-vm#vtpm)-enabled [Measured Boot](https://cloud.google.com/compute/shielded-vm/docs/shielded-vm#measured-boot), and [Integrity monitoring](https://cloud.google.com/compute/shielded-vm/docs/shielded-vm#integrity-monitoring).
 
 ### Monitoring
-You can monitor your VMs in a few ways in Shielded VMs:
+You can monitor your VMs in a few ways with Shielded VMs:
 
 * You can monitor the boot integrity of shielded VMs with cloud monitoring.
 * You can automatically take action on integrity failures with cloud functions.
 
 ## Confidential VMs
-These Virtual Machines use *encryption-in-use* and encrypt the data in memory. You provision a VM with the type [N2D](https://cloud.google.com/compute/docs/general-purpose-machines#n2d_machines):
+These Virtual Machines use *encryption-in-use* and encrypt the data in memory. You provision this type of VM with the type [N2D](https://cloud.google.com/compute/docs/general-purpose-machines#n2d_machines):
 
 * `n2d-standard-2`
 * `n2d-standard-4`

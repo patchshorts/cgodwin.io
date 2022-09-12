@@ -18,7 +18,7 @@ tag:
 ## Top Considerations
 * Business Use Case & Product Strategy
 * Cost Optimization
-* Dovetail with the Application Design
+* Dovetail with Application Design
 * Integration with External Systems
 * Movement of Data
 * Planning decision trade-offs
@@ -240,7 +240,7 @@ basis.
 An effective SLM program will help to ensure that services are delivered in a
 timely and efficient manner, and that customer expectations are met or exceeded.
 
-## Analyzing Techical Requirements
+## Analyzing Technical Requirements
 
 Technical requirements specify the characteristics that a system or component
 must have in order to be able to perform its required functions. These include
@@ -287,12 +287,12 @@ you have multiple workloads that you can sort into different groups to which the
 rules correspond?
 
 Do you need DNS peering to enable hybrid-cloud networking between your VPC and
-your onpremesis networks? These are questions an architct asks. You have to take
+your on-premesis networks? These are questions an architect asks. You have to take
 the company's subnets into account so that you can avoid collisions. So is
 automated or custom subnetting right for your project?
 
 How is hybrid peering accomplished: VPN Peering which has high security but low
-througput? Or will Dedicated Interconnect and Partnet Interconnects be used at
+througput? Or will Dedicated Interconnect and Partner Interconnects be used at
 higher cost for greater throughput?
 
 ### Nonfunctional Requirements
@@ -310,7 +310,7 @@ they ensure that the system will meet the needs of its users.
 * Durability
 * Observability
 
-#### Availability Requiremtents
+#### Availability Requirements
 There are many factors to consider when determining the availability
 requirements for a system. The first is the required uptime, which is the
 percentage of time that the system must be operational. For example, a system
@@ -320,16 +320,16 @@ system, and the response time to failures. Availability requirements are often
 specified in terms of uptime and downtime, which is the amount of time that the
 system is operational and unavailable, respectively.
 
-#### Reliability Requiremtents
+#### Reliability Requirements
 Reliability requirements are those that specify how often a system or component
 must perform its required functions correctly. They are typically expressed as a
 percentage or a probability, and they may be specified for a single function or
 for the system as a whole. Reliability requirements are important because they
 help ensure that a system will be able to meet its operational objectives.
-Related to Availability, Reliability is the same requirement under the presure
+Related to Availability, Reliability is the same requirement under the pressure
 of business load.
 
-#### Scalability Requiremtents
+#### Scalability Requirements
 Scalability requirements are those that dictate how well a system can cope with
 increased loads. They are typically expressed in terms of throughput, response
 time, or capacity. For example, a system that can handle twice the number of
@@ -340,9 +340,9 @@ an application, or a network. It is especially important in the case of
 web-based systems, which are often subject to sudden and unexpected spikes in
 traffic. A system that is not scalable will quickly become overloaded and unable
 to cope, leading to a poor user experience and potential loss of business.
-Scalability requirements ofthen are linked to Reliability factors.
+Scalability requirements often are linked to Reliability factors.
 
-#### Durability Requiremtents
+#### Durability Requirements
 In order for a product to be considered durable, it must be able to withstand
 repeated use and exposure to the elements without showing signs of wear and
 tear. This means that the materials used to construct the product must be of
@@ -354,14 +354,14 @@ determining its overall quality and usefulness.
 
 Durability in the cloud is the ability to retrieve data placed there in the
 future. This means not losing volumes, files, objects and the immediate
-replacability and reproducability of any resources that are not functioning
+replacability and reproducibility of any resources that are not functioning
 correctly.
 
-#### Observability Requiremtents
+#### Observability Requirements
 Observability requirements are those that enable a system to be monitored and
 its performance to be assessed and internal states to be known. They are
 typically concerned with aspects such as the availability of data, the ability
-to detect and diagnose faults, and the ability to predict future behaviour. In
+to detect and diagnose faults, and the ability to predict future behavior. In
 many cases, these requirements will need to be trade-offs between conflicting
 goals, such as the need for timely data versus the need for comprehensive data.
 
