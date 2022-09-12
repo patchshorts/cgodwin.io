@@ -69,15 +69,6 @@ tag:
 |**IoT Core**|**Internet of Things**|**Collect, process, analyze and visualize data from Iot devices in real time**|
 |**Cloud Healthcare**|**Healthcare and Life Sciences**|**send, receive, store, query, transform, and analyze healthcare and life sciences data**|
 |**Game Servers**|**Media and Gaming**|**deploy and manage dedicated game servers across multiple Agones clusters**|
-
-
-
-
-
-[[toc]]
-
-## 
-
 ## Official Resources
 * [Google Cloud Platform Services Summary](https://cloud.google.com/terms/services)
 * [The Official Google Certified Professional Cloud Architect Exam
