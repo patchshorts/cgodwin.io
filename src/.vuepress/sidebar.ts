@@ -1,7 +1,11 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar([
-  "/",
+  {
+    text: "Home",
+    icon: "home",
+    link: "/",
+  },
   {
     text: "Blog Home",
     icon: "blog",
