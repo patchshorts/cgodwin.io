@@ -29,10 +29,6 @@ projects:
     name: Sundaram
     desc: Senior Developer
     link: https://sundaramdesign.com/
-
-  - icon: project
-    name: Host U Online
-    desc: CTO, DevOps Engineer
   # - icon: /logo.svg
   #   name: custom item
   #   desc: Detailed description of this custom item
