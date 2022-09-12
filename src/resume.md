@@ -107,32 +107,6 @@ and industrious top performer who contributes to the efficiency and stability of
 * Crated databases that supported web applications and web sites.
 * Collaborated with management and users to develop e-commerce strategies and integrate these strategies with web sites.
 
-## Host You Online, INC., Austin, Texas
-### CTO, 2009-2011
-* Conferred with board members, organization officials, and staff members to discuss issues, coordinate activities, and resolve problems.
-* Analyzed operations to evaluate performance of company and staff in meeting objectives and to determine areas of potential cost reduction, program improvement, and policy change.
-* Directed, planned, and implemented policies, objectives, and activities of organizations and businesses to ensure continuing operations, maximize returns on investments, and increase productivity.
-* Coordinated and directed activities of businesses and departments concerned with production, pricing, sales, and distribution of products.
-* Helped register 12-fold revenue increase in 2010 with new offering launches.
-
-### Senior Developer, DevOps Engineer, 2009-2011 (Concurrent)
-* Handled hardware and software scalability.
-* Defined and implemented a requirements-first modeled development processes with ongoing requirement collection.
-* Fabricated and maintained fiberoptic-based 10G hosting infrastructure.
-* Created and managed OpenStack cloud infrastructure.
-* Developed service deployment strategies.
-* Set up and maintained OpenQRM cloud.
-* Implemented and designed entire commercial ISP within Colina West (Clear Cube) building on 360 Built on FreeBSD.
-* Built static websites, dynamic web applications, and brochure WordPress websites.
-* Wrote entire Python AV class recording web application called The Classroom Experience for Acton School of Business in Austin.
-* Managed release engineering for virtual machine builds and software deployments.
-* Designed data center to handle failure points and millions of transactions per day.
-* Guided tools development and release engineering for local cluster of clouds and loose nodes.
-* Deployed Puppet on hundreds of hosted virtuals and dedicated servers.
-* Oversaw release engineering, documentation, and training of staff.
-* Provided writing of all internal databases for CRM and customer account and services tracking interfaced with QuickBooks.
-* Enforced adoption of agile religious ceremonies surrounding requirements gathering.
-
 # Certifications
 * Red Hat Certified Engineer (RHCE)
 
@@ -140,11 +114,9 @@ and industrious top performer who contributes to the efficiency and stability of
 PuppetLabs™ training, Business Networking Groups, years of freelancing for professionals.
 
 # TECHNICAL SKILLS
-Kubernetes, Docker, RHCE, Linux, DevOps, Continuous Integration, Continuous Deployment, GitOps, Git, Terraform, Docker, Helm, K8s, Kubernetes
+Kubernetes, Docker, RHCE, Linux, DevOps, Continuous Integration, Continuous Deployment, GitOps, Git, Terraform, Docker, Helm, K8s, Kubernetes,
 Apache Maven, Python, Bash, Harness.io, Argo CD, Bamboo, Node.js, Automation, GCP, AWS, GCP, Red Hat, Shell Scripting, Mongo, JavaScript, Less,
 Sass/SCSS, Bootstrap, HTML5/CSS/JS, Drupal, Wordpress, Salt Stack, Puppet, Vue.js, CentOS/Red Hat, SCO UNIX, FreeBSD, OpenBSD, Puppet, Ansible, MV*/MVC
 
 # INTERPERSONAL SKILLS
-Wooer, Connectedness, Achiever, Analytical, Relator, Leadership, Teamwork, Command, Problem-solving, Effective communication
-skills, Self-direction, Drive, Adaptability, Flexibility, Dependability, Conflict resolution, Flexibility, Leadership, Problem-solving,
-Research, Creativity, Work ethic, Integrity
+Wooer, Connectedness, Achiever, Analytical, Relator, Leadership, Teamwork, Command, Problem-solving, Effective communication skills, Self-direction, Drive, Adaptability, Flexibility, Dependability, Conflict resolution, Flexibility, Leadership, Research, Creativity, Work ethic, Integrity
