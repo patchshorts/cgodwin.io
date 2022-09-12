@@ -15,7 +15,7 @@ tag:
 
 [[toc]]
 
-## Top Considerations
+## Key Considerations
 * Business Use Case & Product Strategy
 * Cost Optimization
 * Dovetail with Application Design
