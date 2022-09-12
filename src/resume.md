@@ -23,7 +23,7 @@ and industrious top performer who contributes to the efficiency and stability of
 
 # Experience
 ## Charles Schwab, Austin, TX
-### Manager of Software Development and Engineering, January 2020-July 2020
+### Manager of Software Development and Engineering, January 2020-Present
 * Produced highly usable and scalable web software solutions using advanced development technologies
 * Implemented application deployment architecture for fortune 500 level enterprise scalability
 * Increased Communication and decreased blockers at various organizational levels.
