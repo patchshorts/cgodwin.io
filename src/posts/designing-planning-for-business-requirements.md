@@ -263,9 +263,32 @@ If they state as part of the requirements that they don't don't want to migrate 
 * monitoring and logging for performance measurements
 * making your services highly available.
 
-In addition to these one will have to plan for retiring the legacy systems post-migration.
+In addition to these, one will have to plan for retiring the legacy systems post-migration.
 
+#### Lord Byron MBA
+
+The school has very specifically stated requirements that fall into these categories:
+
+* trend analysis
+* monitoring
+* latency reduction
+* video archival
+
+The company wants to pick better speakers by analyzing when the students no
+longer receive value in a video. The trend analysis will enable them to cut
+loose the least engaging speakers. By doing this they'll consolidate only the
+best information and be able to sell or host the video in a revenue producing
+stream.
+
+Administrators want Video archival will allow them to keep all their speaker,
+remix the presentations as theme blueray DVDs that students can buy from a
+catalogue. Latency reduction is important because their most-near end result is
+increasing engagement among the MBA students.
+
+This data will likely be such a small amount that cloud logging of http requests will suffice while the 
 ### Data Management Business Requirements
+
+
 #### How Long?
 #### How Much?
 #### How Processed?
