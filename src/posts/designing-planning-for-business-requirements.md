@@ -10,7 +10,7 @@ tag:
   - GCCPCA
 ---
 
-# Designing and Planning Solutions in Google Cloud with GCP Architecture
+# Designing and Planning GCP Solutions for Business Requirements
 
 [[toc]]
 
@@ -128,14 +128,98 @@ To see an exhaustive list, please see [My List of All GCP Managed Services](list
 
 ### Reduced-level Services
 
+Many times when computing needs are considered, certain services with
+availability requirements lower than others can benefit from reduced-level
+services. If a job that must be processed can have those processes paused during
+peak times but can otherwise run normally, it can be preempted.
+
+Reduced level services:
+
+* Preemptible Virtual Machines
+* Spot VMs
+* Standard Networking
+* Pub/Sub Lite
+* Durable Reduced Availability Storage
 
 #### Preemptive VMs
+Preemptable VMs are shutdown after 24 hours and google can pause them at any
+time. Running process on those vms do not stop but they slow to a crawl and
+speed back up when services become available. You can write a rubust application by
+setting it up to detect the preemptions. These VMs cost 60-90% or so less than
+their standard counterparts.
+
+Preemptible VMs also get discounts on volumes and GPUs. Managed resource groups
+will replace a preempted VM when it is suspended after 24 hours. Preemptible VMs
+can use other services to reduce the overall cost of using those services with VMs.
+
 #### Spot VMs
-### Standard & Premium Networking
-### Pub/Sub Lite vs Pub/Sub
-### App Engine Standard vs Flexible
-### Durable Reduced Availability Storage(DRA)
+
+Spot VMs are the next generation Preemptible virtual machine. Though spot VMs
+are not automatically restarted, they can run for longer than 23 hours. Spot VMs
+can be set to a stopped state or be deleted on preemption. With a managed
+resource group of spot VMs, one can set the VMs to be deleted and replaced when
+resources are available.
+
+
+#### Standard & Premium Networking
+Premium Networking is the default, but Standard Tier Networking is a lower
+performaing option. With Standard Tier Networking, Cloud Load Balancing is only
+regional load balancing and not global balancing. Standard Networking is not
+compliant with the global SLA
+
+#### Pub/Sub Lite vs Pub/Sub
+Pub/Sub is an extermely scalable but Pub/Sub Lite can be scaled providing lower
+levels of cost-effective service.
+
+Pub/Sub come with features such as parallelism, automatic scaling, global
+routing, regional and global endpoints.
+
+Pub/Sub Lite is less durable and less available than Pub/Sub. Messages can only
+be replicated to a single zone, while Pub/Sub has multizonal replication within
+a region. Pub/Sub Lite users also have to manage resource capacity themselves.
+
+But if it meets your needs, Pub/Sub Lite is 80% cheaper.
+
+#### App Engine Standard vs Flexible
+App Engine Standard allows scaling down to zero, though the trade offs are that
+you can only use a set of languages, can only write to /tmp with java, can't
+write with python. Standard apps cannot access GCP services, cannot modify the
+runtime, or have background processes, though they can have background threads.
+
+#### Durable Reduced Availability Storage(DRA)
+These are buckets which have an SLA of 99% availability instead of equal to and
+greater than 99.99% availability. Storage operatios are divided into class A and
+class B operations
+
+|API|Class A(\$0.05-\$0.10\*/10,000 ops)|Class B(\$0.004-\$0.01\*/10,000 ops)|
+|----|----|----|
+|JSON|storage.\*.insert1|storage.\*.get|
+|JSON|storage.\*.patch|storage.\*.getIamPolicy|
+|JSON|storage.\*.update|storage.\*.testIamPermissions|
+|JSON|storage.\*.setIamPolicy|storage.\*AccessControls.list|
+|JSON|storage.buckets.list|storage.notifications.list|
+|JSON|storage.buckets.lockRetentionPolicy|Each object change notification|
+|JSON|storage.notifications.delete||
+|JSON|storage.objects.compose||
+|JSON|storage.objects.copy||
+|JSON|storage.objects.list||
+|JSON|storage.objects.rewrite||
+|JSON|storage.objects.watchAll||
+|JSON|storage.projects.hmacKeys.create||
+|JSON|storage.projects.hmacKeys.list||
+|JSON|storage.\*AccessControls.delete||
+|XML|GET Service|GET Bucket (when retrieving bucket configuration or when listing ongoing multipart uploads)|
+|XML|GET Bucket (when listing objects in a bucket)|GET Object|
+|XML|POST|HEAD|
+
+\* DRA Pricing, otherwise Standard Pricing
+
 ### Data Lifecycle Management
+
+Sort your data along a spectrom immediate use to persistent use to infrequent
+use.
+
+* Memorystore
 
 ## Systems Integ and Data Management
 ### Systems Integration Business Requirements
@@ -162,6 +246,7 @@ Acton MBA will host an application in the cloud. The application
 ## Official Resources
 * [The Official Google Certified Professional Cloud Architect Exam
   Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
+* [Preemptible VMs](https://cloud.google.com/compute/docs/instances/preemptible)
 * [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
 * [Sample Questions](http://cloud.google.com/certiications/cloud-architect)
 * [GCP Documentation](http://cloud.google.com/docs)
