@@ -1,9 +1,8 @@
 ---
 icon: cloud
-date: 2022-09-12
+date: 2022-09-14
 category:
   - Google Cloud
-  - Technology
 tag:
   - 'study guide'
   - 'google cloud'
@@ -128,6 +127,7 @@ To see an exhaustive list, please see [My List of All GCP Managed Services](list
 
 
 ### Reduced-level Services
+
 
 #### Preemptive VMs
 #### Spot VMs

@@ -1,6 +1,6 @@
 ---
 icon: cloud
-date: 2022-09-12
+date: 2022-09-13
 category:
   - Google Cloud
   - Technology
