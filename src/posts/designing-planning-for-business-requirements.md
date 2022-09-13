@@ -11,66 +11,155 @@ tag:
   - GCCPCA
 ---
 
-# List of All Managed Google Cloud Platform(GCP) Services
+# Designing and Planning Solutions in Google Cloud with GCP Architecture
 
-|Service|Type|Description|
-|:---|---|---|
-|**AutoML Tables**|**AI and Machine Learning**|**Machine learning models for structured data**|
-|**Recommendations AI**|**AI and Machine Learning**|**Personalized recommendations**|
-|**Natural Language AI**|**AI and Machine Learning**|**Entity recognition, sentiment analysis, language identification**|
-|**Cloud Translation**|**AI and Machine Learning**|**Translate between two languages**|
-|**Cloud Vision**|**AI and Machine Learning**|**Understand contents of images**|
-|**Dialogflow Essentials**|**AI and Machine Learning**|**Development suite for voice to text**|
-|**BigQuery**|**Analytics**|**Data warehousing and analytics**|
-|**Batch**|**Compute**|**fully managed batch jobs at scale**|
-|**VMware Engine(GCVE)**|**Compute**|**running VMware workloads on GCP**|
-|**Cloud Datalab**|**Analytics**|**Interactive data analysis tool based on Jupyter Notebooks**|
-|**Data Catalog**|**Analytics**|**Managed and scalable metadata management service**|
-|**Dataproc**|**Analytics**|**Managed hadoop and Spark service**|
-|**Dataproc Metastore**|**Analytics**|**Managed Apache Hive**|
-|**Cloud Composer**|**Analytics**|**Data workflow orchestration service**|
-|**Cloud Data Fusion**|**Analytics**|**Data integration and ETL tool**|
-|**Data Catalog**|**Analytics**|**Metadata management service**|
-|**Dataflow**|**Analytics**|**Steam and Batch processing**|
-|**Cloud Spanner**|**Database**|**Global relational database**|
-|**Cloud SQl**|**Database**|**Regional relational database**|
-|**Cloud Deployment Manager**|**Development**|**Infrastructure-as-code service**|
-|**Cloud Pub/Sub**|**Messaging**|**Messaging service**|
-|**Bigtable**|**Storage**|**Wide column, NoSQL databases**|
-|**Cloud Data Transfer**|**Storage**|**Bulk data transfer service**|
-|**Cloud Memorystore**|**Storage**|**Managed chage service using Redis or memcached**|
-|**Cloud Storage**|**Storage**|**Managed object storage**|
-|**Cloud Filestore**|**Storage**|**Managed shared files via NFS or mount**|
-|**Cloud DNS**|**Networking**|**Managed DNS with API for publishing changes**|
-|**Cloud IDS**|**Networking**|**Intrusion Detection Systems**|
-|**Cloud Armor Managed Protection Plus**|**Networking**|**DDos Protection with Cloud Armor's AI adaptive protection**|
-|**Service Directory**|**Networking**|**Managed Service registry**|
-|**Cloud Logging**|**Operations**|**Fully managed log aggregator**|
-|**AI Platform Neural Architecture Search (NAS)**|**
-|**AI Platform Training and Prediction**|**AI Platform**|**NAS training**|
-|**Notebooks**|**AI Platform**|**JupyterLab environment**|
-|**Apigee**|**API Management**|**API Gateway security and analysis**|
-|**API Gateway**|**API Management**|**API Gateways**|
-|**Payment Gateway**|**API Management**|**integration with real-time payment systems like UPI**|
-|**Issuer Switch**|**API Management**|**user transactor deployment**|
-|**Anthos Service Mesh**|**Hybrid/Multi-Cloud**|**devide up gke traffic into workloads and secure them with istio**|
-|***BigQuery Omni**|**Analysis**|**Use BigQuery to query other clouds**|
-|**BigQuery Data Transfer Service**|**Analysis**|**Migrate data to BigQuery**|
-|**Database Migration Service**|**Storage**|**fully-managed migration service**|
-|**Migrate to Virtual MachManaged Service for Microsoft Active Directory (AD)	ines**|**Migration**|**migrate workloads at scale into Google Cloud Compute Engine**|
-|**Cloud Data Loss Prevention**|**Security and Identity**|**discover, classify, and protect your most sensitive data**|
-|**Cloud HSM**|**Security and Identity**|**Fully managed hardware security module**|
-|**Managed Service for Microsoft Active Directory (AD)**|**Identity & Access**|**Managed Service for Microsoft Active Directory**|
-|**Cloud Run**|**Serverless Computing**|**Run serverless containers**|
-|**Cloud Scheduler**|**Serverless Computing**|**cron job scheduler**|
-|**Cloud Tasks**|**Serverless Computing**|**distributed task orchestration**|
-|**Eventarc**|**Serverless Computing**|**Event rules between gcp services**|
-|**Workflows**|**Serverless Computing**|**reliably execute sequences of operations across APIs or services**|
-|**IoT Core**|**Internet of Things**|**Collect, process, analyze and visualize data from Iot devices in real time**|
-|**Cloud Healthcare**|**Healthcare and Life Sciences**|**send, receive, store, query, transform, and analyze healthcare and life sciences data**|
-|**Game Servers**|**Media and Gaming**|**deploy and manage dedicated game servers across multiple Agones clusters**|
+[[toc]]
+
+## Key Considerations
+* Business Use Case & Product Strategy
+* Cost Optimization
+* Dovetail with Application Design
+* Integration with External Systems
+* Movement of Data
+* Security
+* Measuring Success
+* Compliance and Observability
+
+## Business Use Cases and Product Strategy
+
+Business requirements dictate technical requirements implicitly. From statements like:
+
+### Tristar Healthcare
+
+#### Business Requirements
+
+* B2B services to various entities, vendors, insurance providers, network directories, etc.
+* Different entities will need different access to read and change records and information.
+* Different entities are of different expertiese
+* The services will always need to be up.
+* Some of the information entities will access is regulated.
+* Confidentiality
+* The data will track the number of times and the type of data accessed and gain insight into trends.
+
+#### Technical Requirements
+
+* They will need to publicly expose an API or set of them.
+* Access will need to be restricted in the API
+* There will be legacy systems involved because of insurance entities.
+* Redundant infrastructure
+* Data Lifecycles will have to take into account regulation, insights, and access controls.
+* Cloud Machine Learning can build their insight models faster than they can be planned and built.
+
+### Lord Byron MBA
+
+#### Business Requirements
+
+Acton MBA is a school which invites speakers to give presentations to students. These speakers are expensive so the school want's to maximize their investment.
+
+They want to record and stream these presentations on a web portal and for live and post review by students with logins. They want to reduce latency. They want to monitor when the students interact with the videos and derive insights as to which videos people rewatch.
+
+Because these requirements are limited, we can only begin to speculate about what the technical requirements will be.
+
+### Your Mother Is Now A Gamer, Inc
+
+#### Business Requirements
+
+This company makes web based and app based phone games that must interact with a High Scoring system, collect minimal user data. They are global and so the user data they collect is regulated in some parts of the globe. Because it is a phone app they want latency to be as low as possible. They are interested in Managed services which can automatically scale. We can begin to anticipate where we want the high score data to end up but we cannot yet flush out all the requirements that can be known.
+
+### Granger Excavation, Inc
+
+#### Business Requirements
+
+Granger Excavation uses GPS coordinates to excavate and pave properties so new buildings can be built in areas that need topographical alterations.
+
+They constantly stream location data of their digging vehicles to an on-premises database for later analysis. Once streamed this data doesn't change. Each vehicle has a tablet running their custom application which allows them to excavate by GPS instead of staked out areas with construction ribbon which constantly has to be maintained.
+
+People combine the CAD Drawings with location coordinates and the tablet displays its own location within the perimeter. They want to migrate all of this to cloud.
+
+
+## Application Design
+
+Business requirements will affect application design when applications are brought into the cloud. In every set of requirements, stated or unstated will be the desire to reduce cost.
+
+* Licensing Costs
+* Cloud computing costs
+* Storage
+* Network Ingress and Egress Costs
+* Operational Personnel Costs
+* 3rd Party Services Costs
+* Sanctions on missed SLA costs
+* Inter-connectivity charges
+
+These contribute to the Total Cost Ownership(TCO) of a cloud project.
+
+### Managed Services
+
+Google has a set of managed services like Cloud SQL which remove the low level work from running these services yourself.
+
+Some of these include:
+
+* Compute Engine
+  * Virtual machines running in Google’s data center.
+* Cloud Storage
+  * Object storage that’s secure, durable, and scalable.
+* Cloud SDK
+  * Command-line tools and libraries for Google Cloud.
+* Cloud SQL
+  * Relational database services for MySQL, PostgreSQL, and SQL Server.
+* Google Kubernetes Engine
+  * Managed environment for running containerized apps.
+* BigQuery
+  * Data warehouse for business agility and insights.
+* Cloud CDN
+  * Content delivery network for delivering web and video.
+* Dataflow
+  * Streaming analytics for stream and batch processing.
+* Operations
+  * Monitoring, logging, and application performance suite.
+* Cloud Run
+  * Fully managed environment for running containerized apps.
+* Anthos
+  * Platform for modernizing existing apps and building new ones.
+* Cloud Functions
+  * Event-driven compute platform for cloud services and apps.
+* And dozens more.
+
+To see an exhaustive list, please see [My List of All GCP Managed Services](list-all-google-cloud-platform-gcp-managed-services.md)
+
+
+### Reduced-level Services
+
+#### Preemptive VMs
+#### Spot VMs
+### Standard & Premium Networking
+### Pub/Sub Lite vs Pub/Sub
+### App Engine Standard vs Flexible
+### Durable Reduced Availability Storage(DRA)
+### Data Lifecycle Management
+
+## Systems Integ and Data Management
+### Systems Integration Business Requirements
+### Data Management Business Requirements
+#### How Long?
+#### How Much?
+#### How Processed?
+## Compliance and Regulations
+### Privacy Regulations
+### Data Integrity Regulations
+## Security
+### Confidentiality
+### Integrity
+### Availability
+## Success Measures
+### Key Performance Indicators
+#### Project KPIs
+#### Operations KPIs
+### Return on Investment(ROI)
+### Essentials
+
+Acton MBA will host an application in the cloud. The application
+
 ## Official Resources
-* [Google Cloud Platform Services Summary](https://cloud.google.com/terms/services)
 * [The Official Google Certified Professional Cloud Architect Exam
   Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
 * [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
