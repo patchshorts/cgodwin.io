@@ -33,8 +33,8 @@ Business requirements dictate technical requirements implicitly. From statements
 #### Business Requirements
 
 * B2B services to various entities, vendors, insurance providers, network directories, etc.
-* Different entities will need different access to read and change records and information.
-* Different entities are of different expertiese
+* Different entities will need and currently have different access to read and change records and information.
+* Different entities are of different expertise
 * The services will always need to be up.
 * Some of the information entities will access is regulated.
 * Confidentiality
@@ -142,9 +142,9 @@ Reduced level services:
 * Durable Reduced Availability Storage
 
 #### Preemptive VMs
-Preemptable VMs are shutdown after 24 hours and google can pause them at any
+Preemptible VMs are shutdown after 24 hours and google can pause them at any
 time. Running process on those vms do not stop but they slow to a crawl and
-speed back up when services become available. You can write a rubust application by
+speed back up when services become available. You can write a robust application by
 setting it up to detect the preemptions. These VMs cost 60-90% or so less than
 their standard counterparts.
 
@@ -163,12 +163,12 @@ resources are available.
 
 #### Standard & Premium Networking
 Premium Networking is the default, but Standard Tier Networking is a lower
-performaing option. With Standard Tier Networking, Cloud Load Balancing is only
+performing option. With Standard Tier Networking, Cloud Load Balancing is only
 regional load balancing and not global balancing. Standard Networking is not
 compliant with the global SLA
 
 #### Pub/Sub Lite vs Pub/Sub
-Pub/Sub is an extermely scalable but Pub/Sub Lite can be scaled providing lower
+Pub/Sub is an extremely scalable but Pub/Sub Lite can be scaled providing lower
 levels of cost-effective service.
 
 Pub/Sub come with features such as parallelism, automatic scaling, global
@@ -188,10 +188,10 @@ runtime, or have background processes, though they can have background threads.
 
 #### Durable Reduced Availability Storage(DRA)
 These are buckets which have an SLA of 99% availability instead of equal to and
-greater than 99.99% availability. Storage operatios are divided into class A and
-class B operations
+greater than 99.99% availability. Storage operations are divided into class A and
+class B operations:
 
-|API|Class A(\$0.05-\$0.10\*/10,000 ops)|Class B(\$0.004-\$0.01\*/10,000 ops)|
+|API|Class A(\$0.10\*/10,000 ops)|Class B(\$0.01\*/10,000 ops)|
 |----|----|----|
 |JSON|storage.\*.insert1|storage.\*.get|
 |JSON|storage.\*.patch|storage.\*.getIamPolicy|
@@ -212,17 +212,59 @@ class B operations
 |XML|GET Bucket (when listing objects in a bucket)|GET Object|
 |XML|POST|HEAD|
 
-\* DRA Pricing, otherwise Standard Pricing
+\* DRA Pricing
 
 ### Data Lifecycle Management
 
-Sort your data along a spectrom immediate use to persistent use to infrequent
-use.
+Sort your data along a spectrum of most frequent to infrequent use. Spread your data along the following:
 
-* Memorystore
+* Memory Caching
+* Live Database
+* Time-series Database
+* Object Storage
+  * Standard
+  * Nearline
+  * Coldline
+  * Archive
+* Onprem, Offline storage
+
+Objects have a storage class of either `standard`, `nearline`, `coldline`, or
+`archive`. Storage classes can be changed on single objects along this
+direction. You cannot move a storage class to a more frequent use class, only
+the opposite. You can move frequency lower on an object.
+
+`standard` -> `nearline` -> `coldline` -> `archive`
+
+storage class|`standard`|`nearline`|`coldline`|`archive`
+---|---|---|---|---
+accessing at least once per|week|month|quarter|year
 
 ## Systems Integ and Data Management
+Once we have these requirements, our minds already start placing the need in the
+right product, though we may be provisionally thinking about it. The same thing
+should be happening when you think of dependencies.
 ### Systems Integration Business Requirements
+Let's review the business needs of our use cases.
+
+#### Tristar Health
+
+Consider the technical requirement "There will be legacy systems involved
+because of insurance entities." implied from the business requirement "Different
+entities will need and currently have different access to read and change
+records and information."
+
+If they state as part of the requirements that they don't don't want to migrate legacy services to the cloud, you'll design and develop new systems in the cloud over the next few years. You'll have to plan for:
+
+* the volume and kinds of information in the traffic
+* how will authentication work
+* how will data be encrypted at rest, in transit or in memory
+* will encryption keys be provided or managed
+* decoupling services to accommodate load
+* monitoring and logging for performance measurements
+* making your services highly available.
+
+In addition to these one will have to plan for retiring the legacy systems post-migration.
+
 ### Data Management Business Requirements
 #### How Long?
 #### How Much?
