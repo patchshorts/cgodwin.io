@@ -35,6 +35,8 @@ Running a database cluster on Compute VM, you take all the management upon yours
 |:------------|:--------:|:----------:|:----------:|:-------:|:---------:|:----:|
 | Bigtable    |     🔴  |🟢|    🟢      |     🟢  |     🟢    |🔴  |
 | BigQuery    |     🟢  |🟢|    🟢✝     |     🔴✝✝|     🔴    |🔴  |
+| Cloud Firestore|  🔴  |🔴|    🟢     |     🔴|     🔴    |🔴  |
+| Firebase Realtime Database|     🟢  |🟢|    🟢✝     |     🔴✝✝|     🔴    |🟢  |
 |Cloud SQL    |     🟢  |🟢|    🟢      |     🔴  |     🔴    |🔴  |
 |Cloud Spanner|     🟢  |🟢|    🔴      |     🔴  |     🔴    |🟢  |
 |Compute VM   |     🟢  |🟢|    🟢      |     🔴  |     🔴    |🔴  |

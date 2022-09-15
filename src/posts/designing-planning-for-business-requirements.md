@@ -285,25 +285,128 @@ remix the presentations as theme blueray DVDs that students can buy from a
 catalogue. Latency reduction is important because their most-near end result is
 increasing engagement among the MBA students.
 
-This data will likely be such a small amount that cloud logging of http requests will suffice while the 
+This data will likely be such a small amount that Cloud Logging and BigTable can
+be used to pull SLIs out of http requests, and since your streaming server is an
+RTMP relay via the nginx rtmp module, you can glean all of your statistics from
+nginx logs.
+
+[nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module/wiki/Directives)
+
+You can use the nginx directive `record all` to store the streams to objects.
+Once there it may be prudent to set up a Cloud Storage trigger to transcode the
+MP4 videos to many formats you can serve later on the class portal.
+
+#### Your Mother Is Now A Gamer, Inc
+
+Data that will never be changed like high scores, previous progress, saved
+games, game boosts earned by some players but not others. These could all live
+in a document storage database like Firebase Realtime Database with the
+multiregion uptime SLA to ensure consistency and global availablility. The
+time-series data can live in Bigtable.
+
+You consider placing the pay-to-play purchases data and the billing database in
+Cloud SQL but because of their need for global consistency, Cloud Spanner would
+be more appropriate. Cloud Endpoints might be able to secure the APIs so that
+only the phone apps with the right keys can access them, however you can
+accomplish both running the public microservices and the authentication through
+Google Cloud Run.
+
+#### Granger Excavation
+
+Granger Excavation uses GPS coordinates to excavate and pave properties so new
+buildings can be built in areas that need topographical alterations.
+
+They need to stream IoT GPS telemetry somewhere. They also need to query if a
+device is within a work area so an applicaiton can turn red or green. Excavators
+literally dig until they hit a red area.
+
+After research you find out that BigQuery has geospacial analytics and can store
+geometries, spatial features and spacial feature collections. The project
+design you put together includes having the the engineers geocode their drawings
+from CAD into Geodatabase format and upload it to BigQuery.
+
+The tablets will post their coodrinates to an endpoint which will use BigQuery
+to return a true of false within 'proximity'. That same API will log the
+coordinates to BigTable for measuring excavator performance.
+
 ### Data Management Business Requirements
 
+Bussiness requirements help us know what platforms to connect and how they will
+work. Those same requirements will tell us what data is stored, how often, for
+how long, and who and what worloads have access to it.
 
-#### How Long?
-#### How Much?
 #### How Processed?
+What is the distance between where the data is stored and where it is processed?
+What volume of data will be moved between storage and processing during an
+operation or set of operations? Are we using stream or batch processing?
+
+The first question's answer influences both the read and write times and the
+network costs associated with transfering the data. Creating replicas in regions
+nearer to the point of processing will increase read times, but will only
+decrease network costs in a 'replecate one time, read many times' situation.
+Using storage solutions with a single write host will not improve replecation
+times.
+
+The second questions's answer influences time and cost as well. On a long enough
+timeline, all processes fail. Build shorter running processes and design
+reconnecting robust processes.
+
+The third question's answer and future-plans answer will influence how you
+perform batch processing. Are you going to migrate from batch to stream?
+
+|Style|Pros|Cons|
+|---|---|---|
+|Batch|tolerates latency, on time data|interval updates, queue buildup|
+|Stream|realtime|late/missing data|
+
+::: tip
+If using VMs for batch processing, use [preemptible](#reduced-level-services) VMs.
+:::
+#### How Long?
+
+At what point does data lose business value? With email, the answer is never,
+people want their past emails, they want all their backed up emails delivered.
+But with other kinds of data, like last year's deployment errors, lose certain
+levels of value as it becomes less actionable now.
+
+You'll have to design processes for removing less valueble data from persistent
+storage locations and stored in archival locations or deleted. How long data is
+stored for each set of data will have a great affect on an archetectural design.
+
+#### How Much?
+The volumes of data and how it will scale up when business goals are met or
+exceded need to be planned for or else there will be a dreaded redesign and
+unecessary iterations.
+
+Storage related managers will need to know the volume and frequency of data
+storage and retrieval so they can plan for their duties and procedures which
+touch your design.
+
 ## Compliance and Regulations
+
+
 ### Privacy Regulations
+
 ### Data Integrity Regulations
+
 ## Security
+
 ### Confidentiality
+
 ### Integrity
+
 ### Availability
+
 ## Success Measures
+
 ### Key Performance Indicators
+
 #### Project KPIs
+
 #### Operations KPIs
+
 ### Return on Investment(ROI)
+
 ### Essentials
 
 Acton MBA will host an application in the cloud. The application
