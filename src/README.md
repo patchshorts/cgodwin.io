@@ -14,48 +14,53 @@ actions:
     link: /posts/
 
 features:
-  - title: Markdown Enhance
-    icon: markdown
+  - title: Leadership
+    icon: support
     details: Add align, sup/sub script, footnote, tasklist, tex, flowchart, diagram, mark and presentation support in markdown
     link: https://vuepress-theme-hope.github.io/v2/guide/markdown/
 
-  - title: Slide page
-    icon: slides
+  - title: Hybrid-Cloud/Multicloud
+    icon: plugin
+    details: Add align, sup/sub script, footnote, tasklist, tex, flowchart, diagram, mark and presentation support in markdown
+    link: https://vuepress-theme-hope.github.io/v2/guide/markdown/
+
+  - title: Kubernetes
+    icon: app
     details: Adding slide pages to display things you like
     link: https://vuepress-theme-hope.github.io/v2/guide/layout/slides
 
-  - title: Layout enhancement
-    icon: layout
+  - title: Containers
+    icon: snow
     details: Adding breadcrumb, footer, improved navbar, improved page nav and etc.
     link: https://vuepress-theme-hope.github.io/v2/guide/layout/
 
-  - title: Pageviews and comments
-    icon: comment
+  - title: Continuous Integration
+    icon: ci
     details: Start pageview statistics and comment support with Waline
     link: https://vuepress-theme-hope.github.io/v2/guide/feature/comment.html
 
-  - title: Article information
-    icon: info
+  - title: Continuous Deployment
+    icon: launch
     details: Add author, writing date, reading time, word count and other information to your article
     link: https://vuepress-theme-hope.github.io/v2/guide/feature/page-info.html
 
-  - title: Blog support
-    icon: blog
+  - title: Reliability Engineering
+    icon: workingDirectory
     details: Listing your articles with their dates, tags and categories with some awesome layouts
     link: https://vuepress-theme-hope.github.io/v2/guide/blog/
 
-  - title: Custom theme color
-    icon: palette
+  - title: Architecture Design
+    icon: customize
     details: Supports custom theme colors and allows users to switch between preset theme colors
     link: https://vuepress-theme-hope.github.io/v2/guide/interface/theme-color.html
 
-  - title: Dark Mode
-    icon: contrast
+  - title: Security
+    icon: anonymous
     details: Switch between light and dark modes freely
     link: https://vuepress-theme-hope.github.io/v2/guide/interface/darkmode.html
 
-  - title: Full A11y support
-    icon: support
+  - title: Compliance
+    icon: eye
     details: Full support of accessibility in your site
     link: https://vuepress-theme-hope.github.io/v2/guide/interface/accessibility.html
 
@@ -64,23 +69,23 @@ features:
     details: Encrypt you articles based on page links, so that only the one you want could see them
     link: https://vuepress-theme-hope.github.io/v2/guide/feature/encrypt.html
 
-  - title: Copy button
-    icon: copy
+  - title: Process Introspection
+    icon: process
     details: Copy codes with one click in code blocks
     link: https://vuepress-theme-hope.github.io/v2/guide/feature/copy-code.html
 
-  - title: Image preview
-    icon: pic
+  - title: Development & Operations
+    icon: relation
     details: Support viewing, zooming, sharing your page images like a gallery
     link: https://vuepress-theme-hope.github.io/v2/guide/feature/photo-swipe.html
 
-  - title: SEO enhancement
-    icon: config
+  - title: SEO & Marketing
+    icon: network
     details: Optimize pages for search engines
     link: https://vuepress-theme-hope.github.io/v2/guide/advanced/seo.html
 
-  - title: Sitemap
-    icon: sitemap
+  - title: Migration Planning
+    icon: change
     details: Generate a Sitemap for your site
     link: https://vuepress-theme-hope.github.io/v2/guide/advanced/sitemap.html
 
