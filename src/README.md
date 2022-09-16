@@ -105,7 +105,7 @@ features:
     link: /posts/
 
 copyright: false
-footer: Copyright © 2020-present Christopher Shaun Godwin
+footer: Copyright © 2020-Now; Christopher Shaun Godwin
 ---
 
 <!-- This is an example of a project homepage. You can place your main content here.
