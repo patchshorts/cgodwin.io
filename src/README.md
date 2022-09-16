@@ -107,4 +107,8 @@ features:
 copyright: false
 footer: "“I know you're tired but come, this is the way.“ - Rumi"
 ---
-<!-- This is a special message for the bold discoverers of hidden things, you're awesome. Now I'll tell you the largest secret of the entire Universe: everything is a coincidentia oppositorum -->
+<!-- This is a special message for the bold discoverers of hidden things, you're awesome. Now I'll tell you the largest secret of the entire Universe: everything is a coincidentia oppositorum. That's why you can fast solve problems but backing into them.
+
+"of insanity, wanting to know reasons, knocking on a door. It opens. I've been knocking from the inside." - Rumi
+
+-->
