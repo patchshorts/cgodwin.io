@@ -105,7 +105,7 @@ features:
     link: /posts/
 
 copyright: false
-footer: Copyright © 2020-Now; Christopher Shaun Godwin
+footer: "“I know you're tired but come, this is the way.“ - Rumi"
 ---
 
 <!-- This is an example of a project homepage. You can place your main content here.
