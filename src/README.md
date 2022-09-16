@@ -107,9 +107,4 @@ features:
 copyright: false
 footer: "“I know you're tired but come, this is the way.“ - Rumi"
 ---
-
-<!-- This is an example of a project homepage. You can place your main content here.
-
-To use this layout, you need to set `home: true` in the page front matter.
-
-For related descriptions of configuration items, please see [Project HomePage Layout Config](https://vuepress-theme-hope.github.io/v2/guide/layout/home/). -->
+<!-- This is a special message for the bold discoverers of hidden things, you're awesome. Now I'll tell you the largest secret of the entire Universe: everything is a coincidentia oppositorum -->
