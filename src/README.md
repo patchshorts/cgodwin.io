@@ -16,100 +16,100 @@ actions:
 features:
   - title: Leadership
     icon: support
-    details: Add align, sup/sub script, footnote, tasklist, tex, flowchart, diagram, mark and presentation support in markdown
+    details: 'My leadership style is based on four key principles: trust, inspiration, coaching, and service.'
     link: https://vuepress-theme-hope.github.io/v2/guide/markdown/
 
   - title: Hybrid-Cloud/Multicloud
     icon: plugin
-    details: Add align, sup/sub script, footnote, tasklist, tex, flowchart, diagram, mark and presentation support in markdown
+    details: 'Hybrid cloud and multicloud are slowly becoming the norm in enterprise IT'
     link: https://vuepress-theme-hope.github.io/v2/guide/markdown/
 
   - title: Kubernetes
     icon: app
-    details: Adding slide pages to display things you like
+    details: "Deployment, scaling, and management of containerized applications"
     link: https://vuepress-theme-hope.github.io/v2/guide/layout/slides
 
   - title: Containers
     icon: snow
-    details: Adding breadcrumb, footer, improved navbar, improved page nav and etc.
+    details: "Dockerized many applications."
     link: https://vuepress-theme-hope.github.io/v2/guide/layout/
 
   - title: Continuous Integration
     icon: ci
-    details: Start pageview statistics and comment support with Waline
+    details: "Bamboo, Jenkins, Gitlab, You Name It!"
     link: https://vuepress-theme-hope.github.io/v2/guide/feature/comment.html
 
   - title: Continuous Deployment
     icon: launch
-    details: Add author, writing date, reading time, word count and other information to your article
+    details: "One of my best skills."
     link: https://vuepress-theme-hope.github.io/v2/guide/feature/page-info.html
 
   - title: Reliability Engineering
     icon: workingDirectory
-    details: Listing your articles with their dates, tags and categories with some awesome layouts
+    details: "Great at identifying and mitigate potential sources of failure"
     link: https://vuepress-theme-hope.github.io/v2/guide/blog/
 
   - title: Architecture Design
     icon: customize
-    details: Supports custom theme colors and allows users to switch between preset theme colors
+    details: "Designing for Bushiness and Technical Requirements"
     link: https://vuepress-theme-hope.github.io/v2/guide/interface/theme-color.html
 
   - title: Security
     icon: anonymous
-    details: Switch between light and dark modes freely
+    details: "Trust No One"
     link: https://vuepress-theme-hope.github.io/v2/guide/interface/darkmode.html
 
   - title: Compliance
     icon: eye
-    details: Full support of accessibility in your site
+    details: "My Skills Include Experience Staying Compliant with Regulations and IT Standards"
     link: https://vuepress-theme-hope.github.io/v2/guide/interface/accessibility.html
 
-  - title: Article Encryption
-    icon: lock
-    details: Encrypt you articles based on page links, so that only the one you want could see them
+  - title: Entrepreneurial
+    icon: dart
+    details: "I've owned and run my own businesses, twice."
     link: https://vuepress-theme-hope.github.io/v2/guide/feature/encrypt.html
 
   - title: Process Introspection
     icon: process
-    details: Copy codes with one click in code blocks
+    details: "I define and edit technical and business processes"
     link: https://vuepress-theme-hope.github.io/v2/guide/feature/copy-code.html
 
   - title: Development & Operations
     icon: relation
-    details: Support viewing, zooming, sharing your page images like a gallery
+    details: "The Magic is Dovetailing with Application and Infrastructure"
     link: https://vuepress-theme-hope.github.io/v2/guide/feature/photo-swipe.html
 
   - title: SEO & Marketing
     icon: network
-    details: Optimize pages for search engines
+    details: "I've worked in marketing shops for 20 years, Both My Fathers Owned and Operated Printing Presses"
     link: https://vuepress-theme-hope.github.io/v2/guide/advanced/seo.html
 
   - title: Migration Planning
     icon: change
-    details: Generate a Sitemap for your site
+    details: "Making the Hard Stuff Simple"
     link: https://vuepress-theme-hope.github.io/v2/guide/advanced/sitemap.html
 
-  - title: Feed support
-    icon: rss
-    details: Generate feed to allow users to subscribe it
+  - title: Applications
+    icon: javascript
+    details: "Experience Supporting Various Applications and APIs"
     link: https://vuepress-theme-hope.github.io/v2/guide/advanced/feed.html
 
-  - title: PWA support
+  - title: Integrity
     icon: mobile
-    details: Make your site more like an APP
+    details: "Working for financial institutions for the last 7 years."
     link: https://vuepress-theme-hope.github.io/v2/guide/advanced/pwa.html
 
-  - title: More new features
+  - title: Linux Philosopher
     icon: more
-    details: Including icon support, fullscreen button, etc.
-    link: https://vuepress-theme-hope.github.io/v2/guide/feature/
+    details: I can write and think too
+    link: /posts/
 
 copyright: false
-footer: MIT Licensed | Copyright © 2019-present Mr.Hope
+footer: Copyright © 2020-present Christopher Shaun Godwin
 ---
 
-This is an example of a project homepage. You can place your main content here.
+<!-- This is an example of a project homepage. You can place your main content here.
 
 To use this layout, you need to set `home: true` in the page front matter.
 
-For related descriptions of configuration items, please see [Project HomePage Layout Config](https://vuepress-theme-hope.github.io/v2/guide/layout/home/).
+For related descriptions of configuration items, please see [Project HomePage Layout Config](https://vuepress-theme-hope.github.io/v2/guide/layout/home/). -->
