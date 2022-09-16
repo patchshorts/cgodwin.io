@@ -24,14 +24,16 @@ export default hopeTheme({
   // sidebar
   sidebar: sidebar,
 
-  footer: "Default footer",
+  copyright: "Copyright &copy; 2022, Christopher Godwin",
+
+  footer: "“I know you're tired but come, this is the way.“ - Rumi",
 
   displayFooter: true,
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
 
   blog: {
-    description: "A FrontEnd programmer",
+    description: "Manager, Cloud Architect, Developer, and Writer",
     intro: "/intro.html",
     medias: {
       Baidu: "https://example.com",
