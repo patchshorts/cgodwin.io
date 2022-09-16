@@ -287,7 +287,7 @@ increasing engagement among the MBA students.
 
 This data will likely be such a small amount that Cloud Logging and BigTable can
 be used to pull SLIs out of http requests, and since your streaming server is an
-RTMP relay via the nginx rtmp module, you can glean all of your statistics from
+RTMP relay via the nginx RTMP module, you can glean all of your statistics from
 nginx logs.
 
 [nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module/wiki/Directives)
@@ -301,7 +301,7 @@ MP4 videos to many formats you can serve later on the class portal.
 Data that will never be changed like high scores, previous progress, saved
 games, game boosts earned by some players but not others. These could all live
 in a document storage database like Firebase Realtime Database with the
-multiregion uptime SLA to ensure consistency and global availablility. The
+multiregion uptime SLA to ensure consistency and global availability. The
 time-series data can live in Bigtable.
 
 You consider placing the pay-to-play purchases data and the billing database in
@@ -317,23 +317,23 @@ Granger Excavation uses GPS coordinates to excavate and pave properties so new
 buildings can be built in areas that need topographical alterations.
 
 They need to stream IoT GPS telemetry somewhere. They also need to query if a
-device is within a work area so an applicaiton can turn red or green. Excavators
+device is within a work area so an application can turn red or green. Excavators
 literally dig until they hit a red area.
 
 After research you find out that BigQuery has geospacial analytics and can store
 geometries, spatial features and spacial feature collections. The project
 design you put together includes having the the engineers geocode their drawings
-from CAD into Geodatabase format and upload it to BigQuery.
+from CAD into Geo-database format and upload it to BigQuery.
 
-The tablets will post their coodrinates to an endpoint which will use BigQuery
+The tablets will post their coordinates to an endpoint which will use BigQuery
 to return a true of false within 'proximity'. That same API will log the
 coordinates to BigTable for measuring excavator performance.
 
 ### Data Management Business Requirements
 
-Bussiness requirements help us know what platforms to connect and how they will
+Business requirements help us know what platforms to connect and how they will
 work. Those same requirements will tell us what data is stored, how often, for
-how long, and who and what worloads have access to it.
+how long, and who and what workloads have access to it.
 
 #### How Processed?
 What is the distance between where the data is stored and where it is processed?
@@ -341,10 +341,10 @@ What volume of data will be moved between storage and processing during an
 operation or set of operations? Are we using stream or batch processing?
 
 The first question's answer influences both the read and write times and the
-network costs associated with transfering the data. Creating replicas in regions
+network costs associated with transferring the data. Creating replicas in regions
 nearer to the point of processing will increase read times, but will only
-decrease network costs in a 'replecate one time, read many times' situation.
-Using storage solutions with a single write host will not improve replecation
+decrease network costs in a 'replicate one time, read many times' situation.
+Using storage solutions with a single write host will not improve replication
 times.
 
 The second questions's answer influences time and cost as well. On a long enough
@@ -369,25 +369,40 @@ people want their past emails, they want all their backed up emails delivered.
 But with other kinds of data, like last year's deployment errors, lose certain
 levels of value as it becomes less actionable now.
 
-You'll have to design processes for removing less valueble data from persistent
+You'll have to design processes for removing less valuable data from persistent
 storage locations and stored in archival locations or deleted. How long data is
-stored for each set of data will have a great affect on an archetectural design.
+stored for each set of data will have a great affect on an architectural design.
 
 #### How Much?
 The volumes of data and how it will scale up when business goals are met or
-exceded need to be planned for or else there will be a dreaded redesign and
-unecessary iterations.
+exceeded need to be planned for or else there will be a dreaded redesign and
+unnecessary iterations.
 
 Storage related managers will need to know the volume and frequency of data
 storage and retrieval so they can plan for their duties and procedures which
 touch your design.
 
 ## Compliance and Regulations
+Many businesses are under regulatory constraints. For example, "Your Mother Is Now A Gamer, Inc" receives payment via credit cards. So they must be PCI compliant and financial services laws apply their receiving payment.
 
+* Health Insurance Portability and Accountability Act (HIPAA) is United States legislation that provides data privacy and security regulations for safeguarding medical information.
+* General Data Protection Regulation (GDPR) a set of regulations that member states of the European Union must implement in order to protect the privacy of digital data.
+* The Sarbanes-Oxley (SOX) Act a number of provisions designed to improve corporate governance and address corporate fraud.
+* Children's Online Privacy Protection Act (COPPA) is a U.S. law that requires website operators to get parental consent before collecting children's personal information online.
+* Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to protect cardholders' information.
+* Gram-Leach Bliley Act (GLBA) designed to protect consumers' personal financial information held by financial institutions.
+
+When we know what regulations apply to our workload it is easier to plan our design accordingly. Regulations can apply to jurisdictions like HealthCare or like the State of California. Operating within a jurisdiction means you'll have to research your industry's governance and what it may be subject to.
 
 ### Privacy Regulations
+Regulations on data slant toward protecting the consumer and giving them greater rights over their information and who it is shared with. You can review privacy policies per Country at [Privacy Law By County](http://www.privacypolicies.com/blog/privacy-law-by-country)
+
+Architects not only need to comply with these laws, but kindle the the spirit of the law within themselves, that of protecting the consumer. Architects need to analyze each part of their design and ask themselves how is the consumer protected when something goes wrong?
+
+Access controls need to cascade in such a way that permissions are restrictive and then opened, and not the other way around. Data needs to be encrypted at rest and in transit and potentially in memory. Networks need firewall and systems need verification of breaches through logging. One can use the Identity Aware Proxy and practice *Defense in Depth*.
 
 ### Data Integrity Regulations
+The Sarbanes-Oxley (SOX) Act aims to put controls on data that make tampering more difficult. I worked for a SOX compliant business, IGT PLC and we had to take escrow of code, making versions of code we deployed immutable so it could be audited. In this case, tampering with the data was made more difficult by using an escrow step in the data processing flows. Other business might need to store data for certain number of years while also being immutable or having some other condition applied to it.
 
 ## Security
 

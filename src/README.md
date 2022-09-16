@@ -103,8 +103,6 @@ features:
     icon: more
     details: I can write and think too
     link: /posts/
-
-footer: "“I know you're tired but come, this is the way.“ - Rumi"
 ---
 <!-- 
 
