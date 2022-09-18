@@ -405,12 +405,40 @@ Access controls need to cascade in such a way that permissions are restrictive a
 The Sarbanes-Oxley (SOX) Act aims to put controls on data that make tampering more difficult. I worked for a SOX compliant business, IGT PLC and we had to take escrow of code, making versions of code we deployed immutable so it could be audited. In this case, tampering with the data was made more difficult by using an escrow step in the data processing flows. Other business might need to store data for certain number of years while also being immutable or having some other condition applied to it.
 
 ## Security
+IS, information security, infosec or cybersecurity is the practice or discipline of keeping information secure. Secured information as a business need comes from the need for confidentiality, the need for lack of tampering, and availability. Unavailable systems are generally secure. No can remotely compromise a computer, for instance, that has no network interface.
 
 ### Confidentiality
+Businesses need to limit access to data so that only the legal, ethical and appropriate parties can read, write, or audit the data. In addition to compliance with data regulations, competing businesses have a need to keep their information private so that competitors cannot know their trade secrets, plans, strategies, and designs.
+
+Google cloud offers several options for meeting these needs. Encryption at rest and in transit is a good start. Memory encryption using N2D compute instances and shielded VMs make the system the least compromisable.
+
+Other offerings include Google Secret Manager, Cloud KMS for keeping Google from reading the data except for the least-access cases you let it. When using customer supplied keys, they are stored outside of Google's own key management infrastructure.
+
+Protected networks keep data confidential. Services also can be configured for maximum protection. For instance, consider these apache configuration directives:
+
+```
+ServerTokens Prod
+ServerSignature Off
+<Directory /opt/app/htdocs>
+  Options -Indexes
+</Directory>
+FileETag None
+```
+
+Similar directives in other service configuration make confidential your software versions and system software. In fact, turning ServerTokens and ServerSignature off and prod is a PCI DSS requirement.
+
+Determine the methods of authentication how methods of authorization can compromise confidentiality.
+
 
 ### Integrity
+Data Integrity is required by regulations which focus on making data tamper-proof, but normally is simply a business requirement. You need your records to be consistent and reflect reality. Data Integrity is also about keeping it in that state.
+
+Ways in google cloud that you can promote and increase data integrity are to use ways to promote data integrity in google cloud are to use tools like Data Loss Prevention (DLP) and Data Encryption. You should also enforce least privilege, use strong data encryption methods, and use access control lists.
+
+Colocate report data instead of drawing on active data. That way, if data is tampered with discrepancies exist directly within the app. The search for these discrepancies can be automated into their own report.
 
 ### Availability
+DDos attacks threaten the availablility of data which is why some companies use Akamai and Cloud Flare
 
 ## Success Measures
 
