@@ -438,26 +438,91 @@ Ways in google cloud that you can promote and increase data integrity are to use
 Colocate report data instead of drawing on active data. That way, if data is tampered with discrepancies exist directly within the app. The search for these discrepancies can be automated into their own report.
 
 ### Availability
-DDos attacks threaten the availablility of data which is why some companies use Akamai and Cloud Flare
+DDos attacks, ransomware, and distruntled administrators and bad faith actors
+threaten the availablility of data. 
+
+You can combat ransomware with a well hardened IaC(Infrastructure as Code)
+pattern culling resources which have their availability degrated, restoring
+their data and stateful information from trusted disaster recovery provisions.
+
+When designing a project, design around these scenarios to ensure a business can
+survive malicious activity. Design a project which can not only survive a
+malicious attack but one that can also continue to be available during one.
 
 ## Success Measures
+As bussinesses move to agile continuous deployment and integration, they want to
+see reports of the deployments going well, development costs decreasing, the
+speed of development therefore increasing. Amid all of this the want to measure
+the overal success of an endeavor so they can correctly support the resources
+which will increase the bottom line.
 
 ### Key Performance Indicators
+The first to two important measurements is Key Performance Indicators(KPIs). The
+other is Return on Investment(ROI). KPIs meausres of value of some portion of
+business activity which can be used as a sign things are well and an effort is
+achieving its objectives. A KPI for an automation team of reliabiltiy engineers
+might be a certain percentage as a threashold of failed deployments to
+successful ones.
 
 #### Project KPIs
+Cloud migration projects have KPIs which the project manager can use to gauge
+the progress of the overall migration. Another KPI might be having a set of
+databases migraged to cloud and no longer being used on premesis. KPIs are
+particular to a projects own needs.
 
 #### Operations KPIs
+Operations departments will use KPIs to determine if they are handling the
+situations they set out to address. Product support teams can use KPIs to
+determine if they are helping their customers use their product to the degrees
+which mean the business objectives. Cloud Architechts will need to know which
+KPIs will the used to measure the success of the project being designed. The
+help the architect understand what takes priority and what motivates
+decision-makers to invest in a project or business effort.
 
-### Return on Investment(ROI)
+### Return on Investment
+Return on investment is the meausre of how much of a financial invenstment pays
+off. ROI is a percentage that measures the difference between the business
+before and after the investment. The profit or loss after an investment divited
+by the total value of the investment. So:
+
+$ROI=\left(\frac {investment\ value-cost\ of\ investment} {cost\ of\ investment} \right) \times 100$
+
+Lets work this out for a 1 year period. Host U Online bought \$3000 in network
+equipment and spent \$6000 to migrate to fiber. The total cost of investing in
+fiber was \$9000. They began reselling their fiber internet to sublets in the
+building. In one year the aquire six customers totalling \$12,000 per month. A
+year's revenue from the investment is \$144,000.
+
+$\left(\frac {135000} {9000} \right) \times 100 = 1500\%$
+
+This is a real sencario I orchestrated for a real company. Our return on
+investment, the ROI, was a tremendous 1500%.
+
+In a cloud migration project the investment costs includes costs google cloud
+services and inrastructure, personell costs, and vendor costs. You should
+include expenses saved in the value of the investment. 
+
+The goals and concepts that the organization places high value upon will be
+underlying the KPIs and ROI measures.
 
 ### Essentials
 
-Acton MBA will host an application in the cloud. The application
+* Understanding the sample requirements word for word
+* Knowing the meanings of business terms like TCO, KPI, ROI
+* Learn about what google services are for what use cases
+* Understanding managing data
+* Understanding how compliance with law can affect architecting a solution
+* Understand the business impetus behind the aspects of security pertaining to
+  business requirements
+  * Confidentiality
+  * Integrity
+  * Availabliltiy
+* Understand the motives behind KPIs
+
 
 ## Official Resources
 * [The Official Google Certified Professional Cloud Architect Exam
   Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
-* [Preemptible VMs](https://cloud.google.com/compute/docs/instances/preemptible)
 * [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
 * [Sample Questions](http://cloud.google.com/certiications/cloud-architect)
 * [GCP Documentation](http://cloud.google.com/docs)
