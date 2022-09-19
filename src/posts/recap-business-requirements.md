@@ -15,24 +15,17 @@ tag:
 [[toc]]
 
 ## Business to Technical Requirements
-When designing a new project, while collecting and studying business
-requirements, you'll have to translate those into technical requirements. You'll
-find that there's not a one to one relationship. One technical solution may
-meet two business requirements. While one business requirement might encapsulate
-several solutions.
+When designing a new project, while collecting and studying business requirements, you'll have to translate those into technical requirements. You'll find that there's not a one to one relationship. One technical solution may meet two business requirements. While one business requirement might encapsulate several solutions.
 
 ## Reducing Costs
-When designing for cost reduction, there are three options you should strongly
-consider:
+When designing for cost reduction, there are three options you should strongly consider:
 * [Managed Services](list-all-google-cloud-platform-gcp-managed-services.md)
-* [Preemptible and Spot VMs](designing-planning-for-business-requirements.html#reduced-level-services)
+* [Preemptible and Spot VMs](./contrast-preemptible-spot-vms-virtual-machines.md)
 * [Autoscaling](https://cloud.google.com/compute/docs/load-balancing-and-autoscaling#autoscaling)
+* [Standard Network Teir](differences-in-google-cloud-platform-gcp-network-tiers.md)
 
 ## Continuous Integration & Delivery
-The benefits of CICD to business requirements is that it enables smaller
-incremental trunk-based development. This shortens the feedback loop, reduces
-risks to services during deployment, increases the speed of debuging, isolates
-featuresets to known risks.
+The benefits of CICD to business requirements is that it enables smaller incremental trunk-based development. This shortens the feedback loop, reduces risks to services during deployment, increases the speed of debuging, isolates featuresets to known risks.
 
 ## Service Level Objectives
 Business requirements typically demand these common type of SLOs.
@@ -43,33 +36,78 @@ Business requirements typically demand these common type of SLOs.
 * **Scalability SLO** Always fitting its workloads.
 
 ## Incident
-An incident is a period of time where SLOs are not met. Incidents are
-disruptions in a service's availability therefore becoming degraded.
+An incident is a period of time where SLOs are not met. Incidents are disruptions in a service's availability therefore becoming degraded.
 
 ## Compliance
 ### In the United States
 * **Sarbanes-Oxley(SOX)** regulates financial records of corporate institutions.
-* **Health Insurance Portability and Accountability Act (HIPPA)** regulates US
-  companies protecting consumer access and the privacy of medical data.
-* **Payment Card Induasty Data Security Standard(PCI DSS)** is a standard for
-  taking credit cards which processing underwriters may require an e-commerce
-  vendor to abide by.
+* **Health Insurance Portability and Accountability Act (HIPPA)** regulates US companies protecting consumer access and the privacy of medical data.
+* **Payment Card Induasty Data Security Standard(PCI DSS)** is a standard for taking credit cards which processing underwriters may require an e-commerce vendor to abide by.
 ### In Europe
-* **General Data Protection Regulations(GDPR)** regulates information stored by
-  companys operating in Europe for its protection and privacy.
+* **General Data Protection Regulations(GDPR)** regulates information stored by companys operating in Europe for its protection and privacy.
 
 ## Global Up-to-Date Data
-Cloud spanner is the best option for an SQL based global records storage with a
-High Consistency SLO.
+Cloud spanner is the best option for an SQL based global records storage with a High Consistency SLO.
 
 ## Virtual Private Clouds(VPCs)
-VPCs isolates the network of your project so that customers running in the same
-cloud, people on the internet, and people without a need in your company are
-denied access unless you specify otherwise.
+VPCs isolates the network of your project so that customers running in the same cloud, people on the internet, and people without a need in your company are denied access unless you specify otherwise.
 
+## Factors of Volume and Load
+The main factors that affect volume are the number of data generators or sensors. If you consider each process that can log as a sensor, the more you log the higher your volume in Cloud Logging, the highter the processing costs in BigQuery and so forth.
+
+* Number of hosts
+* Number of logging processes
+* Network Connectivity
+* Verbosity Configuration
+
+## Reducing Latency on Image Heavy Applications
+Google Cloud CDN is a content delivery network that uses Google's global network of edge locations to deliver content to users with low latency. It is a cost-effective way to improve the performance of your website or web application by caching static and dynamic content at the edge of Google's network. Cloud CDN can also be used to deliver content from your own servers, or from a content provider such as a CDN or a cloud storage service. 
+
+Using Google's Cloud CDN in combination with multi-regional storage will reduce load time.
+
+## Time series data
+Time series data is a type of data that is collected over time. This data can be used to track trends and patterns over time. Time series data can be collected manually or automatically. Automatic time series data collection is often done using sensors or other devices that collect data at regular intervals. This data can be used to track the performance of a system over time, or to predict future trends. These are examples of time-series data:
+
+* MRTG graph data
+* SNMP polled data
+* Everything a fitbit records
+* An EKG output
+
+Time series data is best stored in BigTable which handles this workload better than BigQuery or CloudSQL.
+
+## Cloud Dataflow
+Cloud dataflow is a cloud-based data processing service for batch and streaming data. It is a fully managed service that is designed to handle large data sets with high throughput and low latency. Cloud dataflow is a serverless platform that can scale automatically to meet the needs of your application. It is a cost-effective solution that allows you to pay only for the resources you use.
+
+## Cloud Dataproc
+Cloud Dataproc is a cloud-based platform for processing large data sets. It is designed to be scalable and efficient, and to handle data processing workloads of all types. Cloud Dataproc is based on the open-source Apache Hadoop and Apache Spark platforms, and provides a simple, cost-effective way to process and analyze data in the cloud.
+
+## Dealing with Inconsitent Message Delivery
+Cloud Pubsub is a messaging service that allows applications to exchange messages in a reliable and scalable way. It is a fully managed service that can be used to build applications that require high throughput and low latency.
+
+If Applications are working sychronously, decouple them and have the reporters interact with a third services that is always available and that autoscales.
+
+## Keeping Data Entirely Secret
+Cloud KMS is a cloud-based key management system that allows you to manage your cryptographic keys in a secure, centralized location. With Cloud KMS, you can create, use, rotate, and destroy cryptographic keys, as well as control their permissions. Cloud KMS is integrated with other Google Cloud Platform (GCP) services, making it easy to use your keys with other GCP products.
+
+When you manage the encryption keys Google uses to encrypt your data, the data is kept secret from anyone who doesn't have access to decrypt it, which requires access to uses those keys.
+
+## Improving SQL Latency
+Export unaccessed data older than 90 days from the database and prune those records. Store these exports in Google Cloud Storage in Coldline or Archive class buckets.
+
+## When Managers and Directors Only Compare Infrastructure Costs
+Calculate the TCO of legacy projects against planned cloud projects. Calculate the potential ROI with regard to the TCO of the investment. Use this wider scope to compare the true cost of running legacy projects or forgoing cloud migrations.
+
+## Minimal Effort Predictions
+Cloud AutoML is a cloud-based tool that allows developers to train machine learning models with minimal effort. It is designed to make the process of training machine learning models easier and faster. Cloud AutoML is based on the Google Cloud Platform and offers a variety of features that make it a powerful tool for machine learning.
+
+## Extract, Transform, Load
+It is what it says. It takes large volumes of data from different sources. Transforms it to useable data, and makes available the results somewhere for retrieval by others.
+
+Cloud Datafusion handles these tasks for data scientists and makes it easy to transfer data between various data sources. It offers a simple drag-and-drop interface that makes it easy to connect to different data sources, transform and clean data, and load it into a centralized data warehouse. Cloud Datafusion is a cost-effective solution for businesses that need to quickly and easily integrate data from multiple sources.
+
+Simply AutoML can watch for events and predict when those events will occur.
 ## Official Resources
-* [The Official Google Certified Professional Cloud Architect Exam
-  Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
+* [The Official Google Certified Professional Cloud Architect Exam Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
 * [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
 * [Sample Questions](http://cloud.google.com/certiications/cloud-architect)
 * [GCP Documentation](http://cloud.google.com/docs)
