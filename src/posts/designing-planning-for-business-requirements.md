@@ -55,9 +55,13 @@ Business requirements dictate technical requirements implicitly. From statements
 
 Acton MBA is a school which invites speakers to give presentations to students. These speakers are expensive so the school want's to maximize their investment.
 
-They want to record and stream these presentations on a web portal and for live and post review by students with logins. They want to reduce latency. They want to monitor when the students interact with the videos and derive insights as to which videos people rewatch.
+They want to record and stream these presentations on a web portal and for live and post review by students with logins. They want to reduce latency. They want to monitor when the students interact with the videos and derive insights as to which videos people re-watch.
 
 Because these requirements are limited, we can only begin to speculate about what the technical requirements will be.
+
+::: tip Business to Technical Requirements
+When designing a new project, while collecting and studying business requirements, you'll have to translate those into technical requirements. You'll find that there's not a one to one relationship. One technical solution may meet two business requirements. While one business requirement might encapsulate several solutions.
+:::
 
 ### Your Mother Is Now A Gamer, Inc
 
@@ -290,6 +294,16 @@ be used to pull SLIs out of http requests, and since your streaming server is an
 RTMP relay via the nginx RTMP module, you can glean all of your statistics from
 nginx logs.
 
+::: tip Service Level Objectives
+Business requirements typically demand these common type of SLOs.
+
+* **High Availability SLO** Always accessible.
+* **Durability SLO** Always kept.
+* **Reliability SLO** Always meeting workloads.
+* **Scalability SLO** Always fitting its workloads.
+
+:::
+
 [nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module/wiki/Directives)
 
 You can use the nginx directive `record all` to store the streams to objects.
@@ -392,6 +406,17 @@ Many businesses are under regulatory constraints. For example, "Your Mother Is N
 * Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to protect cardholders' information.
 * Gram-Leach Bliley Act (GLBA) designed to protect consumers' personal financial information held by financial institutions.
 
+::: tip Compliance TLDR
+**In the United States**
+* **SOX** regulates financial records of corporate institutions.
+* **HIPPA** regulates US companies protecting consumer access and the privacy of medical data.
+* **PCI DSS** is a standard for taking credit cards which processing underwriters may require an e-commerce vendor to abide by.
+
+**In Europe**
+* **GDPR** regulates information stored by companies operating in Europe for its protection and privacy.
+
+:::
+
 When we know what regulations apply to our workload it is easier to plan our design accordingly. Regulations can apply to jurisdictions like HealthCare or like the State of California. Operating within a jurisdiction means you'll have to research your industry's governance and what it may be subject to.
 
 ### Privacy Regulations
@@ -438,11 +463,11 @@ Ways in google cloud that you can promote and increase data integrity are to use
 Colocate report data instead of drawing on active data. That way, if data is tampered with discrepancies exist directly within the app. The search for these discrepancies can be automated into their own report.
 
 ### Availability
-DDos attacks, ransomware, and distruntled administrators and bad faith actors
-threaten the availablility of data. 
+DDos attacks, ransomware, and disgruntled administrators and bad faith actors
+threaten the availability of data. 
 
 You can combat ransomware with a well hardened IaC(Infrastructure as Code)
-pattern culling resources which have their availability degrated, restoring
+pattern culling resources which have their availability degraded, restoring
 their data and stateful information from trusted disaster recovery provisions.
 
 When designing a project, design around these scenarios to ensure a business can
@@ -450,39 +475,43 @@ survive malicious activity. Design a project which can not only survive a
 malicious attack but one that can also continue to be available during one.
 
 ## Success Measures
-As bussinesses move to agile continuous deployment and integration, they want to
+As businesses move to agile continuous deployment and integration, they want to
 see reports of the deployments going well, development costs decreasing, the
 speed of development therefore increasing. Amid all of this the want to measure
-the overal success of an endeavor so they can correctly support the resources
+the overall success of an endeavor so they can correctly support the resources
 which will increase the bottom line.
+
+::: tip Continuous Integration & Delivery
+The benefits of CICD to business requirements is that it enables smaller incremental trunk-based development. This shortens the feedback loop, reduces risks to services during deployment, increases the speed of debuging, isolates featuresets to known risks.
+:::
 
 ### Key Performance Indicators
 The first to two important measurements is Key Performance Indicators(KPIs). The
-other is Return on Investment(ROI). KPIs meausres of value of some portion of
+other is Return on Investment(ROI). KPIs measures of value of some portion of
 business activity which can be used as a sign things are well and an effort is
-achieving its objectives. A KPI for an automation team of reliabiltiy engineers
-might be a certain percentage as a threashold of failed deployments to
+achieving its objectives. A KPI for an automation team of reliability engineers
+might be a certain percentage as a threshold of failed deployments to
 successful ones.
 
 #### Project KPIs
 Cloud migration projects have KPIs which the project manager can use to gauge
 the progress of the overall migration. Another KPI might be having a set of
-databases migraged to cloud and no longer being used on premesis. KPIs are
+databases migrated to cloud and no longer being used on premiss. KPIs are
 particular to a projects own needs.
 
 #### Operations KPIs
 Operations departments will use KPIs to determine if they are handling the
 situations they set out to address. Product support teams can use KPIs to
 determine if they are helping their customers use their product to the degrees
-which mean the business objectives. Cloud Architechts will need to know which
+which mean the business objectives. Cloud Architects will need to know which
 KPIs will the used to measure the success of the project being designed. The
 help the architect understand what takes priority and what motivates
 decision-makers to invest in a project or business effort.
 
 ### Return on Investment
-Return on investment is the meausre of how much of a financial invenstment pays
+Return on investment is the measure of how much of a financial investment pays
 off. ROI is a percentage that measures the difference between the business
-before and after the investment. The profit or loss after an investment divited
+before and after the investment. The profit or loss after an investment divided
 by the total value of the investment. So:
 
 $ROI=\left(\frac {investment\ value-cost\ of\ investment} {cost\ of\ investment} \right) \times 100$
@@ -490,17 +519,26 @@ $ROI=\left(\frac {investment\ value-cost\ of\ investment} {cost\ of\ investment}
 Lets work this out for a 1 year period. Host U Online bought \$3000 in network
 equipment and spent \$6000 to migrate to fiber. The total cost of investing in
 fiber was \$9000. They began reselling their fiber internet to sublets in the
-building. In one year the aquire six customers totalling \$12,000 per month. A
+building. In one year the acquire six customers totalling \$12,000 per month. A
 year's revenue from the investment is \$144,000.
 
 $\left(\frac {135000} {9000} \right) \times 100 = 1500\%$
 
-This is a real sencario I orchestrated for a real company. Our return on
+This is a real scenario I orchestrated for a real company. Our return on
 investment, the ROI, was a tremendous 1500%.
 
 In a cloud migration project the investment costs includes costs google cloud
-services and inrastructure, personell costs, and vendor costs. You should
-include expenses saved in the value of the investment. 
+services and infrastructure, personnel costs, and vendor costs. You should
+include expenses saved in the value of the investment.
+
+::: tip Reducing Costs
+When designing for cost reduction, there are three options you should strongly consider:
+* [Managed Services](list-all-google-cloud-platform-gcp-managed-services.md)
+* [Preemptible and Spot VMs](./contrast-preemptible-spot-vms-virtual-machines.md)
+* [Autoscaling](https://cloud.google.com/compute/docs/load-balancing-and-autoscaling#autoscaling)
+* [Standard Network Teir](differences-in-google-cloud-platform-gcp-network-tiers.md)
+  
+:::
 
 The goals and concepts that the organization places high value upon will be
 underlying the KPIs and ROI measures.
@@ -511,12 +549,12 @@ underlying the KPIs and ROI measures.
 * Knowing the meanings of business terms like TCO, KPI, ROI
 * Learn about what google services are for what use cases
 * Understanding managing data
-* Understanding how compliance with law can affect architecting a solution
+* Understanding how compliance with law can affect the architecture of a solution
 * Understand the business impetus behind the aspects of security pertaining to
   business requirements
   * Confidentiality
   * Integrity
-  * Availabliltiy
+  * Availabiltiy
 * Understand the motives behind KPIs
 
 

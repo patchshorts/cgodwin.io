@@ -12,6 +12,11 @@ export default sidebar([
     link: "/posts/",
   },
   {
+    text: "Labs",
+    icon: "science",
+    link: "/labs/",
+  },
+  {
     text: "Timeline",
     icon: "time",
     link: "/timeline/",

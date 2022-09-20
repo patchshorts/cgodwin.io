@@ -47,6 +47,10 @@ like:
 * Reducing incidents and recovery time.
 * Improving legal compliance.
 
+::: tip Incident
+An incident is a period of time where SLOs are not met. Incidents are disruptions in a service's availability therefore becoming degraded.
+:::
+
 ## Reducing Capital Expenditures
 The use of Managed services places certain duties on specialized companies who
 can reduce the cost of management by focusing on that discipline's efficiency.

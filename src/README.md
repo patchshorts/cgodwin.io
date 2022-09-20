@@ -94,7 +94,7 @@ features:
     details: "Experience Supporting Various Applications and APIs"
     link: https://vuepress-theme-hope.github.io/v2/guide/advanced/feed.html
 
-  - title: Integrity
+  - title: Integrity!
     icon: mobile
     details: "Working for financial institutions for the last 7 years."
     link: https://vuepress-theme-hope.github.io/v2/guide/advanced/pwa.html
