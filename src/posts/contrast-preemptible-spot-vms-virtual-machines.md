@@ -22,10 +22,10 @@ tag:
 
 ## Table of Preemptible vs Spot Distinguishing Features
 
-|Product      |Unlimited Runtime|preemptive delete|preemptive pause|SLA Coverage|Cost Reduction|Migrate to Standard VM|Restart on Event|
-|:------------|:--------:|:----------:|:----------:|:-------:|:---------:|:---------:|:---------:|
-| Preemptible VMs|🔴|🔴|🟢|🔴|🟢|🔴|🔴|
-| Spot VMs       |🟢|🟢|🟢|🔴|🟢|🔴|🔴|
+|Product      |Unlimited Runtime|preemptive delete|preemptive pause|SLA Coverage|Cost Reduction|Migrate to Standard VM|Restart on Event|Live Migration|
+|:------------|:--------:|:----------:|:----------:|:-------:|:---------:|:---------:|:---------:|---|
+| Preemptible VMs|🔴|🔴|🟢|🔴|🟢|🔴|🔴|🔴|
+| Spot VMs       |🟢|🟢|🟢|🔴|🟢|🔴|🔴|🔴|
 
 
 

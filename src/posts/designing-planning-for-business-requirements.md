@@ -161,6 +161,9 @@ Preemptible VMs are shutdown after 24 hours and google can pause them at any tim
 
 Preemptible VMs also get discounts on volumes and GPUs. Managed resource groups will replace a preempted VM when it is suspended after 24 hours. Preemptible VMs can use other services to reduce the overall cost of using those services with VMs.
 
+::: warning Live Migration
+Preemptible and Spot VMs are not eligible for live migration.
+:::
 #### Spot VMs
 
 Spot VMs are the next generation Preemptible virtual machine. Though spot VMs are not automatically restarted, they can run for longer than 23 hours. Spot VMs can be set to a stopped state or be deleted on preemption. With a managed resource group of spot VMs, one can set the VMs to be deleted and replaced when resources are available.
@@ -336,7 +339,7 @@ The third question's answer and future-plans answer will influence how you perfo
 |Stream|realtime|late/missing data|
 
 ::: tip
-If using VMs for batch processing, use [preemptible](#reduced-level-services) VMs.
+If using VMs for batch processing, use [preemptible](#reduced-level-services) VMs to save money.
 :::
 #### How Long?
 
@@ -487,7 +490,6 @@ In a cloud migration project the investment costs includes costs google cloud se
 * [Preemptible and Spot VMs](./contrast-preemptible-spot-vms-virtual-machines.md)
 * [Autoscaling](https://cloud.google.com/compute/docs/load-balancing-and-autoscaling#autoscaling)
 * [Standard Network Teir](differences-in-google-cloud-platform-gcp-network-tiers.md)
-  
 :::
 
 The goals and concepts that the organization places high value upon will be underlying the KPIs and ROI measures.

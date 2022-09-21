@@ -1,6 +1,7 @@
 ---
-icon: labs
+icon: start
 date: 2022-09-19
+article: false
 category:
   - Google Cloud
   - Technology
@@ -9,7 +10,6 @@ tag:
   - 'google cloud'
   - gcp
   - GCCPCA
-article: false
 ---
 
 # Title

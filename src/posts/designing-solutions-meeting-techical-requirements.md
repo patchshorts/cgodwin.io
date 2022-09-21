@@ -31,8 +31,7 @@ When it comes to SLAs and account for hardware failures, it is important to cons
 
 One way to prepare for hardware failures is to have a redundancy and a backup plan for your equipment. This way, if one piece of equipment fails, you can quickly switch to another while still running. The work of a cloud business with a 5 9s SLA is to statistically predict disk drive failures overall and plan redundancy and recover procedues. This way, if a drive fails, you actually never know there's a problem.
 
-
-#### Failure Stack
+::: danger Failure Stack
 
 * Application Bugs
 * Service problem
@@ -40,6 +39,7 @@ One way to prepare for hardware failures is to have a redundancy and a backup pl
 * NIC Fails
 * Network fails
 * Misconfiguration of infrastructure or networks
+:::
 
 One way to mitigate the errors that can occur during deployment and configuration is to test thoroughly before making any changes. This can be done by creating staging or lower environments that are identical to the production environment and testing all changes in it before deploying them to production. Canary deployments are another way to mitigate errors. With canary deployments, changes are first deployed to a small subset of users before being rolled out to the entire user base. This allows for any errors to be detected and fixed before they impact the entire user base. Regression testing can also be used to mitigate errors. This is where changes are tested not only in the staging environment, but also in the production environment.
 
@@ -56,9 +56,27 @@ Google Compute Engine is the underlying provider of the following services:
 The process of meeting your availability needs using each of these services is slightly different for each one.
 
 #### High Availability in Compute Engine
-
 ##### Hardware Redundancy and Live Migration
+On the lowest level, much of the servers at google have levels of redundancy. If a server fails for hardware issues, others are there for failing over to while others are booted up to replace redundancy.
+
+Google also live migrates VMs to other hypervisors like it does when power or networks systems fail or during maintenance activities which have a real impact on hypervisors.
+
+::: warning Live Migration
+
+Live migration isn't supported for the following VMs:
+* Confidential VMs
+* GPU Attached VMs
+* Cloud TPUs
+* Preemptible VMs
+* Spot VMs
+
+:::
+
 ##### Managed Instance Groups
+Managed Instance Groups(MIGs) create groups or clusters of virtual machines which exist together as instances of the same VM template.
+
+What makes it work well is that when a VM fails in the group, it is deleted and a new one created. This ensures the availability of the cluster.
+
 ##### Multiple Regions and Global Load Balancing
 #### High Availability in Kubernetes Engine
 #### High Availability in App Engine and Cloud Functions

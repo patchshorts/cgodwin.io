@@ -1,9 +1,0 @@
-
-{
-	"paths": {
-		"node": "./node_modules",
-    "dev": "./.",
-    "dist": "./vuepress/dist",
-        "assets": "./vuepress/dist/assets"
-	}
-}

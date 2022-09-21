@@ -36,7 +36,6 @@ and industrious top performer who contributes to the efficiency and stability of
 * Defined integration and deployment standards, uses of tools and cloud patterns
 * Drove documentation and then approval process for acceptance criteria.
 * Drove testing patterns, code patterns and service relationship
-* Lead a team that dockerized and kubernetized the most used and critical application at Schwab
 * Drove security first planning schemes which became the Cloud culture
 
 ### Sr. Site Reliability Engineer, January 2020-July 2022
