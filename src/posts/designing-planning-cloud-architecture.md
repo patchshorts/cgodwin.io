@@ -256,6 +256,7 @@ ability of a system to perform its required functions correctly and
 consistently. Durability refers to the ability of a system to maintain data
 integrity in the face of failures.
 
+
 ### Functional Requirements
 
 Functional requirements are the specific capabilities that a system must have in
