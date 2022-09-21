@@ -1,0 +1,88 @@
+---
+icon: cloud
+date: 2022-09-18
+category:
+  - Google Cloud
+  - Technology
+tag:
+  - 'study guide'
+  - 'google cloud'
+  - gcp
+  - GCCPCA
+---
+
+# Desiging Solutions for Technical Requirements
+
+[[toc]]
+
+## High Availability
+High availability is a key characteristic of any reliable system, and is typically measured by what is known as the "99999" rule. This rule states that a system must be operational 99.9999% of the time in order to be considered highly available. This equates to a maximum downtime of just over 5 minutes per year. In order to achieve such a high level of availability, a system must be designed and implemented with care, and must be constantly monitored and maintained. Additionally, a high availability system must have a robust service-level agreement (SLA) in place in order to ensure that the system meets the required availability levels.
+
+### Table of Availability SLAs and Downtime
+|% Uptime|Downtime / Day|Downtime / Week|Downtime / Month|
+|:---:|:---:|:---:|:---:|
+|99|14 m 24 s|1h 40m 48s|7h 18m 17s|
+|99.9|1m 26s|10m 4s|43m 49s|
+|99.99|8s|1m|4m 22s|
+|99.999|864 ms|6s 500ms|26s|
+|99.9999|86 ms|604 ms|2s 630ms|
+
+When it comes to SLAs and account for hardware failures, it is important to consider network equipment and disk drives. Hardware failures can often be caused by a variety of factors, including physical damage, overheating, and software issues. By having a plan in place for how to deal with these failures, you can help minimize the impact on your business.
+
+One way to prepare for hardware failures is to have a redundancy and a backup plan for your equipment. This way, if one piece of equipment fails, you can quickly switch to another while still running. The work of a cloud business with a 5 9s SLA is to statistically predict disk drive failures overall and plan redundancy and recover procedues. This way, if a drive fails, you actually never know there's a problem.
+
+
+#### Failure Stack
+
+* Application Bugs
+* Service problem
+* DB Disk Full
+* NIC Fails
+* Network fails
+* Misconfiguration of infrastructure or networks
+
+One way to mitigate the errors that can occur during deployment and configuration is to test thoroughly before making any changes. This can be done by creating staging or lower environments that are identical to the production environment and testing all changes in it before deploying them to production. Canary deployments are another way to mitigate errors. With canary deployments, changes are first deployed to a small subset of users before being rolled out to the entire user base. This allows for any errors to be detected and fixed before they impact the entire user base. Regression testing can also be used to mitigate errors. This is where changes are tested not only in the staging environment, but also in the production environment.
+
+Continuous deployment and continuous verification are two key concepts in minimizing downtime for deployments. By continuously deploying code changes and verifying them before they go live, we can ensure that only working code is deployed and that any issues are caught early. This minimizes the amount of time that our systems are down and keeps our users happy.
+
+### Compute Availability
+Google Compute Engine is the underlying provider of the following services:
+
+* GCE VMs
+* GKE Masters and Worker Nodes
+* App Engine Applications
+* Cloud Functions
+
+The process of meeting your availability needs using each of these services is slightly different for each one.
+
+#### High Availability in Compute Engine
+
+##### Hardware Redundancy and Live Migration
+##### Managed Instance Groups
+##### Multiple Regions and Global Load Balancing
+#### High Availability in Kubernetes Engine
+#### High Availability in App Engine and Cloud Functions
+#### High Availability Computing Requirements in Case Studies
+### Storage Availability
+#### Availability of Block, Object and File Storage
+#### Availability of Databases
+##### Self-Managed Databases
+##### Managed Databases
+#### Availability of CAching
+#### Hi Avilability Storage Requirements in CAse Studies
+### Network Availability
+#### High Availability Network Requirements in Case Studies
+### Application Availability
+## Scalability
+### Scaling Compute Resources
+#### Scaling Compute in GCE
+#### Scaling Compute in GKE
+### Scaling Storage Resources
+### Network Design for Scalability
+## Reliability
+### Measureing Reliability
+### Reliabiltiy Engineering
+
+
+
+
