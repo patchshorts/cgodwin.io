@@ -9,6 +9,7 @@ tag:
   - 'google cloud'
   - gcp
   - GCCPCA
+article: false
 ---
 
 # Title

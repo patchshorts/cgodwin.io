@@ -13,10 +13,6 @@ tag:
   - App Engine
 ---
 
-# header 1
-
-## header2
-
 # Comparison of Standard and Flexible App Engine Environments
 
 [[toc]]
