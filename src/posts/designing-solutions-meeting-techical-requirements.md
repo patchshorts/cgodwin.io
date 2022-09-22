@@ -38,7 +38,8 @@ One way to prepare for hardware failures is to have a redundancy and a backup pl
 * DB Disk Full
 * NIC Fails
 * Network fails
-* Misconfiguration of infrastructure or networks :::
+* Misconfiguration of infrastructure or networks
+:::
 
 One way to mitigate the errors that can occur during deployment and configuration is to test thoroughly before making any changes. This can be done by creating staging or lower environments that are identical to the production environment and testing all changes in it before deploying them to production. Canary deployments are another way to mitigate errors. With canary deployments, changes are first deployed to a small subset of users before being rolled out to the entire user base. This allows for any errors to be detected and fixed before they impact the entire user base. Regression testing can also be used to mitigate errors. This is where changes are tested not only in the staging environment, but also in the production environment.
 
