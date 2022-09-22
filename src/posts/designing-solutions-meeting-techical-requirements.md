@@ -142,7 +142,30 @@ What makes it work well is that when a VM fails in the group, it is deleted and 
 Managed Instance Groups(MIGs) can be zonal, regional and can be autoscaled. Their traffic is load balanced and if one of the instances are unavailable the traffic will be routed to the other instances.
 
 ##### Multiple Regions and Global Load Balancing
+Instance group's top level is regional. You can however run many multizonal MIGs in different regions and balance them with a regional load balancer. Workload is distributed across all MIGs to each of the regional LBs. If one or more of the MIGs becomes unavailable, the global LB will exclude them from routing.
+
+Users will be connected by the global load balancer(LB) to their closest region reducing latency.
+
 #### High Availability in Kubernetes Engine
+
+Kubernetes by default and if uses correctly provides high availability for containers and orchestrates their replication, scaling up, scaling down, container networking, service ingress. This enables canary, blue green and rollout deployments for further reliability testing.
+
+GKE has an extra layer of availability on top of that which is provided by Kubernetes(k8s). Node pools are Managed Instance Groups of VMs running Kubernetes nodes.
+
+Kubernetes monitors pods for readiness and liveness. Pods in k8s are replica sets of containers. Usually a pod has one container defined but often might have a sidecar or binary container pattern. Different containers in the same pod can communicate with IPC, network over localhost, or by volume. You cannot share the individual sockets but you can share the whole socket directory if you have permissions on the environment.
+
+::: info For example
+PHP-FPS might need to run with the webserver it is coupled with. The nginx webserver would be configure similar to this:
+
+```json
+        upstream webapp {
+            server 127.0.0.1:9000;
+        }
+```
+
+The would both share 127.0.0.1.
+:::
+
 #### High Availability in App Engine and Cloud Functions
 #### High Availability Computing Requirements in Case Studies
 ### Storage Availability
