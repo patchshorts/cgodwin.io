@@ -29,7 +29,7 @@ High availability is a key characteristic of any reliable system, and is typical
 
 When it comes to SLAs and account for hardware failures, it is important to consider network equipment and disk drives. Hardware failures can often be caused by a variety of factors, including physical damage, overheating, and software issues. By having a plan in place for how to deal with these failures, you can help minimize the impact on your business.
 
-One way to prepare for hardware failures is to have a redundancy and a backup plan for your equipment. This way, if one piece of equipment fails, you can quickly switch to another while still running. The work of a cloud business with a 5 9s SLA is to statistically predict disk drive failures overall and plan redundancy and recover procedues. This way, if a drive fails, you actually never know there's a problem.
+One way to prepare for hardware failures is to have a redundancy and a backup plan for your equipment. This way, if one piece of equipment fails, you can quickly switch to another while still running. The work of a cloud business with a 5 9s SLA is to statistically predict disk drive failures overall and plan redundancy and recover procedures. This way, if a drive fails, you actually never know there's a problem.
 
 ::: danger Failure Stack
 
@@ -38,8 +38,7 @@ One way to prepare for hardware failures is to have a redundancy and a backup pl
 * DB Disk Full
 * NIC Fails
 * Network fails
-* Misconfiguration of infrastructure or networks
-:::
+* Misconfiguration of infrastructure or networks :::
 
 One way to mitigate the errors that can occur during deployment and configuration is to test thoroughly before making any changes. This can be done by creating staging or lower environments that are identical to the production environment and testing all changes in it before deploying them to production. Canary deployments are another way to mitigate errors. With canary deployments, changes are first deployed to a small subset of users before being rolled out to the entire user base. This allows for any errors to be detected and fixed before they impact the entire user base. Regression testing can also be used to mitigate errors. This is where changes are tested not only in the staging environment, but also in the production environment.
 
@@ -75,7 +74,72 @@ Live migration isn't supported for the following VMs:
 ##### Managed Instance Groups
 Managed Instance Groups(MIGs) create groups or clusters of virtual machines which exist together as instances of the same VM template.
 
-What makes it work well is that when a VM fails in the group, it is deleted and a new one created. This ensures the availability of the cluster.
+**Instance Templates**
+A VM template looks like this:
+
+```sh
+POST https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/global/instanceTemplates
+```
+
+Here is what you're posting before you make replacements:
+
+```json
+{
+  "name": "INSTANCE_TEMPLATE_NAME"
+  "properties": {
+    "machineType": "zones/ZONE/machineTypes/MACHINE_TYPE",
+    "networkInterfaces": [
+      {
+        "network": "global/networks/default",
+        "accessConfigs":
+        [
+          {
+            "name": "external-IP",
+            "type": "ONE_TO_ONE_NAT"
+          }
+        ]
+      }
+    ],
+    "disks":
+    [
+      {
+        "type": "PERSISTENT",
+        "boot": true,
+        "mode": "READ_WRITE",
+        "initializeParams":
+        {
+          "sourceImage": "projects/IMAGE_PROJECT/global/images/IMAGE"
+        }
+      }
+    ]
+  }
+}
+```
+
+Or with **gcloud**
+
+```sh
+gcloud compute instance-templates create example-template-custom \
+    --machine-type=e2-standard-4 \
+    --image-family=debian-10 \
+    --image-project=debian-cloud \
+    --boot-disk-size=250GB
+```
+
+And then instantiate the instance template into a group.
+
+```sh
+gcloud compute instance-groups managed create INSTANCE_GROUP_NAME \
+    --size SIZE \
+    --template INSTANCE_TEMPLATE \
+    --zone ZONE
+```
+
+***
+
+What makes it work well is that when a VM fails in the group, it is deleted and a new one created. This ensures the availability of the group.
+
+Managed Instance Groups(MIGs) can be zonal, regional and can be autoscaled. Their traffic is load balanced and if one of the instances are unavailable the traffic will be routed to the other instances.
 
 ##### Multiple Regions and Global Load Balancing
 #### High Availability in Kubernetes Engine
@@ -87,7 +151,7 @@ What makes it work well is that when a VM fails in the group, it is deleted and 
 ##### Self-Managed Databases
 ##### Managed Databases
 #### Availability of CAching
-#### Hi Avilability Storage Requirements in CAse Studies
+#### Hi Availability Storage Requirements in CAse Studies
 ### Network Availability
 #### High Availability Network Requirements in Case Studies
 ### Application Availability
@@ -98,8 +162,17 @@ What makes it work well is that when a VM fails in the group, it is deleted and 
 ### Scaling Storage Resources
 ### Network Design for Scalability
 ## Reliability
-### Measureing Reliability
-### Reliabiltiy Engineering
+### Measuring Reliability
+### Reliability Engineering
+
+## Official Resources
+* Managed Instance Groups(MIGs)
+  * [Create instance templates](https://cloud.google.com/compute/docs/instance-templates/create-instance-templates)
+  * [Create a MIG with VMs in a single zone (zonal MIG)](https://cloud.google.com/compute/docs/instance-groups/create-zonal-mig)
+  * [Create a MIG with VMs in multiple zones in a region (regional MIG)](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups)
+  * [Create a MIG with autoscaling](https://cloud.google.com/compute/docs/instance-groups/create-mig-with-basic-autoscaling)
+  * [Create a MIG that uses preemptible VMs](https://cloud.google.com/compute/docs/instance-groups/create-mig-with-preemptible-vms)* [Create a MIG with stateful configuration] (https://cloud.google.com/compute/docs/instance-groups/create-mig-with-basic-stateful-disks)
+* 
 
 
 
