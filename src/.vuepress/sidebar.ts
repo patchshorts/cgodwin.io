@@ -13,7 +13,7 @@ export default sidebar([
   },
   {
     text: "Labs",
-    icon: "science",
+    icon: "react",
     link: "/labs/",
   },
   {
