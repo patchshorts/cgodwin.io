@@ -164,17 +164,79 @@ PHP-FPS might need to run with the webserver it is coupled with. The nginx webse
         }
 ```
 
-The would both share 127.0.0.1.
+The would both share `127.0.0.1`.
 :::
 
+If one of the containers in a pod crashes, the restartPolicy directive tells k8s what to do.
+
+Because Managed Instance groups are zonal or multizonal(regional), Kubernetes clusters are also zonal and multizonal(regional). Regional clusters have their control planes replicated across zones so if a control plane goes down, it hasn't lost availability.
+
 #### High Availability in App Engine and Cloud Functions
+
+These services experience automatic high availability. When running these services, the items in the failure stack to worry about involve deployment, integration concerns, application failures.
+
 #### High Availability Computing Requirements in Case Studies
+Recall out [case studies](https://cgodwin-io-xu5obpctlq-uc.a.run.app/posts/designing-planning-for-business-requirements.html#business-use-cases-and-product-strategy)
+
+* Tristar Healthcare needs an always up API service to meet the business requirement "entities will need and currently have different access to read and change records and information". Since this isn't just intra-organization it is external facing for customers, vendors, and partners. You decide to run the the service on App Engine standard for now unless you discover you need to use the Flexible stack.
+* While class is recording, the services need to be always available to consume the broadcasts, otherwise the videos for consumption need to be available for students to watch while class isn't recording. Students however will not be accessing these from outside the local region because the school is local. The small amount of traffic that comes from outside the region is from traveling students who can deal with the latency.
+* LCSoft is using a multiregional Firebase Realtime Database with an always up SLA. Firebase supported by google cloud and supports Google Cloud. You can "pull" in GCP products into a Firebase hosted platform.
+* Granger really only needs total availability of all services during business hours. They're all acting from the same region so they're really needing for multizonal solutions.
+
 ### Storage Availability
-#### Availability of Block, Object and File Storage
+Storage is considered Highly available when it is available and functional at all times.
+
+GCP Storage Types
+
+* Object storage
+* block storage
+* Network attached storage
+* Database services
+* Caching
+
+Availability refers to the quality belonging storage that its contents are retrievable right now. Durability, on the other hand, refers to the long term ability of the data to be in tact and to stay retrievable.
+  
+#### Availability of Different Storage Types
+##### Object Storage
+*Cloud Storage* is entirely managed service for storing objects, files, images, videos, backups, documents, and other unstructured data. It is always highly available as a managed service.
+
+##### File storage
+*Cloud Filestore* is a NAS that is fully managed and thus Google ensures it is highly available.
+
+##### Block Storage
+*Persistent disks* are disks that are attached to VMs but remain available after those VMs are shutoff. They can be used like any local hard drive on a server so they can store files and database backends. PDs are also highly available because they can be resized while in use. Google offers different types of persistent disks:
+
+|        |Standard|Balanced|SSD|Extreme|
+|--------|--------|--------|---|-------|
+|Zonal   |reliable block storage| reliable blk storage with higher IOPS | better IOPS than Balanced | Highest IOPS |
+|Regional|PDs replicated across 2 zones within a region|dual zone replicated higher IOPS| dual zone replicated better IOPS|N/A|
+
+Better performance leads to higher costs as does going from a zonal PD to a regional PD.
+
+Zonal Persistent Disks with a standard IOPS have a 4 9s durability(99.99%), while all the others have a 5 9s uptime(99.999%).
 #### Availability of Databases
 ##### Self-Managed Databases
+If you run your own database on a virtual machine topology, ensuring these systems are redundant is the key to managing your own database availability. The underlying db software will affect how you plan for availability in a architectural design.
+
+For example, MySQL or MariaDB usually use master and replicas. You may want to set up a few regional sql proxy hosts and a global LB to them all to provide an endpoint for the app to all of these. Making your db cluster multiregional and therefore multizonal would involve considering the cost of network traffic, latency, consistency.
+
+In each different sql server case you'll have to decide if it is best to try to share a disk between active and inactive servers, filesystem replication to a standby system, or to use multimaster replication. You could also use vitesse to create your own globally available MySQL server either with containers or with virtual servers.
+
+Or you could use Cloud SQL selecting a highly available cluster during creation and not worry about it. You could use Cloud Spanner for guaranteed consistency.
+
 ##### Managed Databases
-#### Availability of CAching
+HA by Default:
+* Firestore
+* BigQuery
+* Cloud Spanner
+
+Have HA Options:
+* Cloud SQL
+* Bigtable
+
+With services that have High Availability through setup or configuration, it is important to remember that seeking greater availability, say going from 3 9s to a 4 9s SLO, will cost more.
+
+#### Availability of Caching
 #### Hi Availability Storage Requirements in CAse Studies
 ### Network Availability
 #### High Availability Network Requirements in Case Studies

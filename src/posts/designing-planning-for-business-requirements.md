@@ -67,7 +67,7 @@ Because these requirements are limited, we can only begin to speculate about wha
 When designing a new project, while collecting and studying business requirements, you'll have to translate those into technical requirements. You'll find that there's not a one to one relationship. One technical solution may meet two business requirements. While one business requirement might encapsulate several solutions.
 :::
 
-### Your Mother Is Now A Gamer, Inc
+### LCSoft, Inc
 
 #### Business Requirements
 
@@ -296,7 +296,7 @@ Business requirements typically demand these common type of SLOs.
 
 You can use the nginx directive `record all` to store the streams to objects. Once there it may be prudent to set up a Cloud Storage trigger to transcode the MP4 videos to many formats you can serve later on the class portal.
 
-#### Your Mother Is Now A Gamer, Inc
+#### LCSoft, Inc
 
 Data that will never be changed like high scores, previous progress, saved games, game boosts earned by some players but not others. These could all live in a document storage database like Firebase Realtime Database with the multiregion uptime SLA to ensure consistency and global availability. The time-series data can live in Bigtable.
 
@@ -363,7 +363,7 @@ The main factors that affect volume are the number of data generators or sensors
 :::
 
 ## Compliance and Regulations
-Many businesses are under regulatory constraints. For example, "Your Mother Is Now A Gamer, Inc" receives payment via credit cards. So they must be PCI compliant and financial services laws apply their receiving payment.
+Many businesses are under regulatory constraints. For example, "LCSoft, Inc" receives payment via credit cards. So they must be PCI compliant and financial services laws apply their receiving payment.
 
 * Health Insurance Portability and Accountability Act (HIPAA) is United States legislation that provides data privacy and security regulations for safeguarding medical information.
 * General Data Protection Regulation (GDPR) a set of regulations that member states of the European Union must implement in order to protect the privacy of digital data.
