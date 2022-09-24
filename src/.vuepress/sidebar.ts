@@ -7,6 +7,11 @@ export default sidebar([
     link: "/",
   },
   {
+    text: "Resume",
+    icon: "read",
+    link: "/resume",
+  },
+  {
     text: "Blog Home",
     icon: "blog",
     link: "/posts/",
@@ -20,11 +25,6 @@ export default sidebar([
     text: "Timeline",
     icon: "time",
     link: "/timeline/",
-  },
-  {
-    text: "Resume",
-    icon: "read",
-    link: "/resume",
   },
   {
     text: "Toybox",
