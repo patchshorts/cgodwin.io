@@ -278,7 +278,7 @@ The school has very specifically stated requirements that fall into these catego
 
 The company wants to pick better speakers by analyzing when the students no longer receive value in a video. The trend analysis will enable them to cut loose the least engaging speakers. By doing this they'll consolidate only the best information and be able to sell or host the video in a revenue producing stream.
 
-Administrators want Video archival will allow them to keep all their speaker, remix the presentations as theme blueray DVDs that students can buy from a catalogue. Latency reduction is important because their most-near end result is increasing engagement among the MBA students.
+Administrators want video archival will allow them to keep all their speakers' talks, remix the presentations as themed blueray DVDs that students can buy from a catalogue. Latency reduction is important because their most-near end result is increasing engagement among the MBA students.
 
 This data will likely be such a small amount that Cloud Logging and BigTable can be used to pull SLIs out of http requests, and since your streaming server is an RTMP relay via the nginx RTMP module, you can glean all of your statistics from nginx logs.
 
