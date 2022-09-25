@@ -340,13 +340,13 @@ The design supports reliability in the long run by:
 Emphasize issues pertaining to management and operations, decide whose responsibilities are whose.
 
 ## Official Resources
-* Managed Instance Groups(MIGs)
-  * [Create instance templates](https://cloud.google.com/compute/docs/instance-templates/create-instance-templates)
-  * [Create a MIG with VMs in a single zone (zonal MIG)](https://cloud.google.com/compute/docs/instance-groups/create-zonal-mig)
-  * [Create a MIG with VMs in multiple zones in a region (regional MIG)](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups)
-  * [Create a MIG with autoscaling](https://cloud.google.com/compute/docs/instance-groups/create-mig-with-basic-autoscaling)
-  * [Create a MIG that uses preemptible VMs](https://cloud.google.com/compute/docs/instance-groups/create-mig-with-preemptible-vms)* [Create a MIG with stateful configuration] (https://cloud.google.com/compute/docs/instance-groups/create-mig-with-basic-stateful-disks)
-* 
+* [Load Balancing and Autoscaling Compute Engine](https://cloud.google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
+* [Cluster Autoscaling Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
+* [The Official Google Certified Professional Cloud Architect Exam
+  Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
+* [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
+* [Sample Questions](http://cloud.google.com/certiications/cloud-architect)
+* [GCP Documentation](http://cloud.google.com/docs)
 
 
 
