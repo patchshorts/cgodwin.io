@@ -18,6 +18,10 @@ tag:
 ## High Availability
 High availability is a key characteristic of any reliable system, and is typically measured by what is known as the "99999" rule. This rule states that a system must be operational 99.9999% of the time in order to be considered highly available. This equates to a maximum downtime of just over 5 minutes per year. In order to achieve such a high level of availability, a system must be designed and implemented with care, and must be constantly monitored and maintained. Additionally, a high availability system must have a robust service-level agreement (SLA) in place in order to ensure that the system meets the required availability levels.
 
+::: tip
+The best general strategy for increasing availability is redundancy.
+:::
+
 ### Table of Availability SLAs and Downtime
 |% Uptime|Downtime / Day|Downtime / Week|Downtime / Month|
 |:---:|:---:|:---:|:---:|
@@ -255,6 +259,11 @@ Communication within google usually uses their low latency *Premium Network* tei
 Since networking requirements are not often specified, the Architect should analyze the requirements, ask questions and suggest the most cost effective solution which meets the needs of the requirements both business and technical.
 ### Application Availability
 Application Availablility is 3 parts infrastructure availability(network, storage, and compute), but its 1 part reliability engineering in the application design, integration and deployment. Logging and Monitoring is the most appropriate way to handle availability unknowns in the application. Technical and Development processes iterate over the logs and alerts in order to acieve their reliability SLOs within the application.
+
+::: tip
+Add *Cloud Monitoring* with alerts as part of your availability standards to increase application and infrastructure reliability.
+:::
+
 ## Scalability
 This is the ability to add or remove resources based on load and demand. Different parts of the cloud scale differently and efficienly.
 * *Managed Instance Groups*, for instance, increase and decrease the amount of instances in the group.
@@ -338,6 +347,14 @@ The design supports reliability in the long run by:
 * Implement tracking for outages, process introspection, to understand disruptions
 
 Emphasize issues pertaining to management and operations, decide whose responsibilities are whose.
+
+## Exam Essentials
+
+* Be able to contrast availablility scalability, reliability, and availablility
+* Know how redundancy improves availability
+* Rely on managed services to increase availability and scalability
+* Understand the availability of GCE Migs and GKE globally loadbalanced Regionally replicate clusters
+* Be able to link reliability to risk mitigation
 
 ## Official Resources
 * [Load Balancing and Autoscaling Compute Engine](https://cloud.google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
