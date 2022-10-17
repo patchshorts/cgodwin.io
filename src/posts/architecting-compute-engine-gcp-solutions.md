@@ -177,11 +177,62 @@ A script that downloads all of the pages of a website may be interupted. If it p
 ### GKE
 
 Goolge Kubernetes Engine (GKE) is GCP's Kubernetes managed offering. This service offers more complex container orchestration than either App Engine or Cloud Run.
+
+Kubernetes can be used for stateful deployments with certain storage objects configured into your deployment. Kubernetes has internal hooks that are auto configured by google to provide you with GCP provisioned architecture when you deploy it. Kubernetes has different storage classes and some can be marked as default. This way when you provision an object of kind `persistentvolumeclaim`, a Cloud persistent disk is spun up, attache to the node running the pod, then mounted into the pod per your specifications.
+
+To put it simple: it will create a cloud volume and mount it where you say in your yaml. You can install your own storage controllers by creating the yaml for one, creating a template that generates one(helm chart), or by following third party storage controller instructions.
+
+The NFS-Ganesha storage controller is the most robust durrable way to share highly available disks across a whole region in a cluster or set of clusters. You can set persistent volume defaults so that they don't delete when you delete a k8s object, that way you can specify it in a create-once, reattach many deployment style. You can use logging and monnitoring to initate manual deletes when there are orphaned volumes in the process.
+
+In k8s a combination of privoxy, istio and cert manager can secure connections between pods to institute a trust-no-one level of securty. Here we assume your pods can be compromised so we configure them to only talk to the pods which we want and disallow the rest. We can disallow intenet access and poke holes only to the services we need. We can ingress only to customer facing services and even put some armor on it by placing CloudFlare or Akamai in front of the services. In this model, we disallow all incoming connections to the ingress that aren't from on-premisis or from the proxies we may put in front of your customer facing services.
+
+GKE Ochrestrates the following operations:
+* Service discovery
+* Error correction and healing
+* Volume create, deletion, resizing
+* Load Balancing
+* Configuration
+* Restarts, Rollouts, and Rollbacks
+* Optimal resource allocation
+* Resource Versioning
+* Secrets management
+
+As Free and Open Source Software(FOSS), Kubernetes can be self hosted, third-party hosted, or managed as it is hosted. Anthos is google's implementation of that designed to connect to the popular clouds and on-premisis.
+
+#### Kubernetes Cluster Architechture
+
+Kubernetes is organized into nodes and masters. Masters usually only have one unless replicated or made highly available by whatever means. Nodes usually connect to masters but managed kubernetes options often group the nodes into node pools.
+
+##### Default Node Pool
+There is a default node pool with no tolerations or taints specified, defaultly nodes will be added to this pool unless specified. In GKE node pools are specified when you provision the cluster. If using terraform your GKE module or resource ought to specify.
+
+#### Kubernetes Workloads
+* Pods
+* Services
+* ReplicaSets
+* Deployments
+* Persistent Volumes
+* StatefulSets
+* Ingress
+* Node pool
+* CronJob
+
+`Pods` are units of containers. Pods are basically containers if they only have one, but if there are many containers in a `pod`, consider them a dual headed container that shares networking.
+
+`Pods` are ephemereral, their file systems are removed and recreated upon start up. Any stored data needs to be placed in storage via a `volume` and `volumemount`. Pods are deployed by the scheduler on nodes per no rules or specifie rules.
+
+`ReplicaSets` are controllers which scale `pods` up and down per specifications in the `deployment`.
+
+`Services` are in-custer dns abstractions as proxies which route to to `pods`.
+
+`Deployments` are 
+
+#### 
 ### Cloud Run
 
 Google Cloud Run is a serverless and stateless computing platform for container images. This product is ideal for deploying microservices and handling large scale data processing jobs. Cloud Run is highly scalable and can be deployed on demand.
 
-You aren't restricted to a set of runtimes, you build your runtime as a docker image and push Google Artifact Registry or Google Container Registry. Google Cloud Run pulls the image and runs it.
+You aren't restricted to a set of runtimes, you build your runtime as a docker image and push to Google Artifact Registry or Google Container Registry. Google Cloud Run pulls the image and runs it.
 
 ::: tip Cloud Run Availability
 Google Cloud Run has regional availability.
