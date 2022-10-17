@@ -29,12 +29,12 @@ Each of these services have different use cases. You'll have to know how to sele
 ### GCE
 Compute Engine is an Infrastructure as a Service solution that is the underlying platform for many services like Cloud Functions. Compute Engine provides virtual machines called instances.
 
-New virtual machines require a type be specified along with boot image, availabiliy status, and security options. Machine types are sorted into different CPU and Memory options. Machine types are grouped into families like general purpose, cpu optimized, memory optimized, and GPU-capable.
+New virtual machines require a type be specified along with boot image, availability status, and security options. Machine types are sorted into different CPU and Memory options. Machine types are grouped into families like general purpose, cpu optimized, memory optimized, and GPU-capable.
 
 #### Compute Instance Options
 * General Purpose
   * shared-core
-  * sandard
+  * standard
   * high memory
   * high cpu
 * CPU Optimized
@@ -45,10 +45,10 @@ New virtual machines require a type be specified along with boot image, availabi
 * GPU Capable
   * Type of GPU / GPU Platform
 * Disk
-  * Standard Persistant Disk (SPD)
+  * Standard Persistent Disk (SPD)
   * Balanced Persistent Disk (BPD)
   * SSD Persistent Disk (SPD)
-  * Extreme Persisent Disk (EPD)
+  * Extreme Persistent Disk (EPD)
   * Disk size
 
 #### Compute Disk Options
@@ -56,11 +56,11 @@ New virtual machines require a type be specified along with boot image, availabi
 |Type|Workload|
 |---|---|
 |Standard Persistent Disks|Block storage for large processing with sequential I/O|
-|Balanced Persistent Disks|SSDs which balance cost for less performance with a higher IOPS thand SPDs|
-|SSD Persistent Disks|Low latency, high IOPS in the single digit miliseconds, databases|
+|Balanced Persistent Disks|SSDs which balance cost for less performance with a higher IOPS than SPDs|
+|SSD Persistent Disks|Low latency, high IOPS in the single digit milliseconds, databases|
 |Extreme Persistent Disks|sequential and random access at highest IOPS that is user configurable|
 
-Compute disks are encrypted automatically with google managed keys or cusomer managed keys with Googe KMS which allows storage outside of GCP. Virtual machines run in your google project as the default GCE service account though you can specify which service account the VM runs as.
+Compute disks are encrypted automatically with google managed keys or customer managed keys with Google KMS which allows storage outside of GCP. Virtual machines run in your google project as the default GCE service account though you can specify which service account the VM runs as.
 
 ##### Sole-tenancy
 Sole-tenant VMs in Google compute engine offer a high degree of isolation and security for your workloads. By running your VMs on dedicated hardware, you can be sure that your data and applications are protected from other users on the same system. Additionally, sole-tenant VMs can be configured with custom security settings to further protect your data.
@@ -70,7 +70,7 @@ Good for Bring Your Own License (BYOL) applications that are based on the number
 ##### Preemptible VMs
 Preemptible VMs are a type of VM offered by Google Compute Engine at a discounted price. These VMs may be preempted by Google at any time in order to accommodate higher priority workloads. Preemptible VMs are typically used for batch processing jobs that can be interrupted without affecting the overall workflow.
 
-Preemptible VMs can run for a maximum of 24 hours and are terminated but not deleted when preempted. You can use premptible VMs in a Managed Instance Group. These types of virtual machines cannot live migrate and cannot be converted to a standard VM. The compute SLA doesn't cover preemptible or spot VMs.
+Preemptible VMs can run for a maximum of 24 hours and are terminated but not deleted when preempted. You can use preemptible VMs in a Managed Instance Group. These types of virtual machines cannot live migrate and cannot be converted to a standard VM. The compute SLA doesn't cover preemptible or spot VMs.
 
 ##### Shielded VMs
 Shielded VMs in Google Compute Engine provide an extra layer of security by enabling features like secure boot and vTPM. These features help to ensure the integrity of the VM and its contents. Additionally, integrity monitoring can be used to detect and respond to any changes that occur within the VM. By using shielded VMs, businesses can rest assured that their data and applications are safe and secure.
@@ -93,7 +93,7 @@ Google Compute Engine offers a recommender system that can help optimize your co
 * Discount recommender
 * Idle custom image recommender
 * Idle IP address recommender
-* Idle persisitent disk recommender
+* Idle persistent disk recommender
 * Idle VM recommender
 
 #### Instance Groups
@@ -104,7 +104,7 @@ An instance template is a blueprint for creating virtual machines (VMs) in Googl
 ##### Advantage of Managed Instance Groups (MIGS)
 * Minimum availability, auto-replacement on failure
 * Autohealing with healthchecks
-* Distribution of insances
+* Distribution of instances
 * Loadbalancing across the group
 * Autoscaling based on workload
 * Auto-updates, rolling and canary
@@ -161,10 +161,10 @@ Depending on configuration, HTTP triggers to Cloud Functions can be by both auth
 * Go
 * Java 11
 
-Requests are handled one at a time on a Cloud Function instance. If the instance doesn't exist it'll be created. You can specify the maximum number of concerrent instances for a function. HTTP triggered functions are executed at most once and other event triggers are ran atleast once. Cloud Functions need to be idempotent, meaning that when ran multiple times does less and less work until the work is complete. When an idempotent script is ran after all work is completed, no work is performed.
+Requests are handled one at a time on a Cloud Function instance. If the instance doesn't exist it'll be created. You can specify the maximum number of concurrent instances for a function. HTTP triggered functions are executed at most once and other event triggers are ran at least once. Cloud Functions need to be idempotent, meaning that when ran multiple times does less and less work until the work is complete. When an idempotent script is ran after all work is completed, no work is performed.
 
-::: tip Idempotency
-A script that downloads all of the pages of a website may be interupted. If it picks up where it left off on a rerun, or especially if it doesn't redownload the entire site on that rerun, it is idempotent.
+::: tip Idempotent
+A script that downloads all of the pages of a website may be interrupted. If it picks up where it left off on a rerun, or especially if it doesn't redownload the entire site on that rerun, it is idempotent.
 :::
 
 ###### Cloud Function Use Cases
@@ -176,17 +176,17 @@ A script that downloads all of the pages of a website may be interupted. If it p
 
 ### GKE
 
-Goolge Kubernetes Engine (GKE) is GCP's Kubernetes managed offering. This service offers more complex container orchestration than either App Engine or Cloud Run.
+Google Kubernetes Engine (GKE) is GCP's Kubernetes managed offering. This service offers more complex container orchestration than either App Engine or Cloud Run.
 
 Kubernetes can be used for stateful deployments with certain storage objects configured into your deployment. Kubernetes has internal hooks that are auto configured by google to provide you with GCP provisioned architecture when you deploy it. Kubernetes has different storage classes and some can be marked as default. This way when you provision an object of kind `persistentvolumeclaim`, a Cloud persistent disk is spun up, attache to the node running the pod, then mounted into the pod per your specifications.
 
 To put it simple: it will create a cloud volume and mount it where you say in your yaml. You can install your own storage controllers by creating the yaml for one, creating a template that generates one(helm chart), or by following third party storage controller instructions.
 
-The NFS-Ganesha storage controller is the most robust durrable way to share highly available disks across a whole region in a cluster or set of clusters. You can set persistent volume defaults so that they don't delete when you delete a k8s object, that way you can specify it in a create-once, reattach many deployment style. You can use logging and monnitoring to initate manual deletes when there are orphaned volumes in the process.
+The NFS-Ganesha storage controller is the most robust durable way to share highly available disks across a whole region in a cluster or set of clusters. You can set persistent volume defaults so that they don't delete when you delete a k8s object, that way you can specify it in a create-once, reattach many deployment style. You can use logging and monitoring to initiate manual deletes when there are orphaned volumes in the process.
 
-In k8s a combination of privoxy, istio and cert manager can secure connections between pods to institute a trust-no-one level of securty. Here we assume your pods can be compromised so we configure them to only talk to the pods which we want and disallow the rest. We can disallow intenet access and poke holes only to the services we need. We can ingress only to customer facing services and even put some armor on it by placing CloudFlare or Akamai in front of the services. In this model, we disallow all incoming connections to the ingress that aren't from on-premisis or from the proxies we may put in front of your customer facing services.
+In k8s a combination of privoxy, istio and cert manager can secure connections between pods to institute a trust-no-one level of security. Here we assume your pods can be compromised so we configure them to only talk to the pods which we want and disallow the rest. We can disallow internet access and poke holes only to the services we need. We can ingress only to customer facing services and even put some armor on it by placing CloudFlare or Akamai in front of the services. In this model, we disallow all incoming connections to the ingress that aren't from on-premises or from the proxies we may put in front of your customer facing services.
 
-GKE Ochrestrates the following operations:
+GKE Orchestrates the following operations:
 * Service discovery
 * Error correction and healing
 * Volume create, deletion, resizing
