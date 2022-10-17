@@ -11,7 +11,7 @@ tag:
   - GCCPCA
 ---
 
-# Architechting Compute Engine Solutions in GCP
+# Architecting Compute Engine Solutions in GCP
 
 [[toc]]
 
@@ -197,14 +197,14 @@ GKE Ochrestrates the following operations:
 * Resource Versioning
 * Secrets management
 
-As Free and Open Source Software(FOSS), Kubernetes can be self hosted, third-party hosted, or managed as it is hosted. Anthos is google's implementation of that designed to connect to the popular clouds and on-premisis.
+As Free and Open Source Software(FOSS), Kubernetes can be self hosted, third-party hosted, or managed as it is hosted. Anthos is google's implementation of that designed to connect to the popular clouds and on-premises.
 
-#### Kubernetes Cluster Architechture
+#### Kubernetes Cluster Architecture
 
 Kubernetes is organized into nodes and masters. Masters usually only have one unless replicated or made highly available by whatever means. Nodes usually connect to masters but managed kubernetes options often group the nodes into node pools.
 
 ##### Default Node Pool
-There is a default node pool with no tolerations or taints specified, defaultly nodes will be added to this pool unless specified. In GKE node pools are specified when you provision the cluster. If using terraform your GKE module or resource ought to specify.
+There is a default node pool with no toleration or taints specified, defaulted nodes will be added to this pool unless specified. In GKE node pools are specified when you provision the cluster. If using terraform your GKE module or resource ought to specify.
 
 #### Kubernetes Workloads
 * Pods
@@ -219,7 +219,7 @@ There is a default node pool with no tolerations or taints specified, defaultly 
 
 `Pods` are units of containers. Pods are basically containers if they only have one, but if there are many containers in a `pod`, consider them a dual headed container that shares networking.
 
-`Pods` are ephemereral, their file systems are removed and recreated upon start up. Any stored data needs to be placed in storage via a `volume` and `volumemount`. Pods are deployed by the scheduler on nodes per no rules or specifie rules.
+`Pods` are ephemeral, their file systems are removed and recreated upon start up. Any stored data needs to be placed in storage via a `volume` and `volumemount`. Pods are deployed by the scheduler on nodes per no rules or specified rules.
 
 `ReplicaSets` are controllers which scale `pods` up and down per specifications in the `deployment`.
 
@@ -232,7 +232,7 @@ There is a default node pool with no tolerations or taints specified, defaultly 
 
 Google Cloud Run is a serverless and stateless computing platform for container images. This product is ideal for deploying microservices and handling large scale data processing jobs. Cloud Run is highly scalable and can be deployed on demand.
 
-You aren't restricted to a set of runtimes, you build your runtime as a docker image and push to Google Artifact Registry or Google Container Registry. Google Cloud Run pulls the image and runs it.
+You aren't restricted to a set of runtime options, you build your runtime as a docker image and push to Google Artifact Registry or Google Container Registry. Google Cloud Run pulls the image and runs it.
 
 ::: tip Cloud Run Availability
 Google Cloud Run has regional availability.
@@ -240,14 +240,14 @@ Google Cloud Run has regional availability.
 
 If you app can only handle a single request or if that request uses most of the container's resources, set its replica count to 1. You can set the maximum amount of requests a container can handle before it is killed and restarted. You can also adjust for avoiding cold starts by setting the minimum available count.
 
-Each Cloud Run deployment is considered a revision and rollbacks when the latest revision is unhealthy is automatic. In fact, the health of a new revision is verified before traffic is sent to the most recent deployment. Each deployment in Cloud Run is a set of yaml syntaxed configuration that can live in a repo or inside Cloud Run itself. You can run gcloud against this file to issue new deployments or you can use command line options.
+Each Cloud Run deployment is considered a revision and rollbacks when the latest revision is unhealthy is automatic. In fact, the health of a new revision is verified before traffic is sent to the most recent deployment. Each deployment in Cloud Run is a set of yaml syntax configuration that can live in a repo or inside Cloud Run itself. You can run gcloud against this file to issue new deployments or you can use command line options.
 
 ### App Engine
 App Engine is a serverless PaaS that runs on Google's compute engine. It is fully managed, meaning you only need to provide your code. App Engine handles the rest, including provisioning servers, load balancing, and scaling.
 
 #### Standard
 
-App Engine Standard is a serverless environment that runs on Google's compute engine. It is a fully managed PaaS that requires only code. There are no servers to manage. You simply upload your code and google detects how to buid it and runs it on App Engine.
+App Engine Standard is a serverless environment that runs on Google's compute engine. It is a fully managed PaaS that requires only code. There are no servers to manage. You simply upload your code and google detects how to build it and runs it on App Engine.
 
 ##### Standard Code Environments
 * Python 2.7, Python 3.7, Python 3.8, Python 3.9, and Python 3.10.
@@ -262,7 +262,7 @@ App Engine Standard provides two types of instance classes or runtime generation
 First generation is provided for Python 2.7, PHP 5.5, and Java 8.
 
 ##### App Engine Flexible
-App Engine Flexible allows you to customize the runtime with Dockerfiles. This gives you the ability to modify the supported App Engine Flexible runtime and environment. You can also deploy your own custom containers. This makes it easy to scale your app and keep it running in a consistent environment.
+App Engine Flexible allows you to customize the runtime via `Dockerfile`. This gives you the ability to modify the supported App Engine Flexible runtime and environment. You can also deploy your own custom containers. This makes it easy to scale your app and keep it running in a consistent environment.
 
 * Go
 * Java 8
@@ -292,11 +292,11 @@ App Engine can be used for a variety of applications, from simple websites to co
 
 #### App Engine Flexible Key Differences from GCE
 * Flexible containers are restarted once a week
-* SSH can be enabled, but is defaultly disabled
+* SSH can be enabled, but is defaulted to disabled
 * Built using cloud build
-* Settings controlled location and automatic colocaion
+* Settings controlled location and automatic collocation
 
-App Engine includes a cron service, and deploys into many zones by default. App Engine is designed to run stateless workloads but you can write to disk on App Engine Flexible. App Engine provides task queues for a syncronous and background computing.
+App Engine includes a cron service, and deploys into many zones by default. App Engine is designed to run stateless workloads but you can write to disk on App Engine Flexible. App Engine provides task queues for a synchronous and background computing.
 
 ## Anthos
 ### Anthos Service Mesh
