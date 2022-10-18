@@ -299,13 +299,151 @@ App Engine can be used for a variety of applications, from simple websites to co
 App Engine includes a cron service, and deploys into many zones by default. App Engine is designed to run stateless workloads but you can write to disk on App Engine Flexible. App Engine provides task queues for a synchronous and background computing.
 
 ## Anthos
+
+Google Cloud Anthos is an advanced cloud computing service that provides the flexibility to run your containerized applications on-premise or in the cloud.
+
+At its core, Google Cloud Anthos offers access to the benefits of the cloud without having to move all of your applications there. So you'll be able to use the same tools, processes, and infrastructure you're used to today—and still access the benefits of having a global platform.
+
+Google Cloud Anthos offers security and privacy by design; it's built with multi-factor authentication and encryption at all levels of data storage, from internal compute instances to external storage systems. It also has built-in threat detection capabilities that alert you when something seems fishy.
+
+Google Cloud Anthos gives you access to powerful analytics features through its real-time reporting dashboard and machine learning algorithms that help you make better decisions based on data. And because everything runs in a virtual environment on Google's worldwide network of datacenters, there are no limits on how many applications can run at once—so long as they're all within one region or continent!
+
+Anthos:
+* Centrally managed
+* Can use Version Control Based rollbacks
+* Centralizes infrastructure in a single view
+* Centralizes deployments and rollouts
+* Enables Code instrumentation(performance measurements) using ASM
+* Uses Anthos Service Mesh(ASM) for auth and cert based routing
+
+::: tip
+Anthos is just Kubernetes designed to run in GCP, other cloud providers, and on-premises. 
+:::
 ### Anthos Service Mesh
+Service meshes are patterns which provide common frameworks for intra-service communication. They're used for monitoring, authentication, networking. Imagine wrapping every service in an identity aware proxy, that's a service mesh. Difficult to set up initially, service meshes save time by defining systematic policy-compliant ways of communicating across infrastructure. Facilitating hybrid and multi-cloud communications is what Anthos Service Mesh does.
+
+ASM is built on istio which is an open source service mesh. In a service mesh there is a control plane which configures sidecar proxies running as auxiliary services attached to each pod.
+
+Anthos Service Mesh:
+* Can control the traffic between pods on the application and lower layers.
+* Collects metrics and logs
+* Has preconfigured Cloud Monitoring Dashboards
+* Service authentication with mutual TLS certificates
+* Encryption of communication with the Kubernetes Control Plane
+
+ASM can be deployed in-cluster, across Compute VMs or via Managed Anthos Service Mesh. In-cluster options include running the control plane in kubernetes to manage discovery, authentication, security and traffic. With managed ASM google managed the control plane, maintains it, scales it and updates it. When running istiod on Compute Engine, you can have instances in groups take advantage of using the service mesh. Anthos Service mesh only works on certain configurations for in-cluster VMWare, AWS EKS, GCP GKE and bare metal, while you must use an attached cluster if using Microsoft AKS.
+
 ### Multi-cluster Ingress
+
+The Anthos Multi-Cluster Ingress controller is hosted on Google Cloud and enables load balancing across multi-regional clusters. A single virtual ip address is provided for the ingress object regardless of where it is deployed in your hybrid or multi cloud infrastructure setup. This makes your services more highly available, enables seamless migration from on-premises to the cloud.
+
+The Ingress controller in this case is a globally replicated service that runs outside of your cluster.
+
+### Anthos Deployment Permutations
+
+You can deploy anthos a number of ways depending on your needs and the features you would like to utilize. ASM and Anthos Config Management(ACM) are included in all Anthos deployments.
+
+* Traffic rules for TCP, HTTP(S), & gRPC
+* All HTTP(S) traffic in and out of the cluster is metered, logged and traced
+* Authentication and authorization at the service level
+* Rollout testing and canary rollouts
+
+Anthos Config Management uses Kustomize to generate k8s yaml that configures the cluster. Yaml can be grouped into deployed services and supporting infrastructure. An NFS helm chart might be deployed to a cluster using ACM at cluster creation time to support a `persistentvolume` class of NFS *within* the deployment yaml.
+
+ACM can be used to create initial kubernetes serviceaccounts(KSAs), namespaces, resource policy enforcers, labels, annotations, RBAC roles and role bindings. GKE Anthos deployments support a number of features:
+
+* Node auto provisioning
+* Vertical pod autoscaling
+* Shielded GKE Nodes
+* Workload Identity Bindings
+* GKE Sandboxes
+
+ACM, ASM, Multi-Cluster ingress, and binary authorization also come with the GKE implementation of Anthos.
+
+On-Prem Anthos GKE On-prem includes these features:
+
+* The network plugin
+* Anthos UI & Dash
+* ACM
+* CSI storage and hybrid storage
+* Authentication Plugin for Anthos
+* When running VMWare
+ * Prometheus and Grafana
+ * Layer 4 Load Balancers
+
+Anthos on AWS includes:
+
+* ACM
+* Anthos UI & Dashboards
+* The network plugin
+* CSI storage and hybrid storage
+* Anthos Authentication Plugin
+* AWS Load Balancers
+
+Attached Clusters which run on any cloud or On-prem have these features:
+
+* ACM
+* Anthos UI & Dash
+* Anthos Service Mesh
+
 ## AI and Machine Learning
+
+GCP offers several AI options and machine learning options. Vertex AI is an AI platform that offers one place to do machine learning. It handles development, deployment and scaling the ML models. Cloud TPUs are training accelerators for training deep networks.
+
+Google also provides:
+* Speech-to-Text
+* Text-to-Speech
+* Virtual Agents
+* Dialogflow CX
+* Translation
+* Vision OCR
+* Document AI
+
 ### Vertex AI
+Vertex AI is basically a merger of two products: AutoML and the AI Platform. The merged Vertex AI provides one api and one interface for the two platforms. With Vertex you can train your models or you can let AutoML train them.
+
+Vertex AI:
+* Supports AutoML training or custom training
+* Support for model deployment
+* Data labeling, which includes human assisted labeling training examples for supervised tasks
+* Feature store repo for sharing Machine Learning features
+* Workbench, a Jupyter notebook development environment
+
+Vertex AI provides preconfigured deep learning VM images and containers.
+
 ### Cloud TPU
+
+Cloud TPU are Cloud Tensor Processing Units(TPUs) that are Google designed application specific integrated circuits(ASICs). They can train deep learning models faster than GPUs or CPUs. A Cloud TPU v2 can offer 180 teraflops, and a v3 420 teraflops. Groups of TPUs are called pods and a v2 pod can offer 11.5 petaflops while a v3 pod provides over 100 petaflops.
+
+You can use Cloud TPUs in an integrated fashion by connecting from other Google services, for example, the Compute VM running a deep learning operating system image. TPUs come in preemptible form at a discount.
+
 ## Dataflows and Pipelines
+
+The model of the monolithic application is dead. It may be tempting to put your whole business on one web application but when an enterprise runs an application at scale, there are dozens of supporting applications that ensure reliability, applications which meter the availability, application code which deploys highly customized pipeline steps and standards, especially in the financial industry. At Enterprise scales, the pipeline or workflow steps have a Check to Action Ratio(CtAR) of probably 1 to 20. This means we'll have about 20 checks, tests, tracking, metering, or logging steps to one step which actually makes a change like `kubectl` or `cf push`. And that's just deployment.
+
+To illustrate this dimension further there's disaster recovery, durability, maintenance, ops and reporting all done as part of Continuous Deployment Standards. 
+
+Add to that that an a company is often now an entire ecosystem of applications, this is especially true for Internet of Things companies, for example.
+
+Consider, for a moment, a vehicle insurance claim made on behalf of a driver by their spouse, the processing workflow of the claim might look like this:
+
+* Verifying that the spouse is on the policy and has access to file a claim.
+* Analyzing the damage and repair procedures and assigning a value to the damage
+* Reviewing the totals to make sure the repairs don't exceed the value of the vehicle
+* Any fraud compliance reviews
+* Sending these interactions to a data warehouse for analysis
+* Sending the options and communications of circumstance to the claimant
+
+Different applications monolithic or not will process this data in different ways.
+
+If you buy a product online the inventory application may be a monolithic system or microservices, it may be separate or built into something else, but likely it is independent is some wise. A grocery story self checkout application would have to interact with this inventory application much like a cashier's station. Each station is a set of services from the receipt printer to the laser scanner to the payment system. A simple grocery story transaction is not so simple and is fairly complex.
+
+It is of key importance to consider the entire flow of data when designing for GCP.
+
 ### Pub/Sub Pipelines
+Cloud Pub/Sub is a giant buffer. It comes in regular and lite flavors. It supports pushing messages to subscribers or having subscribers pull messages from the queue. A message is a record or entry in the queue.
+
+With push subscriptions, Pub/Sub makes and HTTP POST to a push endpoint. This method benefits when there is a single place to push in order to process the workload. This means its a perfect way to post to a Cloud Function, App Engine App, or Container.
 ### Cloud Dataflow Pipelines
 ### Cloud Dataproc
 ### Cloud Workflows
