@@ -421,9 +421,9 @@ You can use Cloud TPUs in an integrated fashion by connecting from other Google 
 
 The model of the monolithic application is dead. It may be tempting to put your whole business on one web application but when an enterprise runs an application at scale, there are dozens of supporting applications that ensure reliability, applications which meter the availability, application code which deploys highly customized pipeline steps and standards, especially in the financial industry. At Enterprise scales, the pipeline or workflow steps have a Check to Action Ratio(CtAR) of probably 1 to 20. This means we'll have about 20 checks, tests, tracking, metering, or logging steps to one step which actually makes a change like `kubectl` or `cf push`. And that's just deployment.
 
-To illustrate this dimension further there's disaster recovery, durability, maintenance, ops and reporting all done as part of Continuous Deployment Standards. 
+To illustrate this dimension further there's disaster recovery, durability, maintenance, ops and reporting all done as part of Continuous Deployment Standards. Therefore, each application is an ecosystem of standards and reporting.
 
-Add to that that an a company is often now an entire ecosystem of applications, this is especially true for Internet of Things companies, for example.
+Add to that that a company is often now an entire ecosystem of applications which work together, this is especially true for Internet of Things companies, for example. Some of these operations may have even been made auxiliary by leveraging some serverless functions, triggers, or webhooks.
 
 Consider, for a moment, a vehicle insurance claim made on behalf of a driver by their spouse, the processing workflow of the claim might look like this:
 
@@ -444,14 +444,81 @@ It is of key importance to consider the entire flow of data when designing for G
 Cloud Pub/Sub is a giant buffer. It comes in regular and lite flavors. It supports pushing messages to subscribers or having subscribers pull messages from the queue. A message is a record or entry in the queue.
 
 With push subscriptions, Pub/Sub makes and HTTP POST to a push endpoint. This method benefits when there is a single place to push in order to process the workload. This means its a perfect way to post to a Cloud Function, App Engine App, or Container.
+
+Regarding pull subscriptions, services read the messages from the Pub/Sub topic. This is the most efficient method for processing large sets of messages within a topic. Pub/Sub works best when it is used as a buffer between communicating services which cannot have synchronous operations due to load, differences in availability, differences in resource pools serving the sending and receiving services. Consider a service that can quickly collect and send messages. It certainly uses less resources than the consuming services which has to do additional processing work on the messages. It is highly likely that at some point in time the sending service will be able to exceed the speed of the consuming service. Pub/Sub can bridge that gap by buffering the messages to the processing service. In a synchronous design, messages would be lost if there was no place for the sending service to put them. In this case Pub/Sub bridges the gap.
+
+::: tip
+Pub/Sub is good for buffering, transmitting or flow controlling data. If you need to transform the data, Cloud Dataflow is the way to go.
+:::
+
 ### Cloud Dataflow Pipelines
+Cloud Dataflow is Apache Beam stream processing implemented as a fully managed Google Cloud Platform service. Normally you'd have to provision instances of this service on virtual machines, but google managed the entire infrastructure for this service and maintains its availability and reliability.
+
+The service works via processing code written in Python, Java or SQL. Code can be batch or stream processed. You can combine services and send the output from Dataflow into Dataproc or BigQuery or BigTable and so forth. Dataflow is organized into pipelines that are designed to tackle the work of the part of the app that comes after ingests data, but otherwise can be used anywhere Apache Beam is used in applications.
+
 ### Cloud Dataproc
+Dataproc is managed Spark + Hadoop. This is for stream / batch processing and machine learning at the largest magnitudes. Dataproc clusters are stood up and taken down quickly so they're often treated as ephemeral after they produce batch results. Obviously a stream processing effort may run all the time, but if the stream is some sort of live data from an occasional event, like Olympics score data or Sports, can create the need for ephemeral clusters in either case.
+
+Dataproc is already integrated with BigQuery, BigTable, Cloud Storage, Cloud Logging, Cloud Monitoring. This services replaces on-premises clusters in a migration.
+
 ### Cloud Workflows
+Workflows are HTTP api services and workflows. In conjunction with Cloud Run, Cloud Functions, GitOps webhooks, Cloud Build Triggers and so forth, you can accommodate any business and technical requirements. You set them up as `yaml` or `json` steps.
+
+You can trigger a workflow to make several api calls in sequence to do a workload. Workflows do not perform well processing data, rather they do smaller actions in a series well. You wouldn't use workflows to make large http `POST` calls.
+
 ### Cloud Data Fusion
+Another managed service, Cloud Data Fusion is based on something called **Cask Data Application Platform (CDAP)**, which Atlassian defines as "a developer-centric middleware for developing and running Big Data applications. Before you learn how to develop and operate applications, this chapter will explain the concepts and architecture of CDAP."
+
+This platform allows the ELT pattern of extraction, load, and transform as well as the ETL pattern of extraction, transformation, load. It allows this without any coding. CDAP allows drag and drop interfaces as a no-code development tool that has around 200 connectors and transformations.
+
+Cloud Data Fusion instances are deployed as one in three versions: developer, basic, and enterprise.
+
+|Developer|Basic|Enterprise|
+|-|-|-|
+|low cost but limited|visual editor, preloaded transformations, and an SDK|streaming, integration, high availability, triggers and schedules|
+
 ### Cloud Composer
+Composer is basically a managed instance of Airflow which is a workflow coordination system that fires off workflows of a specific type: directed acyclic graphs (DAGs), which are python definitions of nodes and their connections. Here is an example:
+
+```python
+import networkx as nx
+graph = nx.DiGraph()
+graph.add_edges_from([("root", "a"), ("a", "b"), ("a", "e"), ("b", "c"), ("b", "d"), ("d", "e")])
+```
+
+![DAG example](https://mungingdata.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-25-at-9.48.21-AM.png)
+* example from [Munging Data](https://mungingdata.com/python/dag-directed-acyclic-graph-networkx/)
+
+These DAGs are stored in Cloud Storage and loaded in to Composer. Google gives this example on the Cloud Composer Concepts Page:
+
+![overview dag and tasks](https://cloud.google.com/static/composer/docs/images/overview-dag-and-tasks.svg)
+
+**Figure 1.** Relationship between DAGs and tasks
+
+Airflow includes plugins, hooks. operators, and tasks. Plugins are combinations of hooks and operators. Hooks are third party interfaces and operators define how tasks are run and can combine actions, transfers, and sensor operations. Tasks are work done symbolized as one of these nodes in the DAG.
+
+Upon execution of a DAG, logs are stored in a Cloud Storage bucket. Each task has its own log and streaming logs are available.
+
 ## Compute Systems and Provisioning
+You can provision compute services via the console or via terraform. You can run terraform in Cloud Build or in Deployment Manager. Using Terraform allows you to perform GitOps on the processes surrounding version control, integration, pull requests and merging code. Branching strategies allow segmentation of environments. Multiple repositories can be combined into project creation code, infrastructure creation code, access granting code and its best to run all this as a privileged but guarded service account. Enterprises will use a series of layers of access, projects, folders and organizations in complex networks of infrastructure as code. It can all be pulled together using terraform modules, cloud build triggers and repository and project layering.
 ## Compute Design problems
+The key concerns when designing services that rely on compute systems are configuration, deployment, communication between services, data flows and monitoring and logging.
+
 ### State
+Inside the application you'll have to work out how state will be stored either in a shared volume or in a distributed manor among your instances. This kind of design decision can leverage Cloud Storage or Persistent Volumes. Another problem is how to distribute state among instances. There are several means of doing this mathematically using modulo division on some unique attribute. You could also use aggregate level IDs.
+
+You get around this by using things like Redis for session data, shared storage options and you make your app itself stateless in its core but know how to connect to where state information is stored. Running two replicas of Nextcloud containers requires state data be shared somehow or when you login to one, your round robin connection to the other will present you with another login screen. The browser will not be able to maintain the session data of two sessions when there's one and therefore the disparity between the replicas will prevent the application from functioning.
+
+So in memory caches bridge the gap between different instances. Wordpress for instance, is completely stateless(when you use Storage Bucket Media Backends) as it keeps all session and any other state data in the database so a memory cache is not needed.
+
+### Async vs Synchronous
+Synchronous strategies are used when data can't be lost. NFS mounts can be mounted async or sync, for instance. Synchronous setups require lightening fast networks that are fast than the disks involved with low to no latency and probably nothing else on the network. Otherwise if that's not the case your system will try to save a file and will wait for the network to respond before it lets the process move on to other tasks. When a VM or bare-metal system has processes which have to wait on a slow network, the processes stack on top of each other increasing load. Load exponentially reduces a systems ability to respond to requests. Synchronous NFS systems on slow networks crash and so people can't and therefore don't use them.
+
+These problems are universal across all independent systems that need to communicate over means that involve variable speeds. With google's premium network, however, the problem will always be rather load than network speed. Scaling ingestion, for instance, will resolve synchronous problems.
+
+However, services like Pub/Sub can make this process asynchronous, relaxing some of the stress and impact on on such a system's costs and reliability.
+
+Credit card transactions are synchronous as well as maybe a bitcoin mining operation.
 ## Exam Essentials
 
 * blah
