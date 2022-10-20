@@ -1,6 +1,6 @@
 ---
 icon: cloud
-date: 2022-09-27
+date: 2022-10-20
 category:
   - Google Cloud
   - Technology
@@ -227,7 +227,7 @@ There is a default node pool with no toleration or taints specified, defaulted n
 
 `Deployments` are controllers of pods running the same version of a container artifact.
 
-`PersistentVolumes` are volumes requested from storage controllers, either CSI requests volumes from the cloud which attacheds to a specific Kubernetes Node. Other types of volumes exist as different storage class attributes on the persistent volume.
+`PersistentVolumes` are volumes requested from storage controllers, either CSI requests volumes from the cloud which attaches to a specific Kubernetes Node. Other types of volumes exist as different storage class attributes on the persistent volume.
 
 `PersistentVolumeClaims` are the ways pods refer to a `persistentvolume`.
 
@@ -235,7 +235,7 @@ There is a default node pool with no toleration or taints specified, defaulted n
 
 `Ingress` objects define rules that allow requests into the cluster targeting a service. Some ingress gateways are capable of updating cloud dns entries directly while there's always a docker image out there which will watch your public ips on your ingress load balancers and update Cloud DNS.
 
-`Node Pools` are commony labeled and generally of the same hardware class and size with the same disk geometry across nodes. One can run an NFS Ganesha storage controler from helm chart on a certain set of node pools using a shared volume on the instances. You can run one or two nodes in that pool and consider it a storage pool and then create another node pool that is your workload node pool, whose pods utilize the storage controler's storage class. Kubernetes does the automatic job of connecting the NFS controller pods to the service pods. The controler pods can use `PersistentVolumes` of a more durable gcp default storage class which uses persistent disks.
+`Node Pools` are commonly labeled and generally of the same hardware class and size with the same disk geometry across nodes. One can run an NFS Ganesha storage controller from helm chart on a certain set of node pools using a shared volume on the instances. You can run one or two nodes in that pool and consider it a storage pool and then create another node pool that is your workload node pool, whose pods utilize the storage controller's storage class. Kubernetes does the automatic job of connecting the NFS controller pods to the service pods. The controller pods can use `PersistentVolumes` of a more durable gcp default storage class which uses persistent disks.
 
 `Node pools` and their labels allow pods to be configured with nodeAffinities and nodeSelectors among other ways of matching workloads to pools designed to handle their resource consumption.
 
@@ -578,7 +578,7 @@ Credit card transactions are synchronous as well as maybe a bitcoin mining opera
 The most popular options provided by Google Compute Engine that cover a wide variety of use-cases include:
 
 * [Compute Engine VMs](https://cloud.google.com/compute/docs/instances)
-* [App Engine Serverless PaaS, Flexable & Standard](https://cloud.google.com/appengine/docs)
+* [App Engine Serverless PaaS, Flexible & Standard](https://cloud.google.com/appengine/docs)
 * [Cloud Run Stateless Containers](https://cloud.google.com/run/docs/concepts)
 * [Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview)
 * [Anthos fleets](https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview)
