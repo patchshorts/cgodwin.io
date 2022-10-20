@@ -225,9 +225,62 @@ There is a default node pool with no toleration or taints specified, defaulted n
 
 `Services` are in-custer dns abstractions as proxies which route to to `pods`.
 
-`Deployments` are 
+`Deployments` are controllers of pods running the same version of a container artifact.
 
-#### 
+`PersistentVolumes` are volumes requested from storage controllers, either CSI requests volumes from the cloud which attacheds to a specific Kubernetes Node. Other types of volumes exist as different storage class attributes on the persistent volume.
+
+`PersistentVolumeClaims` are the ways pods refer to a `persistentvolume`.
+
+`StatefulSets` are like `deployments` in that they create pods, but the pods are always named the same consistent name with the replica number appended starting with zero.
+
+`Ingress` objects define rules that allow requests into the cluster targeting a service. Some ingress gateways are capable of updating cloud dns entries directly while there's always a docker image out there which will watch your public ips on your ingress load balancers and update Cloud DNS.
+
+`Node Pools` are commony labeled and generally of the same hardware class and size with the same disk geometry across nodes. One can run an NFS Ganesha storage controler from helm chart on a certain set of node pools using a shared volume on the instances. You can run one or two nodes in that pool and consider it a storage pool and then create another node pool that is your workload node pool, whose pods utilize the storage controler's storage class. Kubernetes does the automatic job of connecting the NFS controller pods to the service pods. The controler pods can use `PersistentVolumes` of a more durable gcp default storage class which uses persistent disks.
+
+`Node pools` and their labels allow pods to be configured with nodeAffinities and nodeSelectors among other ways of matching workloads to pools designed to handle their resource consumption.
+
+#### Types of Clusters
+
+Kubernetes Clusters come in two forms:
+
+* Standard
+* Autopilot
+
+Standard is the most flexible but Autopilot is the easiest and requires the least management.
+
+|Feature|GKE Standard|GKE Autopilot|
+|--|--|--|
+|Zonal|🟢|🔴|
+|Regional|🟢|🟢|
+|Add Zones|🟢|⚪|
+|Custom Networking|🟢|🔴 VPC native|
+|Custom Version|🟢  |🔴 GKE Managed|
+|Private Clusters|🟢|🟢|
+
+#### Kubernetes Networking
+
+Inside the cluster, networking is generally automatic. Outside the cluster, huge workloads, however, will often have to build node pools on top up subnets which are large enough for the `NodePool` to scale into.
+
+Within the cluster service networking is handled by:
+
+* Ingresses: which stand up external load balancers that direct traffic at one of the services in the cluster.
+* Services
+  * ClusterIP, a private ip assigned to the vpc subnet that the cluster is using
+  * NodeIP, the ip of the node a pod is running within
+  * Pod IP, local private networks
+
+Like the subnets of the nodepools, you'll have to give pod subnets enough room to run your pods.
+
+##### Service Types
+
+Services can either be LoadBalancer for an external loadbalancer, ClusterIP for an ip that is only accessible within the cluster.
+
+NodePort type services use an assigned port from the range 30000-32768 on the Node IP of the node that the pods which the service points to runs in.
+
+LoadBalancers automatically create NodePort and ClusterIP resources and externally route traffic to them from a Cloud Provided LoadBalancer.
+
+Load balancing across pods and containers is automatic, while service loadbalancing is external.
+
 ### Cloud Run
 
 Google Cloud Run is a serverless and stateless computing platform for container images. This product is ideal for deploying microservices and handling large scale data processing jobs. Cloud Run is highly scalable and can be deployed on demand.
@@ -539,7 +592,6 @@ Dataprocessing and Workflow options include:
 * [Cloud Composer Apache Airflow with DAG based workflows](https://cloud.google.com/composer/docs/concepts)
 * [Cloud Workflows, API calls in a series](https://cloud.google.com/workflows/docs/overview)
 * [Cloud Pub/Sub and Pub/Sub Lite](https://cloud.google.com/pubsub/docs/concepts)
-
 
 ## Exam Essentials
 
