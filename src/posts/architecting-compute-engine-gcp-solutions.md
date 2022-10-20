@@ -519,9 +519,36 @@ These problems are universal across all independent systems that need to communi
 However, services like Pub/Sub can make this process asynchronous, relaxing some of the stress and impact on on such a system's costs and reliability.
 
 Credit card transactions are synchronous as well as maybe a bitcoin mining operation.
+
+## Overview
+
+The most popular options provided by Google Compute Engine that cover a wide variety of use-cases include:
+
+* [Compute Engine VMs](https://cloud.google.com/compute/docs/instances)
+* [App Engine Serverless PaaS, Flexable & Standard](https://cloud.google.com/appengine/docs)
+* [Cloud Run Stateless Containers](https://cloud.google.com/run/docs/concepts)
+* [Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview)
+* [Anthos fleets](https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview)
+* [Cloud Functions Events as a Service](https://cloud.google.com/functions/docs/concepts/overview)
+
+Dataprocessing and Workflow options include:
+
+* [Dataproc Apache Spark + Hadoop](https://cloud.google.com/dataproc/docs/concepts)
+* [Dataflow Apache Beam](https://cloud.google.com/dataflow/docs/concepts)
+* [Datafusion Visual CDAP ETL and ELT pipelines](https://cloud.google.com/data-fusion/docs/concepts)
+* [Cloud Composer Apache Airflow with DAG based workflows](https://cloud.google.com/composer/docs/concepts)
+* [Cloud Workflows, API calls in a series](https://cloud.google.com/workflows/docs/overview)
+* [Cloud Pub/Sub and Pub/Sub Lite](https://cloud.google.com/pubsub/docs/concepts)
+
+
 ## Exam Essentials
 
-* blah
+* Know when to use particular compute services
+* Know all the optional features of these services
+* Know the differences between App Engine Standard and Flexible
+* Know when to use Machine Learning and Data workflows and pipelines
+* Understand the features of different Anthos clusters: EKS, AKS, GKE, Attached
+* Know Kubernetes features
 
 ## Official Resources
 * [Load Balancing and Autoscaling Compute Engine](https://cloud.google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
