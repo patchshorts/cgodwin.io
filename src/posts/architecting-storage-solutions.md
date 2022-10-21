@@ -29,9 +29,62 @@ Bucket name best practices:
 * Use UUIDs or GUIDs if you have buckets in any real quantity.
 * Don't upload objects with time series based filenames in parallel
 * Don't name objects in sequence if uploading them in parallel
-* It's best to use a subdomain
+* It's best to use the fully qualified subdomain
+
+One way to access cloud storage is through a FUSE mount. FUSE (Filesystem in Userspace) is a software interface that allows users to create and access virtual filesystems. This can be useful for mounting cloud storage buckets so that they can be accessed like any other local filesystem. To do this, first install the FUSE package for your operating system. Then, create a directory that will serve as the mount point for the bucket. For example, if you want to mount a bucket named "mybucket" on your local machine, you would create a directory named "mybucket" in your home directory. Next, use the fuse-bucket tool to mount the bucket. To use FUSE with Cloud Storage, you first need to install the FUSE library and the gcsfuse tool. Once these are installed, you can use the gcsfuse command to mount a bucket. For example, the following command will mount a bucket named mybucket.
+
+#### Storage classes
+
+GCP has different classes of storage:
+
+* Standard
+* Nearline
+* Coldline
+* Archive
+
+Different storage classes in Google Cloud Storage offer different benefits for different workloads. The most basic storage class, Standard, is great for storing data that is accessed frequently. The next class, Nearline, is ideal for data that is accessed less frequently, but still needs to be accessed quickly. The last class, Coldline, is perfect for data that is infrequently accessed and can tolerate higher retrieval costs. By understanding the different workloads and access patterns, users can select the most appropriate storage class for their needs and optimize their Google Cloud Storage experience.
+
+The Standard storage class is designed for frequently accessed data. Data stored in the Standard storage class is charged based on how much you store.
+
+Nearline storage is a type of cloud storage that is similar to online storage but with lower availability and higher latency. Nearline storage is typically used for data that is not accessed more often than once every 30 days but needs to be stored for long-term retention. Costs are calculated based on how often you access the data and how much you store.
+
+Coldline is a class of storage that was announced by Google in October 2016. It is designed for data that doesn’t need to be frequently accessed, such as historical logs or data archival. The storage itself is designed for files accessed less than once per year. It has a higher retrieval cost than nearline.
+
+Archive storage is the lowest cost storage option in Google Cloud with the highest retrieval costs. It is specifically for data that you don’t need to access more than once a year, such as historical data, backup files, or log files. This is great for compliance storage of files that never need to be accessed.
+
+##### Feature Summary
+|Feature|Standard|Nearline|Coldline|Archive|
+|--|--|--|--|--|
+|Multiregion SLA|99.95%|99.9%|99.9%|99.9%|
+|Region SLA|99.9%|99.0%|99.0%|99.0%|
+|Latency|millisecond access|millisecond access|millisecond access|millisecond access|
+|Frequency|Often|1x30 days|1x90 days|1x1 year|
+|Capabilities|Video, Multimedia, Business Continuity, Transcoding, Data analytics, General Compute|Backup, Long-tail content, Rarely accessed docs|Archive, Source File Escrow, Disaster Recovery Testing|Compliance Retention, Disaster Recovery|
+
+##### Costs Summary
+|Cost|Standard|Nearline|Coldline|Archive|
+|--|--|--|--|--|
+|Size|$0.020/GB|$0.010/GB|$0.004/GB|$0.0012/GB|
+|Retrieval|$0.00/GB|$0.01/GB|$0.02/GB|$0.05/GB|
+
+Example use-cases for Google Cloud Storage:
+* Hosting website static assets (images, JS, CSS)
+* Distributed backup and disaster recovery
+* Storing data for analytics and Big Data processing
+* Storing data for internet of things devices
+* Storing data for mobile apps
+* Storing data for gaming applications
+* Storing data for video and audio streaming
+* Collaboration and sharing of files non-persistent attached storage
+* Security and compliance data
+* Geospacial data storage
+* In combination with Cloud Functions
+
+These examples leverage both the storage classes and the atomic treatment of the objects themselves. Architects must understand the differences between these storage classes.
 
 ## Network Attached Storage
+
+
 ## Databases
 ## Data retention & Lifecycle Management
 ## Network and Latency
