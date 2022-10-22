@@ -12,7 +12,7 @@ tag:
 ---
 
 # Architecting Storage Solutions in Google Cloud Storage
-
+[[toc]]
 ## Object Storage
 
 Object Storage is common to all cloud systems and has its roots way back in 2006 with Amazon S3 and Rackspace Files/OpenStack Swift and Google Cloud Storage in 2010. These systems are for storing files or documents as objects as opposed to a directory filesystem. Instead of hierarchical the particulate nature of object storage treats everything atomically. You can't seek and read parts of the file, you can't tail off of object storage. You can get, put, delete objects. Their organization depends on the system.
@@ -83,9 +83,44 @@ Example use-cases for Google Cloud Storage:
 These examples leverage both the storage classes and the atomic treatment of the objects themselves. Architects must understand the differences between these storage classes.
 
 ## Network Attached Storage
+Network Attached Storage (NAS) is a type of storage that allows files to be accessed over a network. NAS devices typically connect to a network using Ethernet and can be used by any computer on the network.
 
+Google Cloud Filestore is a NAS service that provides high performance, scalable file storage for applications running on Google Cloud Platform. Cloud Filestore is built on top of Google Cloud Storage and offers the same benefits as other Cloud Storage products, such as high availability, durability, and security.
+
+Cloud Filestore is a good choice for applications that require low latency access to files, such as video editing, media streaming, and scientific computing. Cloud Filestore is also a good choice for applications that require high throughput.
+
+Google Cloud Filestore is a high-performance, managed file storage service for applications that require a file system interface and a shared filesystem. It supports industry-standard file system protocols such as NFSv3 and SMB. Google Cloud Filestore is available in three storage tiers: Basic, High Scale, and Enterprise.
+
+* Basic HDD, Good
+* Basic SSD, Great
+* High Scale SSD, Better
+* Enterprise, Best
+
+### Basic
+The basic Filestore option strikes a good match for file sharing, software development, and use as a backend service with GKE workloads. You can opt for either hard disk drives (HDD) or solid state disks (SSD) when choosing storage, but SSDs provide higher performance at higher cost. For HDD, the I/O performance is reliant on the provisioned capacity, with peak performance increasing when the storage capacity exceeds 10 TiB. For SSD, the performance is fixed no matter the storage capacity.
+
+### High Scale
+High-scale SSD storage tiers instances are ideal for performing large-scale computing tasks such as DNA sequencing and data analysis for financial services. It gives fast throughput with the ability to scale up and down with demand.
+
+### Enterprise
+Enterprise tier is designed for enterprise-grade NFS workloads, critical applications (for example, SAP), and GKE workloads. It supports regional high availability and data replication over multiple zones for resilience within a region.
+
+
+|Service Tier|Provisionable capacity|Scalability|Performance|Availability|Data recovery|Monthly Pricing|
+|---|---|---|---|---|---|---|
+|Basic HDD|1–63.9 TiB|Up only in 1 GiB units|Standard fixed|Zonal|Backups|$204.80($0.20/GiB)|
+|Basic SSD|2.5–63.9 TiB|Up only in 1 GiB units|Premium fixed|Zonal|Backups|$768.00($0.30/GiB)|
+|High Scale SSD|10–100 TiB|Up or down in 2.5 TiB units|Scales with capacity|Zonal|None|$3,072.00($0.30/GiB)|
+|Enterprise|1–10 TiB|Up or down in 256 GiB units|Scales with capacity|Regional|Snapshots|$614.40(0.60/GiB)|
+
+### Filestore Networking
+Cloud file store can connect to a Virtual Private Cloud (VPC) network either by using VPC Network Peering or accessing private services. When connecting to a VPC network with standalone VPC, when creating an Instance within a Host Project of a Shared VPC, or when accessing the Filesystem from an On-Premises network, you can use VPC Network Peering. When connecting from a Service Project to a Shared VPC, or when using Centralized IP Range Management for Multiple Google Services, you need to use the Private Services Access.
+### Filestore Access Controls
+Iam roles only grant you management access but file access is managed with unix permissions in an octet format 0777, chown and chgrp.
 
 ## Databases
+
+
 ## Data retention & Lifecycle Management
 ## Network and Latency
 
