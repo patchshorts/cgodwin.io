@@ -18,7 +18,7 @@ tag:
 Object Storage is common to all cloud systems and has its roots way back in 2006 with Amazon S3 and Rackspace Files/OpenStack Swift and Google Cloud Storage in 2010. These systems are for storing files or documents as objects as opposed to a directory filesystem. Instead of hierarchical the particulate nature of object storage treats everything atomically. You can't seek and read parts of the file, you can't tail off of object storage. You can get, put, delete objects. Their organization depends on the system.
 
 ### Organization
-Buckets in GCP are containers filled with these particular objects. Objects when updated create new versions, you cannot update an old version with a new file. Once a version is there they're immutable or unchangeable. The bucket is the logical definition with the IAM permissions that the objects inherit. Therefor you'll give write access to all the objects in the bucket to any accounts with write access. You can place individual IAM permissions upon individual objects. There is an illusion of a directory structure because the file "/pictures/2022-10-20/picture.jpg" on a file system would be named picture.jpg and live in the folder /2022-10-20/ which in turn lives in the folder /pictures/. However, with object storage, "/pictures/2022-10-20/picture.jpg" is the entire filename.
+Buckets in GCP are containers filled with these particular objects. Objects when updated create new versions, you cannot update an old version with a new file. Once a version is there they're immutable or unchangeable. The bucket is the logical definition with the IAM permissions that the objects inherit. Therefor you'll give write access to all the objects in the bucket to any accounts with write access. You can place individual IAM permissions upon individual objects. There is an illusion of a directory structure because the file `/pictures/2022-10-20/picture.jpg` on a file system would be named picture.jpg and live in the folder /2022-10-20/ which in turn lives in the folder `/pictures/`. However, with object storage, `/pictures/2022-10-20/picture.jpg` is the entire filename.
 
 Buckets must be uniquely named from all other buckets in the cloud owned by all other users. Buckets cannot be renamed or automatically copied to a new bucket. Objects don't have to be uniquely named.
 
@@ -114,12 +114,12 @@ Enterprise tier is designed for enterprise-grade NFS workloads, critical applica
 |Enterprise|1–10 TiB|Up or down in 256 GiB units|Scales with capacity|Regional|Snapshots|$614.40(0.60/GiB)|
 
 ### Filestore Networking
-Cloud file store can connect to a Virtual Private Cloud (VPC) network either by using VPC Network Peering or accessing private services. When connecting to a VPC network with standalone VPC, when creating an Instance within a Host Project of a Shared VPC, or when accessing the Filesystem from an On-Premises network, you can use VPC Network Peering. When connecting from a Service Project to a Shared VPC, or when using Centralized IP Range Management for Multiple Google Services, you need to use the Private Services Access.
+Cloud file store can connect to a Virtual Private Cloud (VPC) network either by using VPC Network Peering or Private Services Access. When connecting to a VPC network with standalone VPC, when creating an Instance within a Host Project of a Shared VPC, or when accessing the Filesystem from an On-Premises network, you can use VPC Network Peering. When connecting from a Service Project to a Shared VPC, or when using Centralized IP Range Management for Multiple Google Services, you need to use the Private Services Access.
 ### Filestore Access Controls
 Iam roles only grant you management access but file access is managed with unix permissions in an octet format 0777, chown and chgrp.
 
 ## Databases
-
+Google cloud has several different database options. Relational, NoSQL, Analytical.
 
 ## Data retention & Lifecycle Management
 ## Network and Latency
