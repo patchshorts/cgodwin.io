@@ -116,15 +116,94 @@ Enterprise tier is designed for enterprise-grade NFS workloads, critical applica
 ### Filestore Networking
 Cloud file store can connect to a Virtual Private Cloud (VPC) network either by using VPC Network Peering or Private Services Access. When connecting to a VPC network with standalone VPC, when creating an Instance within a Host Project of a Shared VPC, or when accessing the Filesystem from an On-Premises network, you can use VPC Network Peering. When connecting from a Service Project to a Shared VPC, or when using Centralized IP Range Management for Multiple Google Services, you need to use the Private Services Access.
 ### Filestore Access Controls
-Iam roles only grant you management access but file access is managed with unix permissions in an octet format 0777, chown and chgrp.
+Iam roles only grant you management access on the GCP resource but file access is managed with unix permissions in an octet format 0777, chown and chgrp.
 
 ## Databases
 Google cloud has several different database options. Relational, NoSQL, Analytical.
 
+### Relational Databases
+Relational databases have tables with fields which can to refer to fields in other tables. An Example:
+
+##### User Table:
+|ID|Name|Age|
+|--|--|--|
+|0|Jeff|35|
+|8|John|35|
+
+##### Jobs Table:
+|ID|Job Title|
+|--|--|
+|25|Software Engineer|
+|8|CEO|
+|0|Director of Engineering|
+
+From the example above we can see that these two tables relate on the ID colum, they are relational. So Jeff is Director of Engineering.
+
+Relational databases are buit to support a query language and minimize problems with the data often called anomalies. In the above twoid tables, ID 25 doesn't exist in the user table so the first row in the Jobs table above is a data anomoly. When fields are properly related, deleting a record in one should cascade to the others. These constraints are part of table schemas. Relational databases conform to ACID(atomicity, consistency, isolation, and durability) transaction models.
+
+#### ACID Transactions
+
+* **Atomicity** means the whole transaction is done or none at all. A transaction is indivisible for relational databases to work.
+* **Consistency** Means when a transaction is complete, the database is constrained to a cosistent state so that all foreign key reference a primary key, all unique keys are unique and the database is in an integral state.
+* **Isolation** Isolation means that parts of transactions cannot be mixed. Meaning strict grouping and ordering of transaction data in buffers.
+* **Durability** Durability means that when a transaction is complete, its change will be immediatly reflected in requests for the data that was changed even if the database crashes after the completed transaction.
+#### Cloud SQL
+Cloud SQL offers MySQL server, Microsoft SQL server, or PostgresSQL via managed VMs. Google will perform upgrades and backups and let you specify maintenance times. Failovers are automatically managed and healing is an automatic process. Regional Databases are perfect for Cloud SQL. Cloud SQL supports databases up to 30 Terrabytes.
+
+* All data is encrypted at rest and in transit
+* Data is replecated across the region to other zones
+* Failover to replecas is automatic
+* Standad tools and libraries can connect to Cloud SQL as if they're connecting to MySQL, SQL Server, or Postgres
+* Logging is integrated as well as monitoring
+
+Cloud SQL Machine Type Examples
+|Legacy Type|vCPUs|Memory(MB)|Machine Type|
+|--|--|--|--|
+|`db-f1-micro`|1|614|n/a|
+|`db-g1-small`|1|1700|n/a|
+|`db-n1-standard-1`|1|3840|`db-custom-1-3840`|
+|`db-n1-standard-2`|2|7680|`db-custom-2-7680`|
+|`db-n1-standard-4`|4|15360|`db-custom-4-15360`|
+|`db-n1-standard-8`|8|30720|`db-custom-8-30720`|
+|`db-n1-standard-16`|16|61440|`db-custom-16-61440`|
+|`db-n1-standard-32`|32|122880|`db-custom-32-122880`|
+|`db-n1-standard-64`|64|245760|`db-custom-64-245760`|
+|`db-n1-standard-96`|96|368640|`db-custom-96-368640`|
+|`db-n1-highmem-2`|2|13312|`db-custom-2-13312`|
+|`db-n1-highmem-4`|4|26624|`db-custom-4-26624`|
+|`db-n1-highmem-8`|8|53248|`db-custom-8-53248`|
+|`db-n1-highmem-16`|16|106496|`db-custom-16-106496`|
+|`db-n1-highmem-32`|32|212992|`db-custom-32-212992`|
+|`db-n1-highmem-64`|64|425984|`db-custom-64-425984`|
+|`db-n1-highmem-96`|96|638976|`db-custom-96-638976`|
+
+Shared core types `db-f1-micro` and `db-g1-small` are not covered by Google's Cloud SQL SLA.
+
+By default a Cloud SQL instance is a single machine in a single zone, but high availablility options for provisioning additional failover and read replicas in additional zones exist. Additionally you can add read replicas in different regions. This is one way to migrate data between regions and to do disaster recovery testing. Failover replica's are automatically promoted from read replicas to master in the case of failure.
+
+GCP's Database Migration Service is designed for MySQL and PostgresSQL workloads and will continuously replicate data from onpremesis or other clouds. It performs and initial snapshot of the database and then leverages the native replication features of your database to continually migrate the data. You can also perform lift and shift migrations with this tool in addition to continuous. Cloud SQL scales well only vertically and not well horizontally. More memory and CPU power is needed for bigger workloads, they aren't sharded across several devices in a workload agnostic manner.
+
+#### Cloud Spanner
+Cloud Spanner is a globally consisten and distributed database that provides the highest level of horizontal scalability as any relational database on the biggest network of its kind. It is fully managed and scales to multiple regions. Spanner supports relational schemas and 2011 ANSI SQL as well as Postgres dialects. Supporting instance consistency rather than "eventual consistncy" as is the case with Cloud SQL read replicas, so the risk of data anomalies that eventual models produce are reduced.
+
+Example Use Cases:
+* Stock trading systems that want to enable global purchasing of a comodity at a current price at a known time of day.
+* Shipping companies who need a consistent view of their global distribution network, the status of packages and the sending of global notifications.
+* Global inventory for a company like Sony Playstation.
+
+Spanner provides a 5 9s availability which means less than 5 minutes of downtime per year. Its fully managed and like other managed database serivces in GCP its upgraded, backed up, and failover is managed. Data is also encrypted and at rest and in transit.
+
+### Analytical Databases
+#### BigQuery
+### NoSQL Databases
 ## Data retention & Lifecycle Management
+
+
 ## Network and Latency
 
+
 ## Exam Essentials
+
 
 * blah
 
