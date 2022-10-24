@@ -194,8 +194,67 @@ Example Use Cases:
 Spanner provides a 5 9s availability which means less than 5 minutes of downtime per year. Its fully managed and like other managed database serivces in GCP its upgraded, backed up, and failover is managed. Data is also encrypted and at rest and in transit.
 
 ### Analytical Databases
-#### BigQuery
+Analytical databases are usually data warehouses. We've described some data lake and data warehouse options in Google Cloud's Hadoop and Spark offering. Though they're used or ETL, Hadoop data lakes can be used as the data from which analytical systems can draw their data.
+
+#### BigQuery(BQ)
+Hadoop cannot do analytics but BigQuery is able to provide insights and is an analytics solution. Its queries scan large amounts of data and can perform data aggregation. BigQuery uses SQL and is serverless, managed and scales automatically.
+
+##### BQ Analytics
+Big Query is built upon Dremel, Colossus, Borg and Jupiter. Dremel maps queryies to extraction trees with leaves called slots. Slots read information from storage and do a bit of processing on the data. Branches on the tree aggregate the data. Colossus is distributed filesystem by Google that offers encryption and replication. Borg is a request router that can handle rerouting during node failure. Jupiter is a petabyte per second network built by Google with rack aware placement which improves fault tolerance and throughput and requires less replication.
+
+While other databases group rows together, in BigQuery, the data in the same column are stored together in an [columnar structure]() called Capacitor. Capacitor supports nested fields and is used because the analtics and business intellegence filtering only happens on a small number of columns compared to a traditional application's filtering of a number of columns in a row.
+
+BigQuery has batch and streaming jobs to load the data, jobs can export the data, run queries or copy data. Projects contain objects called a `dataset` that are regional or multi-regional. Regional is straight forward, is what it sounds like. But with multi-regional you either choose the United States or Europe and google copies the `dataset` into multiple regions within the continent you've chosen.
+
+BigQuery bills on size stored as well as the query size and the data scanned when running the query. For this reason it is advisable to partition your query to specifically the time when the data occured. Use less broad queries for smaller ones and less data scanned while running the query. You can read more about [BigQuery Pricing](https://cloud.google.com/bigquery/pricing#on_demand_pricing). For this reason, don't use queries to view the structure of the tables use `bq head` or use the Preview Option on the console. You can also use `--dry-run` to test command line queries which will tell you the number of bytes the query would have returned. You're not billed for errors or queries whose results are returned from cache.
+
+##### BQ IAM Roles
+Access permissions in all of GCP's products are granted by IAM, which generally has predefined roles for its products. The roles in IAM for BigQuery are:
+
+* `roles/bigquery.dataViewer` can list projects, tables, and access table data.
+* `roles/bigquery.dataEditor` has the permissions of dataViewer and can create and change tables and datasets.
+* `roles/bigquery.dataOwner` has dataEditor and can delete tables and datasets.
+* `roles/bigquery.metadataViewer` can list tables, datasets and projects.
+* `roles/bigquery.user` can list projects, tables has metadataViewer, and can create jobs and datasets.
+* `roles/bigquery.jobUser` Can list projects, create queries and jobs.
+* `roles/bigquery.admin` Can do any BigQuery operation.
+
+In addition to these overarching roles, granular access can be given to google service accounts, google groups, etc over organizations, projects, datasets, tables and table views.
+
+##### Loading Data into BQ
+You can batch load or stream load data into BigQuery.
+
+###### Batch Loading
+Through ETL and ELT processes, data is typically batch loaded into a data warehouse through combinining some sort of extraction, loading and transformation. Jobs which load the data into BigQuery can use files as objects in Cloud Storage, files on your local filesystem. Files can be Avro, CSV, ORC, and Parquet formats.
+
+The Data Transfer Service in BigQuery loads the data from other services such as Youtube, Google Ads and Google Ad Manager, Google's SaaS products and third-party sources. The Storage Write API is used to load data in a batch and process the records in one shot atomically, meaning the whole thing goes in or none of it does. Big Query can load data from Cloud Datastore and Cloud Firestore.
+
+###### Stream Loading
+To stream data into BigQuery you can use the Storage Write API or Cloud Dataflow which uses a runner in Apache Beam to write the data directly to BigQuery tables from a job in Cloud Dataflow. The Storage Write API will ingest the data with high throughput and injest each record only once.
+
 ### NoSQL Databases
+GCP has four NoSQL databases: BigTable, Datastore, Cloud Firestore and Redis via Cloud MemoryStore(especially with RDB snapshotting).
+
+#### Cloud Bigtable
+Bigtable is a wide column multidimensional database that supports petabyte size databases for analitics, operational use, and time series data for Internet of Things(IoT) sensors. It's ability to handle time series data well means it is good for marketing, advertisment, financial data and graphs.
+
+Bigtable supports latencies lower than 10ms, Stores at the Petabyte scale, replicates into mulitple regions, supports Hadoop HBase interfacing, data is stored in the Colossus filesystem, and metadata is stored in the cluster directly.
+
+Data is stored in tables with key to value maps and each row stores information about the entry which is indexed by a row-key. Columns are grouped into column families like collections and a table can container multiple column families.
+
+Tables are sectioned into blocks of contiguous rows called tablets. These tablets are stored in Colossus. Hotspots occur when you make the row key associated with a workload. For instance, if you make the row key the user ID, the heavier use users will all write to one tablet server. Design the workloads so that they're as distributed as possible, and if hotspots still do occur you can limit or throttle the keys that cause the problem. Find out more about [Bigtable hotspots](https://cloud.google.com/blog/products/databases/hotspots-and-performance-debugging-in-cloud-bigtable).
+
+Bigtable has support for the HBase API, so one can migrate from Hadoop HBase to Bigtable. Bigtable is the best option for migrating Cassandra databases to Google Cloud. One can create Bigtable as a multi-cluster and multi-regional and Google will take care of replicating the data. Multi-cluster systems can have their workloads separated, one being the read cluster and the other being assigned a write workload. The cluster replication procedures will assure that both cluster reach "eventual consistency".
+
+#### Cloud Datastore
+
+
+#### Cloud Firestore
+
+
+#### Memorystore for Redis
+
+
 ## Data retention & Lifecycle Management
 
 
