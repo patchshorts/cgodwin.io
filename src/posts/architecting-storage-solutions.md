@@ -247,13 +247,15 @@ Tables are sectioned into blocks of contiguous rows called tablets. These tablet
 Bigtable has support for the HBase API, so one can migrate from Hadoop HBase to Bigtable. Bigtable is the best option for migrating Cassandra databases to Google Cloud. One can create Bigtable as a multi-cluster and multi-regional and Google will take care of replicating the data. Multi-cluster systems can have their workloads separated, one being the read cluster and the other being assigned a write workload. The cluster replication procedures will assure that both cluster reach "eventual consistency".
 
 #### Cloud Datastore
-Datastore is a database for storing json objects called documents. It is superseded by Cloud Firestore. Datastore doesn't have tables, it has what is known as a 'kind'. Kinds contain entities.
+Datastore is a fully managed, autoscaled, flexible structure NoSQL database for storing json objects called documents. It is superseded by Cloud Firestore. Datastore doesn't have tables, it has what is known as a 'kind'. Kinds contain entities. Datastore does have relational column called a property and it has a key instead of a primary key.
 
 
 #### Cloud Firestore
+This is the next product iteration of Cloud Datastore. Firestore is consistent, has two data models(collections and documents). Firestore supprts Datastore mode or Firestore mode, for supporting the latest document database features. Firestore is strongly consistent in either mode. Firestore in Datastore mode is strongly constent where as Cloud Datastore is eventually consistent. Firestore offers millions of writes a second and the fully featured mode can handle millions of connections.
 
-
+### Memorystore
 #### Memorystore for Redis
+
 
 
 ## Data retention & Lifecycle Management
