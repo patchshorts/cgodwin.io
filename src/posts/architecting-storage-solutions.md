@@ -254,15 +254,42 @@ Datastore is a fully managed, autoscaled, flexible structure NoSQL database for 
 This is the next product iteration of Cloud Datastore. Firestore is consistent, has two data models(collections and documents). Firestore operates under Datastore mode or Firestore mode, for supporting the latest document database features. Firestore is strongly consistent in either mode. Firestore in Datastore mode is strongly consistent where as Cloud Datastore is eventually consistent. Firestore offers millions of writes a second and the fully featured mode can handle millions of connections.
 
 ### Memorystore
+Managed as other products are, Memory store comes in two forms, Redis and Memcached. You can use memory caches for message processing, database caching, session sharing, etc. Memory caches are generally nonpersistent, but Redis can be configured to snapshot to dir and start again with that same data.
 #### Memorystore for Redis
+Redis is a memory datastore designed to return information with sub-millisecond latency. You can store many data types in Redis. Instance memory ceilings top out at 300GB with 12 Gigabit networking. Caches can be replicated across zones for 3 nines availability. As a managed service, google handles updates, upgrades, syncing and failing over to other instances.
 
+Memorystore for Redis comes in two tiers:
+* Basic
+* Standard
 
+Basic is a single server with no replication, Standard is a multi-zonal replication and failover model.
 
+#### Memorystore for Memcached
+Memcached is an opensource cache which was first written for LiveJournal to perform query results caching, session caching, and data caching. Memcached nodes within a cluster called an 'instance' must all have the same cpu and memory geometry. So the same amount of resources on each node. Instances can have 20 nodes max, nodes can utilize a max of 32vCPUs and 256GB of memory, with a total cluster memory size of 5TB. This integrated service can be accessed from other services.
 ## Data retention & Lifecycle Management
 
+Data has lifecycles, is fresh, becomes inactive over time, must be archived or pruned. Different types of data have different stages, not only that they can be differently required. As an architect, you must track and handle these data lifecycles for a project or migration.
 
+Storage requirements often impact how policies can be implemented. That is why intimate knowledge of various storage attributes is required of Cloud Architects.
+
+Considering these things is a matter of knowing all your data and the types of data. From there you can record how quickly data must available to be accessed. Then knowing the frequency of access for each type helps define your retention planning and your planning the management of its lifecycles.
+
+|Frequency|Solution|
+|--|--|
+|Sub-millisecond|Cloud Memorystore, Bigtable, Firestore|
+|frequently|Cloud Storage, Database, NoSQl, Document database|
+|infrequently|Cloud Storage Coldline|
+|not accessed archived|Cloud Storage Archive|
+|not accessed|Prune|
+
+In Cloud Storage, one can create triggers that run based on the age of an object or file, the versions of that file, the object's storage class, actions can include deleting, manipulating or changing the storage class of the object. So when objects are old and not accessed, they can be migrated to different classes. Retention policies can be created and when their specifications are not yet satisfied, they are locked into place guaranteeing their retention under the conditions specified in the policy.
 ## Network and Latency
+Latency is a big consideration in overall cloud design. There are decisions you can make that impact latency without knowing their consequences if you are unfamiliar with the particulars of different storage cloud products. Reducing latency is as simple as:
 
+* Replicating data into regions across customer locations
+* Distributing data over a CDN
+* Using the Premium Network Tier
+* Using services like Firestore or Spanner which are already global
 
 ## Exam Essentials
 
