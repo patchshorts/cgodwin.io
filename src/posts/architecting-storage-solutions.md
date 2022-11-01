@@ -255,6 +255,7 @@ This is the next product iteration of Cloud Datastore. Firestore is consistent, 
 
 ### Memorystore
 Managed as other products are, Memory store comes in two forms, Redis and Memcached. You can use memory caches for message processing, database caching, session sharing, etc. Memory caches are generally nonpersistent, but Redis can be configured to snapshot to dir and start again with that same data.
+
 #### Memorystore for Redis
 Redis is a memory datastore designed to return information with sub-millisecond latency. You can store many data types in Redis. Instance memory ceilings top out at 300GB with 12 Gigabit networking. Caches can be replicated across zones for 3 nines availability. As a managed service, google handles updates, upgrades, syncing and failing over to other instances.
 
@@ -266,8 +267,8 @@ Basic is a single server with no replication, Standard is a multi-zonal replicat
 
 #### Memorystore for Memcached
 Memcached is an opensource cache which was first written for LiveJournal to perform query results caching, session caching, and data caching. Memcached nodes within a cluster called an 'instance' must all have the same cpu and memory geometry. So the same amount of resources on each node. Instances can have 20 nodes max, nodes can utilize a max of 32vCPUs and 256GB of memory, with a total cluster memory size of 5TB. This integrated service can be accessed from other services.
-## Data retention & Lifecycle Management
 
+## Data retention & Lifecycle Management
 Data has lifecycles, is fresh, becomes inactive over time, must be archived or pruned. Different types of data have different stages, not only that they can be differently required. As an architect, you must track and handle these data lifecycles for a project or migration.
 
 Storage requirements often impact how policies can be implemented. That is why intimate knowledge of various storage attributes is required of Cloud Architects.
@@ -283,6 +284,7 @@ Considering these things is a matter of knowing all your data and the types of d
 |not accessed|Prune|
 
 In Cloud Storage, one can create triggers that run based on the age of an object or file, the versions of that file, the object's storage class, actions can include deleting, manipulating or changing the storage class of the object. So when objects are old and not accessed, they can be migrated to different classes. Retention policies can be created and when their specifications are not yet satisfied, they are locked into place guaranteeing their retention under the conditions specified in the policy.
+
 ## Network and Latency
 Latency is a big consideration in overall cloud design. There are decisions you can make that impact latency without knowing their consequences if you are unfamiliar with the particulars of different storage cloud products. Reducing latency is as simple as:
 
@@ -291,10 +293,39 @@ Latency is a big consideration in overall cloud design. There are decisions you 
 * Using the Premium Network Tier
 * Using services like Firestore or Spanner which are already global
 
+## Summary
+GCP has Relaional, Analytical, and Unstructured Databases. There are four kinds of cloud storage systems:
+
+* Cloud Storage for objects
+* NAS via Cloud Filestore
+* Databases
+* Memory Caches
+
+GCP Relational Databases:
+* Cloud SQL: Eventual Consistency
+* Cloud Spanner: High Consistency
+
+GCP Analytical Databases:
+* BigQuery: Columnar
+
+NoSQL Databases:
+* Bigtable
+* Datastore
+* Firestore
+
 ## Exam Essentials
-
-
-* blah
+* Understand all the Storage Systems in GCP
+* Understand: Standard, Nearline, Coldline, Archive classes in Cloud Storage
+* Understand: Cloud Filestore NAS features, accessing from Compute
+* Know how to deploy Cloud SQL as a single server or with replication
+* Understand horizontal scalability in GCP Storage options
+* Be familiar with BigQuery as a data warehouse
+* Be familiar with BigTables Petabyte Scale Options and Operations
+* Be familiar with migrating data to GCP
+* Understand GCP's JSON Document stores
+* Understand Caching services
+* Understand data retention and lifecycle management
+* Understand how to consider latency when designing storage for GCP
 
 ## Official Resources
 * [Load Balancing and Autoscaling Compute Engine](https://cloud.google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
