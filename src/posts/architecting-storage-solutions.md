@@ -294,7 +294,7 @@ Latency is a big consideration in overall cloud design. There are decisions you 
 * Using services like Firestore or Spanner which are already global
 
 ## Summary
-GCP has Relaional, Analytical, and Unstructured Databases. There are four kinds of cloud storage systems:
+GCP has Relational, Analytical, and Unstructured Databases. There are four kinds of cloud storage systems:
 
 * Cloud Storage for objects
 * NAS via Cloud Filestore

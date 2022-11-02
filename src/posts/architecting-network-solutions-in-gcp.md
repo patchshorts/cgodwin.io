@@ -22,7 +22,7 @@ tag:
 1. Network, this is where IP Addresses live. Keep in mind these network layers are the layers of a packet sent over the network. This is the base layer for packets. A packet is data encapsulated in a route with source and destination addresses.
 1. Transport. The protocol that makes this process work known by all networking devices speak is Transmission Control Protocol(TCP) or User Datagram Protocol(UDP). The Protocol identifier stored in a packet lives in this layer.
 1. Session, this layer manages handshakes. An SMTP connection timeout would exist on this layer. TLS handshakes happen here. An https packet is fully encrypted, so a request to a server asking for a url cannot be understood unless it is decrypted, then it can be seen. Inside layer 4 lives an encrypted layer 5 envelope in the case oF HTTPS connections. Layer 5 is the encrypted data, while layer 6 is the decrypted data.
-1. Presentation, A GET / request is in this layer. Mapings of network resources to application resources in the OS kernel happen at layer 6.
+1. Presentation, A GET / request is in this layer. Mappings of network resources to application resources in the OS kernel happen at layer 6.
 1. Application, This is the later applications connect to in order to do networking. A webbrowser fetches web pages from this layer. This layer one might consider a data format. A TXT file vs a Json file. Mime types exist at this Layer. Layer 7 in the packet is the raw data unenveloped by network dressing that tells the network about it.
 
 ### OSI Model as an Out of Town Drive
@@ -96,7 +96,7 @@ Above, `Hosts/Net` shows the total number of ip addresses on the network.
 
 Firewall rules control the flow of traffic over any network. In a VPC in GCP, you'll find firewall rules are part of the network. Traffic flowing into a network is called ingress, and traffic which exits the network is called egress.
 
-Respectively, firewall rules fall into the categories of controlling either ingressing or egressing traffic. Implied firewall rules exist by default. The first one blocks all ingressing traffic and the second one allows all egressing traffic. These rules cannot be deleted and they aren't listed, they're implied. To override them you make other rules with a higher priority. If traffic enters or exits the network, its properties are matched to all the rules in order of priority. When a match occurs the rules are no longer processed. Therefore a higher priority rule allowing all HTTPS traffic into the network that matches an icoming packet will allow the packet and not move on to the lower priority implied rule that blocks all trafic.
+Respectively, firewall rules fall into the categories of controlling either ingressive or egressing traffic. Implied firewall rules exist by default. The first one blocks all ingressive traffic and the second one allows all egressing traffic. These rules cannot be deleted and they aren't listed, they're implied. To override them you make other rules with a higher priority. If traffic enters or exits the network, its properties are matched to all the rules in order of priority. When a match occurs the rules are no longer processed. Therefore a higher priority rule allowing all HTTPS traffic into the network that matches an incoming packet will allow the packet and not move on to the lower priority implied rule that blocks all traffic.
 
 Rule priority is processed from low to high, low being 65535 and the highest being 0. The two implied rules have a priority of 65535.
 
@@ -119,7 +119,7 @@ Cloud Router handles routing for the following services:
 * High Availability VPNs
 * Router appliances
 
-Cloud armor is an application layer(OSI Layer 7) web applications firewall(WAF) what protects against DDoS. attacts, cross-site scripting, and Database injections. The preconfiguration for Cloud Armor uses rules mitigating OWASPs top ten threat list. Cloud Armor has security policies that filter connections that use attack methodologies allowing the ones free of them to pass. Policies are available as preconfiguration while allowing for manually configured policies. Rules are defined with a rules language, but policies can also simply specify whitelists of trusted parties.
+Cloud armor is an application layer(OSI Layer 7) web applications firewall(WAF) what protects against DDoS. attacks, cross-site scripting, and Database injections. The preconfiguration for Cloud Armor uses rules mitigating OWASPs top ten threat list. Cloud Armor has security policies that filter connections that use attack methodologies allowing the ones free of them to pass. Policies are available as preconfiguration while allowing for manually configured policies. Rules are defined with a rules language, but policies can also simply specify whitelists of trusted parties.
 
 ## VPCs, Sharing, Subnets, and Peering
 Virtual Private Clouds(VPCs) are networks which exist in the cloud at the global scale, so VPCs in google span all regions. VPCs have subnets and all resources that use internal ips, which are Compute Engine based services for the most part. Cloud Run and App Engine can connect to VPC resources through a Serverless VPC connector, though the connectors for each.
@@ -129,7 +129,7 @@ Though VPCs are global, subnet resources are regional resources, since there is 
 VPSs can be set to one of three modes:
 * default: the mode selected when creating a new project
 * auto-mode: an automatic mode that creates subnets in every region
-* custom: allows full controll of subnetting for production and high security environments
+* custom: allows full control of subnetting for production and high security environments
 
 Auto-mode uses this range to create a subnet in every region automatically:
 ```
@@ -145,9 +145,27 @@ Broadcast: 10.255.255.255       00001010.1 1111111.11111111.11111111
 Hosts/Net: 8388606               Class A, Private Internet
 ```
 
-The VPC reserves four ip addresses from every subnet. Shared VPCs are shared from one project to another. This may be part of an organizational structure, or colaboration between parts of a company. Google recommends using one VPC because its easier to manage. However large enterprises will ignore this.
+The VPC reserves four ip addresses from every subnet. Shared VPCs are shared from one project to another. This may be part of an organizational structure, or collaboration between parts of a company. Google recommends using one VPC because its easier to manage. However large enterprises will ignore this.
 
+Shared VPCs are how the resources across several projects can be on the same network. This works because the host project defines service projects. The firewall rules for the resources can exist on the project but apply the shared VPC. You can specify that all future subnets are shared in a host project or just specific subnets.
 
+You can take this further and delineate network and project duties partitioning them among teams and therefore separating their privileges. As long as the host project and service projects are in the same organization, shared VPCs can be used. Migrations are the exception.
+
+When projects are in different organizations and need to communicate over a network, they can use network peering. VPC Network peering allows two VPCs to communicate with one another via RFC 1918 private ranges. Organizations usually communicate over the internet with public ips. If a lot of private communication exists between companies, they'll use a VPN to communicate over private networks. VPC Network peering is an alternative to these approaches.
+
+VPC Network peering might be used by an organization wanting to make their services available to its customers who are different organizations in GCP. A Concert company might make a private cloud network available to the ticketing vendor and the marketing vendor so that the concert organization can coordinate ticketing and sales from booths within the venue.
+
+Companies might use organizations as part of a higher segmentation of their projects and may have a need for organizations to communicate over its peered VPC.
+
+VPC Network Peering:
+* has lower latency, doesn't travel over the internet
+* as an alternative to public ips, a peered VPC is a reduced attack surface
+* egress between peered VPC is free
+
+Peered VPCs have their own firewall rule definitions from the VPC that is within an organization. A single VPC can have up to 25 connections peered at maximum. VPC peering works with Compute base services which receive a private IP. With peering, both peers must set up the configuration and the configurations must match. If a peer deletes their side's configuration, the peering will cease and go into inactive mode. Peering doesn't add latency.
+
+## Hybrid-Cloud Networking
+Hybrid-Cloud Networking is networking which spans clouds or to onprem datacenters. When only separate public clouds are involved, Multi-cloud Networking is involved. But when an onprem datacenters is involved with one or more public clouds, Hybrid-Cloud Networking is the term applied. 
 ## Exam Essentials
 
 * blah
