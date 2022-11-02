@@ -165,7 +165,7 @@ VPC Network Peering:
 Peered VPCs have their own firewall rule definitions from the VPC that is within an organization. A single VPC can have up to 25 connections peered at maximum. VPC peering works with Compute base services which receive a private IP. With peering, both peers must set up the configuration and the configurations must match. If a peer deletes their side's configuration, the peering will cease and go into inactive mode. Peering doesn't add latency.
 
 ## Hybrid-Cloud Networking
-Hybrid-Cloud Networking is networking which spans clouds or to onprem datacenters. When only separate public clouds are involved, Multi-cloud Networking is involved. But when an onprem datacenters is involved with one or more public clouds, Hybrid-Cloud Networking is the term applied. Services which connect to onprem databases thorugh a dedicated or partner interconnect is considered Hybrid-cloud networking as is something like Anthos Service Mesh in a hybrid context.
+Hybrid-Cloud Networking is networking which spans clouds or to onprem datacenters. When only separate public clouds are involved, Multi-cloud Networking is involved. But when an onprem datacenters is involved with one or more public clouds, Hybrid-Cloud Networking is the term applied. Services which connect to onprem databases thorough a dedicated or partner interconnect is considered Hybrid-cloud networking as is something like Anthos Service Mesh in a hybrid context.
 
 Top 5 workloads staying onprem according to Dell:
 * Unstructured Data Analytics is staying onprem 31% of the time due to a more secure environment for which the data to live.
@@ -180,9 +180,9 @@ Top 5 workloads moving to the cloud:
 * Petabyte scale data warehouses
 * Scaled workloads, Compute Workloads, Stateless kubernetes applications
 
-Data warehouses in the cloud like BigQuery can use onprem sources, and the interconnect between cloud and onpremesis datacenters needs to have the capacity for that connectivity. You must know the projected bandwidth usage and adaquatley plan for not only growth but redundancy for critical operations. This keeps the network reliable under load.
+Data warehouses in the cloud like BigQuery can use onprem sources, and the interconnect between cloud and onpremises datacenters needs to have the capacity for that connectivity. You must know the projected bandwidth usage and adequately plan for not only growth but redundancy for critical operations. This keeps the network reliable under load.
 
-Latency is also a consideration. Running stateless GKE applications that connect to an opremesis database can expect a 2000 milisecond latency accessing a moderate payload event when they run on the fastest and most compute specialized nodes. The bottleneck is entirely the connectivity between datacenter and cloud region. This is less of an issue with customer non-facing applications, however with things like JAM stack APIs running in cloud, this affects page load and the quickness of your app. 
+Latency is also a consideration. Running stateless GKE applications that connect to an onpremises database can expect a 2000 millisecond latency accessing a moderate payload event when they run on the fastest and most compute specialized nodes. The bottleneck is entirely the connectivity between datacenters and cloud regions. This is less of an issue with customer non-facing applications, however with things like JAM stack APIs running in cloud, this affects page load and the quickness of your app. 
 
 One way to handle latency is to use caching in the cloud so that the calls back to onprem databases or APIs will only take long once in a while. One might take a local database and sync it with mongo mirror or add a replica to a local MySQL database in the cloud to reduce latency and continue to meet SLAs.
 
@@ -194,7 +194,7 @@ Network Topologies:
 * Gated egress and ingress topology: both the prior two
 * Handover topology: Onprem data is uploaded to the cloud to be used by cloud services
 
-Your choice of these depends on workload distribution, latency, throughput, and existing toplogy.
+Your choice of these depends on workload distribution, latency, throughput, and existing topology.
 
 
 ## Exam Essentials
