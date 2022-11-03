@@ -1,6 +1,6 @@
 ---
 icon: cloud
-date: 2022-10-08
+date: 2022-10-31
 category:
   - Google Cloud
   - Technology
@@ -196,10 +196,108 @@ Network Topologies:
 
 Your choice of these depends on workload distribution, latency, throughput, and existing topology.
 
+The ways to implement Hybrid-Cloud Networking are by three different means:
+* Cloud VPN
+* Cloud Interconnect (either direct or partner)
+* Direct Peering
+
+Cloud VPNs are services that create a virtual private connection between your VPC in google and your other networks. Cloud VPNs are IPSec tunnels and so they require public static IPs on both ends. Google offers an HA VPN and VPN Classic. The HA VPN uses two connections to one HA VPN gateway, each connection comes with their own external IP addresses. The HA option has 99.99% availability. VPN Classic provides 99.9% availability with one connection and endpoint. Both option support 3Gbps. When data egresses to the VPN is it encrypted and when it ingresses into the destination network it is decrypted. Cloud VPNs operate with Internet Key Exchange(IKE) protocol. 
+
+Cloud Interconnects provide direct connections between GCP and onpremises networks. Highly available interconnects use two connections. Interconnects are available in 10Gbps and 100Gbps bandwidths. Partner interconnects are available between 50Mbps to 50Gbps bandwidths. Google's interconnects terminate at one of Google's Points of Port(PoP). If you are not near enough to a PoP, you interconnect to a third party near you who has connections near one.
+
+Interconnects are:
+* Private
+* VPC addresses are available to onpremises networks without NAT or encryption
+* You can scale up interconnects
+
+Interconnect scaling chart:
+||Dedicated|Partner|
+|--|--|--|
+|Unscaled|10/100Gbps|50Mbps-50Gbps|
+|Scaled|80/200Gbps|80Gbps|
+
+80Gbps connections use eight 10Gbps combined and 200Gbps interconnects use two 10Gbps combined.
+
+Direct Network Peering is used when you need to affect the BGP routing from GCP and Google Workspace services. Peering doesn't utilize any part of GCP, rather it affects the internets routing matrix so that your public resources route directly to you. Google recommends simply using interconnects when not needing to connect to Workspace services.
+
+Private Service Connect for Google APIs connects Google's public API to private locations wihtout the need for egressing over the public side of the network. Private Service connect can be configured to point to private.googleapis.com(all-apis) or restricted.googleapis.com(vpc-sc).
+
+Private Service Connect for Google APIs with Consumer HTTP(S) offers the same service but connects to internal loadbalancers inside your VPC which forwards the correct requests to the correct API.
+
+Private Google Access connects custom domains to Google's APIs through a VPC's internet gateway. With this option you have to create the DNS records you're using and the dns records that point to the all-apis or vpc-sc api domains.
+
+Private Google Access for Onpremises Hosts is access that allows onpremises hosts to connect to private google resources over Cloud VPN or Cloud Interconnect.
+
+Private Service Connect for Published Services allows you to privately connect to services in a different VPC that has published their service using the Private Service Connect for Service Producers.
+
+Private Service Access is network access used by Serverless GCP resources to connect to VPC resources over IP when VPC peering is used.
+
+Serverless VPC Access is used by serverless resources to connect to VPC resources using an internal IP address. This option uses VPC Connectors to connect from Cloud Run, Cloud Functions, and App Engine Standard.
+
+## Load Balancing
+
+GCP has five different loadbalancers(LBs) for different use cases. Is your workload balanced between addresses in a region or across several regions? Does the LB recieve internal, external, or both internal and external traffic? What are the protocols of the connections being balanced?
+
+GCP Loadbalancers:
+* Network TCP/UDP
+* Internal TCP/UDP
+* HTTP(S) Proxy
+* SSL Proxy
+* TCP Proxy
+
+```flow
+multiregional=>condition: Multi-Regional Balancing?
+https=>condition: HTTP(S)?
+ssl=>condition: SSL?
+tcp=>condition: TCP?
+intorext=>condition: Internal traffic?
+internallb=>operation: Internal TCP/UDP
+externallb=>operation: Network TCP/UDP
+httpstraffic=>operation: HTTP(S) Proxy
+ssllb=>operation: SSL Proxy
+tcplb=>operation: TCP Proxy
+e=>end: End
+
+multiregional(yes)->https->e
+multiregional(no)->intorext
+intorext(yes)->internallb
+intorext(no)->externallb
+https(yes)->httpstraffic
+https(no)->ssl
+ssl(yes)->ssllb
+ssl(no)->tcp
+tcp(yes)->tcplb
+```
+
+HTTP(S) Load balancers are Layer 7 LBs and specifically handle http traffic. For other SSL purposes, like loadbalancing SMTP TLS you'd use the SSL LB as it is also a Layer 7 LB which operates on other protocols. For everything else, there's TCP. You would use any of these three if you are balancing across two or more regions.
+
+## Additional Netowkring Services in GCP
+
+Service Directory is a managed service discovery metadatabase. Service directory can be accessed by a number of means, clouds, and GCP Services.
+
+Cloud CDN is a managed content delivery network enabling global latency reduction for data access of files such as images or documents. Cloud CDN can pull content from Compute Engine Managed Instance Groups, App Engine, Cloud Run, Cloud Functions, and Cloud Storage.
+
+Cloud DNS is a managed and globally distributed hosting service for the Domain Name System. Cloud DNS supports public and private DNS zones. Private zones are visible within the VPC and public zones are published to the internet.
+
+## Summary
+
+Virtual Private Clouds are global resources which contain your addressed services. VPCs have various ways of having serverless environments connect to them, or private connections out to google APIs from VPCs with no egress to the internet. Connecting VPCs to onpremises networks is done through hard connection and network management of the flow of traffic over interconnects which can be Highly Available as can Cloud VPNs.
+
+Hybrid Cloud Networking, either with Interconnects, VPNs or Direct Peering allow workloads to spand between local datacenters and cloud resources. Architects include latency, network topology, transfer time, maximum throughput, and room for growth.
+
+Load Balancing handles different use cases with 5 types of loadbalancers, 2 regional, and 3 global.
 
 ## Exam Essentials
 
-* blah
+* Grasp VPCs
+* Understand VPC Sharing
+* Understand Firewall Rules, priorities, and direction
+* Know CIDR notation, lean how to subnet in your head or with `ipcalc`
+* Understand Hybrid-cloud Networking(HCN)
+* Undersnand when to use HCN
+* Know the advantages and disadvantages of each HCN option
+* Understand Private Access Services
+* Undersand GCP Load Balancing
 
 ## Official Resources
 * [Load Balancing and Autoscaling Compute Engine](https://cloud.google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
