@@ -271,9 +271,9 @@ tcp(yes)->tcplb
 
 HTTP(S) Load balancers are Layer 7 LBs and specifically handle http traffic. For other SSL purposes, like loadbalancing SMTP TLS you'd use the SSL LB as it is also a Layer 7 LB which operates on other protocols. For everything else, there's TCP. You would use any of these three if you are balancing across two or more regions.
 
-## Additional Netowkring Services in GCP
+## Additional Networking Services in GCP
 
-Service Directory is a managed service discovery metadatabase. Service directory can be accessed by a number of means, clouds, and GCP Services.
+Service Directory is a managed service discovery meta- database. Service directory can be accessed by a number of means, clouds, and GCP Services.
 
 Cloud CDN is a managed content delivery network enabling global latency reduction for data access of files such as images or documents. Cloud CDN can pull content from Compute Engine Managed Instance Groups, App Engine, Cloud Run, Cloud Functions, and Cloud Storage.
 
