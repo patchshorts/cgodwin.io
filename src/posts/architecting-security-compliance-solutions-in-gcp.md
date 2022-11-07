@@ -80,11 +80,11 @@ Applying these to an identity can be done at the Org, Folder or Project level an
 
 You can grant basic roles per resource so you can make on identity or group owner over certain Compute Managed Instance Groups while giving Owner to other MIGs. Owner role over resources allows users to set up a billing account for those resources. Its best to consider basic roles legacy and avoid them when possible.
 
-Custom roles are those which are created by you where you group a permissions set into a custom role which you grant to identities or groups. This can help you adhear closer to the lease privilege access principle. Some developer roles allow you to set anything in a space where sometimes a thing should be restricted, like production. You would use a custom role to include all the things that a developer role has without the ability to write code and instead limit writes only to pull requests to the master branch.
+Custom roles are those which are created by you where you group a permissions set into a custom role which you grant to identities or groups. This can help you adhere closer to the lease privilege access principle. Some developer roles allow you to set anything in a space where sometimes a thing should be restricted, like production. You would use a custom role to include all the things that a developer role has without the ability to write code and instead limit writes only to pull requests to the master branch.
 
-Policies are Json definitions or directives called a _binding_ which specifies which identities are bound to which roles and permissions. The IAM API allows you to set or get policies and testpermissions. Policies can be set on the Organization, individual projects or folders of projects and are inherited infintiely deep.
+Policies are Json definitions or directives called a _binding_ which specifies which identities are bound to which roles and permissions. The IAM API allows you to set or get policies and test permissions. Policies can be set on the Organization, individual projects or folders of projects and are inherited infinitely deep.
 
-IAM also has Conditions that are written in a logic language called CEL that is a versitile way to define access granting logic so that things like resource tagging may trigger granting access to certain groups over that resource based simply upon its attributes. Conditions can apply to the following services:
+IAM also has Conditions that are written in a logic language called CEL that is a versatile way to define access granting logic so that things like resource tagging may trigger granting access to certain groups over that resource based simply upon its attributes. Conditions can apply to the following services:
 
 * Cloud Storage
 * Compute Engine
@@ -105,7 +105,7 @@ Google recommends these [best practices](https://cloud.Google.com/iam/docs/using
 * Consider each layer of workload of your app is untrusted, give each one its own serviceaccount and grant only the permissions the app needs.
 * Consider that all child Resources inherit the permissions of their parent Resources. Don't grant project level roles when Resource level roles will suffice.
 * Grant permissions or roles on the smallest scope needed.
-* Specify who can imperssonate which service accounts
+* Specify who can impersonate which service accounts
 * Limit who can create and access service accounts.
 * Take care who you grant [Project IAM Admin and Folder IAM Admin](https://cloud.Google.com/iam/docs/understanding-roles#resource-manager-roles)
 * Conditional bindings can allow access to expire
@@ -114,14 +114,14 @@ Google recommends these [best practices](https://cloud.Google.com/iam/docs/using
 #### Service Accounts
 
 * Rotate your service account keys using the [IAM service account API](https://cloud.Google.com/iam/reference/rest/v1).
-* Label the service account with a deplay name that tells you about what it is for and what it has access to.
+* Label the service account with a deploy name that tells you about what it is for and what it has access to.
 * Don't leave the service account keys in email, check them into code, or leave them in the Downloads directory.
 
 * Audit changes to your policies with Cloud Audit Logs
 * Export logs to Cloud Storage for preservation  
 
 * Audit who has the ability to change your allow policies on your projects.
-* Limit access to logs per least privilige princples
+* Limit access to logs per least privilege principles
 * Use the Cloud Audit Logs to audit who has service account key access
 
 #### Policy management
@@ -138,7 +138,7 @@ Bad Actors will look for Service Account Keys in these locations:
 * Temporary file system directories
 
 ### Identity Aware Proxies(IAP)
-IAP are Layer 7 proxies which are capable of allowing or denying HTTP(S) requests based on IAM policy and idenity membership. If a user making the request doesn't have an idenity associated with it, the user will be redirected to a Google Oath page to sign into to a Google account or single signon account. Once an identity is associated with the request, and if the identity is allowed to access the resource, then the IAP forwards the connection to its destination.
+IAP are Layer 7 proxies which are capable of allowing or denying HTTP(S) requests based on IAM policy and identity membership. If a user making the request doesn't have an identity associated with it, the user will be redirected to a Google Oath page to sign into to a Google account or single signon account. Once an identity is associated with the request, and if the identity is allowed to access the resource, then the IAP forwards the connection to its destination.
 
 Using IAP Proxies in front of app are ways you can limit access to parts or all of your application based on Google account. IAP for On-Premises Apps is Googles way of protecting Apps in Hybrid-Cloud Networking environments with IAM.
 
@@ -154,27 +154,27 @@ Providers supported:
 
 ## Organization Policy Constraints
 
-Organizations can have limits placed on them for any number of atributes of the org's resources. You can prevent certain actions from being taken by identities or service accounts. For instance, if you want all CloudFunctions to work through the VPC in a given project, you can create and then apply a constraint against `constraints/cloudfunctions.requireVPCConnector`. Depending on the constraint, it may apply to a set o Google services, or to specific services. You can find a [full list here](https://cloud.Google.com/resource-manager/docs/organization-policy/org-policy-constraints).
+Organizations can have limits placed on them for any number of attributes of the org's resources. You can prevent certain actions from being taken by identities or service accounts. For instance, if you want all CloudFunctions to work through the VPC in a given project, you can create and then apply a constraint against `constraints/cloudfunctions.requireVPCConnector`. Depending on the constraint, it may apply to a set o Google services, or to specific services. You can find a [full list here](https://cloud.Google.com/resource-manager/docs/organization-policy/org-policy-constraints).
 
 ## Data Security and Encryption
 
-Encryption is the process of masquerading data that is in one form into another form using encoding algorythms which produce results that are impractical to convert back without having the cypher keys. Encryption at rest is usually denoting filesystem encryption. Encryption in transit usually refers to things like SSL over TCP or HTTPS encryption.
+Encryption is the process of masquerading data that is in one form into another form using encoding algorithms which produce results that are impractical to convert back without having the cypher keys. Encryption at rest is usually denoting filesystem encryption. Encryption in transit usually refers to things like SSL over TCP or HTTPS encryption.
 
 Within the ecosystem of Google Cloud, Encryption at rest occurs at the hardware level, at the data infrastructure level, and using file encryption. On the infrastructure level the data is grouped into chunks and each one is encrypted. Using AES 256 and 128 encryption, Google can either use encryption keys Google creates and manages or customer managed keys in Cloud KMS.
 
-Cloud SQL encrypts all data together with one key in the same instance. Cloud Spanner, Cloud Bigtable, and Cloud Firestore using an infrastructure encryption mechanism. In storage systems, the data is grouped into chunks which can be several gigabytes in size, and each chunk is encrypted with a data encryption key(DEK) which Google encrypts with key encryption keys(KEKs). DEKs are stored near the chunks they encrypt and sent to a centralized store where they are encrypted by the KEKs which are also stored in a centralized location. If data is changed or added to a chunk, a new key is created and the chunk re-encrypted. Keys are never resused with regard to chunks. Access control lists refer to some of the chunks' unique identifiers. All these chunks are stored on drives which have hardware encryption built into their chips.
+Cloud SQL encrypts all data together with one key in the same instance. Cloud Spanner, Cloud Bigtable, and Cloud Firestore using an infrastructure encryption mechanism. In storage systems, the data is grouped into chunks which can be several gigabytes in size, and each chunk is encrypted with a data encryption key(DEK) which Google encrypts with key encryption keys(KEKs). DEKs are stored near the chunks they encrypt and sent to a centralized store where they are encrypted by the KEKs which are also stored in a centralized location. If data is changed or added to a chunk, a new key is created and the chunk re-encrypted. Keys are never reused with regard to chunks. Access control lists refer to some of the chunks' unique identifiers. All these chunks are stored on drives which have hardware encryption built into their chips.
 
-Encryption in transit or encryption-in-motion protects against network interceptors and middle men. Data intransit in GCP on the Google network may not be encrypted but is authenticated at every transfer. Data in GCP that is outside the borders of the Google network is always encrypted. All incoming traffic to Google Cloud goes through the Google Frontend which runs on distributed global loadbalancers and protects against DDoS attacks. All communication to Google Cloud uses either TLS or QUIC. Within the Google network Application Layer Transport Security(ALTS) to authenticate and encrypt most intra-network connections.
+Encryption in transit or encryption-in-motion protects against network interceptors and middle men. Data in transit in GCP on the Google network may not be encrypted but is authenticated at every transfer. Data in GCP that is outside the borders of the Google network is always encrypted. All incoming traffic to Google Cloud goes through the Google Frontend which runs on distributed global loadbalancers and protects against DDoS attacks. All communication to Google Cloud uses either TLS or QUIC. Within the Google network Application Layer Transport Security(ALTS) to authenticate and encrypt most intra-network connections.
 
-Users do not have to create resources or set anything up to enable this encryption but they cannot control or manimpulate the default Google Managed keys. Rather they can use their own keys with Cloud KMS. By default, DEKs and KEKs are rotated by Google. When a system tries to access a chunk, it requests the DEK from the key management system which authenticates the calling service, and then it sends the DEK to the storage system that decryptes the data.
+Users do not have to create resources or set anything up to enable this encryption but they cannot control or manipulate the default Google Managed keys. Rather they can use their own keys with Cloud KMS. By default, DEKs and KEKs are rotated by Google. When a system tries to access a chunk, it requests the DEK from the key management system which authenticates the calling service, and then it sends the DEK to the storage system that decrypts the data.
 
-Cloud KMS is a managed service for customer controlled encryption keys. It handles generating, importing and storing the keys within Google for application layer encrytion on services such as Cloud Storage, BigQuery and Bigtable.
+Cloud KMS is a managed service for customer controlled encryption keys. It handles generating, importing and storing the keys within Google for application layer encryption on services such as Cloud Storage, BigQuery and Bigtable.
 
 Cloud HSM is Google's support for FIPS 140-2 keys using them only in Level 3 hardware modules which are tamper-evident and respond to tamper attempts.
 
 Customer Supplied Keys is the option for using your own key management entirely. Keys are generated and kept onpremises and passed along with API calls which only use them in memory never storing them to disk. This way, google can encrypt or decrypt the data with the customer supplied keys. This customer provided key is used to create a new customer derived key in combination with a per-persistent disk cryptographic nonce. In many cases, the customer supplied key is used to seed other keys that only stay in memory except for the nonce. Cloud External Key Manager(EKM) is the service which allows one to use third party management of keys and sets up Cloud KMS to consume them.
 
-Cloud Storage supports ACLs in finegrained access mode to mirror support for them in Amazon S3 buckets to aid migrations, but this suppport is considered legacy. Otherwise buckets support IAM access at the bucket and project levels in uniform access mode. You can also use url signatures to grant temporary access to objects. Storage Buckets can also be made available publicly.
+Cloud Storage supports ACLs in finegrained access mode to mirror support for them in Amazon S3 buckets to aid migrations, but this support is considered legacy. Otherwise buckets support IAM access at the bucket and project levels in uniform access mode. You can also use url signatures to grant temporary access to objects. Storage Buckets can also be made available publicly.
 
 
 

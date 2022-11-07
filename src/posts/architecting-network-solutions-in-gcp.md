@@ -220,7 +220,7 @@ Interconnect scaling chart:
 
 Direct Network Peering is used when you need to affect the BGP routing from GCP and Google Workspace services. Peering doesn't utilize any part of GCP, rather it affects the internets routing matrix so that your public resources route directly to you. Google recommends simply using interconnects when not needing to connect to Workspace services.
 
-Private Service Connect for Google APIs connects Google's public API to private locations wihtout the need for egressing over the public side of the network. Private Service connect can be configured to point to private.googleapis.com(all-apis) or restricted.googleapis.com(vpc-sc).
+Private Service Connect for Google APIs connects Google's public API to private locations without the need for egressing over the public side of the network. Private Service connect can be configured to point to private.googleapis.com(all-apis) or restricted.googleapis.com(vpc-sc).
 
 Private Service Connect for Google APIs with Consumer HTTP(S) offers the same service but connects to internal loadbalancers inside your VPC which forwards the correct requests to the correct API.
 
@@ -236,7 +236,7 @@ Serverless VPC Access is used by serverless resources to connect to VPC resource
 
 ## Load Balancing
 
-GCP has five different loadbalancers(LBs) for different use cases. Is your workload balanced between addresses in a region or across several regions? Does the LB recieve internal, external, or both internal and external traffic? What are the protocols of the connections being balanced?
+GCP has five different loadbalancers(LBs) for different use cases. Is your workload balanced between addresses in a region or across several regions? Does the LB receive internal, external, or both internal and external traffic? What are the protocols of the connections being balanced?
 
 GCP Loadbalancers:
 * Network TCP/UDP
@@ -283,7 +283,7 @@ Cloud DNS is a managed and globally distributed hosting service for the Domain N
 
 Virtual Private Clouds are global resources which contain your addressed services. VPCs have various ways of having serverless environments connect to them, or private connections out to google APIs from VPCs with no egress to the internet. Connecting VPCs to onpremises networks is done through hard connection and network management of the flow of traffic over interconnects which can be Highly Available as can Cloud VPNs.
 
-Hybrid Cloud Networking, either with Interconnects, VPNs or Direct Peering allow workloads to spand between local datacenters and cloud resources. Architects include latency, network topology, transfer time, maximum throughput, and room for growth.
+Hybrid Cloud Networking, either with Interconnects, VPNs or Direct Peering allow workloads to span between local datacenters and cloud resources. Architects include latency, network topology, transfer time, maximum throughput, and room for growth.
 
 Load Balancing handles different use cases with 5 types of loadbalancers, 2 regional, and 3 global.
 
@@ -294,10 +294,10 @@ Load Balancing handles different use cases with 5 types of loadbalancers, 2 regi
 * Understand Firewall Rules, priorities, and direction
 * Know CIDR notation, lean how to subnet in your head or with `ipcalc`
 * Understand Hybrid-cloud Networking(HCN)
-* Undersnand when to use HCN
+* Understand when to use HCN
 * Know the advantages and disadvantages of each HCN option
 * Understand Private Access Services
-* Undersand GCP Load Balancing
+* Understand GCP Load Balancing
 
 ## Official Resources
 * [Load Balancing and Autoscaling Compute Engine](https://cloud.google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
