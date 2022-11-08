@@ -176,8 +176,21 @@ Customer Supplied Keys is the option for using your own key management entirely.
 
 Cloud Storage supports ACLs in finegrained access mode to mirror support for them in Amazon S3 buckets to aid migrations, but this support is considered legacy. Otherwise buckets support IAM access at the bucket and project levels in uniform access mode. You can also use url signatures to grant temporary access to objects. Storage Buckets can also be made available publicly.
 
+With Cloud Storage, signed policy documents can be created and set to restrict uploads based on sizes, type and file attribute based restrictions. It is a best practice to write checksums for all uploads and verify them. Google recommends creating and using CRC32C vs MD5 checksums due to its support of composite objects that are created with parallel uploads.
 
+You can Secure your GKE or Anthos clusters with binary authorization, istio and mesh networking(ASM), cert manager, OPA policies and create all your elevated access service accounts with ACM.
 
+## Security Observability
+
+Evaluation of security practices starts with increased observability into the different layers and components of the application you're working with. This starts with understanding if your access controls and IAM work correctly. Otherwise you're unaware if the measures put in place to run the application securely are accomplishing their goal.
+
+Auditing your policies begins with reviewing them and what has happened in your projects logs. The Cloud Logging agent will collect most common logs needed and can be configured to collect specific locations. Cloud Audit Logs is a logging service which records administrative operations taken in your project. Audit Logs are saved for a limited amount of time so need to be exported to Cloud Storage or BigQuery if they need to be retained for a longer amount of time to satisfy regulations. Logging can export messages to Pub/Sub as JSON messages, to Logging datasets in BigQuery, or as JSON files to Cloud Storage. When everything is sufficiently logged, you can create access monitoring as well as audit queries which can be scanned for anomalies and reported. Turning on Docker repository's automatic scan for vulnerabilities is an act of increasing security observability.
+
+Penetration testing simulates an attack, particularly on a network interface of a host or a firewall. These tests connect with services and detect security vulnerabilities in running services. The solution is to often upgrade or patch an application.
+
+The first phase of Penetration Testing is Reconnaissance where testers scope out the target much like a burglar looking for ways in. All information that can be gathered is gathered like Apache's `ServerToken` string. Recon phase testing might include social aspects where the tester learns everything they can about the operators who do have access to the target system. This might come in the form of phishing or leaving a USB key near someone's car in the parking lot. This phase can can be very short or very long.
+
+Once information is gathered, points of access on the network like IPs and ports are scanned, http endpoints have their root fetched, commonly vulnerable urls are checked to see if they exist.
 
 ## Exam Essentials
 
