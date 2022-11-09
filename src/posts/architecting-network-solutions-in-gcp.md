@@ -11,7 +11,7 @@ tag:
   - GCCPCA
 ---
 
-# GCP Networking
+# Architecting GCP Network Solutions
 
 [[toc]]
 
