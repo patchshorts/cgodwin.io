@@ -177,8 +177,6 @@ Customer Supplied Keys is the option for using your own key management entirely.
 Cloud Storage supports ACLs in finegrained access mode to mirror support for them in Amazon S3 buckets to aid migrations, but this support is considered legacy. Otherwise buckets support IAM access at the bucket and project levels in uniform access mode. You can also use url signatures to grant temporary access to objects. Storage Buckets can also be made available publicly.
 
 
-
-
 ## Exam Essentials
 
 * blah
