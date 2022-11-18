@@ -276,9 +276,43 @@ This includes measures to increase transparency, and may include: periodic audit
 * requirement to implement tamper-prevention controls
 * requirement for an annual audits
 * requirement to keep data confidential
+
+## Childrens' Online Privacy Protection Act(COPPA)
+COPPA is a United States law passed in 1998 which requires websites and online service to restrict what they do reguarding the personal information of children under the age of 13. Websites which serve this audience must:
+
+* Notify Parents before collecting data about their child
+* Allow Parents to block such collection
+* Give Parents access to the data collected
+* Give Parents the choice of how such data is used
+* Have clear and understandable privacy policies
+* Retain the data only for the length of time for which it is needed
+* Maintain confidentiality, integrity and availability of the collected data.
+
+All the data covered by the law aren't limited to but specifically mention the identifying information in the data, such as name, dwelling, photographs.
+
+## ITIL Framework
+
+ITIL is a standard of IT management practices that dovetails business goals with common IT activities. ITIL has 34 practices that are grouped into General, Service, and Technical practices. General are strategy, risk management, disaster recovery, architecture, project and security management. Service management items are analytics and analysis, service design, capacity and performance, incident management, and asset management. Technical practices are those which include management of deployments, infrastructure, and software development practices. Businesses adopt something like the ITIL because its a magic box of best practices that fits many different scenarios. It creates a repeatable standard which can simplify a lot of trouble and guesswork in IT management.
+
+## Summary
+Designing secure systems that will live in GCP starts with access and ends with compliance and touches everywhere in between. IAM is used to give access to identities which are users, groups or serviceaccounts, Permissions, custom roles, predefined roles, and basic roles provide for just about any concievable combination of access and limits. Policies ensure that company wide standards are enforced.
+
+Encryption is everywhere and its power can be placed within the customer's hands. Least privilege, defense-in depth, and proper auditing fill in the gaps.
+
 ## Exam Essentials
 
-* blah
+* Understand all the different parts of IAM and how they interact
+* Understand that roles are simply groups of permissions which go together
+* Basic roles are legacy and should be avoided when possible
+* Understand that access can be granted at the resource, project and folder levels
+* Understand that Policies use bindings to associate roles with resources
+* Understand the hierarchy of Organizations, Folders, Projects and inheritance
+* Understand Google's Encryption at Rest and in Transit, know the AES bit level for each
+* Understand DEKs, KEKs, and how they're used and interact
+* Understand all the types of managing keys
+* Understand pentesting and auditing
+* Understand the best practices for security
+* Understand how to use access and storage classes to achieve compliance
 
 ## Official Resources
 * [GCP HIPPA Compliance Information](cloud.google.com/security/compliance/hippa)
