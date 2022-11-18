@@ -384,7 +384,7 @@ Anthos Service Mesh:
 * Service authentication with mutual TLS certificates
 * Encryption of communication with the Kubernetes Control Plane
 
-ASM can be deployed in-cluster, across Compute VMs or via Managed Anthos Service Mesh. In-cluster options include running the control plane in kubernetes to manage discovery, authentication, security and traffic. With managed ASM google managed the control plane, maintains it, scales it and updates it. When running istiod on Compute Engine, you can have instances in groups take advantage of using the service mesh. Anthos Service mesh only works on certain configurations for in-cluster VMWare, AWS EKS, GCP GKE and bare metal, while you must use an attached cluster if using Microsoft AKS.
+ASM can be deployed in-cluster, across Compute VMs or via Managed Anthos Service Mesh. In-cluster options include running the control plane in kubernetes to manage discovery, authentication, security and traffic. With managed ASM google managed the control plane, maintains it, scales it and updates it. When running istiod on Compute Engine, you can have instances in groups take advantage of using the service mesh. Anthos Service mesh only works on certain configurations for in-cluster VMWare, AWS EKS, GCP GKE and bare metal, while you must use an attached cluster if using Microsoft AKS.git
 
 ### Multi-cluster Ingress
 

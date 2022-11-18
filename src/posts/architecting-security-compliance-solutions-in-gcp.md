@@ -182,21 +182,106 @@ You can Secure your GKE or Anthos clusters with binary authorization, istio and 
 
 ## Security Observability
 
-Evaluation of security practices starts with increased observability into the different layers and components of the application you're working with. This starts with understanding if your access controls and IAM work correctly. Otherwise you're unaware if the measures put in place to run the application securely are accomplishing their goal.
+Evaluation of security practices starts with increased observability into the different layers and components of the application you're working with. This starts with understanding if your access controls and IAM policies work correctly. Otherwise you're unaware the security measures put in place to run the application are working.
 
-Auditing your policies begins with reviewing them and what has happened in your projects logs. The Cloud Logging agent will collect most common logs needed and can be configured to collect specific locations. Cloud Audit Logs is a logging service which records administrative operations taken in your project. Audit Logs are saved for a limited amount of time so need to be exported to Cloud Storage or BigQuery if they need to be retained for a longer amount of time to satisfy regulations. Logging can export messages to Pub/Sub as JSON messages, to Logging datasets in BigQuery, or as JSON files to Cloud Storage. When everything is sufficiently logged, you can create access monitoring as well as audit queries which can be scanned for anomalies and reported. Turning on Docker repository's automatic scan for vulnerabilities is an act of increasing security observability.
+Auditing your policies begins with reviewing them and what has happened in your projects audit logs. The Cloud Logging agent will collect most common logs needed and can be configured to collect specific logins and accesses. Cloud Audit Logs is a logging service which records administrative operations taken in your project. Audit Logs are saved for a limited amount of time so they need to be exported to Cloud Storage or BigQuery if regulations require retaining for a longer amount of time. Logging can export messages to Pub/Sub as JSON messages, to 'Logging' datasets in BigQuery, or as JSON files to Cloud Storage. When everything is sufficiently logged, you can create access monitoring and run audit queries which that scan for anomalies which can be reported. Turning on a Google Artifact Registry's automatic scan for vulnerabilities is an example of increasing security observability.
 
-Penetration testing simulates an attack, particularly on a network interface of a host or a firewall. These tests connect with services and detect security vulnerabilities in running services. The solution is to often upgrade or patch an application.
+Penetration testing simulates an attack, particularly on a network interface of a host or a firewall. These tests connect with services and detect security vulnerabilities in running services. The solution is to often upgrade or patch an application so that it is no longer vulnerable.
 
 The first phase of Penetration Testing is Reconnaissance where testers scope out the target much like a burglar looking for ways in. All information that can be gathered is gathered like Apache's `ServerToken` string. Recon phase testing might include social aspects where the tester learns everything they can about the operators who do have access to the target system. This might come in the form of phishing or leaving a USB key near someone's car in the parking lot. This phase can can be very short or very long.
 
-Once information is gathered, points of access on the network like IPs and ports are scanned, http endpoints have their root fetched, commonly vulnerable urls are checked to see if they exist.
+The second step is Scanning. Once information is gathered, points of access on the network like IPs and ports are scanned, http endpoints have their root and header capabilities fetched and tested, commonly vulnerable urls are checked to see if they exist to determine if an access vector is present.
 
+Gaining Access is a phase where the information gathered and a scanned access vector is exploited to obtain access to the breeched system. Maintaining access is what happens when parts of the exploit or other exploits are stored or hidden in the filesystem, obfuscated, set to sleep or listen for commands from some remote uri. They may even scrub logs hiding their tracks.
+
+It is recommended for highly secure environments to create automatic pentesting tools that run automatically and log to Cloud Logging, from which you can draw monitoring alerts or reports.
+
+## Security Principles
+Three main principles apply when we discuss Cloud Security: Separation of Duties, Least Privilege, Defense in Depth.
+## Separation of Duties
+Separation of Duties, especially combined with these two other principles, creates a strong accountability and oversight in the work. Separation of Duties means code committers aren't the same as pull-request approvers. When multiple people have a scope of duties that are closely related, the impact and risk of internal bad actors is reduced.
+
+Developers use pipelines created by reliability engineers through DevOps principles, but often they are not allowed to approve pipeline steps in the higher environments such as production. Small teams may have a harder time accomplishing this.
+
+## Least Privilege
+Least privilege is the principle of giving only the access that is needed. Working in least privilege focused companies is often a headache as nothing is easy to setup, it often takes coming up against an access denial to know what requests you need to make of the access teams. It may take you weeks to set up something it'd take you days to do if you had full access. This is because when access is denied, despite planning, and requests are made for grants, documentation has to be updated, the Solution Architecture Document may need to be updated, several security teams may need to reapprove your project after discovery of new facets of the work, you might need to wait on a Cloud Solutions team to produce a terraform module which provides your needed resources for a part of the project.
+
+If you have microservices that use serviceaccounts to access resources, separate the serviceaccounts into ones that represent the workload, so that resources are grouped and only the services which need to access their resources will be able to do so.
+
+IAM roles and permissions can be granted to satisfy whatever schema you can conceive. Once roles are granted, or custom roles created, you can use the Recommendation Engine to help prune unnecessary principle grants in IAM.
+
+## Defense in Depth
+This is the practice of controlling security at multiple levels of your application using the tools of those layers. For instance, If you treat a kubernetes pod as if it has a bad actor built into its image, we can distrust the filesystem as a safe place to store sensitive data. We can exclude secrets from env vars and use google's SDK to request the directly from the secret manager api upon startup of our application. This assures the secrets are only in memory and our bad actor now can be inside our pod and not be able to know the sensitive information.
+
+So like a stairway of distrust we design while considering:
+
+* The Network is compromised
+* The Cluster or VM is compromised
+* The disk is compromised
+* Root is compromised
+* The Application is compromised
+
+We are trying to reduce the above list to just the last item:
+* The Application is compromised
+
+As an SRE, SRE Manager or an Architect, it is important to know that last item is the responsibility of the application development team to secure their code and app. The other items on the list, we can as SREs design around. We can introduce securityContexts on pods or containers which mount the root FS readonly. We can ask the app team to modify those applications so they only write to volumes. We can design around this stairway of distrust. If every connection is suspect, then when we secure them with istio and certificates then we can be fulfilling the principles of Defense in Depth.
+
+## Regulations
+Regulations are a big part of organizations and business. Every industry and company is regulated. Understanding where those regulations intersect with your design decisions is the same thing as knowing the impact they'll have on your project. Cloud Architects should know how these regulations apply to them and how to stay compliant with regulations like US medical industry's HIPPA/HITECH, Europe's GDPR, and COPPA.
+
+The exam will cover these as well as Sarbanes-Oxley.
+
+### HIPPA/HITECH
+This is the law which applies to medical records in the United States. It is designed to protect personal information and privacy.
+
+The Health Insurance Portability and Accountability Act (HIPAA) was enacted in 1996 to improve the portability and continuity of health insurance coverage. The HITECH Act, enacted as part of the American Recovery and Reinvestment Act of 2009, promotes the adoption and meaningful use of health information technology. Both HIPAA and HITECH place privacy, security, and breach notification requirements on covered entities and their business associates.
+
+As a cloud architect, it is important to be aware of HIPAA and HITECH and how they impact the handling of health information in the cloud. HIPAA and HITECH impose requirements on covered entities and business associates with respect to the security, privacy, and confidentiality of health information. These requirements must be met when storing or transmitting
+
+The HIPAA Security Rule is a federal law that establishes national standards for the security of electronic protected health information. The Rule requires covered entities to implement security measures to protect the confidentiality, integrity, and availability of PHI.
+
+What are the Security Rule Safeguards?
+The HIPAA Security Rule is a set of standards that must be met in order to ensure the confidentiality, integrity, and availability of electronic protected health information (PHI).
+
+There are four main types of safeguards that must be in place in order to meet the requirements of the Security Rule: administrative, physical, technical, and organizational. Administrative safeguards are policies and procedures that must be put in place in order to protect PHI, while physical safeguards are measures taken to secure the physical environment in which PHI is stored. Technical safeguards are security measures used to protect electronic personal health information. Organizational safeguards are measures taken by an organization to protect the personal information of its clients, employees, and other individuals it deals with. Organizational safeguards are specified under Section 164.308 of the HIPAA Security Rule. Organizations must be able to design and implement appropriate administrative, technical, and physical safeguards to protect the privacy and security of individuals’ health information.
+
+The most common technical safeguards are authentication, authorization, integrity, confidentiality, and availability.
+
+The Privacy Rule requires entities covered by HIPAA to identify the personal health information (PHI) of individuals in certain transactions and maintain that information in an identifiable form only for legitimate business purposes.
+
+## GDPR
+The European Union's (EU) General Data Protection Regulation (GDPR) came into effect on 25 May 2018, replacing the previous EU data protection legislation from 1995.
+
+Under the new rules, organizations handling personal data of EU citizens must comply with a variety of requirements covering privacy by design, consent for data use, and access to personal information.
+
+The GDPR treats Controllers and Processors differently. A controller is any person, organization or company that controls the collection and use of personal data. 
+ A person or company that collects data on people for their own use is called a processor. Any processor that uses personal data to create a valuable asset is required to identify the asset as a data subject's must be informed and give consent to.
+
+In the event of a data breach (e.g. leaked passwords), data processors must notify the data controllers who have to notify the government and the people whose data was breached.
+
+## SOX
+
+The Sarbanes-Oxley (SOX) Act is a set of rules and regulations that help ensure the accuracy and transparency accounting information in publicly traded companies. 
+
+The act was introduced by Senator Paul Sarbanes of Maryland in 2002. The primary purpose of the act is to ensure that public information served by companies is accurate and complete.
+
+In addition, the act requires companies to disclose any material weaknesses in their internal control over financial reporting.
+
+What rules do they put in place?
+As far as IT Architects are concerned, the act requires the prevention of falsification and deletion of records, retention of certain records for defined periods.
+
+This includes measures to increase transparency, and may include: periodic auditing compliance with SOX, developing a plan to disclose material information on a regular basis, ensuring that employees understand the company’s reporting process and comply with it, developing training programs to help employees recognize potential conflicts of interest, and creating a culture in which employees feel confident to raise issues without fear of being sued.
+
+
+* requirement to implement tamper-prevention controls
+* requirement for an annual audits
+* requirement to keep data confidential
 ## Exam Essentials
 
 * blah
 
 ## Official Resources
+* [GCP HIPPA Compliance Information](cloud.google.com/security/compliance/hippa)
 * [Load Balancing and Autoscaling Compute Engine](https://cloud.Google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
 * [Cluster Autoscaling Kubernetes Engine](https://cloud.Google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
 * [The Official Google Certified Professional Cloud Architect Exam
@@ -204,7 +289,3 @@ Once information is gathered, points of access on the network like IPs and ports
 * [Exam FAQ](http://cloud.Google.com/certification/faqs/#0)
 * [Sample Questions](http://cloud.Google.com/certiications/cloud-architect)
 * [GCP Documentation](http://cloud.Google.com/docs)
-
-
-
-
