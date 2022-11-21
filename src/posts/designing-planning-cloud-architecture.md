@@ -6,7 +6,7 @@ category:
   - Technology
 tag:
   - 'study guide'
-  - 'google cloud'
+  - 'Google cloud'
   - gcp
   - GCCPCA
 ---
@@ -273,7 +273,7 @@ Requirements can be grouped into being met by the cloud's offerings. Compute
 Engine, App Engine, Kubernetes Engine, Cloud Run, and Cloud Functions all solve
 unique use cases. It is forseeable that all of *your* requirements are going to
 fall along these lines when it comes to processing data requests, responding to
-requests, delivering content and interfaces. If not, another google product will
+requests, delivering content and interfaces. If not, another Google product will
 represent a Functional Needs subset.
 
 #### Cloud Storage
@@ -372,7 +372,7 @@ goals, such as the need for timely data versus the need for comprehensive data.
 
 ## Official Resources
 * [The Official Google Certified Professional Cloud Architect Exam
-  Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
-* [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
-* [Sample Questions](http://cloud.google.com/certiications/cloud-architect)
-* [GCP Documentation](http://cloud.google.com/docs)
+  Guide](http://cloud.Google.com/certification/guides/professional-cloud-architect)
+* [Exam FAQ](http://cloud.Google.com/certification/faqs/#0)
+* [Sample Questions](http://cloud.Google.com/certiications/cloud-architect)
+* [GCP Documentation](http://cloud.Google.com/docs)

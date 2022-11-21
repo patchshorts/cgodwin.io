@@ -5,7 +5,7 @@ category:
   - Google Cloud
 tag:
   - 'study guide'
-  - 'google cloud'
+  - 'Google cloud'
   - gcp
   - GCCPCA
 ---
@@ -137,7 +137,7 @@ Some of these include:
   * Event-driven compute platform for cloud services and apps.
 * And dozens more.
 
-To see an exhaustive list, please see [My List of All GCP Managed Services](list-all-google-cloud-platform-gcp-managed-services.md)
+To see an exhaustive list, please see [My List of All GCP Managed Services](list-all-Google-cloud-platform-gcp-managed-services.md)
 
 ::: tip Reducing Latency on Image Heavy Applications
 Google Cloud CDN is a content delivery network that uses Google's global network of edge locations to deliver content to users with low latency. It is a cost-effective way to improve the performance of your website or web application by caching static and dynamic content at the edge of Google's network. Cloud CDN can also be used to deliver content from your own servers, or from a content provider such as a CDN or a cloud storage service. 
@@ -157,7 +157,7 @@ Reduced level services:
 * Durable Reduced Availability Storage
 
 #### Preemptive VMs
-Preemptible VMs are shutdown after 24 hours and google can pause them at any time. Running process on those vms do not stop but they slow to a crawl and speed back up when services become available. You can write a robust application by setting it up to detect the preemptions. These VMs cost 60-90% or so less than their standard counterparts.
+Preemptible VMs are shutdown after 24 hours and Google can pause them at any time. Running process on those vms do not stop but they slow to a crawl and speed back up when services become available. You can write a robust application by setting it up to detect the preemptions. These VMs cost 60-90% or so less than their standard counterparts.
 
 Preemptible VMs also get discounts on volumes and GPUs. Managed resource groups will replace a preempted VM when it is suspended after 24 hours. Preemptible VMs can use other services to reduce the overall cost of using those services with VMs.
 
@@ -430,7 +430,7 @@ If Applications are working synchronously, decouple them and have the reporters 
 ### Integrity
 Data Integrity is required by regulations which focus on making data tamper-proof, but normally is simply a business requirement. You need your records to be consistent and reflect reality. Data Integrity is also about keeping it in that state.
 
-Ways in google cloud that you can promote and increase data integrity are to use ways to promote data integrity in google cloud are to use tools like Data Loss Prevention (DLP) and Data Encryption. You should also enforce least privilege, use strong data encryption methods, and use access control lists.
+Ways in Google cloud that you can promote and increase data integrity are to use ways to promote data integrity in Google cloud are to use tools like Data Loss Prevention (DLP) and Data Encryption. You should also enforce least privilege, use strong data encryption methods, and use access control lists.
 
 Colocate report data instead of drawing on active data. That way, if data is tampered with discrepancies exist directly within the app. The search for these discrepancies can be automated into their own report.
 
@@ -483,13 +483,13 @@ $\left(\frac {135000} {9000} \right) \times 100 = 1500\%$
 
 This is a real scenario I orchestrated for a real company. Our return on investment, the ROI, was a tremendous 1500%.
 
-In a cloud migration project the investment costs includes costs google cloud services and infrastructure, personnel costs, and vendor costs. You should include expenses saved in the value of the investment.
+In a cloud migration project the investment costs includes costs Google cloud services and infrastructure, personnel costs, and vendor costs. You should include expenses saved in the value of the investment.
 
 ::: tip Reducing Costs When designing for cost reduction, there are three options you should strongly consider:
-* [Managed Services](list-all-google-cloud-platform-gcp-managed-services.md)
+* [Managed Services](list-all-Google-cloud-platform-gcp-managed-services.md)
 * [Preemptible and Spot VMs](./contrast-preemptible-spot-vms-virtual-machines.md)
-* [Autoscaling](https://cloud.google.com/compute/docs/load-balancing-and-autoscaling#autoscaling)
-* [Standard Network Teir](differences-in-google-cloud-platform-gcp-network-tiers.md)
+* [Autoscaling](https://cloud.Google.com/compute/docs/load-balancing-and-autoscaling#autoscaling)
+* [Standard Network Teir](differences-in-Google-cloud-platform-gcp-network-tiers.md)
 :::
 
 The goals and concepts that the organization places high value upon will be underlying the KPIs and ROI measures.
@@ -498,7 +498,7 @@ The goals and concepts that the organization places high value upon will be unde
 
 * Understanding the sample requirements word for word
 * Knowing the meanings of business terms like TCO, KPI, ROI
-* Learn about what google services are for what use cases
+* Learn about what Google services are for what use cases
 * Understanding managing data
 * Understanding how compliance with law can affect the architecture of a solution
 * Understand the business impetus behind the aspects of security pertaining to business requirements
@@ -509,7 +509,7 @@ The goals and concepts that the organization places high value upon will be unde
 
 
 ## Official Resources
-* [The Official Google Certified Professional Cloud Architect Exam Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
-* [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
-* [Sample Questions](http://cloud.google.com/certiications/cloud-architect)
-* [GCP Documentation](http://cloud.google.com/docs)
+* [The Official Google Certified Professional Cloud Architect Exam Guide](http://cloud.Google.com/certification/guides/professional-cloud-architect)
+* [Exam FAQ](http://cloud.Google.com/certification/faqs/#0)
+* [Sample Questions](http://cloud.Google.com/certiications/cloud-architect)
+* [GCP Documentation](http://cloud.Google.com/docs)

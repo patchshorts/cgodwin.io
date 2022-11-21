@@ -6,7 +6,7 @@ category:
   - Technology
 tag:
   - 'study guide'
-  - 'google cloud'
+  - 'Google cloud'
   - GCCPCA
   - Bigtable
   - Database
@@ -49,7 +49,7 @@ Running a database cluster on Compute VM, you take all the management upon yours
 |✝✝| Read / Append Only|
 ## Official Resources
 * [The Official Google Certified Professional Cloud Architect Exam
-  Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
-* [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
-* [Sample Questions](http://cloud.google.com/certiications/cloud-architect)
-* [GCP Documentation](http://cloud.google.com/docs)
+  Guide](http://cloud.Google.com/certification/guides/professional-cloud-architect)
+* [Exam FAQ](http://cloud.Google.com/certification/faqs/#0)
+* [Sample Questions](http://cloud.Google.com/certiications/cloud-architect)
+* [GCP Documentation](http://cloud.Google.com/docs)

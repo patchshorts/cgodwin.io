@@ -6,7 +6,7 @@ category:
   - Technology
 tag:
   - 'study guide'
-  - 'google cloud'
+  - 'Google cloud'
   - gcp
   - GCCPCA
   - Cloud computing
@@ -29,9 +29,9 @@ tag:
 |   🔴    | No           |
 
 ## Official Resources
-* [Choose an App Engine environment](https://cloud.google.com/appengine/docs/the-appengine-environments)
+* [Choose an App Engine environment](https://cloud.Google.com/appengine/docs/the-appengine-environments)
 * [The Official Google Certified Professional Cloud Architect Exam
-  Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
-* [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
-* [Sample Questions](http://cloud.google.com/certiications/cloud-architect)
-* [GCP Documentation](http://cloud.google.com/docs)
+  Guide](http://cloud.Google.com/certification/guides/professional-cloud-architect)
+* [Exam FAQ](http://cloud.Google.com/certification/faqs/#0)
+* [Sample Questions](http://cloud.Google.com/certiications/cloud-architect)
+* [GCP Documentation](http://cloud.Google.com/docs)

@@ -6,7 +6,7 @@ category:
   - Technology
 tag:
   - 'study guide'
-  - 'google cloud'
+  - 'Google cloud'
   - GCCPCA
   - Bigtable
   - Database
@@ -42,12 +42,12 @@ only support Load Balancers which are regional.
 |   🟢    | Yes          |
 |   🔴    | No           |
 
-![GCP Network Tier Decision Tree](https://cloud.google.com/static/images/network-tiers/decision-tree.svg)
+![GCP Network Tier Decision Tree](https://cloud.Google.com/static/images/network-tiers/decision-tree.svg)
 
 ## Official Resources
-* [GCP Network Tiers](https://cloud.google.com/network-tiers)
+* [GCP Network Tiers](https://cloud.Google.com/network-tiers)
 * [The Official Google Certified Professional Cloud Architect Exam
-  Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
-* [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
-* [Sample Questions](http://cloud.google.com/certiications/cloud-architect)
-* [GCP Documentation](http://cloud.google.com/docs)
+  Guide](http://cloud.Google.com/certification/guides/professional-cloud-architect)
+* [Exam FAQ](http://cloud.Google.com/certification/faqs/#0)
+* [Sample Questions](http://cloud.Google.com/certiications/cloud-architect)
+* [GCP Documentation](http://cloud.Google.com/docs)

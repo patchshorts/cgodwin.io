@@ -6,7 +6,7 @@ category:
   - Technology
 tag:
   - 'study guide'
-  - 'google cloud'
+  - 'Google cloud'
   - gcp
   - GCCPCA
   - 'Compute Engine'
@@ -24,7 +24,7 @@ tag:
 ## Shielded VMs
 Shielded VMs use verification on hardware IDs and chips to defend against Linux bootkits and rootkits and provides self-healing security features such as integrity monitoring and healing.
 
-It uses [Secure Boot](https://cloud.google.com/compute/shielded-vm/docs/shielded-vm#secure-boot), [Virtual trusted platform module(vTPM)](https://cloud.google.com/compute/shielded-vm/docs/shielded-vm#vtpm)-enabled [Measured Boot](https://cloud.google.com/compute/shielded-vm/docs/shielded-vm#measured-boot), and [Integrity monitoring](https://cloud.google.com/compute/shielded-vm/docs/shielded-vm#integrity-monitoring).
+It uses [Secure Boot](https://cloud.Google.com/compute/shielded-vm/docs/shielded-vm#secure-boot), [Virtual trusted platform module(vTPM)](https://cloud.Google.com/compute/shielded-vm/docs/shielded-vm#vtpm)-enabled [Measured Boot](https://cloud.Google.com/compute/shielded-vm/docs/shielded-vm#measured-boot), and [Integrity monitoring](https://cloud.Google.com/compute/shielded-vm/docs/shielded-vm#integrity-monitoring).
 
 ### Monitoring
 You can monitor your VMs in a few ways with Shielded VMs:
@@ -33,7 +33,7 @@ You can monitor your VMs in a few ways with Shielded VMs:
 * You can automatically take action on integrity failures with cloud functions.
 
 ## Confidential VMs
-These Virtual Machines use *encryption-in-use* and encrypt the data in memory. You provision this type of VM with the type [N2D](https://cloud.google.com/compute/docs/general-purpose-machines#n2d_machines):
+These Virtual Machines use *encryption-in-use* and encrypt the data in memory. You provision this type of VM with the type [N2D](https://cloud.Google.com/compute/docs/general-purpose-machines#n2d_machines):
 
 * `n2d-standard-2`
 * `n2d-standard-4`
@@ -59,11 +59,11 @@ VPC Service Controls can define perimeters around sets of services within a VPC 
 
 ### VPC Service Control Netflow
 
-![image](https://cloud.google.com/static/vpc-service-controls/images/service_perimeter.png)
+![image](https://cloud.Google.com/static/vpc-service-controls/images/service_perimeter.png)
 
 ## Official Resources
-* [Shielded VMs](https://cloud.google.com/compute/docs/about-shielded-vm)
-* [Confidential VMs](https://cloud.google.com/compute/docs/about-confidential-vm)
-* [Integrity Monitoring](https://cloud.google.com/compute/shielded-vm/docs/integrity-monitoring)
-* [VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs/overview)
-* [GCP Documentation](http://cloud.google.com/docs)
+* [Shielded VMs](https://cloud.Google.com/compute/docs/about-shielded-vm)
+* [Confidential VMs](https://cloud.Google.com/compute/docs/about-confidential-vm)
+* [Integrity Monitoring](https://cloud.Google.com/compute/shielded-vm/docs/integrity-monitoring)
+* [VPC Service Controls](https://cloud.Google.com/vpc-service-controls/docs/overview)
+* [GCP Documentation](http://cloud.Google.com/docs)

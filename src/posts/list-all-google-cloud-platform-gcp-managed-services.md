@@ -6,7 +6,7 @@ category:
   - Technology
 tag:
   - 'study guide'
-  - 'google cloud'
+  - 'Google cloud'
   - gcp
   - GCCPCA
 ---
@@ -70,9 +70,9 @@ tag:
 |**Cloud Healthcare**|**Healthcare and Life Sciences**|**send, receive, store, query, transform, and analyze healthcare and life sciences data**|
 |**Game Servers**|**Media and Gaming**|**deploy and manage dedicated game servers across multiple Agones clusters**|
 ## Official Resources
-* [Google Cloud Platform Services Summary](https://cloud.google.com/terms/services)
+* [Google Cloud Platform Services Summary](https://cloud.Google.com/terms/services)
 * [The Official Google Certified Professional Cloud Architect Exam
-  Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
-* [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
-* [Sample Questions](http://cloud.google.com/certiications/cloud-architect)
-* [GCP Documentation](http://cloud.google.com/docs)
+  Guide](http://cloud.Google.com/certification/guides/professional-cloud-architect)
+* [Exam FAQ](http://cloud.Google.com/certification/faqs/#0)
+* [Sample Questions](http://cloud.Google.com/certiications/cloud-architect)
+* [GCP Documentation](http://cloud.Google.com/docs)

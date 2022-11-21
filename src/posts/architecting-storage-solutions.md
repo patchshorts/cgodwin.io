@@ -6,7 +6,7 @@ category:
   - Technology
 tag:
   - 'study guide'
-  - 'google cloud'
+  - 'Google cloud'
   - gcp
   - GCCPCA
 ---
@@ -204,9 +204,9 @@ Big Query is built upon Dremel, Colossus, Borg and Jupiter. Dremel maps queries 
 
 While other databases group rows together, in BigQuery, the data in the same column are stored together in an [columnar structure]() called Capacitor. Capacitor supports nested fields and is used because the analytics and business intelligence filtering only happens on a small number of columns compared to a traditional application's filtering of a number of columns in a row.
 
-BigQuery has batch and streaming jobs to load the data, jobs can export the data, run queries or copy data. Projects contain objects called a `dataset` that are regional or multi-regional. Regional is straight forward, is what it sounds like. But with multi-regional you either choose the United States or Europe and google copies the `dataset` into multiple regions within the continent you've chosen.
+BigQuery has batch and streaming jobs to load the data, jobs can export the data, run queries or copy data. Projects contain objects called a `dataset` that are regional or multi-regional. Regional is straight forward, is what it sounds like. But with multi-regional you either choose the United States or Europe and Google copies the `dataset` into multiple regions within the continent you've chosen.
 
-BigQuery bills on size stored as well as the query size and the data scanned when running the query. For this reason it is advisable to partition your query to specifically the time when the data occurred. Use less broad queries for smaller ones and less data scanned while running the query. You can read more about [BigQuery Pricing](https://cloud.google.com/bigquery/pricing#on_demand_pricing). For this reason, don't use queries to view the structure of the tables use `bq head` or use the Preview Option on the console. You can also use `--dry-run` to test command line queries which will tell you the number of bytes the query would have returned. You're not billed for errors or queries whose results are returned from cache.
+BigQuery bills on size stored as well as the query size and the data scanned when running the query. For this reason it is advisable to partition your query to specifically the time when the data occurred. Use less broad queries for smaller ones and less data scanned while running the query. You can read more about [BigQuery Pricing](https://cloud.Google.com/bigquery/pricing#on_demand_pricing). For this reason, don't use queries to view the structure of the tables use `bq head` or use the Preview Option on the console. You can also use `--dry-run` to test command line queries which will tell you the number of bytes the query would have returned. You're not billed for errors or queries whose results are returned from cache.
 
 ##### BQ IAM Roles
 Access permissions in all of GCP's products are granted by IAM, which generally has predefined roles for its products. The roles in IAM for BigQuery are:
@@ -219,7 +219,7 @@ Access permissions in all of GCP's products are granted by IAM, which generally 
 * `roles/bigquery.jobUser` Can list projects, create queries and jobs.
 * `roles/bigquery.admin` Can do any BigQuery operation.
 
-In addition to these overarching roles, granular access can be given to google service accounts, google groups, etc over organizations, projects, datasets, tables and table views.
+In addition to these overarching roles, granular access can be given to Google service accounts, Google groups, etc over organizations, projects, datasets, tables and table views.
 
 ##### Loading Data into BQ
 You can batch load or stream load data into BigQuery.
@@ -242,7 +242,7 @@ Bigtable supports latencies lower than 10ms, Stores at the Petabyte scale, repli
 
 Data is stored in tables with key to value maps and each row stores information about the entry which is indexed by a row-key. Columns are grouped into column families like collections and a table can container multiple column families.
 
-Tables are sectioned into blocks of contiguous rows called tablets. These tablets are stored in Colossus. Hotspots occur when you make the row key associated with a workload. For instance, if you make the row key the user ID, the heavier use users will all write to one tablet server. Design the workloads so that they're as distributed as possible, and if hotspots still do occur you can limit or throttle the keys that cause the problem. Find out more about [Bigtable hotspots](https://cloud.google.com/blog/products/databases/hotspots-and-performance-debugging-in-cloud-bigtable).
+Tables are sectioned into blocks of contiguous rows called tablets. These tablets are stored in Colossus. Hotspots occur when you make the row key associated with a workload. For instance, if you make the row key the user ID, the heavier use users will all write to one tablet server. Design the workloads so that they're as distributed as possible, and if hotspots still do occur you can limit or throttle the keys that cause the problem. Find out more about [Bigtable hotspots](https://cloud.Google.com/blog/products/databases/hotspots-and-performance-debugging-in-cloud-bigtable).
 
 Bigtable has support for the HBase API, so one can migrate from Hadoop HBase to Bigtable. Bigtable is the best option for migrating Cassandra databases to Google Cloud. One can create Bigtable as a multi-cluster and multi-regional and Google will take care of replicating the data. Multi-cluster systems can have their workloads separated, one being the read cluster and the other being assigned a write workload. The cluster replication procedures will assure that both cluster reach "eventual consistency".
 
@@ -257,7 +257,7 @@ This is the next product iteration of Cloud Datastore. Firestore is consistent, 
 Managed as other products are, Memory store comes in two forms, Redis and Memcached. You can use memory caches for message processing, database caching, session sharing, etc. Memory caches are generally nonpersistent, but Redis can be configured to snapshot to dir and start again with that same data.
 
 #### Memorystore for Redis
-Redis is a memory datastore designed to return information with sub-millisecond latency. You can store many data types in Redis. Instance memory ceilings top out at 300GB with 12 Gigabit networking. Caches can be replicated across zones for 3 nines availability. As a managed service, google handles updates, upgrades, syncing and failing over to other instances.
+Redis is a memory datastore designed to return information with sub-millisecond latency. You can store many data types in Redis. Instance memory ceilings top out at 300GB with 12 Gigabit networking. Caches can be replicated across zones for 3 nines availability. As a managed service, Google handles updates, upgrades, syncing and failing over to other instances.
 
 Memorystore for Redis comes in two tiers:
 * Basic
@@ -328,13 +328,13 @@ NoSQL Databases:
 * Understand how to consider latency when designing storage for GCP
 
 ## Official Resources
-* [Load Balancing and Autoscaling Compute Engine](https://cloud.google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
-* [Cluster Autoscaling Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
+* [Load Balancing and Autoscaling Compute Engine](https://cloud.Google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
+* [Cluster Autoscaling Kubernetes Engine](https://cloud.Google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
 * [The Official Google Certified Professional Cloud Architect Exam
-  Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
-* [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
-* [Sample Questions](http://cloud.google.com/certiications/cloud-architect)
-* [GCP Documentation](http://cloud.google.com/docs)
+  Guide](http://cloud.Google.com/certification/guides/professional-cloud-architect)
+* [Exam FAQ](http://cloud.Google.com/certification/faqs/#0)
+* [Sample Questions](http://cloud.Google.com/certiications/cloud-architect)
+* [GCP Documentation](http://cloud.Google.com/docs)
 
 
 

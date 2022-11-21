@@ -6,7 +6,7 @@ category:
   - Technology
 tag:
   - 'study guide'
-  - 'google cloud'
+  - 'Google cloud'
   - gcp
   - GCCPCA
   - 'Compute Engine'
@@ -35,8 +35,8 @@ tag:
 |   🔴    | No          |
 
 ## Official Resources
-* [Create and use preemptible VMs](https://cloud.google.com/compute/docs/instances/create-use-preemptible)
-* [Create and use Spot VMs](https://cloud.google.com/compute/docs/instances/create-use-spot)
-* [Preemptible VMs](https://cloud.google.com/compute/docs/instances/preemptible)
-* [Spot VMs](https://cloud.google.com/compute/docs/instances/spot)
-* [GCP Documentation](http://cloud.google.com/docs)
+* [Create and use preemptible VMs](https://cloud.Google.com/compute/docs/instances/create-use-preemptible)
+* [Create and use Spot VMs](https://cloud.Google.com/compute/docs/instances/create-use-spot)
+* [Preemptible VMs](https://cloud.Google.com/compute/docs/instances/preemptible)
+* [Spot VMs](https://cloud.Google.com/compute/docs/instances/spot)
+* [GCP Documentation](http://cloud.Google.com/docs)

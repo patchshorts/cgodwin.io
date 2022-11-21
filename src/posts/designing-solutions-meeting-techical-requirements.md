@@ -6,7 +6,7 @@ category:
   - Technology
 tag:
   - 'study guide'
-  - 'google cloud'
+  - 'Google cloud'
   - gcp
   - GCCPCA
 ---
@@ -61,7 +61,7 @@ The process of meeting your availability needs using each of these services is s
 
 #### High Availability in Compute Engine
 ##### Hardware Redundancy and Live Migration
-On the lowest level, much of the servers at google have levels of redundancy. If a server fails for hardware issues, others are there for failing over to while others are booted up to replace redundancy.
+On the lowest level, much of the servers at Google have levels of redundancy. If a server fails for hardware issues, others are there for failing over to while others are booted up to replace redundancy.
 
 Google also live migrates VMs to other hypervisors like it does when power or networks systems fail or during maintenance activities which have a real impact on hypervisors.
 
@@ -83,7 +83,7 @@ Managed Instance Groups(MIGs) create groups or clusters of virtual machines whic
 A VM template looks like this:
 
 ```sh
-POST https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/global/instanceTemplates
+POST https://compute.Googleapis.com/compute/v1/projects/PROJECT_ID/global/instanceTemplates
 ```
 
 Here is what you're posting before you make replacements:
@@ -184,7 +184,7 @@ Recall out [case studies](https://cgodwin-io-xu5obpctlq-uc.a.run.app/posts/desig
 
 * Tristar Healthcare needs an always up API service to meet the business requirement "entities will need and currently have different access to read and change records and information". Since this isn't just intra-organization it is external facing for customers, vendors, and partners. You decide to run the the service on App Engine standard for now unless you discover you need to use the Flexible stack.
 * While class is recording, the services need to be always available to consume the broadcasts, otherwise the videos for consumption need to be available for students to watch while class isn't recording. Students however will not be accessing these from outside the local region because the school is local. The small amount of traffic that comes from outside the region is from traveling students who can deal with the latency.
-* LCSoft is using a multiregional Firebase Realtime Database with an always up SLA. Firebase supported by google cloud and supports Google Cloud. You can "pull" in GCP products into a Firebase hosted platform.
+* LCSoft is using a multiregional Firebase Realtime Database with an always up SLA. Firebase supported by Google cloud and supports Google Cloud. You can "pull" in GCP products into a Firebase hosted platform.
 * Granger really only needs total availability of all services during business hours. They're all acting from the same region so they're really needing for multizonal solutions.
 
 ### Storage Availability
@@ -254,7 +254,7 @@ Memcached and redis are supported by Google's Cloud Memory Store.
 ### Network Availability
 Using premium tier networing and redunant networks, you can increase network availability. If one interconnect is down, often a second will provide protection against connectivity loss. Interconnects have a minimum of 10Gbps and traffic does not cross the public internet. When crossing the internet is not a problem, Google offers and HA VPN which has redundant connections and offers a 4 9s(99.99%) uptime SLA.
 
-Communication within google usually uses their low latency *Premium Network* teir which doesn't cross the internet and is global. Standard networking tiers will not be able to use this global network and so cannot take advantage of global load balancing. Communications within the cloud on the Standard Networking tier do cross the internet.
+Communication within Google usually uses their low latency *Premium Network* teir which doesn't cross the internet and is global. Standard networking tiers will not be able to use this global network and so cannot take advantage of global load balancing. Communications within the cloud on the Standard Networking tier do cross the internet.
 #### High Availability Network Requirements in Case Studies
 Since networking requirements are not often specified, the Architect should analyze the requirements, ask questions and suggest the most cost effective solution which meets the needs of the requirements both business and technical.
 ### Application Availability
@@ -357,13 +357,13 @@ Emphasize issues pertaining to management and operations, decide whose responsib
 * Be able to link reliability to risk mitigation
 
 ## Official Resources
-* [Load Balancing and Autoscaling Compute Engine](https://cloud.google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
-* [Cluster Autoscaling Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
+* [Load Balancing and Autoscaling Compute Engine](https://cloud.Google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
+* [Cluster Autoscaling Kubernetes Engine](https://cloud.Google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
 * [The Official Google Certified Professional Cloud Architect Exam
-  Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
-* [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
-* [Sample Questions](http://cloud.google.com/certiications/cloud-architect)
-* [GCP Documentation](http://cloud.google.com/docs)
+  Guide](http://cloud.Google.com/certification/guides/professional-cloud-architect)
+* [Exam FAQ](http://cloud.Google.com/certification/faqs/#0)
+* [Sample Questions](http://cloud.Google.com/certiications/cloud-architect)
+* [GCP Documentation](http://cloud.Google.com/docs)
 
 
 

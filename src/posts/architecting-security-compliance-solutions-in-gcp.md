@@ -172,7 +172,7 @@ Cloud KMS is a managed service for customer controlled encryption keys. It handl
 
 Cloud HSM is Google's support for FIPS 140-2 keys using them only in Level 3 hardware modules which are tamper-evident and respond to tamper attempts.
 
-Customer Supplied Keys is the option for using your own key management entirely. Keys are generated and kept onpremises and passed along with API calls which only use them in memory never storing them to disk. This way, google can encrypt or decrypt the data with the customer supplied keys. This customer provided key is used to create a new customer derived key in combination with a per-persistent disk cryptographic nonce. In many cases, the customer supplied key is used to seed other keys that only stay in memory except for the nonce. Cloud External Key Manager(EKM) is the service which allows one to use third party management of keys and sets up Cloud KMS to consume them.
+Customer Supplied Keys is the option for using your own key management entirely. Keys are generated and kept onpremises and passed along with API calls which only use them in memory never storing them to disk. This way, Google can encrypt or decrypt the data with the customer supplied keys. This customer provided key is used to create a new customer derived key in combination with a per-persistent disk cryptographic nonce. In many cases, the customer supplied key is used to seed other keys that only stay in memory except for the nonce. Cloud External Key Manager(EKM) is the service which allows one to use third party management of keys and sets up Cloud KMS to consume them.
 
 Cloud Storage supports ACLs in finegrained access mode to mirror support for them in Amazon S3 buckets to aid migrations, but this support is considered legacy. Otherwise buckets support IAM access at the bucket and project levels in uniform access mode. You can also use url signatures to grant temporary access to objects. Storage Buckets can also be made available publicly.
 
@@ -211,7 +211,7 @@ If you have microservices that use serviceaccounts to access resources, separate
 IAM roles and permissions can be granted to satisfy whatever schema you can conceive. Once roles are granted, or custom roles created, you can use the Recommendation Engine to help prune unnecessary principle grants in IAM.
 
 ## Defense in Depth
-This is the practice of controlling security at multiple levels of your application using the tools of those layers. For instance, If you treat a kubernetes pod as if it has a bad actor built into its image, we can distrust the filesystem as a safe place to store sensitive data. We can exclude secrets from env vars and use google's SDK to request the directly from the secret manager api upon startup of our application. This assures the secrets are only in memory and our bad actor now can be inside our pod and not be able to know the sensitive information.
+This is the practice of controlling security at multiple levels of your application using the tools of those layers. For instance, If you treat a kubernetes pod as if it has a bad actor built into its image, we can distrust the filesystem as a safe place to store sensitive data. We can exclude secrets from env vars and use Google's SDK to request the directly from the secret manager api upon startup of our application. This assures the secrets are only in memory and our bad actor now can be inside our pod and not be able to know the sensitive information.
 
 So like a stairway of distrust we design while considering:
 
@@ -315,7 +315,7 @@ Encryption is everywhere and its power can be placed within the customer's hands
 * Understand how to use access and storage classes to achieve compliance
 
 ## Official Resources
-* [GCP HIPPA Compliance Information](cloud.google.com/security/compliance/hippa)
+* [GCP HIPPA Compliance Information](cloud.Google.com/security/compliance/hippa)
 * [Load Balancing and Autoscaling Compute Engine](https://cloud.Google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
 * [Cluster Autoscaling Kubernetes Engine](https://cloud.Google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
 * [The Official Google Certified Professional Cloud Architect Exam

@@ -6,7 +6,7 @@ category:
   - Technology
 tag:
   - 'study guide'
-  - 'google cloud'
+  - 'Google cloud'
   - gcp
   - GCCPCA
 ---
@@ -60,7 +60,7 @@ New virtual machines require a type be specified along with boot image, availabi
 |SSD Persistent Disks|Low latency, high IOPS in the single digit milliseconds, databases|
 |Extreme Persistent Disks|sequential and random access at highest IOPS that is user configurable|
 
-Compute disks are encrypted automatically with google managed keys or customer managed keys with Google KMS which allows storage outside of GCP. Virtual machines run in your google project as the default GCE service account though you can specify which service account the VM runs as.
+Compute disks are encrypted automatically with Google managed keys or customer managed keys with Google KMS which allows storage outside of GCP. Virtual machines run in your Google project as the default GCE service account though you can specify which service account the VM runs as.
 
 ##### Sole-tenancy
 Sole-tenant VMs in Google compute engine offer a high degree of isolation and security for your workloads. By running your VMs on dedicated hardware, you can be sure that your data and applications are protected from other users on the same system. Additionally, sole-tenant VMs can be configured with custom security settings to further protect your data.
@@ -178,7 +178,7 @@ A script that downloads all of the pages of a website may be interrupted. If it 
 
 Google Kubernetes Engine (GKE) is GCP's Kubernetes managed offering. This service offers more complex container orchestration than either App Engine or Cloud Run.
 
-Kubernetes can be used for stateful deployments with certain storage objects configured into your deployment. Kubernetes has internal hooks that are auto configured by google to provide you with GCP provisioned architecture when you deploy it. Kubernetes has different storage classes and some can be marked as default. This way when you provision an object of kind `persistentvolumeclaim`, a Cloud persistent disk is spun up, attache to the node running the pod, then mounted into the pod per your specifications.
+Kubernetes can be used for stateful deployments with certain storage objects configured into your deployment. Kubernetes has internal hooks that are auto configured by Google to provide you with GCP provisioned architecture when you deploy it. Kubernetes has different storage classes and some can be marked as default. This way when you provision an object of kind `persistentvolumeclaim`, a Cloud persistent disk is spun up, attache to the node running the pod, then mounted into the pod per your specifications.
 
 To put it simple: it will create a cloud volume and mount it where you say in your yaml. You can install your own storage controllers by creating the yaml for one, creating a template that generates one(helm chart), or by following third party storage controller instructions.
 
@@ -197,7 +197,7 @@ GKE Orchestrates the following operations:
 * Resource Versioning
 * Secrets management
 
-As Free and Open Source Software(FOSS), Kubernetes can be self hosted, third-party hosted, or managed as it is hosted. Anthos is google's implementation of that designed to connect to the popular clouds and on-premises.
+As Free and Open Source Software(FOSS), Kubernetes can be self hosted, third-party hosted, or managed as it is hosted. Anthos is Google's implementation of that designed to connect to the popular clouds and on-premises.
 
 #### Kubernetes Cluster Architecture
 
@@ -300,7 +300,7 @@ App Engine is a serverless PaaS that runs on Google's compute engine. It is full
 
 #### Standard
 
-App Engine Standard is a serverless environment that runs on Google's compute engine. It is a fully managed PaaS that requires only code. There are no servers to manage. You simply upload your code and google detects how to build it and runs it on App Engine.
+App Engine Standard is a serverless environment that runs on Google's compute engine. It is a fully managed PaaS that requires only code. There are no servers to manage. You simply upload your code and Google detects how to build it and runs it on App Engine.
 
 ##### Standard Code Environments
 * Python 2.7, Python 3.7, Python 3.8, Python 3.9, and Python 3.10.
@@ -384,7 +384,7 @@ Anthos Service Mesh:
 * Service authentication with mutual TLS certificates
 * Encryption of communication with the Kubernetes Control Plane
 
-ASM can be deployed in-cluster, across Compute VMs or via Managed Anthos Service Mesh. In-cluster options include running the control plane in kubernetes to manage discovery, authentication, security and traffic. With managed ASM google managed the control plane, maintains it, scales it and updates it. When running istiod on Compute Engine, you can have instances in groups take advantage of using the service mesh. Anthos Service mesh only works on certain configurations for in-cluster VMWare, AWS EKS, GCP GKE and bare metal, while you must use an attached cluster if using Microsoft AKS.git
+ASM can be deployed in-cluster, across Compute VMs or via Managed Anthos Service Mesh. In-cluster options include running the control plane in kubernetes to manage discovery, authentication, security and traffic. With managed ASM Google managed the control plane, maintains it, scales it and updates it. When running istiod on Compute Engine, you can have instances in groups take advantage of using the service mesh. Anthos Service mesh only works on certain configurations for in-cluster VMWare, AWS EKS, GCP GKE and bare metal, while you must use an attached cluster if using Microsoft AKS.git
 
 ### Multi-cluster Ingress
 
@@ -505,7 +505,7 @@ Pub/Sub is good for buffering, transmitting or flow controlling data. If you nee
 :::
 
 ### Cloud Dataflow Pipelines
-Cloud Dataflow is Apache Beam stream processing implemented as a fully managed Google Cloud Platform service. Normally you'd have to provision instances of this service on virtual machines, but google managed the entire infrastructure for this service and maintains its availability and reliability.
+Cloud Dataflow is Apache Beam stream processing implemented as a fully managed Google Cloud Platform service. Normally you'd have to provision instances of this service on virtual machines, but Google managed the entire infrastructure for this service and maintains its availability and reliability.
 
 The service works via processing code written in Python, Java or SQL. Code can be batch or stream processed. You can combine services and send the output from Dataflow into Dataproc or BigQuery or BigTable and so forth. Dataflow is organized into pipelines that are designed to tackle the work of the part of the app that comes after ingests data, but otherwise can be used anywhere Apache Beam is used in applications.
 
@@ -544,7 +544,7 @@ graph.add_edges_from([("root", "a"), ("a", "b"), ("a", "e"), ("b", "c"), ("b", "
 
 These DAGs are stored in Cloud Storage and loaded in to Composer. Google gives this example on the Cloud Composer Concepts Page:
 
-![overview dag and tasks](https://cloud.google.com/static/composer/docs/images/overview-dag-and-tasks.svg)
+![overview dag and tasks](https://cloud.Google.com/static/composer/docs/images/overview-dag-and-tasks.svg)
 
 **Figure 1.** Relationship between DAGs and tasks
 
@@ -567,7 +567,7 @@ So in memory caches bridge the gap between different instances. Wordpress for in
 ### Async vs Synchronous
 Synchronous strategies are used when data can't be lost. NFS mounts can be mounted async or sync, for instance. Synchronous setups require lightening fast networks that are fast than the disks involved with low to no latency and probably nothing else on the network. Otherwise if that's not the case your system will try to save a file and will wait for the network to respond before it lets the process move on to other tasks. When a VM or bare-metal system has processes which have to wait on a slow network, the processes stack on top of each other increasing load. Load exponentially reduces a systems ability to respond to requests. Synchronous NFS systems on slow networks crash and so people can't and therefore don't use them.
 
-These problems are universal across all independent systems that need to communicate over means that involve variable speeds. With google's premium network, however, the problem will always be rather load than network speed. Scaling ingestion, for instance, will resolve synchronous problems.
+These problems are universal across all independent systems that need to communicate over means that involve variable speeds. With Google's premium network, however, the problem will always be rather load than network speed. Scaling ingestion, for instance, will resolve synchronous problems.
 
 However, services like Pub/Sub can make this process asynchronous, relaxing some of the stress and impact on on such a system's costs and reliability.
 
@@ -577,21 +577,21 @@ Credit card transactions are synchronous as well as maybe a bitcoin mining opera
 
 The most popular options provided by Google Compute Engine that cover a wide variety of use-cases include:
 
-* [Compute Engine VMs](https://cloud.google.com/compute/docs/instances)
-* [App Engine Serverless PaaS, Flexible & Standard](https://cloud.google.com/appengine/docs)
-* [Cloud Run Stateless Containers](https://cloud.google.com/run/docs/concepts)
-* [Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview)
-* [Anthos fleets](https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview)
-* [Cloud Functions Events as a Service](https://cloud.google.com/functions/docs/concepts/overview)
+* [Compute Engine VMs](https://cloud.Google.com/compute/docs/instances)
+* [App Engine Serverless PaaS, Flexible & Standard](https://cloud.Google.com/appengine/docs)
+* [Cloud Run Stateless Containers](https://cloud.Google.com/run/docs/concepts)
+* [Kubernetes Engine](https://cloud.Google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview)
+* [Anthos fleets](https://cloud.Google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview)
+* [Cloud Functions Events as a Service](https://cloud.Google.com/functions/docs/concepts/overview)
 
 Dataprocessing and Workflow options include:
 
-* [Dataproc Apache Spark + Hadoop](https://cloud.google.com/dataproc/docs/concepts)
-* [Dataflow Apache Beam](https://cloud.google.com/dataflow/docs/concepts)
-* [Datafusion Visual CDAP ETL and ELT pipelines](https://cloud.google.com/data-fusion/docs/concepts)
-* [Cloud Composer Apache Airflow with DAG based workflows](https://cloud.google.com/composer/docs/concepts)
-* [Cloud Workflows, API calls in a series](https://cloud.google.com/workflows/docs/overview)
-* [Cloud Pub/Sub and Pub/Sub Lite](https://cloud.google.com/pubsub/docs/concepts)
+* [Dataproc Apache Spark + Hadoop](https://cloud.Google.com/dataproc/docs/concepts)
+* [Dataflow Apache Beam](https://cloud.Google.com/dataflow/docs/concepts)
+* [Datafusion Visual CDAP ETL and ELT pipelines](https://cloud.Google.com/data-fusion/docs/concepts)
+* [Cloud Composer Apache Airflow with DAG based workflows](https://cloud.Google.com/composer/docs/concepts)
+* [Cloud Workflows, API calls in a series](https://cloud.Google.com/workflows/docs/overview)
+* [Cloud Pub/Sub and Pub/Sub Lite](https://cloud.Google.com/pubsub/docs/concepts)
 
 ## Exam Essentials
 
@@ -603,13 +603,13 @@ Dataprocessing and Workflow options include:
 * Know Kubernetes features
 
 ## Official Resources
-* [Load Balancing and Autoscaling Compute Engine](https://cloud.google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
-* [Cluster Autoscaling Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
+* [Load Balancing and Autoscaling Compute Engine](https://cloud.Google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
+* [Cluster Autoscaling Kubernetes Engine](https://cloud.Google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
 * [The Official Google Certified Professional Cloud Architect Exam
-  Guide](http://cloud.google.com/certification/guides/professional-cloud-architect)
-* [Exam FAQ](http://cloud.google.com/certification/faqs/#0)
-* [Sample Questions](http://cloud.google.com/certiications/cloud-architect)
-* [GCP Documentation](http://cloud.google.com/docs)
+  Guide](http://cloud.Google.com/certification/guides/professional-cloud-architect)
+* [Exam FAQ](http://cloud.Google.com/certification/faqs/#0)
+* [Sample Questions](http://cloud.Google.com/certiications/cloud-architect)
+* [GCP Documentation](http://cloud.Google.com/docs)
 
 
 
