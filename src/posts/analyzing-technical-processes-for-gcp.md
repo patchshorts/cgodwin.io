@@ -15,7 +15,13 @@ tag:
 
 [[toc]]
 
-blah
+Architects are involved in many different types of technical processes:
+
+* Continuos Deployment
+* Continuous Delivery
+* Post-mortem Analysis
+* Development Lifecycle Planning
+* 
 
 ## topic
 blah
