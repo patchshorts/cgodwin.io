@@ -167,7 +167,23 @@ Unit tests do this for software, are written and performed by developers and the
 Stress tests are often used to simulate and understand cascading failures. This will inform your monitoring goals and strategy. Chaos engineering puts load on a system an then just randomly causes probably problems to see how the system will respond in order to tease out mitigation responses before they occur.
 
 ## Incident Management and Post-mortem sessions
-Incidents are problems, minor or major. Severe incidences are the most important ones to mitigate quickly in order to meat Service Level Agreements.
+Incidents are major problems. Severe incidences are those that impact services which have Service Level Agreements. Severe incidents can be defined as those which impact multiple teams and multiple different type of customer experiences on the service-level. Incident management is the set of duties surrounding incidents and include remediation and fixing the incident, recording details about the state of the incident as it initially occurred and a history of all the decision surrounding the incident. Incident management duties often include making calls to involved parties in an escalation tree.
+
+* Notify a captain who coordinates the incident response.
+* Call a working session with available response teams from operations, automation, and development teams.
+* Analyze the problem, make corrections
+* Audit all actions taken into a log for the post-mortem analysis
+
+Incident management focuses on correcting the service-level disruption as soon as possible. There should be less concern with why it failed but how it will be fixed.
+
+The post mortem should focus on a blameless cause of the incident. Blameless postmortems create less of an environment of fear which reduces cognition. Cognition is key to production solutions which fix future versions of this problem. In the spectrum of problems one can have there are patterns, unique to your app, that will form in incidents. If you catch and fix each one, 20% of all fixes will negate 80% of the errors. This zipfy statistic is what allows startups to launch on a startup amount of effort. As an application matures, engineers take on the remaining 80% of fixes which are one offs which apply to fringe cases that only affect 20% of the customers.
+
+|Incidents/Bugs|Fixes|Customer Affect|
+|--|--|--|
+|Wide field|20%|80%|
+|Narrow field|80%|20%|
+11
+This is basically a [law of nature and governs everything](https://www.youtube.com/watch?v=fCn8zs912OE).
 
 ## Exam Essentials
 
