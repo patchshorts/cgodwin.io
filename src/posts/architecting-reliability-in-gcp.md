@@ -182,12 +182,21 @@ The post mortem should focus on a blameless cause of the incident. Blameless pos
 |--|--|--|
 |Wide field|20%|80%|
 |Narrow field|80%|20%|
-11
-This is basically a [law of nature and governs everything](https://www.youtube.com/watch?v=fCn8zs912OE).
+
+This zipfy pareto principle is basically a [law of nature and governs everything](https://www.youtube.com/watch?v=fCn8zs912OE).
+
+## Summary
+
+Reliability is a measure of how available the system is over a period of time. Creating reliable systems is a discipline involving application design and development, deployment methodologies, Incident management, Continuous Testing and more. Continuous Integration and Delivery managed code releases and bring sanity and mitigate risk in what was traditionally quickly changing process. Systems Reliability Engineering involves software development that includes operations goals, things like safe modes with degraded services or upstream throttling. Architects must understand that systems will fail, and that the best way to live with failures are to have defined service level objectives service level indicators, monitor services to detect incidences, and learn from failures by to risk assessment and mitigation techniques.
 
 ## Exam Essentials
 
-* blah
+* Understand monitoring, logging, and alerting in gcp and in relation to reliability
+* Be able to design for continuous deployments and integration
+* Be versed in kinds of tests use in reliability engineering
+* Understand that Reliability Engineering(RE) is a collaboration of operations and development goals combined on all levels of the system to reduce the risk of conflicting interests between development and operations.
+* Understand that RE includes planning for unplanned load, cascading failures, and responding to incidents
+* Understand that testing is a cornerstone of reliability engineering
 
 ## Official Resources
 * [Load Balancing and Autoscaling Compute Engine](https://cloud.Google.com/compute/docs/load-balancing-and-autoscaling#:~:text=documentation%20for%20descriptions.-,Autoscaling,need%20for%20resources%20is%20lower.)
