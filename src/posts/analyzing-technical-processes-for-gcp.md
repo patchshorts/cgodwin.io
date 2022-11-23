@@ -79,14 +79,35 @@ Scratch allows for full control but involves the most work, most maintenance, mo
 
 Once you have several viable solutions to consider, spike the one first with the greatest cost benefit. You'll know this because you can do a Cost Benefit Analysis on all these options we've discussed.
 
-### Cost Benefit Analysis
+#### Cost Benefit Analysis
 Part of Analysis is the cost benefit analysis of meeting the requirements with your various solution options. When asked to justify the decisions in your project you'll be asked for this and be able to contrast the different values of each solution. As part of this you'll calculate the ROI for the different options to arrive at the solutions value. At the end of this phase you'll decide which solutions you'll pursue in the Design.
 
+### Design
 As part of the design phase, you'll plan out how the software will work, the structure of the schemas and endpoints, and the functionality that these will achieve. This phase starts with a high level design and ends in a detailed one.
 
 The High Level design is an inventory of all the top levels of parts of the application. Here you'll identify how components will interact as well their overarching functions. You might work up UML or mermaid diagrams describing parts and interactions.
 
-The Detailed design is a plan of implementation of each of these parts. These parts will be modularized in though and broken down into the most sensible and efficient anatomies in which for them to exist. Some of the things planned include, error codes or pages, data structures, algorithms, security controls, logging, exit codes and wire-frames for user interfaces. 
+The Detailed design is a plan of implementation of each of these parts. These parts will be modularized in though and broken down into the most sensible and efficient anatomies in which for them to exist. Some of the things planned include, error codes or pages, data structures, algorithms, security controls, logging, exit codes and wire-frames for user interfaces.
+
+During the design phase, its best to work directly with the users of the system as you would work with other disciplines during other phases. The Users of a system will have a closer relationship to the requirements. In this phase developers will choose which frameworks, libraries, and dependencies.
+
+### Develop, Test, Implement
+Under development, software is created by engineers and built as artifacts which are pushed to a repository. These artifacts are deployed into an operating system either with a package manager, ssh, direct copying, a build process or via `Dockerfile` commands. Artifacts can have within them code, binaries, documentation, configuration, or raw mime/type files.
+
+In this phase developers might use tools like 'VSCode', analysis applications, administration tools; while changes are committed with source control tools that have gitOps attached to them. All these processes are in the domain of an Architect to conceive and track when designing a project.
+
+Developers will also test as part of the commands they give the continuous integration(CI) system. Well before the CI steps are created, the developer has created unit and integration tests and knows the commands to run them so that the automation team can include them in the creation of the CI portion of the development operations. There are language specific unit tests but generally the integration tests the API endpoints and you have a choice of software for that.
+
+### Documentation
+Documentation is crucial to the SDLC because it lets others using the software know how to operate the software. This is often your DevOps team handling automation in deployments. Developer documenation can be in the form of inline comments within the code, but also developers should release a manual as a README.md file in the source control repository root. A `README.md` file should exist in every folder where a different component has different usage instructions.
+
+You entire solution architecture design should be documented. For a lot of companies this is a page in a intranet wiki like Confluence.
+
+### Maintenance
+This is the practice of keeping the software running and updated. In Agile software practices, developers maintain code and run deployment pipelines to development environments which graduate to higher environments. In a fully agile environment, automation engineers create the pipelines but an automation release team approves the barriers so that developer initiated deployments can be released to production under supervision during a release window.
+
+Keeping a service running includes logging, monitoring, alerting and mitigation. Some of this work includes log rotation and performance scaling. Developers control log messages but infrastructure developers like cloud engineering teams might create the terraform modules that automation engineers use to automatically create alerts and logging policies.
+
 ## Continuous Integration / Continuous Delivery(CICD)
 
 ## Fixing Incident Culture
