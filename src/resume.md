@@ -22,6 +22,12 @@ Utilizes outstanding technical knowledge to collaborate on solutions and process
 and industrious top performer who contributes to the efficiency and stability of an organization.
 
 # Experience
+
+![My Certification Image](https://i.imgur.com/hV8PHrf.png)
+## Certifications
+* [Google Certified Cloud Professional Cloud Architect(GCCPCA)](https://www.credential.net/077683a1-2cd5-41bc-be5c-e33499ac7b13)
+* Red Hat Certified Engineer (RHCE)
+
 ## Charles Schwab, Austin, TX
 ### Manager of Software Development and Engineering, January 2020-Present
 * Produced highly usable and scalable web software solutions using advanced development technologies
@@ -105,9 +111,6 @@ and industrious top performer who contributes to the efficiency and stability of
 * Developed and validated test routines and schedules to ensure test cases mimicked external interfaces and addressed all browser and device types.
 * Crated databases that supported web applications and web sites.
 * Collaborated with management and users to develop e-commerce strategies and integrate these strategies with web sites.
-
-# Certifications
-* Red Hat Certified Engineer (RHCE)
 
 # Professional Development
 PuppetLabs™ training, Business Networking Groups, years of freelancing for professionals.

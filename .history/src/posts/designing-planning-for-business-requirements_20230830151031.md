@@ -324,11 +324,6 @@ Business requirements typically demand these common type of SLOs.
 - User data needs to be collected and processed in a privacy-compliant manner.
 - The system must provide low latency for a smooth gaming experience.
 - Managed services can be used to handle automatic scaling.
-
-::: tip Global Up-to-Date Data
-Cloud spanner is the best option for an SQL based global records storage with a High Consistency SLO.
-:::
-
 ### TerramEarth
 #### Business Requirements
 - TerramEarth manufactures heavy equipment for the construction and mining industries.
@@ -339,9 +334,6 @@ Cloud spanner is the best option for an SQL based global records storage with a 
 - A robust data analytics solution is needed to derive insights from the sensor data
 - A migration plan is needed to move existing data and systems to the cloud.
 
-::: tip Cloud Dataproc
-Cloud Dataproc is a cloud-based platform for processing large data sets. It is designed to be scalable and efficient, and to handle data processing workloads of all types. Cloud Dataproc is based on the open-source Apache Hadoop and Apache Spark platforms, and provides a simple, cost-effective way to process and analyze data in the cloud.
-:::
 ### Data Management Business Requirements
 
 Business requirements help us know what platforms to connect and how they will work. Those same requirements will tell us what data is stored, how often, for how long, and who and what workloads have access to it.

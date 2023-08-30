@@ -182,17 +182,10 @@ These services experience automatic high availability. When running these servic
 #### High Availability Computing Requirements in Case Studies
 Recall our [case studies](https://cgodwin-io-xu5obpctlq-uc.a.run.app/posts/designing-planning-for-business-requirements.html#business-use-cases-and-product-strategy)
 
-
-- EHR Healthcare needs a highly available API service to meet the business requirement of "entities will need and currently have different access to read and change records and information". This is essential as it is an external-facing service for customers, vendors, and partners.
-- HRL requires high availability for its real-time telemetry and video feed during races to enhance the spectator experience. This is crucial to ensure uninterrupted live streaming of races.
-- A high availability analytics solution is needed to gain insights into viewer behavior and preferences. This will ensure uninterrupted access to critical viewer data for business decision-making.
-- The archival storage for past races also needs to be highly available for on-demand viewing by fans and analysts.
-- High availability is vital for the online video games developed by Mountkirk Games. This is necessary to ensure a seamless gaming experience for players across the globe.
-- The high scores and player achievements system also require high availability to record and display player scores and achievements in real time.
-- The user data collection system for personalizing the gaming experience needs to be highly available to collect and process user data efficiently.
-- For TerramEarth, high availability is essential for their IoT sensor data system, which provides crucial data for improving their products and services.
-- The migration of their existing on-premises data infrastructure to the cloud needs to ensure high availability to prevent any disruption to their operations.
-- The data analytics solution for deriving insights from sensor data also requires high availability to ensure continuous access to valuable business insights.
+* Tristar Healthcare needs an always up API service to meet the business requirement "entities will need and currently have different access to read and change records and information". Since this isn't just intra-organization it is external facing for customers, vendors, and partners. You decide to run the the service on App Engine standard for now unless you discover you need to use the Flexible stack.
+* While class is recording, the services need to be always available to consume the broadcasts, otherwise the videos for consumption need to be available for students to watch while class isn't recording. Students however will not be accessing these from outside the local region because the school is local. The small amount of traffic that comes from outside the region is from traveling students who can deal with the latency.
+* LCSoft is using a multiregional Firebase Realtime Database with an always up SLA. Firebase supported by Google cloud and supports Google Cloud. You can "pull" in GCP products into a Firebase hosted platform.
+* Granger really only needs total availability of all services during business hours. They're all acting from the same region so they're really needing for multizonal solutions.
 
 ### Storage Availability
 Storage is considered Highly available when it is available and functional at all times.
@@ -254,10 +247,10 @@ Memcached and redis are supported by Google's Cloud Memory Store.
 :::
 #### High Availability Storage Requirements in Case Studies
 
-* EHR HealthCare's active data available through the API will need to be highly durable and highly available at all times. Thier databases should take advantage of a managed database sorage solutions.
-* HRL needs highly durable storage for retaining permenant videos of races using `archive` class object storage. They also need always available storage for serving the most recent videos to audiences on their website. If transcoding is intense you might consider an extreme IOPS or SSD but a Regional SSD will have better availability. You might transcode locally and copy to an available drive.
-* Mountkirk will need durable and highly available Big Table as well as Firestore or Firebase Realtime Database. They can achieve this as these services are fully managed. If they required some durable volume space to share among gaming servers, highly durable Regional Balanced PDDS with backups. Their billing will be supported by *Cloud Spanner*.
-* TerramEarth will have highly available storage in BigQuery.
+* Tristar Healthcare's active data available through the API will need to be highly durable and highly available at all times. Thier databases should take advantage of a managed database sorage solutions.
+* Lord Byron needs highly durable storage for retaining permenant videos of speakers using `archive` class object storage. They also need always available storage for serving the most recent videos to students on their website. If transcoding is intense you might consider an extreme IOPS or SSD but a Regional SSD will have better availability. You might transcode locally and copy to an available drive.
+* LCSoft will need durable and highly available Big Table as well as Firestore or Firebase Realtime Database. They can achive this as these services are fully managed. If they required some durable volume space to share among gaming servers, highly durable Regional Balanced PDDS with backups. Their billing will be supported by *Cloud Spanner*.
+* Granger Excavation will have highly available storage in BigQuery.
 ### Network Availability
 Using premium tier networing and redunant networks, you can increase network availability. If one interconnect is down, often a second will provide protection against connectivity loss. Interconnects have a minimum of 10Gbps and traffic does not cross the public internet. When crossing the internet is not a problem, Google offers and HA VPN which has redundant connections and offers a 4 9s(99.99%) uptime SLA.
 
@@ -265,7 +258,7 @@ Communication within Google usually uses their low latency *Premium Network* tei
 #### High Availability Network Requirements in Case Studies
 Since networking requirements are not often specified, the Architect should analyze the requirements, ask questions and suggest the most cost effective solution which meets the needs of the requirements both business and technical.
 ### Application Availability
-Application Availablility is 3 parts infrastructure availability(network, storage, and compute), but its 1 part reliability engineering in the application design, integration and deployment. Logging and Monitoring is the most appropriate way to handle availability unknowns in the application. Technical and Development processes iterate over the logs and alerts in order to achieve their reliability SLOs within the application.
+Application Availablility is 3 parts infrastructure availability(network, storage, and compute), but its 1 part reliability engineering in the application design, integration and deployment. Logging and Monitoring is the most appropriate way to handle availability unknowns in the application. Technical and Development processes iterate over the logs and alerts in order to acieve their reliability SLOs within the application.
 
 ::: tip
 Add *Cloud Monitoring* with alerts as part of your availability standards to increase application and infrastructure reliability.

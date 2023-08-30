@@ -286,10 +286,6 @@ Let's review the business needs of our use cases.
 - Infrastructure redundancy is necessary.
 - Data Lifecycles must consider regulation, insights, and access controls.
 - Cloud Machine Learning can be leveraged to build insight models faster than they can be planned and built.
-::: tip Cloud Dataflow
-Cloud dataflow is a cloud-based data processing service for batch and streaming data. It is a fully managed service that is designed to handle large data sets with high throughput and low latency. Cloud dataflow is a serverless platform that can scale automatically to meet the needs of your application. It is a cost-effective solution that allows you to pay only for the resources you use.
-:::
-
 ### Helicopter Racing League
 #### Business Requirements
 - The Helicopter Racing League (HRL) organizes and manages helicopter races worldwide.
@@ -303,15 +299,6 @@ Cloud dataflow is a cloud-based data processing service for batch and streaming 
 - Archival storage is needed for storing race videos for on-demand viewing.
 - An analytics solution is needed for analyzing viewer behavior and preferences.
 - The solution must be highly available and scalable to handle traffic spikes during races.
-::: tip Service Level Objectives
-Business requirements typically demand these common type of SLOs.
-
-* **High Availability SLO** Always accessible.
-* **Durability SLO** Always kept.
-* **Reliability SLO** Always meeting workloads.
-* **Scalability SLO** Always fitting its workloads.
-
-:::
 ### Mountkirk Games
 #### Business Requirements
 - Mountkirk Games develops and operates online video games.
@@ -324,11 +311,6 @@ Business requirements typically demand these common type of SLOs.
 - User data needs to be collected and processed in a privacy-compliant manner.
 - The system must provide low latency for a smooth gaming experience.
 - Managed services can be used to handle automatic scaling.
-
-::: tip Global Up-to-Date Data
-Cloud spanner is the best option for an SQL based global records storage with a High Consistency SLO.
-:::
-
 ### TerramEarth
 #### Business Requirements
 - TerramEarth manufactures heavy equipment for the construction and mining industries.
@@ -339,9 +321,6 @@ Cloud spanner is the best option for an SQL based global records storage with a 
 - A robust data analytics solution is needed to derive insights from the sensor data
 - A migration plan is needed to move existing data and systems to the cloud.
 
-::: tip Cloud Dataproc
-Cloud Dataproc is a cloud-based platform for processing large data sets. It is designed to be scalable and efficient, and to handle data processing workloads of all types. Cloud Dataproc is based on the open-source Apache Hadoop and Apache Spark platforms, and provides a simple, cost-effective way to process and analyze data in the cloud.
-:::
 ### Data Management Business Requirements
 
 Business requirements help us know what platforms to connect and how they will work. Those same requirements will tell us what data is stored, how often, for how long, and who and what workloads have access to it.

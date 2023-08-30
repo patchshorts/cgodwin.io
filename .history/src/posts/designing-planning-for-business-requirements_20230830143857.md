@@ -28,17 +28,17 @@ tag:
 
 Business requirements dictate technical requirements implicitly. From statements like:
 
-### EHR HealthCare
+### Tristar Healthcare
 
 #### Business Requirements
 
-- EHR Healthcare provides B2B services to various entities, including vendors, insurance providers, and network directories.
-- Different entities will need to have varying levels of access to read and modify records and information. This implies the need for a robust access control system.
-- Given the nature of their work, EHR Healthcare needs to ensure that their services are always available. High availability is thus a core business requirement.
-- Some of the information that entities will access is regulated, so compliance with relevant data protection and privacy laws is a must.
-- Confidentiality is crucial since EHR Healthcare deals with sensitive health data.
-- The company wants to track the number and type of data accessed and gain insights into trends. This suggests a need for a comprehensive analytics solution.
-- Different entities involved possess varying levels of expertise, which might require the development of user-friendly interfaces or provision of training for the effective use of EHR Healthcare's systems.
+* B2B services to various entities, vendors, insurance providers, network directories, etc.
+* Different entities will need and currently have different access to read and change records and information.
+* Different entities are of different expertise
+* The services will always need to be up.
+* Some of the information entities will access is regulated.
+* Confidentiality
+* The data will track the number of times and the type of data accessed and gain insight into trends.
 
 ::: tip Minimal Effort Predictions
 Cloud AutoML is a cloud-based tool that allows developers to train machine learning models with minimal effort. It is designed to make the process of training machine learning models easier and faster. Cloud AutoML is based on the Google Cloud Platform and offers a variety of features that make it a powerful tool for machine learning.
@@ -46,50 +46,32 @@ Cloud AutoML is a cloud-based tool that allows developers to train machine learn
 
 #### Technical Requirements
 
-- A publicly exposed API or set of APIs needs to be developed to facilitate interactions between various entities.
-- Access restrictions must be applied at the API level to adhere to the varying access rights of different entities.
-- There will be involvement of legacy systems due to insurance entities. This implies the need for systems integration or migration strategies.
-- Redundant infrastructure is required to ensure high availability and continuous operation of the services.
-- Data lifecycle management must be implemented, considering regulation, insights, and access controls.
-- Given the nature of their work, EHR Healthcare needs to employ Cloud Machine Learning to build insight models faster than they can be planned and built. This indicates a requirement for machine learning capabilities in their infrastructure.
+* They will need to publicly expose an API or set of them.
+* Access will need to be restricted in the API
+* There will be legacy systems involved because of insurance entities.
+* Redundant infrastructure
+* Data Lifecycles will have to take into account regulation, insights, and access controls.
+* Cloud Machine Learning can build their insight models faster than they can be planned and built.
 
-### Mountkirk Games
+### Lord Byron MBA
 
 #### Business Requirements
 
-- Mountkirk Games develops and operates online video games. They need a robust and scalable solution to handle high scores and player achievements.
-- They aim to collect minimal user data for personalizing the gaming experience, complying with data privacy regulations.
-- The solution must be globally available to cater to their worldwide player base.
-- They seek low latency to ensure a smooth and responsive gaming experience.
-- Mountkirk Games expresses interest in Managed services which can automatically scale to meet demand.
+Acton MBA is a school which invites speakers to give presentations to students. These speakers are expensive so the school want's to maximize their investment.
 
-#### Technical Requirements
+They want to record and stream these presentations on a web portal and for live and post review by students with logins. They want to reduce latency. They want to monitor when the students interact with the videos and derive insights as to which videos people re-watch.
 
-- A globally available high score and achievement system is needed to keep track of player progress and milestones.
-- User data needs to be collected and processed in a manner that is privacy-compliant and secure.
-- The system must provide low latency to ensure a seamless gaming experience, which may require a global distribution of resources.
-- Managed services can be used to handle automatic scaling, reducing the overhead of manual resource management.
-
+Because these requirements are limited, we can only begin to speculate about what the technical requirements will be.
 
 ::: tip Business to Technical Requirements
 When designing a new project, while collecting and studying business requirements, you'll have to translate those into technical requirements. You'll find that there's not a one to one relationship. One technical solution may meet two business requirements. While one business requirement might encapsulate several solutions.
 :::
 
-### TerramEarth
+### LCSoft, Inc
 
 #### Business Requirements
 
-- TerramEarth manufactures heavy equipment for the construction and mining industries. They want to leverage their extensive collection of IoT sensor data to improve their products and provide better service to their customers.
-- They aim to move their existing on-premises data infrastructure to the cloud, indicating a need for a comprehensive and secure cloud migration strategy.
-
-#### Technical Requirements
-
-- IoT data needs to be ingested and processed in real-time. This involves creating a robust pipeline for data ingestion from various IoT devices, and real-time data processing capabilities.
-- A robust data analytics solution is needed to derive insights from the sensor data. This requires the deployment of big data analytics tools that can process and analyze large volumes of sensor data.
-- A migration plan is needed to move existing data and systems to the cloud.
-- This involves choosing the right cloud services for storage, computation, and
-  analytics, and planning the migration process to minimize downtime and data
-  loss.
+This company makes web based and app based phone games that must interact with a High Scoring system, collect minimal user data. They are global and so the user data they collect is regulated in some parts of the globe. Because it is a phone app they want latency to be as low as possible. They are interested in Managed services which can automatically scale. We can begin to anticipate where we want the high score data to end up but we cannot yet flush out all the requirements that can be known.
 
 ::: tip Extract, Transform, Load
 It is what it says. It takes large volumes of data from different sources. Transforms it to useable data, and makes available the results somewhere for retrieval by others.
@@ -97,18 +79,16 @@ It is what it says. It takes large volumes of data from different sources. Trans
 Cloud Datafusion handles these tasks for data scientists and makes it easy to transfer data between various data sources. It offers a simple drag-and-drop interface that makes it easy to connect to different data sources, transform and clean data, and load it into a centralized data warehouse. Cloud Datafusion is a cost-effective solution for businesses that need to quickly and easily integrate data from multiple sources.
 :::
 
-### Helicopter Racing League
+### Granger Excavation, Inc
 
 #### Business Requirements
-- The Helicopter Racing League (HRL) organizes and manages helicopter races worldwide. They aim to enhance the spectator experience by providing real-time telemetry and video feed for each race.
-- HRL wants to archive all races for future viewing on demand. This will allow fans and analysts to revisit past races at their convenience.
-- A robust data analytics solution is required to gain insights into viewer behavior and preferences. This will help HRL understand their audience better and make data-informed decisions to improve the viewer experience.
-- The solution must be highly available and scalable to handle spikes during race events. This is essential to ensure a seamless live streaming experience for viewers, regardless of the number of concurrent viewers.
-#### Technical Requirements
-- Real-time data processing capability is needed to handle race telemetry data. This involves setting up a system that can ingest and process high volumes of data in real time.
-- A scalable video streaming solution is needed to broadcast races worldwide. This system must be capable of handling high video quality and large volumes of concurrent viewers without degradation of service.
-- Archival storage is needed for storing race videos for on-demand viewing. This involves choosing a storage solution that is cost-effective, secure, and capable of storing large volumes of video data.
-- An analytics solution is needed for analyzing viewer behavior and preferences. This requires the deployment of data analytics tools that can process and analyze viewer data to provide actionable insights.
+
+Granger Excavation uses GPS coordinates to excavate and pave properties so new buildings can be built in areas that need topographical alterations.
+
+They constantly stream location data of their digging vehicles to an on-premises database for later analysis. Once streamed this data doesn't change. Each vehicle has a tablet running their custom application which allows them to excavate by GPS instead of staked out areas with construction ribbon which constantly has to be maintained.
+
+People combine the CAD Drawings with location coordinates and the tablet displays its own location within the perimeter. They want to migrate all of this to cloud.
+
 
 ## Application Design
 
@@ -272,76 +252,55 @@ Let's review the business needs of our use cases.
 
 ### EHR Healthcare
 #### Business Requirements
-- EHR Healthcare provides B2B services to various entities, vendors, insurance providers, network directories, etc.
-- Different entities have different access rights to read and edit records and information.
-- Different entities possess varying levels of expertise.
-- The services must always be up and running.
-- Some information accessed by entities is regulated.
-- Confidentiality is of utmost importance.
-- The company wishes to track the number and type of data accessed to gain insights into trends.
+EHR Healthcare provides B2B services to various entities, vendors, insurance providers, network directories, etc.
+Different entities have different access rights to read and edit records and information.
+Different entities possess varying levels of expertise.
+The services must always be up and running.
+Some information accessed by entities is regulated.
+Confidentiality is of utmost importance.
+The company wishes to track the number and type of data accessed to gain insights into trends.
 #### Technical Requirements
-- They will need to publicly expose an API or set of them.
-- Access restrictions must be applied at the API level.
-- There will be legacy systems involved because of insurance entities.
-- Infrastructure redundancy is necessary.
-- Data Lifecycles must consider regulation, insights, and access controls.
-- Cloud Machine Learning can be leveraged to build insight models faster than they can be planned and built.
-::: tip Cloud Dataflow
-Cloud dataflow is a cloud-based data processing service for batch and streaming data. It is a fully managed service that is designed to handle large data sets with high throughput and low latency. Cloud dataflow is a serverless platform that can scale automatically to meet the needs of your application. It is a cost-effective solution that allows you to pay only for the resources you use.
-:::
-
+They will need to publicly expose an API or set of them.
+Access restrictions must be applied at the API level.
+There will be legacy systems involved because of insurance entities.
+Infrastructure redundancy is necessary.
+Data Lifecycles must consider regulation, insights, and access controls.
+Cloud Machine Learning can be leveraged to build insight models faster than they can be planned and built.
 ### Helicopter Racing League
-#### Business Requirements
-- The Helicopter Racing League (HRL) organizes and manages helicopter races worldwide.
-- HRL wants to enhance the spectator experience by providing real-time telemetry and video feed for each race.
-- HRL wants to archive all races for future viewing on demand.
-- A robust data analytics solution is needed to gain insights into viewer behavior and preferences.
-- The solution must be highly available and scalable to handle spikes during race events.
-#### Technical Requirements
-- Real-time data processing capability is needed to handle race telemetry data.
-- A scalable video streaming solution is needed to broadcast races worldwide.
-- Archival storage is needed for storing race videos for on-demand viewing.
-- An analytics solution is needed for analyzing viewer behavior and preferences.
-- The solution must be highly available and scalable to handle traffic spikes during races.
-::: tip Service Level Objectives
-Business requirements typically demand these common type of SLOs.
+Business Requirements
+The Helicopter Racing League (HRL) organizes and manages helicopter races worldwide.
+HRL wants to enhance the spectator experience by providing real-time telemetry and video feed for each race.
+HRL wants to archive all races for future viewing on demand.
+A robust data analytics solution is needed to gain insights into viewer behavior and preferences.
+The solution must be highly available and scalable to handle spikes during race events.
+Technical Requirements
+Real-time data processing capability is needed to handle race telemetry data.
+A scalable video streaming solution is needed to broadcast races worldwide.
+Archival storage is needed for storing race videos for on-demand viewing.
+An analytics solution is needed for analyzing viewer behavior and preferences.
+The solution must be highly available and scalable to handle traffic spikes during races.
+Mountkirk Games
+Business Requirements
+Mountkirk Games develops and operates online video games.
+They need a solution to handle high scores and player achievements.
+They need to collect minimal user data for personalizing the gaming experience.
+The solution must be globally available and provide low latency.
+They are interested in Managed services which can automatically scale.
+Technical Requirements
+A globally available high score and achievement system is needed.
+User data needs to be collected and processed in a privacy-compliant manner.
+The system must provide low latency for a smooth gaming experience.
+Managed services can be used to handle automatic scaling.
+TerramEarth
+Business Requirements
+TerramEarth manufactures heavy equipment for the construction and mining industries.
+They want to leverage their vast trove of IoT sensor data to improve their products and provide better service to their customers.
+They want to move their existing on-premises data infrastructure to the cloud.
+Technical Requirements
+IoT data needs to be ingested and processed in real-time.
+A robust data analytics solution is needed to derive insights from the sensor data.
+A migration plan is needed to move existing data and systems to the cloud.
 
-* **High Availability SLO** Always accessible.
-* **Durability SLO** Always kept.
-* **Reliability SLO** Always meeting workloads.
-* **Scalability SLO** Always fitting its workloads.
-
-:::
-### Mountkirk Games
-#### Business Requirements
-- Mountkirk Games develops and operates online video games.
-- They need a solution to handle high scores and player achievements.
-- They need to collect minimal user data for personalizing the gaming experience.
-- The solution must be globally available and provide low latency.
-- They are interested in Managed services which can automatically scale.
-#### Technical Requirements
-- A globally available high score and achievement system is needed.
-- User data needs to be collected and processed in a privacy-compliant manner.
-- The system must provide low latency for a smooth gaming experience.
-- Managed services can be used to handle automatic scaling.
-
-::: tip Global Up-to-Date Data
-Cloud spanner is the best option for an SQL based global records storage with a High Consistency SLO.
-:::
-
-### TerramEarth
-#### Business Requirements
-- TerramEarth manufactures heavy equipment for the construction and mining industries.
-- They want to leverage their vast trove of IoT sensor data to improve their products and provide better service to their customers.
-- They want to move their existing on-premises data infrastructure to the cloud.
-#### Technical Requirements
-- IoT data needs to be ingested and processed in real-time.
-- A robust data analytics solution is needed to derive insights from the sensor data
-- A migration plan is needed to move existing data and systems to the cloud.
-
-::: tip Cloud Dataproc
-Cloud Dataproc is a cloud-based platform for processing large data sets. It is designed to be scalable and efficient, and to handle data processing workloads of all types. Cloud Dataproc is based on the open-source Apache Hadoop and Apache Spark platforms, and provides a simple, cost-effective way to process and analyze data in the cloud.
-:::
 ### Data Management Business Requirements
 
 Business requirements help us know what platforms to connect and how they will work. Those same requirements will tell us what data is stored, how often, for how long, and who and what workloads have access to it.
@@ -385,7 +344,7 @@ The main factors that affect volume are the number of data generators or sensors
 :::
 
 ## Compliance and Regulations
-Many businesses are under regulatory constraints. For example, "Mountkirk" receives payment via credit cards. So they must be PCI compliant and financial services laws apply their receiving payment.
+Many businesses are under regulatory constraints. For example, "LCSoft, Inc" receives payment via credit cards. So they must be PCI compliant and financial services laws apply their receiving payment.
 
 * Health Insurance Portability and Accountability Act (HIPAA) is United States legislation that provides data privacy and security regulations for safeguarding medical information.
 * General Data Protection Regulation (GDPR) a set of regulations that member states of the European Union must implement in order to protect the privacy of digital data.

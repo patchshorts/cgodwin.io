@@ -255,9 +255,9 @@ Memcached and redis are supported by Google's Cloud Memory Store.
 #### High Availability Storage Requirements in Case Studies
 
 * EHR HealthCare's active data available through the API will need to be highly durable and highly available at all times. Thier databases should take advantage of a managed database sorage solutions.
-* HRL needs highly durable storage for retaining permenant videos of races using `archive` class object storage. They also need always available storage for serving the most recent videos to audiences on their website. If transcoding is intense you might consider an extreme IOPS or SSD but a Regional SSD will have better availability. You might transcode locally and copy to an available drive.
-* Mountkirk will need durable and highly available Big Table as well as Firestore or Firebase Realtime Database. They can achieve this as these services are fully managed. If they required some durable volume space to share among gaming servers, highly durable Regional Balanced PDDS with backups. Their billing will be supported by *Cloud Spanner*.
-* TerramEarth will have highly available storage in BigQuery.
+* Lord Byron needs highly durable storage for retaining permenant videos of speakers using `archive` class object storage. They also need always available storage for serving the most recent videos to students on their website. If transcoding is intense you might consider an extreme IOPS or SSD but a Regional SSD will have better availability. You might transcode locally and copy to an available drive.
+* LCSoft will need durable and highly available Big Table as well as Firestore or Firebase Realtime Database. They can achieve this as these services are fully managed. If they required some durable volume space to share among gaming servers, highly durable Regional Balanced PDDS with backups. Their billing will be supported by *Cloud Spanner*.
+* Granger Excavation will have highly available storage in BigQuery.
 ### Network Availability
 Using premium tier networing and redunant networks, you can increase network availability. If one interconnect is down, often a second will provide protection against connectivity loss. Interconnects have a minimum of 10Gbps and traffic does not cross the public internet. When crossing the internet is not a problem, Google offers and HA VPN which has redundant connections and offers a 4 9s(99.99%) uptime SLA.
 
