@@ -94,3 +94,4 @@ This is a special message for the bold discoverers of hidden things, you're awes
 "of insanity, wanting to know reasons, knocking on a door. It opens. I've been knocking from the inside." - Rumi
 
 -->
+<a rel="me" style="display: none" href="https://mastodon.celticpaganism.org/@chris">Mastodon</a>

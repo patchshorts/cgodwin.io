@@ -3,7 +3,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://cgodwin-io-xu5obpctlq-uc.a.run.app/",
+  hostname: "https://cgodwin.io/",
 
   author: {
     name: "Christopher Godwin",
