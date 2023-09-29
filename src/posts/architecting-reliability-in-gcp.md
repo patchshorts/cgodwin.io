@@ -175,6 +175,7 @@ Incidents are major problems. Severe incidences are those that impact services w
 * Audit all actions taken into a log for the post-mortem analysis
 
 Incident management focuses on correcting the service-level disruption as soon as possible. There should be less concern with why it failed but how it will be fixed.
+Incident management focuses on correcting the service-level disruption as soon as possible. There should be less concern with why it failed but how it will be fixed.
 
 The post mortem should focus on a blameless cause of the incident. Blameless postmortems create less of an environment of fear which reduces cognition. Cognition is key to production solutions which fix future versions of this problem. In the spectrum of problems one can have there are patterns, unique to your app, that will form in incidents. If you catch and fix each one, 20% of all fixes will negate 80% of the errors. This zipfy statistic is what allows startups to launch on a startup amount of effort. As an application matures, engineers take on the remaining 80% of fixes which are one offs which apply to fringe cases that only affect 20% of the customers.
 
