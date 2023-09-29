@@ -1,6 +1,6 @@
 ---
 icon: cloud
-date: 2023-09-23
+date: 2023-09-24
 category:
   - Google Cloud
   - Technology
@@ -11,7 +11,7 @@ tag:
   - GCCPCA
 ---
 
-# Examining Technical Processes
+# Examining Technical Processes for GCP
 
 [[toc]]
 
