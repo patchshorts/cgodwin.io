@@ -20,7 +20,7 @@ sidebar: false
     <div class="input-box">
       <input v-model="userInput" @keyup.enter="sendMessage" placeholder="Type your message..." />
       <button @click="sendMessage">
-        <i class="fas fa-paper-plane"></i>
+        <HopeIcon icon="send" color="white" />
       </button>
     </div>
   </div>
@@ -100,7 +100,6 @@ export default {
   overflow-y: auto;
   padding: 10px 20px;
   background-color: #f5f5f5;
-  margin-bottom: 30px;
 }
 
 .input-box {
