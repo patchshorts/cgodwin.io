@@ -20,7 +20,7 @@ sidebar: false
     <div class="input-box">
       <input v-model="userInput" @keyup.enter="sendMessage" placeholder="Type your message..." />
       <button @click="sendMessage">
-        <HopeIcon icon="send" color="white" />
+        ✉️
       </button>
     </div>
   </div>
