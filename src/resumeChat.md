@@ -6,19 +6,17 @@ headerDepth: 1
 showInSidebar: false
 sidebar: false
 ---
-<template>
-  <div class="chat-container">
+<div class="chat-container">
     <div class="chat-box">
-      <div v-for="message in messages" :key="message.id" :class="`message ${message.type}`">
+        <div v-for="message in messages" :key="message.id" :class="`message ${message.type}`">
         {{ message.content }}
-      </div>
+        </div>
     </div>
     <div class="input-box">
-      <input v-model="userInput" @keyup.enter="sendMessage" placeholder="Type your message..." />
-      <button @click="sendMessage">Send</button>
+        <input v-model="userInput" @keyup.enter="sendMessage" placeholder="Type your message..." />
+        <button @click="sendMessage">Send</button>
     </div>
-  </div>
-</template>
+</div>
 
 <script>
 export default {
