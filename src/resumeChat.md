@@ -8,7 +8,7 @@ sidebar: false
 ---
   <div class="chat-container">
     <div class="chat-header">
-      Chat with GPT-4
+      Chat with Virtual Christopher Godwin
     </div>
     <div class="chat-box">
       <div v-for="message in messages" :key="message.id" :class="`message ${message.type}`">
