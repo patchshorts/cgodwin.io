@@ -81,8 +81,8 @@ export default {
 
 <style scoped>
 .chat-container {
-  width: 400px;
-  height: 500px;
+  min-width: 100%;
+  height: fit-content;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
