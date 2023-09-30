@@ -6,7 +6,6 @@ headerDepth: 1
 showInSidebar: false
 sidebar: false
 ---
-<template>
   <div class="chat-container">
     <div class="chat-header">
       Chat with GPT-4
@@ -25,7 +24,6 @@ sidebar: false
       </button>
     </div>
   </div>
-</template>
 
 <script>
 export default {
@@ -102,6 +100,7 @@ export default {
   overflow-y: auto;
   padding: 10px 20px;
   background-color: #f5f5f5;
+  margin-bottom: 30px;
 }
 
 .input-box {
