@@ -6,24 +6,24 @@ headerDepth: 1
 showInSidebar: false
 sidebar: false
 ---
-  <div class="chat-container">
-    <div class="chat-header">
-      Chat with Virtual Christopher Godwin
-    </div>
-    <div class="chat-box">
-      <div v-for="message in messages" :key="message.id" :class="`message ${message.type}`">
-        <div class="message-content">
-          {{ message.content }}
-        </div>
+<div class="chat-container">
+  <div class="chat-header">
+    Chat with Virtual Christopher Godwin
+  </div>
+  <div class="chat-box">
+    <div v-for="message in messages" :key="message.id" :class="`message ${message.type}`">
+      <div class="message-content">
+        {{ message.content }}
       </div>
     </div>
-    <div class="input-box">
-      <input v-model="userInput" @keyup.enter="sendMessage" placeholder="Type your message..." />
-      <button @click="sendMessage">
-        ✉️
-      </button>
-    </div>
   </div>
+  <div class="input-box">
+    <input v-model="userInput" @keyup.enter="sendMessage" placeholder="Type your message..." />
+    <button @click="sendMessage">
+      ✉️
+    </button>
+  </div>
+</div>
 
 <script>
 export default {
@@ -33,6 +33,11 @@ export default {
       messages: [],
       messageId: 0,
     };
+  },
+  computed: {
+    previousConversation() {
+      return this.messages.map(message => `${message.type === 'user' ? "user's question" : "Christopher Godwin's answer"}: ${message.content}`).join('\n');
+    }
   },
   methods: {
     sendMessage() {
@@ -51,14 +56,17 @@ export default {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ prompt: this.userInput }),
+        body: JSON.stringify({
+          question: this.userInput,
+          previous_conversation: this.previousConversation
+        }),
       })
         .then((response) => response.json())
         .then((data) => {
           // Add GPT-4's response to chat
           this.messages.push({
             id: this.messageId++,
-            content: data,
+            content: data.response,
             type: 'bot',
           });
         })
