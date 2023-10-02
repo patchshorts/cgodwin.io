@@ -174,7 +174,7 @@ Wooer, Connectedness, Achiever, Analytical, Relator, Leadership, Teamwork, Comma
 """
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://cgodwin.io"}})  # Only allow requests from cgodwin.io
 
 def embed_chain():
     import os
