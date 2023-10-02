@@ -110,6 +110,7 @@ export default {
             type: 'bot',
           });
           this.isTyping = false;
+          this.scrollToBottom();
           this.fetchSuggestions();
         })
         .catch((error) => {
@@ -120,6 +121,7 @@ export default {
             content: 'Error communicating with the backend.',
             type: 'error',
           });
+          this.scrollToBottom();
         });
 
       this.userInput = '';
