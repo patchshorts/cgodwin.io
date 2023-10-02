@@ -53,7 +53,7 @@ export default {
     }
   },
   mounted() {
-    fetch('http://backend.cgodwin.io:8080/suggestions', {
+    fetch('https://backend.cgodwin.io:8080/suggestions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
