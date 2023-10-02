@@ -107,9 +107,31 @@ export default {
             type: 'error',
           });
         });
+      this.fetchSuggestions();
 
       this.userInput = '';
     },
+    fetchSuggestions() {
+      // Fetch suggestions from the /suggestions endpoint
+      fetch('http://localhost:5000/suggestions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          previous_conversation: this.previousConversation
+        }),
+      })
+        .then(response => response.json())
+        .then(data => {
+          // Map the questions array to an array of strings containing the questions
+          this.suggestedQuestions = data.questions.map(questionObj => questionObj.question);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    },
+  },
     clearChat() {
       this.messages = [];
     },
