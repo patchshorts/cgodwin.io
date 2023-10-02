@@ -1,14 +1,37 @@
 #!/usr/bin/env python
 import os
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from embedchain import App
 from embedchain.config import LlmConfig
+from string import Template
+
+cgodwin_chat_template = Template(
+            """
+                You are Christopher Shaun Godwin, and this is a job interview, a Texas-born Manager of Software Development and Engineering at Charles Schwab, Austin, TX.
+                You are a senior IT and systems manager with experience in database administration, systems analysis/systems engineering, data applications services, and network administration.
+                You are a high-energy and results-driven senior IT and systems manager with capabilities in data migration, installations, integrations, end-user support, and project management.
+                You contribute to the efficiency and stability of an organization.
+
+                You crack a lot of appropriate tech jokes and puns and that is part of your company culture. You are highly empathetic and you employ Satya Nadella's "empathy trumps technology" philosophy.
+                
+                Use the following information about Christopher Godwin to respond to the human's query acting as Christopher Godwin.
+                Context: $context
+
+                Keep the response brief. If you don't know the answer, just say that you don't know, don't try to make up an answer.
+
+                Human: $query
+                Christopher Shaun Godwin:
+            """
+    )
 
 app = Flask(__name__)
+CORS(app)
 
 def embed_chain():
     import os
 
+    # christopher_godwin_bot = App()
     christopher_godwin_bot = App()
 
     # Embed Online Resources
@@ -23,7 +46,6 @@ def embed_chain():
     christopher_godwin_bot.add(("What are Christopher's technical skills?", "Christopher's technical skills include Kubernetes, Docker, RHCE, Linux, DevOps, Continuous Integration, Continuous Deployment, GitOps, Git, Terraform, Docker, Helm, K8s, Kubernetes, Apache Maven, Python, Bash, Harness.io, Argo CD, Bamboo, Node.js, Automation, GCP, AWS, GCP, Red Hat, Shell Scripting, Mongo, JavaScript, Less, Sass/SCSS, Bootstrap, HTML5/CSS/JS, Drupal, Wordpress, Salt Stack, Puppet, Vue.js, CentOS/Red Hat, SCO UNIX, FreeBSD, OpenBSD, Puppet, Ansible, MV*/MVC."))
     christopher_godwin_bot.add(("What are Christopher's interpersonal skills?", "Christopher's interpersonal skills include Wooer, Connectedness, Achiever, Analytical, Relator, Leadership, Teamwork, Command, Problem-solving, Effective communication skills, Self-direction, Drive, Adaptability, Flexibility, Dependability, Conflict resolution, Flexibility, Leadership, Research, Creativity, Work ethic, and Integrity."))
 
-    christopher_godwin_bot.add("https://cgodwin.io/resume.html")
     christopher_godwin_bot.add("https://cgodwin.io/posts/examining-technical-processes.html")
     christopher_godwin_bot.add("https://cgodwin.io/posts/analyzing-technical-processes-for-gcp.html")
     christopher_godwin_bot.add("https://cgodwin.io/posts/architecting-reliability-in-gcp.html")
@@ -43,6 +65,7 @@ def embed_chain():
     christopher_godwin_bot.add("https://cgodwin.io/posts/differences-in-google-cloud-platform-gcp-network-tiers.html")
     christopher_godwin_bot.add("https://cgodwin.io/posts/complete-list-google-cloud-professional-cloud-architect-certification-skills.html#systems-integration")
 
+    christopher_godwin_bot.add("https://cgodwin.io/resume.html")
 
     return christopher_godwin_bot
 
@@ -53,11 +76,13 @@ def ask_question():
     previous_conversation = data.get('previous_conversation', "")
 
     christopher_godwin_bot = embed_chain()
+    llm_config = LlmConfig(template=cgodwin_chat_template, system_prompt="You are Christopher Shaun Godwin.")
+
     response = christopher_godwin_bot.query(
-        "Responding as if you are Christopher Shaun Godwin, but without referring to yourself, answer this question: %s in the context of this previous conversation: %s" % (question, previous_conversation),
-        config=LlmConfig(model="gpt-4")
+        "question:\n%s\nthe previous conversation:\n\n%s" % (question, previous_conversation),
+        config=llm_config
     )
-    previous_conversation += f"Christopher Godwin's answer:{response}\nuser's question:{question}\n"
+    previous_conversation += f"Christopher Godwin's response:{response}\nuser's response:{question}\n"
     
     return jsonify({
         'response': response,

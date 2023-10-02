@@ -18,12 +18,16 @@ sidebar: false
     </div>
   </div>
   <div class="input-box">
+    <button @click="clearChat" title="Clear Chat">
+      🧹
+    </button>
     <input v-model="userInput" @keyup.enter="sendMessage" placeholder="Type your message..." />
     <button @click="sendMessage">
       ✉️
     </button>
   </div>
 </div>
+
 
 <script>
 export default {
@@ -81,6 +85,9 @@ export default {
 
       this.userInput = '';
     },
+    clearChat() {
+      this.messages = [];
+    }
   },
 };
 </script>
@@ -130,9 +137,10 @@ export default {
   color: white;
   border: none;
   padding: 10px 15px;
-  border-radius: 0 20px 20px 0;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-right: 5px; /* Added margin for spacing between buttons */
 }
 
 .input-box button:hover {
