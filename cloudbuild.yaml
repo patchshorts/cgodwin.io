@@ -22,7 +22,7 @@ steps:
       - '--no-cache'
       - '-t'
       - '$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/backend:$COMMIT_SHA'
-      - .
+      - ./backend
       - '-f'
       - backend/Dockerfile
     id: Build-backend
