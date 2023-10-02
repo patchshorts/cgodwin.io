@@ -51,7 +51,7 @@ steps:
       - run
       - services
       - update
-      - $_SERVICE_NAME
+      - $_SERVICE_NAME-backend
       - '--platform=managed'
       - '--image=$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/backend:$COMMIT_SHA'
       - >-
