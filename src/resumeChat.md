@@ -80,7 +80,7 @@ export default {
         type: 'user',
       });
 
-      fetch('http://backend.cgodwin.io:8080/ask', {
+      fetch('https://backend.cgodwin.io:8080/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ export default {
       this.userInput = '';
     },
     fetchSuggestions() {
-      fetch('http://backend.cgodwin.io:8080/suggestions', {
+      fetch('https://backend.cgodwin.io:8080/suggestions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
