@@ -67,25 +67,22 @@ resume_text = """
 Curriculum Vitae
 Christopher Godwin
 
-Certifications
-Charles Schwab, Austin, TX
-International Game Technologies PLC (THE LOTTERY), Austin, Texas
-Fire, Well & Tree, Austin, Texas
-Sundaram, LLC, Austin, Texas
-#Christopher Shaun Godwin
-#Summary
-A high-energy and results-driven senior IT and systems manager with demonstrated experience in database administration, systems analysis/systems engineering, data applications services, and network administration.
+Certifications: Google Cloud Professional Cloud Architect (GCCPCA), Red Hat Certified Engineer (RHCE - RHEL 6)
+Current Employer: Charles Schwab, Austin, TX
+Previous Employer: International Game Technologies PLC (THE LOTTERY), Austin, Texas
+Self Employment DBA: Fire, Well & Tree, Austin, Texas
+Eldest Employer: Sundaram, LLC, Austin, Texas
+
+Christopher Shaun Godwin is A high-energy and results-driven senior devops and cloud system engineer & engineering manager with demonstrated experience in database administration, systems analysis/systems engineering, data applications services, and network administration.
 
 Established capabilities in data migration, installations, integrations, end-user support, and project management. Utilizes outstanding technical knowledge to collaborate on solutions and process implementations. An analytical and industrious top performer who contributes to the efficiency and stability of an organization.
 
 #Experience
 My Certification Image
 
-#Certifications
-Google Certified Cloud Professional Cloud Architect(GCCPCA)
-Red Hat Certified Engineer (RHCE)
-#Charles Schwab, Austin, TX
-#Manager of Software Development and Engineering, January 2020-Present
+
+
+Manager of Software Development and Engineering, January 2020-Present at Charles Schwab, Austin, TX:
 Produced highly usable and scalable web software solutions using advanced development technologies
 Implemented application deployment architecture for fortune 500 level enterprise scalability
 Increased Communication and decreased blockers at various organizational levels.
@@ -106,8 +103,9 @@ Setup CD Infrastructure with Harness
 Pipeline Migration
 Rapid Learning
 Process Improvement
-#International Game Technologies PLC (THE LOTTERY), Austin, Texas
-#Sr. Site Reliability Engineer, 2015-2020
+
+
+Sr. Site Reliability Engineer, 2015-2020 at International Game Technologies PLC (THE LOTTERY), Austin, Texas:
 Utilized Vagrant and Docker to mirror entire production stacks within laptop for developers, pushing updates to their environments seamlessly.
 Oversaw and approved half of all team merge requests for DevOps code.
 Conducted automation of Jenkins job creation for several multi-environment systems totaling in hundreds.
@@ -148,22 +146,10 @@ Built core systems and business infrastructure and internal implementation proce
 Reduced deployment time creating custom deployment playbooks, scripts, and modules.
 Set up bonding on several Linux networks.
 Deployed elastic OpenStack cloud for one customer and Foreman for another running PXE boot process and AOE (ATA over Ethernet frame).
-#Sundaram, LLC, Austin, Texas
-#Development Guru, 2011-2013
-Built responsive web applications using sensible technologies.
-Worked in an agile environment with identical production and development systems. Developed changes in code for continuous implementation and QA.
-Managed 20 different web applications of different volumes, with some built and others maintained.
-Coordinated design and development effort to create one final seamless product.
-Solved and overcame unique programming challenges.
-Designed, built, and maintained websites using authoring and scripting languages, content creation tools, management tools, and digital media.
-Conferred with management and development teams to prioritize needs, resolve conflicts, develop content criteria, and choose solutions.
-Evaluated code to ensure validity, structuring, meeting of industry standards, and compatible with browsers, devices, and operating systems.
-Maintained understanding of current web technologies and programming practices through continuing education, reading, and participation in professional conferences, workshops, and groups.
-Analyzed user needs to determine technical requirements.
-Developed and validated test routines and schedules to ensure test cases mimicked external interfaces and addressed all browser and device types.
-Crated databases that supported web applications and web sites.
-Collaborated with management and users to develop e-commerce strategies and integrate these strategies with web sites.
+
 #Professional Development
+Google™ Cloud Professional Cloud Architect (GCCPCA), 2021
+Red Hat™ Certified Engineer (RHCE - RHEL 6), 2010
 PuppetLabs™ training, Business Networking Groups, years of freelancing for professionals.
 
 #TECHNICAL SKILLS

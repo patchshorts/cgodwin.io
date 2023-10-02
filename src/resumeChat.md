@@ -44,7 +44,11 @@ export default {
       userInput: '',
       messages: [],
       messageId: 0,
-      suggestedQuestions: [],
+      suggestedQuestions: [
+        'What company culture do you fit with?',
+        'Give me a self summary.',
+        'What is unique to your worldview?'
+      ],
     };
   },
   computed: {
@@ -97,6 +101,7 @@ export default {
             content: data.response,
             type: 'bot',
           });
+          this.fetchSuggestions();
         })
         .catch((error) => {
           console.error('Error:', error);
@@ -106,7 +111,6 @@ export default {
             type: 'error',
           });
         });
-      this.fetchSuggestions();
 
       this.userInput = '';
     },
