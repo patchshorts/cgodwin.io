@@ -17,17 +17,21 @@ sidebar: false
       </div>
     </div>
   </div>
+  <div class="suggested-questions">
+    <button v-for="(question, index) in suggestedQuestions" :key="index" @click="useSuggestion(question)">
+      {{ question }}
+    </button>
+  </div>
   <div class="input-box">
-    <button @click="clearChat" title="Clear Chat">
+    <button class="right" @click="clearChat" title="Clear Chat">
       🧹
     </button>
     <input v-model="userInput" @keyup.enter="sendMessage" placeholder="Type your message..." />
-    <button @click="sendMessage">
+    <button class="right" @click="sendMessage">
       ✉️
     </button>
   </div>
 </div>
-
 
 <script>
 export default {
@@ -36,6 +40,7 @@ export default {
       userInput: '',
       messages: [],
       messageId: 0,
+      suggestedQuestions: [],
     };
   },
   computed: {
@@ -43,18 +48,34 @@ export default {
       return this.messages.map(message => `${message.type === 'user' ? "user's question" : "Christopher Godwin's answer"}: ${message.content}`).join('\n');
     }
   },
+  mounted() {
+    fetch('http://localhost:5000/suggestions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        previous_conversation: this.previousConversation
+      }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        this.suggestedQuestions = data.suggested_questions;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  },
   methods: {
     sendMessage() {
       if (this.userInput.trim() === '') return;
 
-      // Add user's message to chat
       this.messages.push({
         id: this.messageId++,
         content: this.userInput,
         type: 'user',
       });
 
-      // Send POST request to Flask backend
       fetch('http://localhost:5000/ask', {
         method: 'POST',
         headers: {
@@ -67,7 +88,6 @@ export default {
       })
         .then((response) => response.json())
         .then((data) => {
-          // Add GPT-4's response to chat
           this.messages.push({
             id: this.messageId++,
             content: data.response,
@@ -87,10 +107,25 @@ export default {
     },
     clearChat() {
       this.messages = [];
-    }
+    },
+    useSuggestion(question) {
+      this.userInput = question;
+      this.sendMessage();
+    },
   },
 };
 </script>
+
+<style scoped>
+/* ... your existing styles ... */
+.suggested-questions {
+  margin: 1em 0;
+}
+.suggested-questions button {
+  margin-right: 0.5em;
+}
+</style>
+
 
 <style scoped>
 .chat-container {
@@ -132,12 +167,23 @@ export default {
   outline: none;
 }
 
-.input-box button {
+.input-box button.left {
   background-color: #4CAF50;
   color: white;
   border: none;
   padding: 10px 15px;
-  border-radius: 20px;
+  border-radius: 20px 0px 0px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 5px; /* Added margin for spacing between buttons */
+}
+
+.input-box button.right {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0px 20px 20px 0px;
   cursor: pointer;
   transition: background-color 0.3s;
   margin-right: 5px; /* Added margin for spacing between buttons */
