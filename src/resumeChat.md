@@ -84,6 +84,7 @@ export default {
   },
   methods: {
     sendMessage() {
+      this.playNotificationSound();
       if (this.userInput.trim() === '') return;
       this.isTyping = true;
       this.messages.push({
@@ -111,6 +112,7 @@ export default {
           });
           this.isTyping = false;
           this.scrollToBottom();
+          this.playNotificationSound();
           this.fetchSuggestions();
         })
         .catch((error) => {
@@ -126,6 +128,10 @@ export default {
 
       this.userInput = '';
       this.scrollToBottom();
+    },
+    playNotificationSound() {
+      const audio = new Audio('https://cgodwin.io/toys/notif.mp3');
+      audio.play();
     },
     scrollToBottom() {
       this.$nextTick(() => {
