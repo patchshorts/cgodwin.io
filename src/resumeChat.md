@@ -22,8 +22,7 @@ sidebar: false
       v-for="(question, index) in suggestedQuestions"
       :key="index"
       @click="useSuggestion(question)"
-      :data-tooltip="question"  /* Add data-tooltip attribute */
-    >
+      :data-tooltip="question" >
       {{ question }}
     </button>
   </div>
