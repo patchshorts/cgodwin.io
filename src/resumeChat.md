@@ -15,6 +15,11 @@ sidebar: false
       <div class="message-content">
         {{ message.content }}
       </div>
+      <div v-if="isTyping" class="message bot">  <!-- Typing indicator -->
+        <div class="message-content">
+          Christopher Godwin is typing...
+        </div>
+      </div>
     </div>
   </div>
   <div class="suggested-questions">
@@ -51,6 +56,7 @@ export default {
         "Share a tough challenge you've faced at work and how you handled it.",
         "Describe a time you explained a complex topic to someone unfamiliar. How did you ensure clarity?",
       ],
+      isTyping: false,
     };
   },
   computed: {
@@ -79,7 +85,7 @@ export default {
   methods: {
     sendMessage() {
       if (this.userInput.trim() === '') return;
-
+      this.isTyping = true;
       this.messages.push({
         id: this.messageId++,
         content: this.userInput,
@@ -103,9 +109,11 @@ export default {
             content: data.response,
             type: 'bot',
           });
+          this.isTyping = false;
           this.fetchSuggestions();
         })
         .catch((error) => {
+          this.isTyping = false;
           console.error('Error:', error);
           this.messages.push({
             id: this.messageId++,
@@ -115,6 +123,13 @@ export default {
         });
 
       this.userInput = '';
+      this.scrollToBottom();
+    },
+    scrollToBottom() {
+      this.$nextTick(() => {
+        const chatBox = document.querySelector('.chat-box');
+        chatBox.scrollTop = chatBox.scrollHeight;
+      });
     },
     fetchSuggestions() {
       fetch('https://backend.cgodwin.io/suggestions', {
