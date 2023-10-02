@@ -15,10 +15,10 @@ sidebar: false
       <div class="message-content">
         {{ message.content }}
       </div>
-      <div v-if="isTyping" class="message bot">  <!-- Typing indicator -->
-        <div class="message-content">
-          Christopher Godwin is typing...
-        </div>
+    </div>
+    <div v-if="isTyping" class="message bot">  <!-- Typing indicator -->
+      <div class="message-content">
+        Christopher Godwin is typing...
       </div>
     </div>
   </div>
