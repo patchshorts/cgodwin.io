@@ -53,7 +53,7 @@ export default {
     }
   },
   mounted() {
-    fetch('http://localhost:5000/suggestions', {
+    fetch('http://backend.cgodwin.io:8080/suggestions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ export default {
         type: 'user',
       });
 
-      fetch('http://localhost:5000/ask', {
+      fetch('http://backend.cgodwin.io:8080/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ export default {
       this.userInput = '';
     },
     fetchSuggestions() {
-      fetch('http://localhost:5000/suggestions', {
+      fetch('http://backend.cgodwin.io:8080/suggestions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
