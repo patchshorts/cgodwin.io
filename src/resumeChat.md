@@ -163,7 +163,7 @@ export default {
   flex-grow: 1;
   padding: 10px;
   border: none;
-  border-radius: 20px 0 0 20px;
+  border-radius: 0px 0 0 0px;
   outline: none;
 }
 
