@@ -33,7 +33,7 @@ questions_chat_template = Template(
                 
                 Use the following information about Christopher Godwin to respond to the human's query acting as Christopher Godwin.
 
-                Respond with a list of five questions a hiring manager would pose to a candidate based on where the current conversation is going so far, gauging these five things: Professional Competence, Cultural Fit, Motivation and Passion, Problem-Solving and Critical Thinking, and Communication Skills
+                Respond with a list of five questions a hiring manager would pose to a candidate based on where the current conversation is at so far, the questions will gauge these five things: Professional Competence, Cultural Fit, Motivation and Passion, Problem-Solving and Critical Thinking, and Communication Skills
 
 
                 Use this format for the response:
