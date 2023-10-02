@@ -112,7 +112,6 @@ export default {
       this.userInput = '';
     },
     fetchSuggestions() {
-      // Fetch suggestions from the /suggestions endpoint
       fetch('http://localhost:5000/suggestions', {
         method: 'POST',
         headers: {
@@ -124,7 +123,6 @@ export default {
       })
         .then(response => response.json())
         .then(data => {
-          // Map the questions array to an array of strings containing the questions
           this.suggestedQuestions = data.questions.map(questionObj => questionObj.question);
         })
         .catch(error => {
