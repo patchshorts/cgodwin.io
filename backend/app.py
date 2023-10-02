@@ -35,6 +35,15 @@ questions_chat_template = Template(
 
                 Respond with a list of the top five things a hiring manager would want to know based on where the current conversation is going so far.
 
+                I want to gauge these five things:
+
+                1. Professional Competence
+                2. Cultural Fit
+                3. Motivation and Passion
+                4. Problem-Solving and Critical Thinking
+                5. Communication Skills
+
+                
                 Use this format for the response:
 
                 {
