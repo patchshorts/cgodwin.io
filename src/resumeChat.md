@@ -23,7 +23,7 @@ sidebar: false
     </button>
   </div>
   <div class="input-box">
-    <button class="right" @click="clearChat" title="Clear Chat">
+    <button class="left" @click="clearChat" title="Clear Chat">
       🧹
     </button>
     <input v-model="userInput" @keyup.enter="sendMessage" placeholder="Type your message..." />
