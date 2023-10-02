@@ -258,4 +258,5 @@ def ask_suggestions():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))  # Default to port 5000 if PORT is not set
-    app.run(debug=True, port=port)
+    port = bool(str(os.environ.get("DEBUG", False)))  # Default to false
+    app.run(debug=debug, port=port)
