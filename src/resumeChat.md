@@ -18,7 +18,12 @@ sidebar: false
     </div>
   </div>
   <div class="suggested-questions">
-    <button v-for="(question, index) in suggestedQuestions" :key="index" @click="useSuggestion(question)">
+ <button
+      v-for="(question, index) in suggestedQuestions"
+      :key="index"
+      @click="useSuggestion(question)"
+      :data-tooltip="question"  /* Add data-tooltip attribute */
+    >
       {{ question }}
     </button>
   </div>
@@ -145,6 +150,39 @@ export default {
   border: 0px 0px 1px 0px solid #4caf50;
 }
 
+.suggested-questions button {
+  background-color: #4CAF50;  /* Green background */
+  color: white;  /* White text */
+  border: none;  /* No border */
+  padding: 10px 15px;  /* Padding */
+  margin: 5px 5px;  /* Margin for spacing between buttons */
+  border-radius: 20px;  /* Rounded corners */
+  cursor: pointer;  /* Hand cursor on hover */
+  transition: background-color 0.3s;  /* Transition effect on hover */
+  white-space: nowrap;  /* Prevent text wrapping */
+  overflow: hidden;  /* Hide overflow */
+  text-overflow: ellipsis;  /* Show ellipsis for overflow */
+  max-width: 200px;  /* Set max width */
+  position: relative;  /* Relative positioning for tooltip */
+}
+
+.suggested-questions button:hover {
+  background-color: #45a049;  /* Darker green background on hover */
+}
+
+.suggested-questions button:hover::after {
+    content: attr(data-tooltip);  /* Get tooltip text from data-tooltip attribute */
+    position: absolute;  /* Absolute positioning */
+    left: 100%;  /* Position to the right of the button */
+    top: 0;  /* Align with the top of the button */
+    white-space: pre;  /* Preserve whitespace in the tooltip */
+    background-color: #4CAF50;  /* Background color */
+    color: white;  /* Text color */
+    padding: 10px;  /* Padding */
+    border-radius: 5px;  /* Rounded corners */
+    z-index: 1;  /* Bring to the front */
+}
+
 .chat-header {
   background-color: #4CAF50;
   color: white;
@@ -182,7 +220,7 @@ export default {
   border-radius: 20px 0px 0px 20px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-right: 5px; /* Added margin for spacing between buttons */
+  margin-left: 5px; /* Added margin for spacing between buttons */
 }
 
 .input-box button.right {
