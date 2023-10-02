@@ -33,17 +33,9 @@ questions_chat_template = Template(
                 
                 Use the following information about Christopher Godwin to respond to the human's query acting as Christopher Godwin.
 
-                Respond with a list of the top five things a hiring manager would want to know based on where the current conversation is going so far.
+                Respond with a list of five questions a hiring manager would pose to a candidate based on where the current conversation is going so far, gauging these five things: Professional Competence, Cultural Fit, Motivation and Passion, Problem-Solving and Critical Thinking, and Communication Skills
 
-                I want to gauge these five things:
 
-                1. Professional Competence
-                2. Cultural Fit
-                3. Motivation and Passion
-                4. Problem-Solving and Critical Thinking
-                5. Communication Skills
-
-                
                 Use this format for the response:
 
                 {
