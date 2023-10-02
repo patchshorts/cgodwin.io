@@ -45,9 +45,11 @@ export default {
       messages: [],
       messageId: 0,
       suggestedQuestions: [
-        'What company culture do you fit with?',
-        'Give me a self summary.',
-        'What is unique to your worldview?'
+        "Tell me about a project where you used Kubernetes and its impact.",
+        "What's your ideal work culture, and how have you contributed to team culture before?",
+        "How does the role of Manager fit your career goals?",
+        "Share a tough challenge you've faced at work and how you handled it.",
+        "Describe a time you explained a complex topic to someone unfamiliar. How did you ensure clarity?",
       ],
     };
   },
