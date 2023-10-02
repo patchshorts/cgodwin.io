@@ -129,7 +129,6 @@ export default {
           console.error('Error:', error);
         });
     },
-  },
     clearChat() {
       this.messages = [];
     },
