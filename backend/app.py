@@ -32,28 +32,27 @@ questions_chat_template = Template(
                 You are a Director of a Devops and Automation Department hiring for the position of Lead or Manager.
                 
                 Use the following information about Christopher Godwin to respond to the human's query acting as Christopher Godwin.
-                Context: 
 
-                Respond with a list of five and only five relevant sample interview questions encapsulated in json based on the context of the interview so far.
+                Respond with a list of the top five things a hiring manager would want to know based on where the current conversation is going so far.
 
                 Use this format for the response:
 
                 {
                     "questions": [
                         {
-                        "question": "Can you describe your experience in implementing application deployment architecture for enterprise scalability?"
+                        "question": "<question1>"
                         },
                         {
-                        "question": "How have you contributed to improving the technical and professional skills of your team?"
+                        "question": "<question2>"
                         },
                         {
-                        "question": "Can you provide an example of a project where you implemented CI/CD processes and automation?"
+                        "question": "<question3>"
                         },
                         {
-                        "question": "How have you handled the deployment of applications to multiple jurisdictions and projects?"
+                        "question": "<question4>"
                         },
                         {
-                        "question": "Can you describe your experience in setting up and configuring automated systems using tools like Puppet and Ansible?"
+                        "question": "<question5>"
                         }
                     ]
                 }
