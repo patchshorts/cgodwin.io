@@ -60,7 +60,7 @@ export default {
     })
       .then(response => response.json())
       .then(data => {
-        this.suggestedQuestions = data.suggested_questions;
+        this.suggestedQuestions = data.questions.map(questionObj => questionObj.question);
       })
       .catch(error => {
         console.error('Error:', error);
@@ -136,6 +136,13 @@ export default {
   overflow: hidden;
   font-family: 'Arial', sans-serif;
   position: relative;
+}
+
+.suggested-questions{
+  padding: 10px;
+  background-color: white;
+  margin: 0px;
+  border: 0px 0px 1px 0px solid #4caf50;
 }
 
 .chat-header {

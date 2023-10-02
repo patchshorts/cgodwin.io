@@ -34,17 +34,39 @@ questions_chat_template = Template(
                 Use the following information about Christopher Godwin to respond to the human's query acting as Christopher Godwin.
                 Context: 
 
-                Respond with a list of sample interview questions encapsulated in json based on the context of the interview so far.
+                Respond with a list of five and only five relevant sample interview questions encapsulated in json based on the context of the interview so far.
+
+                Use this format for the response:
+
+                {
+                    "questions": [
+                        {
+                        "question": "Can you describe your experience in implementing application deployment architecture for enterprise scalability?"
+                        },
+                        {
+                        "question": "How have you contributed to improving the technical and professional skills of your team?"
+                        },
+                        {
+                        "question": "Can you provide an example of a project where you implemented CI/CD processes and automation?"
+                        },
+                        {
+                        "question": "How have you handled the deployment of applications to multiple jurisdictions and projects?"
+                        },
+                        {
+                        "question": "Can you describe your experience in setting up and configuring automated systems using tools like Puppet and Ansible?"
+                        }
+                    ]
+                }
 
                 Context: $context
+                Query: $query
             """
     )
 
 resume_text = """
 Curriculum Vitae
 Christopher Godwin
-About 4 min
-On This Page
+
 Certifications
 Charles Schwab, Austin, TX
 International Game Technologies PLC (THE LOTTERY), Austin, Texas
@@ -228,7 +250,11 @@ def ask_suggestions():
         "resume: %s\n\nprevious_conversation: %s" % (resume_text, previous_conversation),
         config=llm_config
     )    
-    return jsonify(json.loads(response))
+    try:
+        return jsonify(json.loads(response))
+    except json.decoder.JSONDecodeError:
+        print(response)
+        return jsonify("{}")
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))  # Default to port 5000 if PORT is not set
