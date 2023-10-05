@@ -20,6 +20,8 @@ export default {
     script.src = '/toys/lib/libv86.js'
     document.head.appendChild(script)
     // Create a new instance of the V86 emulator when the component is mounted
+
+    await new Promise(resolve => script.onload = resolve);
     const emulator = new V86({
       wasm_path: '/toys/lib/v86.wasm',
       memory_size: 512 * 1024 * 1024,
