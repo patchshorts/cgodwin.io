@@ -7,16 +7,6 @@ showInSidebar: false
 sidebar: false
 ---
 
-<script>
-export default {
-    mounted() {
-        let script = document.createElement('script')
-        script.src = '/toys/lib/libv86.js'
-        document.head.appendChild(script)
-    }
-}
-</script>
-
 <div id="emulator-container">
     <div id="screen_container"></div>
 </div>
@@ -26,6 +16,9 @@ export default {
 export default {
   name: 'Emulator',
   mounted() {
+    let script = document.createElement('script')
+    script.src = '/toys/lib/libv86.js'
+    document.head.appendChild(script)
     // Create a new instance of the V86 emulator when the component is mounted
     const emulator = new V86({
       wasm_path: '/toys/lib/v86.wasm',
