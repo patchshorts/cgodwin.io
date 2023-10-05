@@ -7,7 +7,15 @@ showInSidebar: false
 sidebar: false
 ---
 
-<script src="/toys/lib/libv86.js"></script>
+<script>
+export default {
+    mounted() {
+        let script = document.createElement('script')
+        script.src = '/toys/lib/libv86.js'
+        document.head.appendChild(script)
+    }
+}
+</script>
 
 <div id="emulator-container">
     <div id="screen_container"></div>
