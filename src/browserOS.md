@@ -6,9 +6,6 @@ headerDepth: 1
 showInSidebar: false
 sidebar: false
 ---
-<!doctype html>
-<title>Debian</title>
-
 <script src="/toys/lib/libv86.js"></script>
 <script>
 "use strict";
