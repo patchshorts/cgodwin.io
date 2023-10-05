@@ -6,13 +6,14 @@ headerDepth: 1
 showInSidebar: false
 sidebar: false
 ---
+
+<script src="/toys/lib/libv86.js"></script>
+
 <div id="emulator-container">
     <div id="screen_container"></div>
 </div>
 
 <script>
-// Import the v86 library
-import '/toys/lib/libv86.js';
 
 export default {
   name: 'Emulator',
