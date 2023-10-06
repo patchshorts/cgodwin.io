@@ -1,3 +1,4 @@
+steps:
   # Existing steps for building, pushing, and deploying the src image
   - name: gcr.io/cloud-builders/docker
     args:
