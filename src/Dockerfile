@@ -4,8 +4,6 @@ FROM node:16-alpine AS build
 WORKDIR /app
 # Copy source code to working directory
 ADD src /app
-# Install http-server globally
-RUN yarn global add http-server
 # Install dependencies
 RUN yarn install --production
 # Build the project
