@@ -11,9 +11,6 @@ RUN ./node_modules/.bin/vuepress build . --clean-cache
 # Copy toys directory and download & extract os.tar.gz
 COPY toys .vuepress/dist/toys
 RUN cd .vuepress/dist/toys/ && \
-    wget https://github.com/patchshorts/cgodwin.io/raw/develop/toys/os.tar.gz -O os.tar.gz && \
-    tar -xzvf os.tar.gz && \
-    find . && \
     cd ../../../
 
 # ---- Serve Stage ----
