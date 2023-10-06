@@ -1,4 +1,22 @@
 steps:
+  # Step to install git-lfs
+  - name: 'gcr.io/cloud-builders/git'
+    id: Install-git-lfs
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        apt-get update &&
+        apt-get install -y git-lfs &&
+        git lfs install
+
+  # Step to fetch git-lfs objects
+  - name: 'gcr.io/cloud-builders/git'
+    id: Fetch-git-lfs
+    args:
+      - lfs
+      - fetch
+
   # Existing steps for building, pushing, and deploying the src image
   - name: gcr.io/cloud-builders/docker
     args:
@@ -10,11 +28,13 @@ steps:
       - '-f'
       - src/Dockerfile
     id: Build-src
+
   - name: gcr.io/cloud-builders/docker
     args:
       - push
       - '$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA'
     id: Push-src
+  
   # New steps for building and pushing the backend image
   - name: gcr.io/cloud-builders/docker
     args:
@@ -26,11 +46,13 @@ steps:
       - '-f'
       - backend/Dockerfile
     id: Build-backend
+  
   - name: gcr.io/cloud-builders/docker
     args:
       - push
       - '$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/backend:$COMMIT_SHA'
     id: Push-backend
+  
   # Existing step for deploying the src image
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
     args:
@@ -46,6 +68,7 @@ steps:
       - '--quiet'
     id: Deploy-Frontend
     entrypoint: gcloud
+  
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
     args:
       - run
@@ -60,11 +83,14 @@ steps:
       - '--quiet'
     id: Deploy-Backend
     entrypoint: gcloud
+
 images:
   - '$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA'
   - '$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/backend:$COMMIT_SHA'  # Add the backend image to the images section
+
 options:
   substitutionOption: ALLOW_LOOSE
+
 substitutions:
   _DEPLOY_REGION: us-central1
   _GCR_HOSTNAME: us.gcr.io
@@ -72,6 +98,7 @@ substitutions:
   _SERVICE_NAME: cgodwin-io
   _LABELS: gcb-trigger-id=b14fb0f3-004c-4823-ac3b-da94b51f2878
   _TRIGGER_ID: b14fb0f3-004c-4823-ac3b-da94b51f2878
+
 tags:
   - gcp-cloud-build-deploy-cloud-run
   - gcp-cloud-build-deploy-cloud-run-managed
