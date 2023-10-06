@@ -1,28 +1,3 @@
-steps:
-  # Step to install git-lfs
-  - name: 'gcr.io/cloud-builders/git'
-    id: Install-git-lfs
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
-        apt-get update &&
-        apt-get install -y git-lfs &&
-        git lfs install
-        git fls
-
-  # Step to fetch git-lfs objects
-  - name: 'gcr.io/cloud-builders/git'
-    id: Fetch-git-lfs
-    args:
-- '-c'
-      - |
-        apt-get update &&
-        apt-get install -y git-lfs &&
-        git lfs install
-        git lfs
-      - fetch
-
   # Existing steps for building, pushing, and deploying the src image
   - name: gcr.io/cloud-builders/docker
     args:
