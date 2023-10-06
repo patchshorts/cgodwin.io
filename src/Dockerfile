@@ -20,11 +20,15 @@ RUN cd .vuepress/dist/toys/ && \
 
 # ---- Serve Stage ----
 FROM nginx:alpine
+ENV PORT=8080
+ENV NGINX_PORT=${PORT:-8080}
+ENV NGINX_HOST=cgodwin.io
 # Set working directory
 WORKDIR /usr/share/nginx/html
 # Copy built files from build stage to serve stage
 COPY --from=build /app/.vuepress/dist .
 # Expose port 80 for Nginx
-EXPOSE 80
+RUN echo "listen       \${NGINX_PORT};" > /etc/nginx/templates/default.conf.template
+EXPOSE ${PORT}
 # The default command will run Nginx in the foreground
 CMD ["nginx", "-g", "daemon off;"]
