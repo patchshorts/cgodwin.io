@@ -27,7 +27,8 @@ ENV NGINX_HOST=cgodwin.io
 WORKDIR /usr/share/nginx/html
 # Copy built files from build stage to serve stage
 COPY --from=build /app/.vuepress/dist .
-RUN echo "server {" > /etc/nginx/templates/default.conf.template && \
+RUN mkdir -p /etc/nginx/templates && \
+    echo "server {" > /etc/nginx/templates/default.conf.template && \
     echo "    listen       \${PORT};" >> /etc/nginx/templates/default.conf.template && \
     echo "    location / {" >> /etc/nginx/templates/default.conf.template && \
     echo "        root /usr/share/nginx/html;" >> /etc/nginx/templates/default.conf.template && \
