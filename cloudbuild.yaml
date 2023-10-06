@@ -9,12 +9,18 @@ steps:
         apt-get update &&
         apt-get install -y git-lfs &&
         git lfs install
+        git fls
 
   # Step to fetch git-lfs objects
   - name: 'gcr.io/cloud-builders/git'
     id: Fetch-git-lfs
     args:
-      - lfs
+- '-c'
+      - |
+        apt-get update &&
+        apt-get install -y git-lfs &&
+        git lfs install
+        git lfs
       - fetch
 
   # Existing steps for building, pushing, and deploying the src image
