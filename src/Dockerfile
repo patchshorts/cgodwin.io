@@ -28,7 +28,8 @@ WORKDIR /usr/share/nginx/html
 # Copy built files from build stage to serve stage
 COPY --from=build /app/.vuepress/dist .
 # Expose port 80 for Nginx
-RUN echo "listen       \${NGINX_PORT};" > /etc/nginx/templates/default.conf.template
+RUN mkdir -p /etc/nginx/templates/; \
+    echo "listen       \${NGINX_PORT};" > /etc/nginx/templates/default.conf.template
 EXPOSE ${PORT}
 # The default command will run Nginx in the foreground
 CMD ["nginx", "-g", "daemon off;"]
