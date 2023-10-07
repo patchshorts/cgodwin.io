@@ -15,6 +15,7 @@ window.onload = function()
         initial_state: { url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-state-base.bin" },
         filesystem: { baseurl: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-9p-rootfs-flat/" },
         autostart: true,
+        cmdline: [ '/usr/games/nsnake' ].join(" "),
     });
 };
 </script>
