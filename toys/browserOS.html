@@ -14,9 +14,11 @@ window.onload = function()
         screen_container: document.getElementById("screen_container"),
         initial_state: { url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-state-base.bin" },
         filesystem: { baseurl: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-9p-rootfs-flat/" },
-        autostart: true,
-        cmdline: [ '/usr/games/nsnake' ].join(" "),
+        autostart: true
     });
+
+
+    
     var state;
     document.getElementById("run").onclick = function() {
     if (emulator.is_running()) {
@@ -29,7 +31,16 @@ window.onload = function()
 };
 
     document.getElementById("reset").onclick = function() {
-        emulator.reset();
+        emulator.close();
+        var emulator = new V86({
+            wasm_path: "/toys/lib/v86.wasm",
+            memory_size: 512 * 1024 * 1024,
+            vga_memory_size: 8 * 1024 * 1024,
+            screen_container: document.getElementById("screen_container"),
+            initial_state: { url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-state-base.bin" },
+            filesystem: { baseurl: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-9p-rootfs-flat/" },
+            autostart: true,
+        });
         this.blur();
     };
 
