@@ -7,31 +7,47 @@
 
 window.onload = function()
 {
-    var emulator = new V86({
-        wasm_path: "/toys/lib/v86.wasm",
-        memory_size: 512 * 1024 * 1024,
-        vga_memory_size: 8 * 1024 * 1024,
-        screen_container: document.getElementById("screen_container"),
-        // initial_state: { url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-state-base.bin" },
-        filesystem: { baseurl: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-9p-rootfs-flat/" },
-        autostart: true,
-    });
+        var emulator = new V86({
+            wasm_path: "/toys/lib/v86.wasm",
+            memory_size: 512 * 1024 * 1024,
+            vga_memory_size: 8 * 1024 * 1024,
+            screen_container: document.getElementById("screen_container"),
+            // initial_state: { url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-state-base.bin" },
+            filesystem: { baseurl: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-9p-rootfs-flat/" },
+            autostart: true,
+        });
 
+        setTimeout(function() {
+            typeCommand("/usr/games/nsnake\n");
+        }, 60000); // Wait 60 seconds for system to boot
 
+        function typeCommand(command) {
+            for (let i = 0; i < command.length; i++) {
+                let char = command[i];
 
-    var state;
-    document.getElementById("run").onclick = function() {
-    if (emulator.is_running()) {
-        this.value = "Resume";
-        emulator.stop();
-    } else {
-        this.value = "Pause";
-        emulator.run();
-    }
-};
+                if (char === '\n') {
+                    emulator.keyboard_send_key(0x1C); // 'Enter' key down
+                    emulator.keyboard_send_key(0x9C); // 'Enter' key up
+                } else {
+                    let code = char.charCodeAt(0);
+                    emulator.keyboard_send_text(char); // Send the character
+                }
+            }
+        }
+    
+        var state;
+        document.getElementById("run").onclick = function() {
+            if (emulator.is_running()) {
+                this.value = "Resume";
+                emulator.stop();
+            } else {
+                this.value = "Pause";
+                emulator.run();
+            }
+        };
 
     document.getElementById("reset").onclick = function() {
-        emulator.close();
+        emulator.stop();
         var emulator = new V86({
             wasm_path: "/toys/lib/v86.wasm",
             memory_size: 512 * 1024 * 1024,
