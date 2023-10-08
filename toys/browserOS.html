@@ -15,11 +15,13 @@ window.onload = function()
             initial_state: { url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-state-base.bin" },
             filesystem: { baseurl: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-9p-rootfs-flat/" },
             autostart: true,
+            network_relay_url: "ws://relayy.cgodwin.io:8001/socket",
+            network_card: "ne2k",
         });
 
         setTimeout(function() {
             typeCommand("/usr/games/nsnake\n");
-        }, 60000); // Wait 60 seconds for system to boot
+        }, 5000); // Wait 60 seconds for system to boot
 
         function typeCommand(command) {
             for (let i = 0; i < command.length; i++) {
