@@ -21,6 +21,7 @@ window.onload = function()
 
         setTimeout(function() {
             typeCommand("/usr/games/nsnake\n\n");
+            typeCommand("\n\n");
         }, 5000); // Wait 60 seconds for system to boot
 
         function typeCommand(command) {
@@ -30,6 +31,7 @@ window.onload = function()
                 if (char === '\n') {
                     emulator.keyboard_send_key(0x1C); // 'Enter' key down
                     emulator.keyboard_send_key(0x9C); // 'Enter' key up
+                    emulator.keyboard_send_text("\n"); // 'Enter' key up
                 } else {
                     let code = char.charCodeAt(0);
                     emulator.keyboard_send_text(char); // Send the character
