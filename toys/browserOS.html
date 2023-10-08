@@ -17,8 +17,164 @@ window.onload = function()
         autostart: true,
         cmdline: [ '/usr/games/nsnake' ].join(" "),
     });
+    var state;
+    document.getElementById("run").onclick = function() {
+    if (emulator.is_running()) {
+        this.value = "Resume";
+        emulator.stop();
+    } else {
+        this.value = "Pause";
+        emulator.run();
+    }
 };
+
+    document.getElementById("reset").onclick = function() {
+        emulator.reset();
+        this.blur();
+    };
+
+    document.getElementById("exit").onclick = function() {
+        emulator.stop();
+        window.close(); // Might not work in all browsers due to security reasons
+    };
+
+    document.getElementById("ctrlaltdel").onclick = function() {
+        emulator.keyboard_send_scancodes([
+            0x1D, // CTRL press
+            0x38, // ALT press
+            0x53, // DEL press
+            0xD3, // DEL release
+            0xB8, // ALT release
+            0x9D  // CTRL release
+        ]);
+        this.blur();
+    };
+
+    document.getElementById("alttab").onclick = function() {
+        emulator.keyboard_send_scancodes([
+            0x38, // ALT press
+            0x0F, // TAB press
+            0x8F, // TAB release
+            0xB8  // ALT release
+        ]);
+        this.blur();
+    };
+
+    document.getElementById("save_restore").onclick = async function()
+    {
+        var button = this;
+
+        if(state)
+        {
+            button.value = "Save state";
+            await emulator.restore_state(state);
+            state = undefined;
+        }
+        else
+        {
+            const new_state = await emulator.save_state();
+            console.log("Saved state of " + new_state.byteLength + " bytes");
+            button.value = "Restore state";
+            state = new_state;
+        }
+
+        button.blur();
+    };
+
+    document.getElementById("save_file").onclick = async function()
+    {
+        const new_state = await emulator.save_state();
+        var a = document.createElement("a");
+        a.download = "v86state.bin";
+        a.href = window.URL.createObjectURL(new Blob([new_state]));
+        a.dataset.downloadurl = "application/octet-stream:" + a.download + ":" + a.href;
+        a.click();
+
+        this.blur();
+    };
+
+    document.getElementById("restore_file").onchange = function()
+    {
+        if(this.files.length)
+        {
+            var filereader = new FileReader();
+            emulator.stop();
+
+            filereader.onload = async function(e)
+            {
+                await emulator.restore_state(e.target.result);
+                emulator.run();
+            };
+
+            filereader.readAsArrayBuffer(this.files[0]);
+
+            this.value = "";
+        }
+
+        this.blur();
+    };
+    document.getElementById("fullscreen").onclick = function() {
+        const screen = document.getElementById("screen_container");
+        if (screen.requestFullscreen) {
+            screen.requestFullscreen();
+        } else if (screen.mozRequestFullScreen) { /* Firefox */
+            screen.mozRequestFullScreen();
+        } else if (screen.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+            screen.webkitRequestFullscreen();
+        } else if (screen.msRequestFullscreen) { /* IE/Edge */
+            screen.msRequestFullscreen();
+        }
+        this.blur();
+    };
+
+    document.getElementById("mute").onclick = function() {
+        if (emulator.is_muted()) {
+            this.value = "Mute";
+            emulator.unmute();
+        } else {
+            this.value = "Unmute";
+            emulator.mute();
+        }
+    };
+
+    document.getElementById("scale").onchange = function() {
+        const scale_factor = parseFloat(this.value);
+        emulator.screen_set_scale_factor(scale_factor);
+    };
+    };
 </script>
+
+
+<div id="runtime_options" style="display: none">
+    <input type="button" value="Pause" id="run">
+    <input type="button" value="Reset" id="reset">
+    <input type="button" value="Exit" id="exit">
+    <input type="button" value="Send Ctrl-Alt-Del" id="ctrlaltdel">
+    <input type="button" value="Send Alt-Tab" id="alttab">
+    <input type="button" value="Get floppy image" id="get_fda_image">
+    <input type="button" value="Get second floppy image" id="get_fdb_image">
+    <input type="button" value="Get hard disk image" id="get_hda_image">
+    <input type="button" value="Get second hard disk image" id="get_hdb_image">
+    <input type="button" value="Get cdrom image" id="get_cdrom_image">
+    <input type="button" value="Insert floppy image" id="change_fda_image">
+    <input type="button" value="Save State" id="save_state">
+    <input type="button" value="Load State" id="load_state"> <input type="file" style="display: none" id="load_state_input">
+    <input type="button" value="Memory Dump" id="memory_dump">
+    <input type="button" value="Capture network traffic" id="capture_network_traffic" title="In wireshark: file -> import from hex -> tick direction indication, timestamp %s.%f">
+    <input type="button" value="Disable mouse" id="toggle_mouse">
+    <input type="button" value="Lock mouse" id="lock_mouse">
+    <input type="button" value="Go fullscreen" id="fullscreen">
+    <input type="button" value="Take screenshot" id="take_screenshot">
+    <input type="button" value="Mute" id="mute">
+
+    <label>
+        Scale:
+        <input type="number" min="0.25" step="0.25" value="1.0" id="scale" style="width: 50px">
+    </label>
+
+    <br><br>
+</div>
+
 
 <!-- A minimal structure for the ScreenAdapter defined in browser/screen.js -->
 <div id="screen_container">
