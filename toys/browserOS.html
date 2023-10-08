@@ -28,8 +28,9 @@ window.onload = function()
             for (let i = 0; i < command.length; i++) {
                 let char = command[i];
 
-                if (char === '\n') {
+                if (char == "\\") {
                     emulator.keyboard_send_text(10); // 'Enter' key up
+                    break
                 } else {
                     let code = char.charCodeAt(0);
                     emulator.keyboard_send_text(char); // Send the character
