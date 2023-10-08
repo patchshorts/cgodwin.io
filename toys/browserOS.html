@@ -141,7 +141,47 @@ window.onload = function()
         const scale_factor = parseFloat(this.value);
         emulator.screen_set_scale_factor(scale_factor);
     };
+    document.getElementById("get_fda_image").onclick = function() {
+        var fda_blob = emulator.get_floppy_disk_controller().buffer;
+        if (fda_blob) {
+            downloadBlob(fda_blob, "fda_image.img");
+        }
     };
+
+    document.getElementById("change_fda_image").onclick = function() {
+        var input = document.createElement('input');
+        input.type = 'file';
+        input.onchange = function(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                emulator.get_floppy_disk_controller().set_drive(e.target.result);
+            };
+            reader.readAsArrayBuffer(file);
+        };
+        input.click();
+    };
+
+    document.getElementById("memory_dump").onclick = function() {
+        var memory_blob = emulator.dump_memory();
+        downloadBlob(memory_blob, "memory_dump.bin");
+    };
+
+    document.getElementById("take_screenshot").onclick = function() {
+        var canvas = document.querySelector("#screen_container canvas");
+        var a = document.createElement("a");
+        a.download = "screenshot.png";
+        a.href = canvas.toDataURL("image/png");
+        a.click();
+    };
+};
+function downloadBlob(blob, filename) {
+    var a = document.createElement("a");
+    a.download = filename;
+    a.href = window.URL.createObjectURL(blob);
+    a.dataset.downloadurl = ["application/octet-stream", a.download, a.href].join(':');
+    a.click();
+}
 </script>
 
 
