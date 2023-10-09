@@ -12,10 +12,10 @@ window.onload = function()
             memory_size: 512 * 1024 * 1024,
             vga_memory_size: 8 * 1024 * 1024,
             screen_container: document.getElementById("screen_container"),
-            initial_state: { url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-state-base.bin" },
-            filesystem: { baseurl: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-9p-rootfs-flat/" },
+            // initial_state: { url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/FiwixOS-state-base.bin" },
+            cdrom: { url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/FiwixOS-3.2-i386.iso" },
             autostart: true,
-            network_relay_url: "ws://relayy.cgodwin.io",
+            network_relay_url: "ws://relay.cgodwin.io",
             network_card: "ne2k",
         });
 
