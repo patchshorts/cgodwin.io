@@ -9,8 +9,8 @@ window.onload = function()
 {
         var emulator = new V86({
             wasm_path: "/toys/lib/v86.wasm",
-            bios: { url: "/toys/libseabios.bin" },
-            vga_bios: { url: "vgabios.bin" },
+            bios: { url: "/toys/lib/seabios.bin" },
+            vga_bios: { url: "/toys/lib/vgabios.bin" },
             memory_size: 512 * 1024 * 1024,
             vga_memory_size: 8 * 1024 * 1024,
             screen_container: document.getElementById("screen_container"),
@@ -19,7 +19,7 @@ window.onload = function()
             hda: {
                 url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/FiwixOS-3.2-i386.img",
                 size: 1 * 1024 * 1024 * 1024,
-                async: true,
+                async: false,
 
             },
             autostart: true,
