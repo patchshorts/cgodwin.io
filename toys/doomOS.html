@@ -14,12 +14,11 @@ window.onload = function()
             memory_size: 512 * 1024 * 1024,
             vga_memory_size: 8 * 1024 * 1024,
             screen_container: document.getElementById("screen_container"),
-            initial_state: { url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/FiwixOS-state-base.bin" },
 
             hda: {
                 url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/FiwixOS-3.2-i386.img",
                 size: 1 * 1024 * 1024 * 1024,
-                async: false,
+                async: true,
 
             },
             autostart: true,
