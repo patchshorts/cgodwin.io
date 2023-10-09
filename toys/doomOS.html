@@ -1,5 +1,5 @@
 <!doctype html>
-<title>ResumeOS</title>
+<title>BrowserOS</title>
 
 <script src="/toys/lib/libv86-debug.js"></script>
 <script>
@@ -9,25 +9,18 @@ window.onload = function()
 {
         var emulator = new V86({
             wasm_path: "/toys/lib/v86.wasm",
-            bios: { url: "/toys/lib/seabios.bin" },
-            vga_bios: { url: "/toys/lib/vgabios.bin" },
             memory_size: 512 * 1024 * 1024,
             vga_memory_size: 8 * 1024 * 1024,
             screen_container: document.getElementById("screen_container"),
-
-            hda: {
-                url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/FiwixOS-3.2-i386.img",
-                size: 1 * 1024 * 1024 * 1024,
-                async: true,
-
-            },
+            initial_state: { url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-state-base.bin" },
+            filesystem: { baseurl: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-9p-rootfs-flat/" },
             autostart: true,
-            network_relay_url: "ws://relay.cgodwin.io",
+            network_relay_url: "ws://relayy.cgodwin.io",
             network_card: "ne2k",
         });
 
         setTimeout(function() {
-            typeCommand("/usr/games/lsdoom && clear\n");
+            typeCommand("/usr/games/prboom-plus -file /usr/share/games/doom/doom1.wad\n");
         }, 5000); // Wait 60 seconds for system to boot
 
         function typeCommand(command) {
