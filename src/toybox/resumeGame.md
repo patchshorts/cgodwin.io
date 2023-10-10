@@ -1,6 +1,6 @@
 ---
-title: Resume Chat
-icon: chat
+title: Resume Game
+icon: snake
 article: false
 headerDepth: 1
 showInSidebar: false
@@ -8,7 +8,7 @@ sidebar: false
 ---
 
   <div id="game-container">
-    <canvas ref="gameCanvas" width="800" height="600"></canvas>
+    <canvas ref="gameCanvas" width="100%" height="600"></canvas>
   </div>
 
 
@@ -25,7 +25,7 @@ export default {
         position: { x: 200, y: 200 },
         text: 'Hello',
       },
-      canvasSize: { width: 800, height: 600 },
+      // canvasSize: { width: 800, height: 600 },
     };
   },
   mounted() {
@@ -105,11 +105,13 @@ export default {
 
 <style scoped>
 #game-container {
-    display: flex;
+  max-width: 100%;
+  max-height: 100vh;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    align-items: center; */
+    /* height: 100vh; */
+    /* background-color: #f0f0f0; */
 }
 
 canvas {
