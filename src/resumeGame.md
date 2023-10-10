@@ -6,44 +6,6 @@ headerDepth: 1
 showInSidebar: false
 sidebar: false
 ---
-<!DOCTYPE html>
-<title>Multi-level Game</title>
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #000;
-}
-
-.game-level {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-/* Add specific styles for each level if needed */
-#level-1 {
-    /* Specific styles for Pong Game */
-    background-color: red; /* Example style */
-}
-
-#level-2 {
-    display: none;
-    /* Specific styles for Gorilla Game */
-    background-color: green; /* Example style */
-}
-
-#level-3 {
-    display: none;
-    /* Specific styles for Snake Game */
-    background-color: blue; /* Example style */
-}
-</style>
-
 <div id="level-1" class="game-level">
     <!-- Pong Game Elements -->
     PONG GAME
@@ -208,5 +170,39 @@ Math.clamp = function(value, min, max) {
 }
 canvas {
     border: 1px solid #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+.game-level {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* Add specific styles for each level if needed */
+#level-1 {
+    /* Specific styles for Pong Game */
+    background-color: red; /* Example style */
+}
+
+#level-2 {
+    display: none;
+    /* Specific styles for Gorilla Game */
+    background-color: green; /* Example style */
+}
+
+#level-3 {
+    display: none;
+    /* Specific styles for Snake Game */
+    background-color: blue; /* Example style */
 }
 </style>
