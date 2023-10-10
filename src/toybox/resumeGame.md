@@ -47,12 +47,23 @@ export default {
       // Add a new segment to the snake body at the new position
       this.snake.body.unshift({ x: this.snake.position.x, y: this.snake.position.y });
 
-      // Check if the snake has eaten the food
-      if (this.snake.position.x === this.food.position.x && this.snake.position.y === this.food.position.y) {
-        // Update food text or position as necessary
-        this.food.position = { x: Math.floor(Math.random() * this.canvasSize.width), y: Math.floor(Math.random() * this.canvasSize.height) };
+      // Check if the snake has collided with the food
+      const foodBoundingBox = {
+        x: this.food.position.x,
+        y: this.food.position.y - 10, // Subtract 10 to account for font size
+        width: this.ctx.measureText(this.food.text).width,
+        height: 10, // Use fixed height of 10 for font size
+      };
+      if (
+        this.snake.position.x >= foodBoundingBox.x &&
+        this.snake.position.x <= foodBoundingBox.x + foodBoundingBox.width &&
+        this.snake.position.y >= foodBoundingBox.y &&
+        this.snake.position.y <= foodBoundingBox.y + foodBoundingBox.height
+      ) {
+        // Generate a new food object
+        this.generateFood();
       } else {
-        // If the snake hasn't eaten the food, remove the last segment of the snake body to maintain length
+        // If the snake hasn't collided with the food, remove the last segment of the snake body to maintain length
         this.snake.body.pop();
       }
 
@@ -67,6 +78,7 @@ export default {
         this.resetGame();
       }
 
+      // Draw game
       this.draw();
     },
     draw() {
