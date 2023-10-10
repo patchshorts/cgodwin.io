@@ -8,7 +8,7 @@ sidebar: false
 ---
 
   <div id="game-container">
-    <canvas ref="gameCanvas" width="100%" height="600"></canvas>
+    <canvas ref="gameCanvas" width="600" height="600"></canvas>
   </div>
 
 
@@ -25,7 +25,7 @@ export default {
         position: { x: 200, y: 200 },
         text: 'Hello',
       },
-      // canvasSize: { width: 800, height: 600 },
+      canvasSize: { width: 600, height: 600 },
     };
   },
   mounted() {
