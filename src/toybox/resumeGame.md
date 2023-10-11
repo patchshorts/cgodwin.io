@@ -46,7 +46,10 @@ export default {
 
       // Add a new segment to the snake body at the new position
       this.snake.body.unshift({ x: this.snake.position.x, y: this.snake.position.y });
-
+      if (!this.ctx) {
+        const canvas = this.$refs.gameCanvas;
+        this.ctx = canvas.getContext('2d');
+      }
       // Check if the snake has collided with the food
       const foodBoundingBox = {
         x: this.food.position.x,
@@ -83,7 +86,9 @@ export default {
     },
     draw() {
       const canvas = this.$refs.gameCanvas;
-      const ctx = canvas.getContext('2d');
+      if (!this.ctx) {
+        this.ctx = canvas.getContext('2d');
+      }
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       // Draw snake
