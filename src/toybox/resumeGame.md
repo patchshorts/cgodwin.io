@@ -18,13 +18,44 @@ export default {
     return {
       snake: {
         position: { x: 100, y: 50 },
-        body: [{ x: 100, y: 50 }, { x: 90, y: 50 }, { x: 80, y: 50 }],
+        body: [{ x: 100, y: 50 }, { x: 90, y: 50 }, { x: 80, y: 50 }, { x: 70, y: 50 }],
         direction: 'RIGHT',
       },
       food: {
-        position: { x: 200, y: 200 },
-        text: 'Hello',
+        nuggets: [
+          {
+              "position": { "x": 346, "y": 338 },
+              "text": "Support Technician, Suddenlink"
+          },
+          {
+              "position": { "x": 424, "y": 281 },
+              "text": "Unix Administrator, NLI"
+          },
+          {
+              "position": { "x": 413, "y": 402 },
+              "text": "Linux Engineer III, Rackspace"
+          },
+          {
+              "position": { "x": 167, "y": 256 },
+              "text": "CTO, HostUOnline, Inc"
+          },
+          {
+              "position": { "x": 139, "y": 375 },
+              "text": "Development Guru, Sundaram"
+          },
+          {
+              "position": { "x": 285, "y": 494 },
+              "text": "Sr. SRE, International Game Tech"
+          },
+          {
+              "position": { "x": 112, "y": 499 },
+              "text": "Manager SRE / DevSecOps, Charles Schwab"
+          }
+      ],
+       count: 0
       },
+      growthCounter: 0, // new counter for snake growth
+      growthRate: 5, // new growth rate for snake
       canvasSize: { width: 600, height: 600 },
     };
   },
@@ -37,6 +68,9 @@ export default {
     window.removeEventListener('keydown', this.handleKeyDown);
   },
   methods: {
+    generateFood() {
+      this.food.count = this.food.count + 1
+    },
     updateGame() {
       // Update snake position based on direction
       if(this.snake.direction === 'RIGHT') this.snake.position.x += 10;
@@ -46,15 +80,16 @@ export default {
 
       // Add a new segment to the snake body at the new position
       this.snake.body.unshift({ x: this.snake.position.x, y: this.snake.position.y });
+
       if (!this.ctx) {
         const canvas = this.$refs.gameCanvas;
         this.ctx = canvas.getContext('2d');
       }
       // Check if the snake has collided with the food
       const foodBoundingBox = {
-        x: this.food.position.x,
-        y: this.food.position.y - 10, // Subtract 10 to account for font size
-        width: this.ctx.measureText(this.food.text).width,
+        x: this.food.nuggets[this.food.count].position.x,
+        y: this.food.nuggets[this.food.count].position.y - 10, // Subtract 10 to account for font size
+        width: this.ctx.measureText(this.food.nuggets[this.food.count].text).width,
         height: 10, // Use fixed height of 10 for font size
       };
       if (
@@ -86,9 +121,7 @@ export default {
     },
     draw() {
       const canvas = this.$refs.gameCanvas;
-      if (!this.ctx) {
-        this.ctx = canvas.getContext('2d');
-      }
+      const ctx = canvas.getContext('2d');
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       // Draw snake
@@ -99,7 +132,7 @@ export default {
       
       // Draw food
       ctx.fillStyle = 'red';
-      ctx.fillText(this.food.text, this.food.position.x, this.food.position.y);
+      ctx.fillText(this.food.nuggets[this.food.count].text, this.food.nuggets[this.food.count].position.x, this.food.nuggets[this.food.count].position.y);
     },
     handleKeyDown(event) {
       const { key } = event;
@@ -112,8 +145,8 @@ export default {
       this.snake.position = { x: 100, y: 50 };
       this.snake.body = [{ x: 100, y: 50 }, { x: 90, y: 50 }, { x: 80, y: 50 }];
       this.snake.direction = 'RIGHT';
-      this.food.position = { x: 200, y: 200 };
-      this.food.text = 'Hello';
+      this.food.nuggets[this.food.count].position = { x: 200, y: 200 };
+      this.food.count = 0;
     },
   },
 };
