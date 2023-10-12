@@ -98,7 +98,7 @@ Drove testing patterns, code patterns and service relationship
 Drove security first planning schemes which became the Cloud culture
 #Sr. Site Reliability Engineer, January 2020-July 2022
 Contract to hire
-Continuous Integration Bamboo which is terrible for Continuous Integration
+Continuous Integration Github Actions
 Continuous Deployment with Harness.io
 Pipeline Migration
 Rapid Learning
