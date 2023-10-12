@@ -118,11 +118,11 @@ export default {
         id: this.messageId++,
         content: this.userInput,
         type: 'user',
-      }).then((data) => {
-            this.previous_conversation += "You: %s\n\n" % (this.greeting);
-            console.log(this.previous_conversation)
       });
 
+      this.previous_conversation += "You: %s\n\n" % (this.greeting);
+      console.log(this.previous_conversation)
+      
       fetch('https://backend.cgodwin.io/ask', {
         method: 'POST',
         headers: {
