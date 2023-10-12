@@ -78,7 +78,7 @@ export default {
     this.drawSubtext();
     this.drawInstructions();
     window.addEventListener('keydown', this.handleKeyDownOnce);
-    canvas.addEventListener('touchstart', this.handleTouchStart);
+    canvas.addEventListener('touchstart', this.handleTouchStartOnce);
     canvas.addEventListener('touchmove', this.handleTouchMove);
   },
   beforeDestroy() {
@@ -86,8 +86,22 @@ export default {
     window.removeEventListener('keydown', this.handleKeyDown);
   },
   methods: {
+    handleTouchStartOnce(event) {
+      event.preventDefault();
+      this.startGame();
+      window.removeEventListener('keydown', this.handleKeyDownOnce);
+      window.removeEventListener('touchstart', this.handleTouchStartOnce);
+      window.addEventListener('keydown', this.handleKeyDown);
+      window.addEventListener('touchstart', this.handleTouchStart);
+      window.addEventListener('touchmove', this.handleTouchMove);
+
+      const touch = event.touches[0];
+      this.touchStartX = touch.clientX;
+      this.touchStartY = touch.clientY;
+    },
     handleTouchStart(event) {
       event.preventDefault();
+
       const touch = event.touches[0];
       this.touchStartX = touch.clientX;
       this.touchStartY = touch.clientY;
@@ -99,11 +113,19 @@ export default {
       const deltaX = touch.clientX - this.touchStartX;
       const deltaY = touch.clientY - this.touchStartY;
       if (Math.abs(deltaX) > Math.abs(deltaY)) {
-        if (deltaX > 0 && this.snake.direction !== 'LEFT') this.snake.direction = 'RIGHT';
-        if (deltaX < 0 && this.snake.direction !== 'RIGHT') this.snake.direction = 'LEFT';
+        if (deltaX > 0 && this.snake.direction !== 'LEFT') {
+          this.snake.direction = 'RIGHT';
+        }
+        if (deltaX < 0 && this.snake.direction !== 'RIGHT') {
+          this.snake.direction = 'LEFT';
+        }
       } else {
-        if (deltaY > 0 && this.snake.direction !== 'UP') this.snake.direction = 'DOWN';
-        if (deltaY < 0 && this.snake.direction !== 'DOWN') this.snake.direction = 'UP';
+        if (deltaY > 0 && this.snake.direction !== 'UP') {
+          this.snake.direction = 'DOWN';
+        }
+        if (deltaY < 0 && this.snake.direction !== 'DOWN') {
+          this.snake.direction = 'UP';
+        }
       }
       this.touchStartX = null;
       this.touchStartY = null;
@@ -129,8 +151,6 @@ export default {
       this.ctx.fillText('Avoid hitting the walls or yourself', 50, 260);
     },
     handleKeyDownOnce(event) {
-        console.log(event)
-        console.log(this.snake)
       if (event.key === 'ArrowUp' && this.snake.direction === 'NONE') {
         this.startGame();
         this.snake.direction = 'UP';
