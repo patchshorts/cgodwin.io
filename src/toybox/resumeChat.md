@@ -57,6 +57,8 @@ export default {
         "Describe a time you explained a complex topic to someone unfamiliar. How did you ensure clarity?",
       ],
       isTyping: false,
+      previous_conversation: "",
+      greeting: "Hi, My name is Christopher Godwin and I'd be happy to answer any resume and interview related questions.",
     };
   },
   computed: {
@@ -73,9 +75,12 @@ export default {
       })
         .then((response) => response.json())
         .then((data) => {
+            this.previous_conversation += "You: %s\n\n" % (this.userInput);
+        })
+        .then((data) => {
           this.messages.push({
             id: this.messageId++,
-            content: "Hi, My name is Christopher Godwin and I'd be happy to answer any resume and interview related questions.",
+            content: this.greeting,
             type: 'bot',
           });
           this.isTyping = true;
@@ -89,9 +94,9 @@ export default {
         }).then((data) => {
           this.messages.push({
             id: this.messageId++,
-            content: "Hi, My name is Christopher Godwin and I'd be happy to answer any resume and interview related questions.",
+            content: this.greeting,
             type: 'bot',
-          })});
+          })})
     fetch('https://backend.cgodwin.io/suggestions', {
       method: 'POST',
       headers: {
@@ -118,6 +123,9 @@ export default {
         id: this.messageId++,
         content: this.userInput,
         type: 'user',
+      }).then((data) => {
+            this.previous_conversation += "You: %s\n\n" % (this.greeting);
+            console.log(this.previous_conversation)
       });
 
       fetch('https://backend.cgodwin.io/ask', {
@@ -131,6 +139,9 @@ export default {
         }),
       })
         .then((response) => response.json())
+        .then((data) => {
+            this.previous_conversation += "You: %s\n\n" % (data.response);
+        })
         .then((data) => {
           this.messages.push({
             id: this.messageId++,
