@@ -99,7 +99,7 @@ Drove security first planning schemes which became the Cloud culture
 #Sr. Site Reliability Engineer, January 2020-July 2022
 Contract to hire
 Continuous Integration Bamboo which is terrible for Continuous Integration
-Continuous Deployment with Harness.io which is superior to Jenkins
+Continuous Deployment with Harness.io
 Pipeline Migration
 Rapid Learning
 Process Improvement
@@ -122,7 +122,6 @@ Wrote custom Puppet resources.
 Processed automation of Ssh logins via Python Pexpect and encryption.
 Performed fully-automated deployment to development and testing servers, totally in developers’ hands.
 Wrote Puppet modules and Ruby YARD documentation that deployed over 16 unique applications.
-Served as primary Puppet/Jenkins support person for other teammates.
 Created installation, release, and rollback plans according to diagrams and application design.
 Executed GitLab and Bitbucket server administration, GitLab and Bitbucket CI/CD.
 Received daily calls working from home, with longest at 21 hours.
