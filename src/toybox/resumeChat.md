@@ -91,7 +91,7 @@ export default {
             id: this.messageId++,
             content: "Hi, My name is Christopher Godwin and I'd be happy to answer any resume and interview related questions.",
             type: 'bot',
-          });
+          })});
     fetch('https://backend.cgodwin.io/suggestions', {
       method: 'POST',
       headers: {
