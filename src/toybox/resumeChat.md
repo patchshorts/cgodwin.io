@@ -78,7 +78,7 @@ export default {
             content: data.response,
             type: 'bot',
           });
-          this.isTyping = false;
+          this.isTyping = true;
           this.scrollToBottom();
           this.fetchSuggestions();
         })
