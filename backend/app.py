@@ -223,6 +223,11 @@ def ask_question():
         'previous_conversation': previous_conversation
     })
 
+@app.route('/healthcheck', methods=['GET'])
+def health_check():
+    return jsonify({'message': 'Hi, I am Christopher Shaun Godwin, and I am ready to answer interview questions!'})
+
+
 @app.route('/suggestions', methods=['POST'])
 def ask_suggestions():
     data = request.json

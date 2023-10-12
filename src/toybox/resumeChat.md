@@ -65,6 +65,33 @@ export default {
     }
   },
   mounted() {
+    fetch('https://backend.cgodwin.io/healthcheck', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          this.messages.push({
+            id: this.messageId++,
+            content: data.response,
+            type: 'bot',
+          });
+          this.isTyping = false;
+          this.scrollToBottom();
+          this.fetchSuggestions();
+        })
+        .catch((error) => {
+          this.isTyping = false;
+          console.error('Error:', error);
+          this.messages.push({
+            id: this.messageId++,
+            content: 'Error communicating with the backend.',
+            type: 'error',
+          });
+          this.scrollToBottom();
+    });
     fetch('https://backend.cgodwin.io/suggestions', {
       method: 'POST',
       headers: {
