@@ -98,8 +98,8 @@ Drove testing patterns, code patterns and service relationship
 Drove security first planning schemes which became the Cloud culture
 #Sr. Site Reliability Engineer, January 2020-July 2022
 Contract to hire
-Setup Ci Infrastructure with Bamboo
-Setup CD Infrastructure with Harness
+Continuous Integration Bamboo which is terrible for Continuous Integration
+Continuous Deployment with Harness.io which is superior to Jenkins
 Pipeline Migration
 Rapid Learning
 Process Improvement
@@ -108,7 +108,7 @@ Process Improvement
 Sr. Site Reliability Engineer, 2015-2020 at International Game Technologies PLC (THE LOTTERY), Austin, Texas:
 Utilized Vagrant and Docker to mirror entire production stacks within laptop for developers, pushing updates to their environments seamlessly.
 Oversaw and approved half of all team merge requests for DevOps code.
-Conducted automation of Jenkins job creation for several multi-environment systems totaling in hundreds.
+Conducted automation of job creation for several multi-environment systems totaling in hundreds.
 Set up, integrated, built, and released stages for 40 lottery projects.
 Worked with applications that required 25 systems mirrored and highly available.
 Sculpted the CI/CD processes used by the team.
