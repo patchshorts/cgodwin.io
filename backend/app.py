@@ -208,7 +208,7 @@ def ask_question():
     question = data['question']
     previous_conversation = data.get('previous_conversation', "")
 
-    christopher_godwin_bot = embed_chain()
+    # christopher_godwin_bot = embed_chain()
     llm_config = LlmConfig(template=cgodwin_chat_template, system_prompt="You are Christopher Shaun Godwin.", model="gpt-4")
 
     response = christopher_godwin_bot.query(
@@ -233,7 +233,7 @@ def ask_suggestions():
     # question = data['question']
     previous_conversation = data.get('previous_conversation', "")
 
-    christopher_godwin_bot = embed_chain()
+    # christopher_godwin_bot = embed_chain()
     llm_config = LlmConfig(template=questions_chat_template, system_prompt="You are list generating computer program which outputs only json.")
 
     response = christopher_godwin_bot.query(
@@ -247,6 +247,7 @@ def ask_suggestions():
         return jsonify("{}")
 
 if __name__ == "__main__":
+    christopher_godwin_bot = embed_chain()
     port = int(os.environ.get("PORT", 8080))  # Default to port 5000 if PORT is not set
     debug = bool(str(os.environ.get("DEBUG", False)))  # Default to false
     app.run(host='0.0.0.0', debug=debug, port=port)
