@@ -75,7 +75,7 @@ export default {
         .then((data) => {
           this.messages.push({
             id: this.messageId++,
-            content: data.response,
+            content: "Hi, My name is Christopher Godwin and I'd be happy to answer any resume and interview related questions.",
             type: 'bot',
           });
           this.isTyping = true;
@@ -85,13 +85,13 @@ export default {
         .catch((error) => {
           this.isTyping = false;
           console.error('Error:', error);
+          this.scrollToBottom();
+        }).then((data) => {
           this.messages.push({
             id: this.messageId++,
-            content: 'Error communicating with the backend.',
-            type: 'error',
+            content: "Hi, My name is Christopher Godwin and I'd be happy to answer any resume and interview related questions.",
+            type: 'bot',
           });
-          this.scrollToBottom();
-    });
     fetch('https://backend.cgodwin.io/suggestions', {
       method: 'POST',
       headers: {
