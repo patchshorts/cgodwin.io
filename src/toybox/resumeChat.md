@@ -68,35 +68,30 @@ export default {
   },
   mounted() {
     fetch('https://backend.cgodwin.io/healthcheck', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-        .then((response) => response.json())
-        .then((data) => {
-            this.previous_conversation += "You: %s\n\n" % (this.userInput);
-        })
-        .then((data) => {
-          this.messages.push({
-            id: this.messageId++,
-            content: this.greeting,
-            type: 'bot',
-          });
-          this.isTyping = true;
-          this.scrollToBottom();
-          this.fetchSuggestions();
-        })
-        .catch((error) => {
-          this.isTyping = false;
-          console.error('Error:', error);
-          this.scrollToBottom();
-        }).then((data) => {
-          this.messages.push({
-            id: this.messageId++,
-            content: this.greeting,
-            type: 'bot',
-          })})
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }})
+    .then((response) => response.json())
+    .then((data) => {
+      this.previous_conversation += "You: %s\n\n" % (this.greeting);
+    })
+    .then((data) => {
+      this.isTyping = true;
+      this.messages.push({
+        id: this.messageId++,
+        content: this.greeting,
+        type: 'bot',
+      });
+      this.isTyping = false;
+      this.scrollToBottom();
+      this.fetchSuggestions();
+    })
+    .catch((error) => {
+      this.isTyping = false;
+      console.error('Error:', error);
+      this.scrollToBottom();
+    });
     fetch('https://backend.cgodwin.io/suggestions', {
       method: 'POST',
       headers: {
@@ -106,13 +101,13 @@ export default {
         previous_conversation: this.previousConversation
       }),
     })
-      .then(response => response.json())
-      .then(data => {
-        this.suggestedQuestions = data.questions.map(questionObj => questionObj.question);
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
+    .then(response => response.json())
+    .then(data => {
+      this.suggestedQuestions = data.questions.map(questionObj => questionObj.question);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
   },
   methods: {
     sendMessage() {
