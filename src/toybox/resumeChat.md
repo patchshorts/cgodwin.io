@@ -155,7 +155,7 @@ export default {
 
       this.userInput = '';
       this.scrollToBottom();
-      console.log(this.previous_conversation.split(/\s+/).slice(-1000).join(' '));
+      // console.log(this.previous_conversation.split(/\s+/).slice(-1000).join(' '));
     },
     playNotificationSound() {
       const audio = new Audio('https://cgodwin.io/toys/notif.mp3');
