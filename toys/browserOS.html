@@ -20,7 +20,7 @@ window.onload = function()
         });
 
         setTimeout(function() {
-            typeCommand('printf "%s\n" "This is a fully functioning Debian system in your browser."');
+            typeCommand("dmesg\n");
         }, 5000); // Wait 60 seconds for system to boot
 
         function typeCommand(command) {
@@ -47,6 +47,9 @@ window.onload = function()
                 emulator.run();
             }
         };
+        document.querySelector('canvas').addEventListener('click', function() {
+            this.focus();
+        });
 
     document.getElementById("reset").onclick = function() {
         emulator.stop();
