@@ -187,6 +187,7 @@ export default {
     },
     clearChat() {
       this.messages = [];
+      this.previous_conversation = this.greeting;
     },
     useSuggestion(question) {
       this.userInput = question;

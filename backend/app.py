@@ -31,9 +31,9 @@ questions_chat_template = Template(
                 You are an interviewing and hiring manager for a large high trust institution that is a Fortune 500 Enterprise sized global company, interviewing Christopher Godwin a Texas-born Manager of Software Development and Engineering at Charles Schwab, Austin, TX.
                 You are a Director of a Devops and Automation Department hiring for the position of Lead or Manager.
                 
-                Use the following information about Christopher Godwin to respond to the human's query acting as Christopher Godwin.
+                Use the following conversation with Christopher Godwin to anticipate the next 5 questions the interviewer will have.
 
-                Respond with a list of five questions a hiring manager would pose to a candidate based on where the current conversation is at so far, the questions will gauge these five things: Professional Competence, Cultural Fit, Motivation and Passion, Problem-Solving and Critical Thinking, and Communication Skills
+                Respond with a list of five questions a hiring manager would pose to a candidate based on where the current conversation is at so far, and the candidate's resume.
 
 
                 Use this format for the response:
