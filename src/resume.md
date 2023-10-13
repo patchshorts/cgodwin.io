@@ -30,7 +30,7 @@ and industrious top performer who contributes to the efficiency and stability of
 
 ## Charles Schwab, Austin, TX
 ### Manager of Software Development and Engineering, January 2020-Present
-* **Driving End-to-End Architecture**: Steered the comprehensive architecture of customer login applications on the Heroku platform. Coordinated various stages of development, ensuring cohesive and enterprise-scalable solutions that meet organizational objectives.
+* **Driving End-to-End Architecture**: Steered the comprehensive architecture of customer login applications on the GCP platform. Coordinated various stages of development, ensuring cohesive and enterprise-scalable solutions that meet organizational objectives.
 
 * **Crafting Architectural Principles**: Collaboratively developed and refined architectural principles, frameworks, and standards, ensuring robust and maintainable enterprise solutions, fostering strategic technological initiatives and alignment across teams.
 * **Strategic Technology Leadership**: Actively engaged in driving strategic technology initiatives, liaising with product managers, architects, engineers, and broader organizational teams, ensuring aligned and synergized efforts towards organizational goals.
