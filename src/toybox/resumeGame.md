@@ -277,6 +277,7 @@ export default {
 
       window.addEventListener('keydown', this.handleKeyDownOnce);
       window.addEventListener('touchstart', this.handleTouchStart);
+      window.addEventListener('touchmove', this.handleTouchMove);
     },
   },
 };
