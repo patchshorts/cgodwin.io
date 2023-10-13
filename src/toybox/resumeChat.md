@@ -75,8 +75,6 @@ export default {
     .then((response) => response.json())
     .then((data) => {
       this.previous_conversation += "You: %s\n\n" % (this.greeting);
-    })
-    .then((data) => {
       this.isTyping = true;
       this.messages.push({
         id: this.messageId++,
