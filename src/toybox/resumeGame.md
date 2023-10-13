@@ -69,6 +69,7 @@ export default {
       score: 0, // new score property
       xp: 0, // new xp property
       snakeLength: 0,
+      started: false,
     };
   },
   mounted() {
@@ -79,19 +80,26 @@ export default {
     this.drawInstructions();
     window.addEventListener('keydown', this.handleKeyDownOnce);
     canvas.addEventListener('touchstart', this.handleTouchStartOnce);
-    canvas.addEventListener('touchmove', this.handleTouchMove);
   },
   beforeDestroy() {
     clearInterval(this.gameLoop);
     window.removeEventListener('keydown', this.handleKeyDown);
+    window.removeEventListener('touchstart', this.handleTouchStart);
+    window.removeEventListener('touchmove', this.handleTouchMove);
   },
   methods: {
     handleTouchStartOnce(event) {
+      if (this.started == false) {
+        this.started = true;
+        this.startGame();
+      }
       event.preventDefault();
-      this.startGame();
-      window.removeEventListener('keydown', this.handleKeyDownOnce);
+      console.log('touchstartone')
+      if (this.snake.direction == 'NONE') {
+        this.snake.direction = 'RIGHT';
+      }
+
       window.removeEventListener('touchstart', this.handleTouchStartOnce);
-      window.addEventListener('keydown', this.handleKeyDown);
       window.addEventListener('touchstart', this.handleTouchStart);
       window.addEventListener('touchmove', this.handleTouchMove);
 
@@ -152,33 +160,26 @@ export default {
     },
     handleKeyDownOnce(event) {
       if (event.key === 'ArrowUp' && this.snake.direction === 'NONE') {
-        this.startGame();
         this.snake.direction = 'UP';
-        window.removeEventListener('keydown', this.handleKeyDownOnce);
-        window.addEventListener('keydown', this.handleKeyDown);
       }
       if (event.key === 'ArrowDown' && this.snake.direction === 'NONE') {
-
-        this.startGame();
         this.snake.direction = 'DOWN';
-        window.removeEventListener('keydown', this.handleKeyDownOnce);
-        window.addEventListener('keydown', this.handleKeyDown);
       }
       if (event.key === 'ArrowLeft' && this.snake.direction === 'NONE') {
-        this.startGame();
         this.snake.direction = 'LEFT';
-        window.removeEventListener('keydown', this.handleKeyDownOnce);
-        window.addEventListener('keydown', this.handleKeyDown);
       }
       if (event.key === 'ArrowRight' && this.snake.direction === 'NONE') {
-        this.startGame();
         this.snake.direction = 'RIGHT';
-        window.removeEventListener('keydown', this.handleKeyDownOnce);
-        window.addEventListener('keydown', this.handleKeyDown);
       }
+      this.startGame();
     },
     startGame() {
       this.gameLoop = setInterval(this.updateGame, 100);
+      window.removeEventListener('keydown', this.handleKeyDownOnce);
+      window.removeEventListener('touchstart', this.handleTouchStartOnce);
+      window.addEventListener('keydown', this.handleKeyDown);
+      window.addEventListener('touchstart', this.handleTouchStart);
+      window.addEventListener('touchmove', this.handleTouchMove);
     },
     generateFood() {
       this.food.count = this.food.count + 1
@@ -267,6 +268,16 @@ export default {
       this.xp = 0;
       this.snakeLength = this.snake.body.length
       this.score = 0;
+
+      
+      clearInterval(this.gameLoop); // Stop the game loop
+      window.removeEventListener('keydown', this.handleKeyDown);
+      window.removeEventListener('touchstart', this.handleTouchStart);
+      window.removeEventListener('touchmove', this.handleTouchMove);
+
+      window.addEventListener('keydown', this.handleKeyDownOnce);
+      window.addEventListener('touchstart', this.handleTouchStart);
+      window.addEventListener('touchmove', this.handleTouchMove);
     },
   },
 };
