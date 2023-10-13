@@ -116,7 +116,7 @@ and industrious top performer who contributes to the efficiency and stability of
 * Committed to continuous learning, staying updated with the latest in technology, tools, and best practices in the IT industry.
 * Participated in various workshops and conferences, enhancing knowledge and sharing professional expertise.
 
-#Interpersonal Skills
+# Interpersonal Skills
 
 * Proven leadership skills, effectively managing and mentoring teams towards achieving organizational objectives.
 * Exceptional problem-solving abilities, adept at navigating challenges and driving projects to completion.
