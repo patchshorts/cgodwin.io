@@ -96,7 +96,7 @@ export default {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        previous_conversation: this.previous_conversation
+        previous_conversation: this.previous_conversation.split(/\s+/).slice(-1000).join(' ');
       }),
     })
     .then(response => response.json())
@@ -126,7 +126,7 @@ export default {
         },
         body: JSON.stringify({
           question: this.userInput,
-          previous_conversation: this.previous_conversation
+          previous_conversation: this.previous_conversation.split(/\s+/).slice(-1000).join(' ');
         }),
       })
         .then((response) => response.json())
@@ -155,7 +155,7 @@ export default {
 
       this.userInput = '';
       this.scrollToBottom();
-      console.log(this.previous_conversation)
+      console.log(this.previous_conversation.split(/\s+/).slice(-1000).join(' '));
     },
     playNotificationSound() {
       const audio = new Audio('https://cgodwin.io/toys/notif.mp3');
@@ -174,7 +174,7 @@ export default {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          previous_conversation: this.previous_conversation
+          previous_conversation: this.previous_conversation.split(/\s+/).slice(-1000).join(' ');
         }),
       })
         .then(response => response.json())
