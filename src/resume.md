@@ -125,6 +125,6 @@ and industrious top performer who contributes to the efficiency and stability of
 * Demonstrated conflict resolution skills, ensuring harmonious team environments and fostering collaboration and innovation.
 * Displays strong work ethic and integrity, committed to delivering quality and upholding organizational values.
 
-# TECHNICAL SKILLS
+# Technical Skills
 Gen AI Implementation, Embeddings, Kubernetes, Docker, RHCE, Linux, DevOps, Continuous Integration, Continuous Deployment, GitOps, Git, Terraform, Docker, Helm, K8s, Kubernetes, Apache Maven, Python, Bash, Harness.io, Argo CD, Bamboo, Node.js, Automation, GCP, AWS, GCP, Red Hat, Shell Scripting, Mongo, JavaScript, Less,
 Sass/SCSS, Bootstrap, HTML5/CSS/JS, Drupal, Wordpress, Salt Stack, Puppet, Vue.js, CentOS/Red Hat, SCO UNIX, FreeBSD, OpenBSD, Puppet, Ansible, MV*/MVC
