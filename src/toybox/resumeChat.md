@@ -96,7 +96,7 @@ export default {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        previous_conversation: this.previousConversation
+        previous_conversation: this.previous_conversation
       }),
     })
     .then(response => response.json())
@@ -118,7 +118,7 @@ export default {
         type: 'user',
       });
 
-      this.previous_conversation += "You: %s\n\n" % (this.greeting);
+      this.previous_conversation += "You: "+this.greeting+"\n\n";
       console.log(this.previous_conversation)
       
       fetch('https://backend.cgodwin.io/ask', {
@@ -128,12 +128,12 @@ export default {
         },
         body: JSON.stringify({
           question: this.userInput,
-          previous_conversation: this.previousConversation
+          previous_conversation: this.previous_conversation
         }),
       })
         .then((response) => response.json())
         .then((data) => {
-            this.previous_conversation += "You: %s\n\n" % (data.response);
+            this.previous_conversation += "You: "+data.response+"\n\n";
             this.messages.push({
               id: this.messageId++,
               content: data.response,
@@ -175,7 +175,7 @@ export default {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          previous_conversation: this.previousConversation
+          previous_conversation: this.previous_conversation
         }),
       })
         .then(response => response.json())
