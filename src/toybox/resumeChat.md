@@ -136,13 +136,11 @@ export default {
         .then((response) => response.json())
         .then((data) => {
             this.previous_conversation += "You: %s\n\n" % (data.response);
-        })
-        .then((data) => {
-          this.messages.push({
-            id: this.messageId++,
-            content: data.response,
-            type: 'bot',
-          });
+            this.messages.push({
+              id: this.messageId++,
+              content: data.response,
+              type: 'bot',
+            });
           this.isTyping = false;
           this.scrollToBottom();
           this.playNotificationSound();
