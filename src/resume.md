@@ -14,7 +14,7 @@ heroFullScreen: false
 # Christopher Shaun Godwin
 
 # Summary
-A high-energy and results-driven senior IT and systems manager with demonstrated experience in database
+A high-energy and results-driven senior DevSecOps Manager/Architect with demonstrated experience in database
 administration, systems analysis/systems engineering, data applications services, and network administration.
 
 Established capabilities in data migration, installations, integrations, end-user support, and project management.
@@ -30,27 +30,23 @@ and industrious top performer who contributes to the efficiency and stability of
 
 ## Charles Schwab, Austin, TX
 ### Manager of Software Development and Engineering, January 2020-Present
-* Produced highly usable and scalable web software solutions using advanced development technologies
-* Implemented application deployment architecture for fortune 500 level enterprise scalability
-* Increased Communication and decreased blockers at various organizational levels.
-* Solving bushiness problems in a dynamic customer-focused team environment
-* A commitment to regularly improving the technical and professional skills of the team.
-* Overseeing acquiring new skill through the interview process
-* Coached team learning emerging technologies and growing the knowledge of team members
-* Reviewed the team's pull requests
-* Lead planning, and sprint retros, documentation and deployment status reviews
-* Defined integration and deployment standards, uses of tools and cloud patterns
-* Drove documentation and then approval process for acceptance criteria.
-* Drove testing patterns, code patterns and service relationship
-* Drove security first planning schemes which became the Cloud culture
+* **Driving End-to-End Architecture**: Steered the comprehensive architecture of customer login applications on the Heroku platform. Coordinated various stages of development, ensuring cohesive and enterprise-scalable solutions that meet organizational objectives.
+
+* **Crafting Architectural Principles**: Collaboratively developed and refined architectural principles, frameworks, and standards, ensuring robust and maintainable enterprise solutions, fostering strategic technological initiatives and alignment across teams.
+* **Strategic Technology Leadership**: Actively engaged in driving strategic technology initiatives, liaising with product managers, architects, engineers, and broader organizational teams, ensuring aligned and synergized efforts towards organizational goals.
+* **Promoting Communication and Teamwork**: Advocated and implemented enhanced communication strategies, fostering improved teamwork, alignment, and collaboration across various organizational levels, both internally and externally.
+* **Enhancing Product and Operational Excellence**: Contributed valuable feedback and insights on security, development, and strategic directions. Influenced long-range product requirements, methodologies, and operational guidelines, prioritizing continuous improvement and reliability.
+* **Innovation and Knowledge Sharing**: Engaged in innovative engineering research, creating case studies and prototypes, particularly on Google Cloud Platform, while promoting a culture of knowledge sharing through code authorship and maintenance.
+* **Mentoring and Career Advancement**: Took a proactive role in mentoring engineers, providing guidance in technical skills enhancement and career development, ensuring continuous individual and team growth and improvement.
+* **Operational Responsibility**: Participated actively in on-call rotations, tackling complex, real-time challenges to maintain operational integrity and service availability, ensuring sustained organizational performance.
+* **Software Development Leadership**: Produced refined web software solutions, emphasizing usability and scalability through advanced development technologies, enhancing enterprise scalability and business problem-solving capabilities.
+* **Fostering Skill Development and Improvement**: Led initiatives focusing on continuous improvement, skill acquisition, and knowledge enhancement, ensuring teams stay updated with emerging technologies and industry best practices.
+* **Enhancing Security and Standards**: Advocated for a security-first approach in planning, setting robust standards, and defining clear acceptance criteria, ensuring a strong foundation for organizational projects and initiatives.
+* **Facilitating Onboarding:** Managed and streamlined the onboarding process for new engineers, ensuring a smooth transition and effective integration into organizational processes and projects.
 
 ### Sr. Site Reliability Engineer, January 2020-July 2022
-* Contract to hire
-* Setup Ci Infrastructure with Bamboo
-* Setup CD Infrastructure with Harness
-* Pipeline Migration
-* Rapid Learning
-* Process Improvement
+* Established and **optimized CI/CD infrastructures**, promoting process improvement and operational efficiency.
+* **Implemented** innovative solutions for **pipeline migration**, fostering a culture of continuous learning and improvement.
 
 ## International Game Technologies PLC (THE LOTTERY), Austin, Texas
 ### Sr. Site Reliability Engineer, 2015-2020
@@ -113,12 +109,22 @@ and industrious top performer who contributes to the efficiency and stability of
 * Collaborated with management and users to develop e-commerce strategies and integrate these strategies with web sites.
 
 # Professional Development
-PuppetLabs™ training, Business Networking Groups, years of freelancing for professionals.
+
+* Actively participated in PuppetLabs™ training to enhance technical proficiency and stay updated with industry best practices.
+* Engaged in business networking groups, fostering professional relationships and staying abreast of industry trends and insights.
+* Consistently freelanced for professionals, honing practical skills, and gaining diverse industry experience.
+* Committed to continuous learning, staying updated with the latest in technology, tools, and best practices in the IT industry.
+* Participated in various workshops and conferences, enhancing knowledge and sharing professional expertise.
+
+#Interpersonal Skills
+
+* Proven leadership skills, effectively managing and mentoring teams towards achieving organizational objectives.
+* Exceptional problem-solving abilities, adept at navigating challenges and driving projects to completion.
+* Excellent communicator, facilitating clear and open discussions, ensuring alignment and understanding within teams.
+* Strong adaptability, thriving in dynamic environments, and effectively managing change.
+* Demonstrated conflict resolution skills, ensuring harmonious team environments and fostering collaboration and innovation.
+* Displays strong work ethic and integrity, committed to delivering quality and upholding organizational values.
 
 # TECHNICAL SKILLS
-Kubernetes, Docker, RHCE, Linux, DevOps, Continuous Integration, Continuous Deployment, GitOps, Git, Terraform, Docker, Helm, K8s, Kubernetes,
-Apache Maven, Python, Bash, Harness.io, Argo CD, Bamboo, Node.js, Automation, GCP, AWS, GCP, Red Hat, Shell Scripting, Mongo, JavaScript, Less,
+Gen AI Implementation, Embeddings, Kubernetes, Docker, RHCE, Linux, DevOps, Continuous Integration, Continuous Deployment, GitOps, Git, Terraform, Docker, Helm, K8s, Kubernetes, Apache Maven, Python, Bash, Harness.io, Argo CD, Bamboo, Node.js, Automation, GCP, AWS, GCP, Red Hat, Shell Scripting, Mongo, JavaScript, Less,
 Sass/SCSS, Bootstrap, HTML5/CSS/JS, Drupal, Wordpress, Salt Stack, Puppet, Vue.js, CentOS/Red Hat, SCO UNIX, FreeBSD, OpenBSD, Puppet, Ansible, MV*/MVC
-
-# INTERPERSONAL SKILLS
-Wooer, Connectedness, Achiever, Analytical, Relator, Leadership, Teamwork, Command, Problem-solving, Effective communication skills, Self-direction, Drive, Adaptability, Flexibility, Dependability, Conflict resolution, Flexibility, Leadership, Research, Creativity, Work ethic, Integrity
