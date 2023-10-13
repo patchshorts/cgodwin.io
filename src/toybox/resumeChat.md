@@ -67,6 +67,7 @@ export default {
     }
   },
   mounted() {
+    this.previous_conversation = "Christopher Godwin: "+this.greeting+"\n\n";
     fetch('https://backend.cgodwin.io/healthcheck', {
       method: 'GET',
       headers: {
@@ -117,9 +118,7 @@ export default {
         content: this.userInput,
         type: 'user',
       });
-
-      this.previous_conversation += "You: "+this.greeting+"\n\n";
-      console.log(this.previous_conversation)
+      this.previous_conversation += "User: "+this.userInput+"\n";
       
       fetch('https://backend.cgodwin.io/ask', {
         method: 'POST',
@@ -157,6 +156,7 @@ export default {
 
       this.userInput = '';
       this.scrollToBottom();
+      console.log(this.previous_conversation)
     },
     playNotificationSound() {
       const audio = new Audio('https://cgodwin.io/toys/notif.mp3');
