@@ -57,7 +57,7 @@ export default {
         "Describe a time you explained a complex topic to someone unfamiliar. How did you ensure clarity?",
       ],
       isTyping: false,
-      previous_conversation: "",
+      previous_conversation: "\n",
       greeting: "Hi, My name is Christopher Godwin and I'd be happy to answer any resume and interview related questions.",
     };
   },
@@ -75,7 +75,6 @@ export default {
       }})
     .then((response) => response.json())
     .then((data) => {
-      this.previous_conversation += "You: %s\n\n" % (this.greeting);
       this.isTyping = true;
       this.messages.push({
         id: this.messageId++,
@@ -118,7 +117,7 @@ export default {
         content: this.userInput,
         type: 'user',
       });
-      this.previous_conversation += "User: "+this.userInput+"\n";
+      this.previous_conversation += "User: "+this.userInput+"\n\n";
       
       fetch('https://backend.cgodwin.io/ask', {
         method: 'POST',
@@ -132,7 +131,7 @@ export default {
       })
         .then((response) => response.json())
         .then((data) => {
-            this.previous_conversation += "You: "+data.response+"\n\n";
+            this.previous_conversation += "Christopher Godwin: "+data.response+"\n\n";
             this.messages.push({
               id: this.messageId++,
               content: data.response,
