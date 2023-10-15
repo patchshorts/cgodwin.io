@@ -30,7 +30,7 @@ export default {
         nuggets: [
           {
               "position": { "x": 346, "y": 338 },
-              "text": "Support Technician, Suddenlink"
+              "text": "NOC Support / Sys Eng, Suddenlink"
           },
           {
               "position": { "x": 424, "y": 281 },

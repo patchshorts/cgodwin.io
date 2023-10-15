@@ -14,6 +14,11 @@ actions:
     link: /posts/
 
 features:
+  - title: Generative AI Implementation
+    icon: state
+    details: 'I have 2 years of experience using generative AI as a prompt engineer. With code I can implement anything you can imagine.'
+    link: '/toybox'
+
   - title: Leadership
     icon: support
     details: 'My leadership style is based on four key principles: trust, inspiration, coaching, and service.'
