@@ -15,4 +15,4 @@ These are fun things I'd like to showcase.
 
 * [LLM acting as me fine-tuned on my resume, writings and accomplishments](/toybox/resumeChat)
 * [Linux VM in your Browser](/toybox/browserOS)
-* [resumeSnake](/toybox/resumeGame)
+* [resumeSnake](/toybox/resumeSnake)

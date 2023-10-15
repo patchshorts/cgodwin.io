@@ -1,5 +1,5 @@
 ---
-title: Resume Game
+title: ResumeSnake
 icon: snake
 article: false
 headerDepth: 1
