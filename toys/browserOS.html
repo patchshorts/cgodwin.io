@@ -4,9 +4,11 @@
 <script>
 "use strict";
 
+var emulator = NONE;
+
 window.onload = function()
 {
-        var emulator = new V86({
+        emulator = new V86({
             wasm_path: "/toys/lib/v86.wasm",
             memory_size: 512 * 1024 * 1024,
             vga_memory_size: 8 * 1024 * 1024,
@@ -57,7 +59,7 @@ window.onload = function()
         } else {
             this.value = "Reset";
 
-            var emulator = new V86({
+            emulator = new V86({
                 wasm_path: "/toys/lib/v86.wasm",
                 memory_size: 512 * 1024 * 1024,
                 vga_memory_size: 8 * 1024 * 1024,
