@@ -52,21 +52,27 @@ window.onload = function()
         });
 
     document.getElementById("reset").onclick = function() {
-        emulator.stop();
-        var emulator = new V86({
-            wasm_path: "/toys/lib/v86.wasm",
-            memory_size: 512 * 1024 * 1024,
-            vga_memory_size: 8 * 1024 * 1024,
-            screen_container: document.getElementById("screen_container"),
-            initial_state: { url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-state-base.bin" },
-            filesystem: { baseurl: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-9p-rootfs-flat/" },
-            autostart: true,
-        });
+        if (emulator.is_running()) {
+            this.value = "Resetting";
+            emulator.destroy();
+        } else {
+            this.value = "Reset";
+
+            var emulator = new V86({
+                wasm_path: "/toys/lib/v86.wasm",
+                memory_size: 512 * 1024 * 1024,
+                vga_memory_size: 8 * 1024 * 1024,
+                screen_container: document.getElementById("screen_container"),
+                initial_state: { url: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-state-base.bin" },
+                filesystem: { baseurl: "https://storage.googleapis.com/cgodwin-io-asset-bucket/os/images/debian-9p-rootfs-flat/" },
+                autostart: true,
+            });
+        }
         this.blur();
     };
 
     document.getElementById("exit").onclick = function() {
-        emulator.stop();
+        emulator.destroy();
         window.close(); // Might not work in all browsers due to security reasons
     };
 
@@ -101,9 +107,7 @@ window.onload = function()
             button.value = "Save state";
             await emulator.restore_state(state);
             state = undefined;
-        }
-        else
-        {
+        } else {
             const new_state = await emulator.save_state();
             console.log("Saved state of " + new_state.byteLength + " bytes");
             button.value = "Restore state";
@@ -225,12 +229,8 @@ function downloadBlob(blob, filename) {
     <input type="button" value="Send Alt-Tab" id="alttab">
     <input type="button" value="Get floppy image" id="get_fda_image">
     <input type="button" value="Get second floppy image" id="get_fdb_image">
-    <input type="button" value="Get hard disk image" id="get_hda_image">
-    <input type="button" value="Get second hard disk image" id="get_hdb_image">
-    <input type="button" value="Get cdrom image" id="get_cdrom_image">
     <input type="button" value="Insert floppy image" id="change_fda_image">
-    <input type="button" value="Save State" id="save_state">
-    <input type="button" value="Load State" id="load_state"> <input type="file" style="display: none" id="load_state_input">
+    <input type="button" value="Save State" id="save_restore">
     <input type="button" value="Memory Dump" id="memory_dump">
     <input type="button" value="Capture network traffic" id="capture_network_traffic" title="In wireshark: file -> import from hex -> tick direction indication, timestamp %s.%f">
     <input type="button" value="Disable mouse" id="toggle_mouse">
