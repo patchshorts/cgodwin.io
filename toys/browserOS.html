@@ -202,6 +202,14 @@ window.onload = function()
         downloadBlob(memory_blob, "memory_dump.bin");
     };
 
+    function downloadBlob(blob, filename) {
+        var a = document.createElement("a");
+        a.download = filename;
+        a.href = window.URL.createObjectURL(blob);
+        a.dataset.downloadurl = ["application/octet-stream", a.download, a.href].join(':');
+        a.click();
+    }
+
     document.getElementById("take_screenshot").onclick = function() {
         var canvas = document.querySelector("#screen_container canvas");
         var a = document.createElement("a");
@@ -210,13 +218,6 @@ window.onload = function()
         a.click();
     };
 };
-function downloadBlob(blob, filename) {
-    var a = document.createElement("a");
-    a.download = filename;
-    a.href = window.URL.createObjectURL(blob);
-    a.dataset.downloadurl = ["application/octet-stream", a.download, a.href].join(':');
-    a.click();
-}
 </script>
 
 
