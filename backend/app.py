@@ -120,7 +120,8 @@ Gen AI Implementation, Embeddings, Kubernetes, Docker, RHCE, Linux, DevOps, Cont
 """
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://cgodwin.io"}})  # Only allow requests from cgodwin.io
+host = os.env("HOST")
+CORS(app, resources={r"/*": {"origins": "https://%s" % host}})  # Only allow requests from cgodwin.io
 
 def embed_chain():
     import os

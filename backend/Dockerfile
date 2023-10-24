@@ -12,6 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Define environment variable
 ENV PORT=${PORT:-5000}
+ENV HOST=${HOST:-cgodwin.io}
 
 # Make port 5000 available to the world outside this container
 EXPOSE ${PORT}
