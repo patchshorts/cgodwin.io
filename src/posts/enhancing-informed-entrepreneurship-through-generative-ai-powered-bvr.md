@@ -60,3 +60,16 @@ We propose a digital platform that employs GenAI agents, each calibrated to prov
     - Ensure adherence to privacy laws and industry standards.
 
 This business need statement encapsulates the essence of merging technological advancements in Generative AI with the inherent need for well-informed entrepreneurship. The envisioned platform is not merely a tool but a companion in an entrepreneur's journey towards creating viable and successful ventures.
+
+#### Technical Requirements
+- Oauth app ids and mechanisms
+- services hosting frontend
+- backend to talk to the message queue
+- message queue for report generation
+- database to store pii, sessions and report object urls
+- caching of report as object after storage
+- login to display reports
+- constraints on number of reports they can generate
+- retry or errors
+  - mitigation
+- embeddings for relevant automatic contexts
