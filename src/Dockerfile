@@ -1,11 +1,17 @@
 # ---- Build Stage ----
 FROM node:16-alpine AS build
+# Argument for the host which the backend points to
+ARG HOST=${HOST:-cgodwin.io}
 # Set working directory
 WORKDIR /app
 # Copy source code to working directory
 ADD src /app
 # Install dependencies
 RUN yarn install --production
+# Install sed
+RUN apk update && apk add sed
+# Replace the host
+RUN /bin/sed -e 's#%HOST%#'$HOST'#g' -i toybox/resumeChat.md
 # Build the project
 RUN ./node_modules/.bin/vuepress build . --clean-cache
 # Copy toys directory and download & extract os.tar.gz

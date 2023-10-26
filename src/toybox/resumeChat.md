@@ -68,7 +68,7 @@ export default {
   },
   mounted() {
     this.previous_conversation = "Christopher Godwin: "+this.greeting+"\n\n";
-    fetch('https://backend.cgodwin.io/healthcheck', {
+    fetch('//%HOST%/healthcheck', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ export default {
       console.error('Error:', error);
       this.scrollToBottom();
     });
-    fetch('https://backend.cgodwin.io/suggestions', {
+    fetch('//%HOST%/suggestions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ export default {
       });
       this.previous_conversation += "User: "+this.userInput+"\n\n";
       
-      fetch('https://backend.cgodwin.io/ask', {
+      fetch('//%HOST%/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ export default {
       // console.log(this.previous_conversation.split(/\s+/).slice(-1000).join(' '));
     },
     playNotificationSound() {
-      const audio = new Audio('https://cgodwin.io/toys/notif.mp3');
+      const audio = new Audio('/toys/notif.mp3');
       audio.play();
     },
     scrollToBottom() {
@@ -168,7 +168,7 @@ export default {
       });
     },
     fetchSuggestions() {
-      fetch('https://backend.cgodwin.io/suggestions', {
+      fetch('//%HOST%/suggestions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
