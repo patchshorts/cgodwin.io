@@ -21,17 +21,33 @@ build_backend:
 .PHONY: run_frontend
 run_frontend:
 	@echo "Running Frontend Docker container..."
-	docker run -d -p $(FRONTEND_PORT):8080 $(FRONTEND_IMAGE)
+	docker run -d --name frontend -p $(FRONTEND_PORT):8080 $(FRONTEND_IMAGE)
 
 .PHONY: run_backend
 run_backend:
 	@echo "Running Backend Docker container..."
-	docker run -d -p $(BACKEND_PORT):8080 -e OPENAI_API_KEY="${OPENAI_API_KEY}" -e PORT=8080 -e HOST="http://$(CORS)" $(BACKEND_IMAGE)
+	docker run -d --name backend -p $(BACKEND_PORT):8080 -e OPENAI_API_KEY="${OPENAI_API_KEY}" -e PORT=8080 -e HOST="http://$(CORS)" $(BACKEND_IMAGE)
 
-.PHONY: build_all
-build_all: build_frontend build_backend
+.PHONY: stop_frontend
+stop_frontend:
+	@echo "Running Frontend Docker container..."
+	docker stop frontend
+	docker rm frontend
+
+.PHONY: stop_backend
+stop_backend:
+	@echo "Running Backend Docker container..."
+	docker stop backend
+	docker rm backend
+
+.PHONY: build-all
+build-all: build_frontend build_backend
 	@echo "Both Frontend and Backend Docker images have been built."
 
-.PHONY: run_all
-run_all: run_frontend run_backend
+.PHONY: run-all
+run-all: run_frontend run_backend
+	@echo "Both Frontend and Backend Docker containers are running."
+
+.PHONY: stop-all
+stop-all: stop_frontend stop_backend
 	@echo "Both Frontend and Backend Docker containers are running."
