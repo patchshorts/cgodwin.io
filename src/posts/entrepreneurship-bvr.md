@@ -111,7 +111,7 @@ These are the items we can see that we'll need, however we don't fully see how t
  - Summary will be displayed on the side and persist through advancement, it is a re-echoing of the user provided meaning, if the user agrees with it, the user and AI will be in thought-parity.
 - Input asked for but not collected will be generated.
 
-### Mutual Dependancy
+### Mutual Dependency
 - We envision a variable populator. Some variables will be arrived at through a request to the ai and the supplying of new variables to it as specific context.
   - This function will be called once all the user input is collected or generated and the user agrees with the summary.
   - It will take requests in any order, if a variable it supplies as context is empty, it will try to resolve that request, detecting and avoiding infinite loops and breaking out of them.
