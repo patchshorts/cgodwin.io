@@ -1,6 +1,6 @@
 ---
 icon: cloud
-date: 2023-10-26
+date: 2023-10-27
 category:
   - Generative AI
   - ChatGPT
@@ -19,40 +19,6 @@ tag:
 
 [toc]
 
-## Embed Chain
-
-**Embedchain** is a **Python module** that provides a data platform for LLMs (Language Model Models). It allows you to **load, index, retrieve, and sync any unstructured data**. You can use it to create LLM-powered apps over any data. The module is available on **PyPI** and can be installed using pip. 
-
-The following are the key features of Embedchain:
-- Load, index, retrieve, and sync any unstructured data.
-- Create LLM-powered apps over any data.
-- Supports various data types such as Youtube videos, PDF files, web pages, sitemaps, JSON files, code documentation websites, Notion, and many more.
-- Provides a standard interface for text embedding models from different providers such as OpenAI, Cohere, Hugging Face, etc.
-- Offers a vector database to store embeddings using local files or elastisearch.
-### Example
-Here is an example of how you can use Embedchain to create an Elon Musk bot:
-```python
-import os
-from embedchain import App
-
-# Create a bot instance
-os.environ["OPENAI_API_KEY"] = "YOUR API KEY"
-elon_bot = App()
-
-# Embed online resources
-elon_bot.add("https://en.wikipedia.org/wiki/Elon_Musk")
-elon_bot.add("https://www.forbes.com/profile/elon-musk")
-elon_bot.add("https://www.youtube.com/watch?v=RcYjXbSJBN8")
-
-# Query the bot
-elon_bot.query("How many companies does Elon Musk run and name those?")
-# Answer: Elon Musk currently runs several companies. As of my knowledge, he is the CEO and lead designer of SpaceX, the CEO and product architect of Tesla, Inc., the CEO and founder of Neuralink, and the CEO and founder of The Boring Company. However, please note that this information may change over time, so it's always good to verify the latest updates.
-```
-
-::: info Requirements
-Using embed chain meets the technical requirement **embeddings for relevant automatic contexts** and the Business requirement **Ensure the reports are comprehensive, incorporating various data representation formats.**
-:::
-
 ## Autogen
 
 Microsoft's PyPI autogen module is a Python package that enables the development of next-gen large language model (LLM) applications using multiple agents that can converse with each other to solve tasks. The module is available on PyPI and can be installed using pip.
@@ -68,6 +34,11 @@ user_proxy.initiate_chat(assistant, message="Show me the YTD gain of 10 largest 
 This code creates an assistant agent and a user proxy agent, and then initiates a chat between them. The user proxy agent sends a message to the assistant agent, asking for the YTD gain of 10 largest technology companies as of today. The assistant agent processes the message using LLMs and returns the answer to the user proxy agent.
 
 You can find more examples and documentation on the official autogen GitHub page.
+## RAProxyAgent
+
+::: info Requirements
+We were going to use embed chain to meets the technical requirement **embeddings for relevant automatic contexts** and the Business requirement **Ensure the reports are comprehensive, incorporating various data representation formats.** But RAProxyAgent in Autogen will do this for us.
+:::
 
 ## The Design
 
@@ -117,7 +88,13 @@ These are the items we can see that we'll need, however we don't fully see how t
   - It will take requests in any order, if a variable it supplies as context is empty, it will try to resolve that request, detecting and avoiding infinite loops and breaking out of them.
   - This way, variables which depend on other variables will be processed in the correct order without tracking state.
 
-### Autogen / Embed Chain integration
-- If possible and toward useful purposes, autogen will potentially be able to have some function calls specified or overridden so that autogen can use embed chains context awareness.
-- We'll only do this if Autogen doesn't come with embedchain's capabilities(some of which it very likely may well have).
-  - This is TBD(to be determined).
+### Autogen
+- If possible and toward useful purposes, autogen will potentially be able to have some function calls specified or overridden so that autogen can be extensible toward our goals.
+- query suffix for granularity "explain your thinking step by step"
+  - 
+
+### Templating
+- We'll define a template that the report variables will be placed into once they're all generated in.
+
+### Graphs
+- I'm pulling a Steve Jobs on LISA Fonts here: The MVP Must have graphs for the top 7 most important bits of data. More later.
