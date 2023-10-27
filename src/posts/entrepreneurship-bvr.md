@@ -98,3 +98,26 @@ Here’s a simplified workflow using AutoGen in our proposed digital platform:
 
 
 This workflow showcases how AutoGen can facilitate a structured, collaborative, and efficient analysis process by conducting the interactions and collaborations among multiple role-based agents. By doing so, it significantly enhances the platform’s ability to provide thorough and actionable business analyses for entrepreneurs.
+
+## Fuzzy Designs
+
+These are the items we can see that we'll need, however we don't fully see how they'll connect to the whole or one another:
+
+### Input collection
+- We know we want a multi-stage input collection system. Input a field, click next, be presented with another.
+- After field input, value is sent to openai for improvement, user see a choice between the original and improved.
+- User will be able to pick one and edit the value before proceeding.
+- The final value will go into a context and a summary will be regenerated when that context changes.
+ - Summary will be displayed on the side and persist through advancement, it is a re-echoing of the user provided meaning, if the user agrees with it, the user and AI will be in thought-parity.
+- Input asked for but not collected will be generated.
+
+### Mutual Dependancy
+- We envision a variable populator. Some variables will be arrived at through a request to the ai and the supplying of new variables to it as specific context.
+  - This function will be called once all the user input is collected or generated and the user agrees with the summary.
+  - It will take requests in any order, if a variable it supplies as context is empty, it will try to resolve that request, detecting and avoiding infinite loops and breaking out of them.
+  - This way, variables which depend on other variables will be processed in the correct order without tracking state.
+
+### Autogen / Embed Chain integration
+- If possible and toward useful purposes, autogen will potentially be able to have some function calls specified or overridden so that autogen can use embed chains context awareness.
+- We'll only do this if Autogen doesn't come with embedchain's capabilities(some of which it very likely may well have).
+  - This is TBD(to be determined).
