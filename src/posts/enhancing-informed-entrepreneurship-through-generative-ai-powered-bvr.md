@@ -12,9 +12,9 @@ tag:
   - '10x'
   - 'Undercover Billionaire'
 ---
-# Enhancing Informed Entrepreneurship Through Generative AI-Powered Business Viability Analysis
+# Enhancing Small Business Entrepreneurship with AI-Powered Business Analysis
 
-So we start with a loose [specification](./fun-with-gen-ai)... that was part 1, thus this is part 2.
+Part I [specification](./fun-with-gen-ai)... that was part 1, this is part 2.
 
 ### Business Need Statement
 

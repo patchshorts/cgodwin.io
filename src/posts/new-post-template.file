@@ -1,14 +1,13 @@
 ---
-icon: cloud
+icon:  
 date: 2022-09-03
 category:
-  - Google Cloud
-  - Technology
+  - <category>
 tag:
-  - 'study guide'
-  - 'Google cloud'
-  - gcp
-  - GCCPCA
+  - '<tag1>'
+  - '<tag2>'
+  - '<tag3>'
+  - '<tag4>'
 ---
 
 # Title

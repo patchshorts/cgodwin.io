@@ -1,0 +1,100 @@
+---
+icon: cloud
+date: 2023-10-26
+category:
+  - Generative AI
+  - ChatGPT
+tag:
+  - 'business'
+  - 'entrepreneur'
+  - 'wantrepreneur'
+  - 'startups'
+  - '10x'
+  - 'Undercover Billionaire'
+---
+# Designing the BVR Creation Process from Requirements 
+
+- Part I [specification](./fun-with-gen-ai)
+- Part II [Requirements](./enhancing-informed-entrepreneurship-through-generative-ai-powered-bvr.md)
+
+[toc]
+
+## Embed Chain
+
+**Embedchain** is a **Python module** that provides a data platform for LLMs (Language Model Models). It allows you to **load, index, retrieve, and sync any unstructured data**. You can use it to create LLM-powered apps over any data. The module is available on **PyPI** and can be installed using pip. 
+
+The following are the key features of Embedchain:
+- Load, index, retrieve, and sync any unstructured data.
+- Create LLM-powered apps over any data.
+- Supports various data types such as Youtube videos, PDF files, web pages, sitemaps, JSON files, code documentation websites, Notion, and many more.
+- Provides a standard interface for text embedding models from different providers such as OpenAI, Cohere, Hugging Face, etc.
+- Offers a vector database to store embeddings using local files or elastisearch.
+### Example
+Here is an example of how you can use Embedchain to create an Elon Musk bot:
+```python
+import os
+from embedchain import App
+
+# Create a bot instance
+os.environ["OPENAI_API_KEY"] = "YOUR API KEY"
+elon_bot = App()
+
+# Embed online resources
+elon_bot.add("https://en.wikipedia.org/wiki/Elon_Musk")
+elon_bot.add("https://www.forbes.com/profile/elon-musk")
+elon_bot.add("https://www.youtube.com/watch?v=RcYjXbSJBN8")
+
+# Query the bot
+elon_bot.query("How many companies does Elon Musk run and name those?")
+# Answer: Elon Musk currently runs several companies. As of my knowledge, he is the CEO and lead designer of SpaceX, the CEO and product architect of Tesla, Inc., the CEO and founder of Neuralink, and the CEO and founder of The Boring Company. However, please note that this information may change over time, so it's always good to verify the latest updates.
+```
+
+::: info Requirements
+Using embed chain meets the technical requirement **embeddings for relevant automatic contexts** and the Business requirement **Ensure the reports are comprehensive, incorporating various data representation formats.**
+:::
+
+## Autogen
+
+Microsoft's PyPI autogen module is a Python package that enables the development of next-gen large language model (LLM) applications using multiple agents that can converse with each other to solve tasks. The module is available on PyPI and can be installed using pip.
+
+Here is an example of how you can use the autogen module to initiate a chat between an assistant and a user proxy:
+```python
+from autogen import AssistantAgent, UserProxyAgent
+
+assistant = AssistantAgent("assistant")
+user_proxy = UserProxyAgent("user_proxy")
+user_proxy.initiate_chat(assistant, message="Show me the YTD gain of 10 largest technology companies as of today.")
+```
+This code creates an assistant agent and a user proxy agent, and then initiates a chat between them. The user proxy agent sends a message to the assistant agent, asking for the YTD gain of 10 largest technology companies as of today. The assistant agent processes the message using LLMs and returns the answer to the user proxy agent.
+
+You can find more examples and documentation on the official autogen GitHub page.
+
+## The Design
+
+Here’s a simplified workflow using AutoGen in our proposed digital platform:
+
+1. **User Input:**
+   - The entrepreneur logs into the platform and inputs their business idea along with any relevant data.
+
+2. **Initiation of GenAI Agents:**
+   - The system initiates various GenAI agents, each tailored for different analysis dimensions like market analysis, financial projection, competition analysis, etc.
+
+3. **Multi-Agent Conversation Framework:**
+   - The agents communicate and collaborate using AutoGen’s multi-agent conversation framework. For instance:
+       - The Market Analysis Agent might need data from the Competition Analysis Agent to complete its analysis.
+       - The Financial Projection Agent might need inputs from both Market and Competition Analysis Agents to generate accurate financial forecasts.
+
+4. **Individual Analysis:**
+   - Each agent performs its designated analysis and generates a portion of the Business Viability Report (BVR).
+
+5. **Aggregation and Finalization:**
+   - AutoGen helps in aggregating the individual analyses into a comprehensive BVR, ensuring that the insights from one agent are correctly integrated with the others.
+
+6. **Report Generation:**
+   - The final BVR, containing a multi-faceted evaluation of the business idea, is generated and presented to the entrepreneur in the specified multimodal format (charts, texts, images, etc.).
+
+7. **Chat with Report:**
+   - Use of embed_chain to consume the report and chat with it.
+
+
+This workflow showcases how AutoGen can facilitate a structured, collaborative, and efficient analysis process by conducting the interactions and collaborations among multiple role-based agents. By doing so, it significantly enhances the platform’s ability to provide thorough and actionable business analyses for entrepreneurs.
