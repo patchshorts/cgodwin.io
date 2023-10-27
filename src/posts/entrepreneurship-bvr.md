@@ -89,9 +89,9 @@ These are the items we can see that we'll need, however we don't fully see how t
   - This way, variables which depend on other variables will be processed in the correct order without tracking state.
 
 ### Autogen
+
 - If possible and toward useful purposes, autogen will potentially be able to have some function calls specified or overridden so that autogen can be extensible toward our goals.
 - query suffix for granularity "explain your thinking step by step"
-  - 
 
 ### Templating
 - We'll define a template that the report variables will be placed into once they're all generated in.
