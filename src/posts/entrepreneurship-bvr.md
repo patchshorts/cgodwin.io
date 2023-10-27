@@ -12,12 +12,16 @@ tag:
   - '10x'
   - 'Undercover Billionaire'
 ---
-# Designing the BVR Creation Process from Requirements 
+# Designing the BVR Creation Process from Requirements
+
+::: warning WIP
+this article is a Work In Progres(WIP). It'll change at my discretion.
+:::
 
 - Part I [specification](./fun-with-gen-ai)
 - Part II [Requirements](./enhancing-informed-entrepreneurship-through-generative-ai-powered-bvr.md)
 
-[toc]
+[[toc]]
 
 ## Autogen
 
@@ -36,8 +40,44 @@ This code creates an assistant agent and a user proxy agent, and then initiates 
 You can find more examples and documentation on the official autogen GitHub page.
 ## RAProxyAgent
 
+Best most concise information about Autogen with RAProxy:
+1. [AutoGen Advanced Tutorial 🧠 Build Insane AI Agents (Bonus: NEW Agent Type!)](https://youtu.be/PUPO2tTyPOo?si=0QN1BrfHGpxjPzxg&t=1280)
+
+### RAG Summary
+
+The video above on Retrieval Augmented Generation (RAG) in Autogen discussed the integration of external data sources, typically in the form of embeddings which enriches the capabilities of agents.
+
+The Key points:
+
+1. **Agent Types**:
+   - The concept of RAG was introduced to enhance two existing agent types: assistant agent and user proxy agent, leading to new types called retrieve assistant agent and retrieve user proxy agent.
+   - These augmented agents can pull information from specified external data sources.
+
+2. **Configuration**:
+   - The configuration includes specifying a `retrieve config` parameter, which contains the task type (e.g., QA for question-answering) and a path to the document (e.g., a README file) from which the agent pulls information.
+   - The agent processes the document, converting text to embeddings and storing them in a vector database, with customization options available for embeddings and text chunking methods.
+
+3. **Retrieval Example**:
+   - An example was provided showing a comparison between responses from a regular user proxy agent and a retrieve user proxy agent when asked about Autogen. The retrieve user proxy agent could access and utilize the external documentation to provide a more accurate answer.
+
+4. **Customization**:
+   - Users can customize the embedding function, text split function, and vector database used for retrieval.
+   - Different models like OpenAI's or Hugging Face’s models can be used for computing embeddings, and different databases like Chroma DB or Pine Cone can be used for vector storage.
+
+5. **Integration**:
+   - The RAG agents can be integrated with other agents in a group chat setting, demonstrating a sophisticated example of how retrieval agents can work in tandem with other agents to handle a conversation and pull in external information when needed.
+
+6. **Advanced Customization**:
+   - The platform allows for deep customization, including overriding the default methods for document retrieval and customizing the vector database.
+
+Through RAG, Autogen enables the creation of more knowledgeable agents that can access and utilize external data seamlessly, demonstrating a significant enhancement in the agent's ability to provide accurate and contextually rich responses.
+
 ::: info Requirements
-We were going to use embed chain to meets the technical requirement **embeddings for relevant automatic contexts** and the Business requirement **Ensure the reports are comprehensive, incorporating various data representation formats.** But RAProxyAgent in Autogen will do this for us.
+RAG meets these requirements
+#### Technical
+- **embeddings for relevant automatic contexts**
+#### Business
+- **Ensure the reports are comprehensive, incorporating various data representation formats.**
 :::
 
 ## The Design
