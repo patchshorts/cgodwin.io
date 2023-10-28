@@ -11,8 +11,11 @@ tag:
   - 'startups'
   - '10x'
   - 'Undercover Billionaire'
+heroImage: '/post-img/entrepreneurship-bvr.webp'
 ---
 # Designing the BVR Creation Process from Requirements
+
+![Designing the BVR Creation Process from Requirements](/post-img/entrepreneurship-bvr.webp)
 
 ::: warning WIP
 this article is a Work In Progres(WIP). It'll change at my discretion.
@@ -42,6 +45,8 @@ You can find more examples and documentation on the official autogen GitHub page
 
 Best most concise information about Autogen with RAProxy:
 1. [AutoGen Advanced Tutorial 🧠 Build Insane AI Agents (Bonus: NEW Agent Type!)](https://youtu.be/PUPO2tTyPOo?si=0QN1BrfHGpxjPzxg&t=1280)
+
+<YouTube id="PUPO2tTyPOo" start="1280" />
 
 ### RAG Summary
 

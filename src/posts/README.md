@@ -1,14 +1,13 @@
 ---
 home: false
-layout: Blog
+layout: BlogHome
 icon: home
 article: false
-title: Blog Home
 bgImage: /hero.jpg
 bgImageStyle: cover
 heroImage: /logo.svg
-heroText: Christopher Shaun Godwin
-heroFullScreen: false
+heroText: Blog Home
+heroFullScreen: true
 tagline: Manager, Cloud & DevSecOps
 projects:
   - icon: project

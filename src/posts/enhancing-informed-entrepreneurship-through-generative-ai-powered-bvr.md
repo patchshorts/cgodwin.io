@@ -11,8 +11,12 @@ tag:
   - 'startups'
   - '10x'
   - 'Undercover Billionaire'
+heroImage: '/post-img/enhancing-informed-entrepreneurship-through-generative-ai-powered-bvr.webp'
 ---
 # Enhancing Small Business Entrepreneurship with AI-Powered Business Analysis
+
+![Enhancing Small Business Entrepreneurship with AI-Powered Business Analysis](/post-img/enhancing-informed-entrepreneurship-through-generative-ai-powered-bvr.webp)
+
 
 Part I [specification](./fun-with-gen-ai)... that was part 1, this is part 2.
 

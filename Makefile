@@ -31,13 +31,13 @@ run_backend:
 .PHONY: stop_frontend
 stop_frontend:
 	@echo "Running Frontend Docker container..."
-	docker stop frontend
+	docker kill frontend
 	docker rm frontend
 
 .PHONY: stop_backend
 stop_backend:
 	@echo "Running Backend Docker container..."
-	docker stop backend
+	docker kill backend
 	docker rm backend
 
 .PHONY: build-all

@@ -1,5 +1,5 @@
 # ---- Build Stage ----
-FROM node:16-alpine AS build
+FROM node:18-alpine AS build
 # Argument for the host which the backend points to
 ARG HOST=${HOST:-backend.cgodwin.io}
 # Set working directory
