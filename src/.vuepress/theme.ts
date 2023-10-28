@@ -49,6 +49,22 @@ export default hopeTheme({
   },
 
   plugins: {
+    components: {
+      components: [
+        "ArtPlayer",
+        "AudioPlayer",
+        "Badge",
+        "CodePen",
+        "FontIcon",
+        "PDF",
+        "Replit",
+        "Share",
+        "StackBlitz",
+        "SiteInfo",
+        "VideoPlayer",
+        "YouTube"
+      ],
+    },
     blog: true,
 
     // install @waline/client before enabling it
