@@ -11,11 +11,9 @@ tag:
   - 'startups'
   - '10x'
   - 'Undercover Billionaire'
-heroImage: '/post-img/fun-with-gen-ai.webp'
+cover: '/post-img/fun-with-gen-ai.webp'
 ---
 # Using Generative AI to Test Business Viability
-
-![Fun with Gen AI](/post-img/fun-with-gen-ai.webp)
 
 ## Spec / Reference
 
@@ -33,6 +31,8 @@ instruction:
 context: <automatic>
 query: <query>\n\n<Consideration1>\n<Consideration2>
 ```
+
+![Fun with Gen AI](/post-img/fun-with-gen-ai.webp)
 
 ## Considerations
 

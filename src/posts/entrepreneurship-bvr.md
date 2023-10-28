@@ -11,11 +11,9 @@ tag:
   - 'startups'
   - '10x'
   - 'Undercover Billionaire'
-heroImage: '/post-img/entrepreneurship-bvr.webp'
+cover: '/post-img/entrepreneurship-bvr.webp'
 ---
 # Designing the BVR Creation Process from Requirements
-
-![Designing the BVR Creation Process from Requirements](/post-img/entrepreneurship-bvr.webp)
 
 ::: warning WIP
 this article is a Work In Progres(WIP). It'll change at my discretion.
@@ -27,6 +25,8 @@ this article is a Work In Progres(WIP). It'll change at my discretion.
 [[toc]]
 
 ## Autogen
+
+![Designing the BVR Creation Process from Requirements](/post-img/entrepreneurship-bvr.webp)
 
 Microsoft's PyPI autogen module is a Python package that enables the development of next-gen large language model (LLM) applications using multiple agents that can converse with each other to solve tasks. The module is available on PyPI and can be installed using pip.
 

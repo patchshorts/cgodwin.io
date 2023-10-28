@@ -11,17 +11,13 @@ tag:
   - 'startups'
   - '10x'
   - 'Undercover Billionaire'
-heroImage: '/post-img/enhancing-informed-entrepreneurship-through-generative-ai-powered-bvr.webp'
+cover: '/post-img/enhancing-informed-entrepreneurship-through-generative-ai-powered-bvr.webp'
 ---
 # Enhancing Small Business Entrepreneurship with AI-Powered Business Analysis
-
-![Enhancing Small Business Entrepreneurship with AI-Powered Business Analysis](/post-img/enhancing-informed-entrepreneurship-through-generative-ai-powered-bvr.webp)
-
 
 Part I [specification](./fun-with-gen-ai)... that was part 1, this is part 2.
 
 ### Business Need Statement
-
 
 #### Executive Summary:
 
@@ -30,6 +26,8 @@ In an increasingly competitive business landscape, the lack of precise and thoro
 #### Problem Statement:
 
 The journey from a business idea to a viable venture is riddled with uncertainties. The absence of expert analysis and data-backed evaluations often results in entrepreneurs navigating through these uncertainties blindly. This lack of informed decision-making not only risks the entrepreneur's investment but also stymies innovation and economic growth.
+
+![Enhancing Small Business Entrepreneurship with AI-Powered Business Analysis](/post-img/enhancing-informed-entrepreneurship-through-generative-ai-powered-bvr.webp)
 
 #### Proposed Solution:
 
