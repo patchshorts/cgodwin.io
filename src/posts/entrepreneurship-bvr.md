@@ -19,10 +19,14 @@ cover: '/post-img/entrepreneurship-bvr.webp'
 this article is a Work In Progres(WIP). It'll change at my discretion.
 :::
 
-- Part I [specification](./fun-with-gen-ai)
+- Part I [Specification](./fun-with-gen-ai)
 - Part II [Requirements](./enhancing-informed-entrepreneurship-through-generative-ai-powered-bvr.md)
 
 [[toc]]
+
+# Overall Design
+
+This is a loose overall design, as clearly we aren't even specifying stack tech, how logins will work, which db we'll use, etc. Let's just talk about the hard parts.
 
 ## Autogen
 
@@ -143,3 +147,308 @@ These are the items we can see that we'll need, however we don't fully see how t
 
 ### Graphs
 - I'm pulling a Steve Jobs on LISA Fonts here: The MVP Must have graphs for the top 7 most important bits of data. More later.
+
+## Design Charts
+
+
+### Flow
+
+```mermaid
+graph TD;
+    subgraph User
+        User_Input[User Input]
+        Login[Login and Business Idea Input]
+    end
+    
+    subgraph System_Initiation
+        GenAI_Agents[Initiation of GenAI Agents]
+    end
+
+    subgraph Multi_Agent_Conversation_Framework
+        MA_Conversation[Multi-Agent Conversation Framework]
+    end
+
+    subgraph Individual_Analysis
+        Market_Analysis[Market Analysis Agent]
+        Competition_Analysis[Competition Analysis Agent]
+        Financial_Projection[Financial Projection Agent]
+    end
+
+    subgraph Aggregation_and_Finalization
+        Aggregation[Aggregation of Analyses]
+    end
+
+    subgraph Report_Generation
+        Report[Report Generation]
+    end
+
+    subgraph Chat_with_Report
+        Chat[Chat with Report]
+    end
+
+    Login --> GenAI_Agents
+    GenAI_Agents --> MA_Conversation
+    MA_Conversation --> Market_Analysis
+    MA_Conversation --> Competition_Analysis
+    MA_Conversation --> Financial_Projection
+    Market_Analysis --> Aggregation
+    Competition_Analysis --> Aggregation
+    Financial_Projection --> Aggregation
+    Aggregation --> Report
+    Report --> Chat
+```
+
+### Infrastructure Flow
+
+```mermaid
+graph TB
+  A["Frontend Container"] -- "HTTP Request" --> B["Backend Container"]
+  B -- "Queries" --> C["MongoDB Database"]
+  B -- "Publishes Message" --> D["Google Pub/Sub"]
+  D -- "Triggers" --> E["Google Cloud Function"]
+  E -- "Processes Message" --> D
+  B -- "HTTP Response" --> A
+```
+
+### User Journey
+
+```mermaid
+sequenceDiagram
+    participant User as Entrepreneur
+    participant UI as User Interface
+    participant PS as Pub/Sub
+    participant AA as Autogen Agents
+    participant Internet as Internet
+    User->>UI: Login and Input Business Idea
+    UI->>PS: Publish User Input Message
+    PS->>AA: Trigger Agents with User Input
+    AA->>Internet: Query Business Data
+    Internet->>AA: Return Queried Data
+    AA->>PS: Publish Analysis Results
+    PS->>UI: Send Analysis Results
+    UI->>User: Display Business Viability Report (BVR)
+    User->>UI: Review and Interact with BVR
+```
+
+### Class Diagram of Spec Queries
+
+```mermaid
+classDiagram
+Business -- MarketResearch
+Business -- ProductOrService
+Business -- Financials
+Business -- MarketingAndSales
+Business -- OperationsAndSupplyChain
+Business -- RegulatoryAndCompliance
+Business -- Technology
+Business -- TeamAndExpertise
+Business -- RisksAndChallenges
+Business -- SustainabilityAndSocialImpact
+Business -- AdvancedQueries
+class MarketResearch{
+    +TargetAudience
+    +MarketSize
+    +Competition
+}
+class ProductOrService{
+    +ValueProposition
+    +Differentiation
+    +Feasibility
+}
+class Financials{
+    +RevenueModel
+    +CostStructure
+    +Profitability
+    +ServiceableObtainableMarket
+}
+class MarketingAndSales{
+    +MarketingStrategy
+    +SalesChannels
+    +PricingStrategy
+}
+class OperationsAndSupplyChain{
+    +Suppliers
+    +Production
+    +Logistics
+}
+class RegulatoryAndCompliance{
+    +KeyLegalConsiderations
+    +IndustryRegulations
+}
+class Technology{
+    +TechnicalRequirements
+    +IntellectualProperty
+}
+class TeamAndExpertise{
+    +SkillsAndExperience
+    +AdvisorsAndPartnerships
+}
+class RisksAndChallenges{
+    +IdentifiedRisks
+    +RiskMitigationStrategies
+    +ContingencyPlans
+}
+class SustainabilityAndSocialImpact{
+    +EnvironmentalImpact
+    +SocialContribution
+}
+class AdvancedQueries{
+    +AdjacentIndustries
+    +BusinessModel
+    +ValueProposition
+    +CustomerSegments
+    +SalesAndDistributionChannels
+    +CustomerRelationships
+    +AudiencePersonas
+    +RevenueStreams
+    +KeyResources
+    +KeyPartnerships
+    +CostStructure
+    +Vision
+    +NovelRevenueModels
+    +UserPainPoints
+    +TotalAddressableMarket
+    +ServiceableAddressableMarket
+    +ServiceableObtainableMarket
+    +Strengths
+    +Weaknesses
+    +Opportunities
+    +Threats
+    +FeedbackLoop
+    +MarketShare
+    +WhyNow
+    +MarketGrowth
+    +ChangesInConsumerPrefOrTech
+    +Experiments
+    +PartnershipsAndCollaborations
+    +MarketValueComparisonAnalysis
+    +MarketSizeAndGrowthPotential
+    +KeyMotivatorsToPurchase
+    +ResearchAndDiscovery
+    +Strengths
+    +Weaknesses
+    +Opportunities
+    +Threats
+    +FeedbackLoop
+}
+class Business{
+    +businessName
+    +businessOverview
+}
+```
+
+### AI Query Dependency
+
+```mermaid
+graph LR
+    adjacentIndustries --> businessName
+    adjacentIndustries --> businessOverview
+    businessModel --> businessName
+    businessModel --> businessOverview
+    valueProposition --> businessName
+    valueProposition --> businessOverview
+    consumerBehavior --> businessName
+    consumerBehavior --> businessOverview
+    demographicCharacteristics --> businessName
+    demographicCharacteristics --> businessOverview
+    salesAndDistributionChannels --> businessName
+    salesAndDistributionChannels --> businessOverview
+    salesAndDistributionChannels --> targetAudience
+    earlyAcquisitionStrategy --> businessName
+    earlyAcquisitionStrategy --> businessOverview
+    lateAcquisitionStrategy --> businessName
+    lateAcquisitionStrategy --> businessOverview
+    audiencePersonas --> businessName
+    audiencePersonas --> businessOverview
+    audiencePersonas --> targetAudience
+    revenueModels --> businessName
+    revenueModels --> businessOverview
+    operationalEquipment --> businessName
+    operationalEquipment --> businessOverview
+    teamAndExpertise --> businessName
+    teamAndExpertise --> businessOverview
+    operationalSuppliers --> businessName
+    operationalSuppliers --> businessOverview
+    costStructure --> businessName
+    costStructure --> businessOverview
+    operationalCosts --> businessName
+    operationalCosts --> businessOverview
+    hiringRoadmapAndCosts --> businessName
+    hiringRoadmapAndCosts --> businessOverview
+    vision --> businessName
+    vision --> businessOverview
+    vision --> marketTrends
+    vision --> competitiveLandscapeChangesOverTime
+    vision --> targetAudience
+    vision --> marketSize
+    vision --> serviceableObtainableMarket
+    vision --> differentiation
+    vision --> valueProposition
+    vision --> industryRegulations
+    vision --> technologyRequirements
+    vision --> environmentalImpact
+    vision --> socialContribution
+    vision --> teamSkillsAndExperience
+    novelRevenueModels --> businessName
+    novelRevenueModels --> businessOverview
+    novelRevenueModels --> businessModel
+    novelRevenueModels --> marketSectorTrends
+    novelRevenueModels --> revenueModels
+    painPoints --> businessName
+    painPoints --> businessOverview
+    painPoints --> consumerBehavior
+    painPoints --> demographicCharacteristics
+    painPoints --> targetAudience
+    painPoints --> competition
+    painPoints --> differentiation
+    painPoints --> marketStrategy
+    painPoints --> technologyRequirements
+    painPoints --> identifiedRisks
+    totalAddressableMarket --> businessName
+    totalAddressableMarket --> businessOverview
+    totalAddressableMarket --> adjacentIndustries
+    totalAddressableMarket --> demographicCharacteristics
+    totalAddressableMarket --> targetAudience
+    totalAddressableMarket --> competition
+    totalAddressableMarket --> industryRegulations
+    totalAddressableMarket --> marketSize
+    totalAddressableMarket --> pricingStrategy
+    totalAddressableMarket --> salesAndDistributionChannels
+    totalAddressableMarket --> marketSectorTrends
+    serviceableAddressableMarket --> businessName
+    serviceableAddressableMarket --> businessOverview
+    serviceableAddressableMarket --> totalAddressableMarket
+    serviceableAddressableMarket --> marketSectorTrends
+    serviceableAddressableMarket --> adjacentIndustries
+    serviceableAddressableMarket --> demographicCharacteristics
+    serviceableAddressableMarket --> targetAudience
+    serviceableAddressableMarket --> competition
+    serviceableAddressableMarket --> industryRegulations
+    serviceableAddressableMarket --> marketSize
+    serviceableAddressableMarket --> pricingStrategy
+    serviceableAddressableMarket --> salesAndDistributionChannels
+    serviceableAddressableMarket --> competitiveLandscapeChangesOverTime
+    serviceableObtainableMarket --> businessName
+    serviceableObtainableMarket --> businessOverview
+    serviceableObtainableMarket --> serviceableAddressableMarket
+    serviceableObtainableMarket --> competitiveLandscapeChangesOverTime
+    serviceableObtainableMarket --> totalAddressableMarket
+    serviceableObtainableMarket --> marketSectorTrends
+    serviceableObtainableMarket --> adjacentIndustries
+    serviceableObtainableMarket --> demographicCharacteristics
+    serviceableObtainableMarket --> targetAudience
+    serviceableObtainableMarket --> competition
+    serviceableObtainableMarket --> industryRegulations
+    serviceableObtainableMarket --> marketSize
+    serviceableObtainableMarket --> pricingStrategy
+    serviceableObtainableMarket --> salesAndDistributionChannels
+    strength --> businessName
+    strength --> businessOverview
+    weaknesses --> businessName
+    weaknesses --> businessOverview
+    opportunities --> businessName
+    opportunities --> businessOverview
+    threats --> businessName
+    threats --> businessOverview
+    feedbackLoop --> businessName
+```
