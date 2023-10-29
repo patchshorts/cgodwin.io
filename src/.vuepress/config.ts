@@ -7,6 +7,5 @@ export default defineUserConfig({
   description: "A Resume for Christopher Shaun Godwin",
 
   base: "/",
-
   theme,
 });
