@@ -460,7 +460,7 @@ graph LR
 With all of them, it mermaid js says "too many edges" so we've removed like 30 nodes.
 
 ```mermaid
-graph LR
+graph RL
 30SecondPitch --> businessName
 30SecondPitch --> businessOverview
 30SecondPitch --> pitchPreparationAndDelivery
