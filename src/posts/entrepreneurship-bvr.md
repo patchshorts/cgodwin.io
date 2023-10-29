@@ -457,6 +457,8 @@ graph LR
 
 #### With Advanced Queries from the Specification
 
+With all of them, it mermaid js says "too many edges" so we've removed like 30 nodes.
+
 ```mermaid
 graph LR
 30SecondPitch --> businessName
