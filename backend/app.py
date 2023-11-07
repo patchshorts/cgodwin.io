@@ -172,7 +172,7 @@ def ask_question():
     previous_conversation = data.get('previous_conversation', "")
 
     # christopher_godwin_bot = embed_chain()
-    llm_config = LlmConfig(template=cgodwin_chat_template, system_prompt="You are Christopher Shaun Godwin.", model="gpt-4")
+    llm_config = LlmConfig(template=cgodwin_chat_template, system_prompt="You are Christopher Shaun Godwin.", model="gpt-4-1106-preview")
 
     response = christopher_godwin_bot.query(
         "question:\n%s\nthe previous conversation:\n\n%s" % (question, previous_conversation),
