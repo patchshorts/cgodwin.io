@@ -22,21 +22,30 @@ Here we've defined the core work below. We've found we cannot implement this wit
 So we're abandoning `autogen` for most things. Instead we'll use `embedchain` to do the same work and write structing code to take the place of what `autogen` was doing.
 
 ```mermaid
-flowchart TD
-    A[Start: List of Questions in YAML] --> B[Processing Loop]
-    B --> C[Generate Relevant Report Questions]
-    C --> D[Ask GPT-4 the Answer to Those Questions]
-    D --> E[Quality Check the Answer]
-    B --> F[GPT Generates Search Queries]
-    F --> G[Run Script to Retrieve Data from Search Results]
-    G --> H[Store the Answers in Text Files with Standardized Names]
-    H --> I[Add Retrieved Data to Embedded Context]
-    I --> J[Weave Together the Text Files, and images into a Report]
-    J --> K[End: Completed Report]
-    B --> L[Ask GPT-4 to write a script to draw a diagram of the data]
-    L --> M[Run the Script saving to a standard file name]
-    M --> I
-    E --> I
+stateDiagram-v2
+    [*] --> Initialization
+    Initialization: Start with a list of questions in YAML
+    Initialization --> Processing: Begin Processing Loop
+    
+    Processing --> GeneratingQuestions: Generate Report Questions
+    GeneratingQuestions --> QueryingGPT4: Ask GPT-4 for Answers
+    QueryingGPT4 --> QualityCheck: Perform Quality Check on Answers
+    
+    Processing --> GeneratingSearchQueries: GPT Generates Search Queries
+    GeneratingSearchQueries --> DataRetrieval: Run Script to Retrieve Data
+    DataRetrieval --> StoringData: Store Answers in Text Files
+    
+    QualityCheck --> DataIntegration: Quality Check Passed
+    StoringData --> DataIntegration: Data Ready for Integration
+    DataIntegration: Add Retrieved Data to Embedded Context
+    DataIntegration --> ReportCompilation: Weave Together Text and Images
+    
+    Processing --> Scripting: Ask GPT-4 to Write Script for Diagram
+    Scripting --> ScriptExecution: Run the Diagram Script
+    ScriptExecution --> DataIntegration: Script Output Ready
+    
+    ReportCompilation --> Finalization: Compile the Final Report
+    Finalization --> [*]: End Process
 ```
 ## The process
 And so now this is how it'll work:
