@@ -38,6 +38,7 @@ flowchart TD
     M --> I
     E --> I
 ```
+## The process
 And so now this is how it'll work:
 
 ```mermaid
