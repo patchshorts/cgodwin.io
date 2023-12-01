@@ -6,7 +6,7 @@ heroImage: /logo.svg
 heroText: Christopher Shaun Godwin
 tagline: Manager, Cloud, DevSecOps
 actions:
-  - text: Book a Project 💡
+  - text: Book My Time 💡
     link: https://www.upwork.com/services/product/development-it-christopher-1729228527499173888?ref=project_share
     type: primary
 
